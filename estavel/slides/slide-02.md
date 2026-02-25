@@ -33,11 +33,12 @@ Por que `Hexadecimal` é amado pelos desenvolvedores C/C++? Um *Byte* (8 bits) p
 
 ## 🔢 1. Sistema Binário e Hexadecimal
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Como você lida com Hex no C++?
+$ cat var.cpp
+int mascara_de_bits = 0xFF; // Representa 255
+```
 
 ---
 

@@ -67,11 +67,15 @@ Quando escrevemos um código com constantes consultas não linearizadas ao Banco
 
 ## ⏳ 2. Os Impactos da Latência (Lado do Código)
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Como consultar as camadas do processador Linux
+$ lscpu | grep Cache
+L1d cache:                       64 KiB
+L1i cache:                       64 KiB
+L2 cache:                        1 MiB
+L3 cache:                        12 MiB
+```
 
 ---
 

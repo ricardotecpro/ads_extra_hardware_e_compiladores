@@ -62,11 +62,13 @@ Como programador, ao compilar nosso software, a *Target Architecture* é o divis
 
 ## 🖨️ 2. Como isso afeta o Compilador C/C++?
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Compilando para a máquina local (digamos, x86_64 CISC)
+$ gcc app.c -o app
+$ # Compilando Cruzado (Cross-Compiling) de um PC x86 para rodar num Raspberry Pi (ARMv8):
+$ aarch64-linux-gnu-gcc app.c -o app_arm
+```
 
 ---
 

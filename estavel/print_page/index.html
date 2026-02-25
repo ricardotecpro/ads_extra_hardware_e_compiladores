@@ -1708,16 +1708,8 @@
 <li><em>Gravar na Memória (STORE)</em></li>
 </ul>
 <p>Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas operações ditadas pela ISA para rodar.</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-01-__codelineno-0-1"></a><span class="gp">$ </span>gcc<span class="w"> </span>-O2<span class="w"> </span>-S<span class="w"> </span>hello.c
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-01-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>hello.s
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-01-__codelineno-0-3"></a><span class="go">main:</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-01-__codelineno-0-4"></a><span class="go">    pushq   %rbp</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-01-__codelineno-0-5"></a><span class="go">    movq    %rsp, %rbp</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-01-__codelineno-0-6"></a><span class="go">    leaq    .LC0(%rip), %rdi</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-01-__codelineno-0-7"></a><span class="go">    call    puts@PLT</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$">gcc -O2 -S hello.c</span><span data-ty="input" data-ty-prompt="$">cat hello.s</span><span data-ty>main:<br>    pushq   %rbp<br>    movq    %rsp, %rbp<br>    leaq    .LC0(%rip), %rdi<br>    call    puts@PLT<br></span></div>
+
 <p><em>Acima, o output é o assembly x86 do seu C. É a representação literal da série de instruções que formarão a ISA do seu microprocessador Intel/AMD.</em></p>
 <hr>
 <h2 id="aulas-aula-01-resumo-pratico">🚀 Resumo Prático</h2>
@@ -1772,18 +1764,14 @@
 <li><strong>Byte</strong>: 8 bits (<code>00000000</code> a <code>11111111</code>, indo de 0 a 255 no decimal)</li>
 </ul>
 <p>Por que <code>Hexadecimal</code> é amado pelos desenvolvedores C/C++? Um <em>Byte</em> (8 bits) pode ser perfeitamente representado por exatos dois caracteres Hexadecimais. <code>FF</code> é o mesmo que <code>11111111</code>.</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-02-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você lida com Hex no C++?</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-02-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>var.cpp
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-02-__codelineno-0-3"></a><span class="go">int mascara_de_bits = 0xFF; // Representa 255</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Como você lida com Hex no C++?</span><span data-ty="input" data-ty-prompt="$">cat var.cpp</span><span data-ty>int mascara_de_bits = 0xFF; // Representa 255<br></span></div>
+
 <hr>
 <h2 id="aulas-aula-02-2-inteiros-com-e-sem-sinal-unsigned">🔋 2. Inteiros com e sem Sinal (Unsigned)</h2>
 <p>Em C/C++, o rigor nos tipos provém diretamente do hardware:</p>
-<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#aulas-aula-02-__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w">           </span><span class="c1">// Geralmente um int é 32 bits, comportando valores grandes, podendo ser negativo (signed).</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#aulas-aula-02-__codelineno-1-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8 bits sem sinal (0 a 255)</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#aulas-aula-02-__codelineno-1-3"></a><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">    </span><span class="c1">// 8 bits com sinal (-128 a 127)</span>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-02-__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w">           </span><span class="c1">// Geralmente um int é 32 bits, comportando valores grandes, podendo ser negativo (signed).</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-02-__codelineno-0-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8 bits sem sinal (0 a 255)</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-02-__codelineno-0-3"></a><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">    </span><span class="c1">// 8 bits com sinal (-128 a 127)</span>
 </span></code></pre></div>
 <p>No hardware, inteiros negativos são representados usando a regra de <strong>Complemento de 2</strong>. Para obtermos o binário do <code>-1</code>, invertemos todos os bits de <code>1</code> e somamos <code>1</code>.</p>
 <blockquote>
@@ -1852,15 +1840,8 @@ Ao somar decimais repetidamente, as variações de mantissa geram margens de err
 <li><strong>CU (Unidade de Controle):</strong> O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).</li>
 <li><strong>Registradores:</strong> Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).</li>
 </ol>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-03-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você lê valores do processador direto em C?</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-03-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>register.c
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-03-__codelineno-0-3"></a><span class="go">int main() {</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-03-__codelineno-0-4"></a><span class="go">    register int i = 10; // "Dica" para o compilador usar um registrador direto!</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-03-__codelineno-0-5"></a><span class="go">    return i;</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-03-__codelineno-0-6"></a><span class="go">}</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Como você lê valores do processador direto em C?</span><span data-ty="input" data-ty-prompt="$">cat register.c</span><span data-ty>int main() {<br>    register int i = 10; // "Dica" para o compilador usar um registrador direto!<br>    return i;<br>}<br></span></div>
+
 <hr>
 <h2 id="aulas-aula-03-2-o-ciclo-de-instrucao-fetch-decode-execute">🔄 2. O Ciclo de Instrução (Fetch-Decode-Execute)</h2>
 <p>Cada operação ou linha de código C/C++ que você escreve é processada na cadência do <em>Clock</em> pelo ciclo clássico:</p>
@@ -1945,13 +1926,8 @@ Errar a adivinhação do <code>if</code> corrompe todo o Pipeline que foi pré-c
 <hr>
 <h2 id="aulas-aula-04-2-como-isso-afeta-o-compilador-cc">🖨️ 2. Como isso afeta o Compilador C/C++?</h2>
 <p>Como programador, ao compilar nosso software, a <em>Target Architecture</em> é o divisor de águas:</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-04-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Compilando para a máquina local (digamos, x86_64 CISC)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-04-__codelineno-0-2"></a><span class="gp">$ </span>gcc<span class="w"> </span>app.c<span class="w"> </span>-o<span class="w"> </span>app
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-04-__codelineno-0-3"></a><span class="gp">$ </span><span class="c1"># Compilando Cruzado (Cross-Compiling) de um PC x86 para rodar num Raspberry Pi (ARMv8):</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-04-__codelineno-0-4"></a><span class="gp">$ </span>aarch64-linux-gnu-gcc<span class="w"> </span>app.c<span class="w"> </span>-o<span class="w"> </span>app_arm
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Compilando para a máquina local (digamos, x86_64 CISC)</span><span data-ty="input" data-ty-prompt="$">gcc app.c -o app</span><span data-ty="input" data-ty-prompt="$"># Compilando Cruzado (Cross-Compiling) de um PC x86 para rodar num Raspberry Pi (ARMv8):</span><span data-ty="input" data-ty-prompt="$">aarch64-linux-gnu-gcc app.c -o app_arm</span><span data-ty></span></div>
+
 <p>O código C++ original <code>app.c</code> não muda! Quem rala é o compilador, que na versão ARM gera dezenas de pequenas instruções curtas RISC, e na versão local gera um op-code gigante com microcódigos CISC internos da Intel.</p>
 <blockquote>
 <p>[!TIP]
@@ -2028,15 +2004,8 @@ A latência é o tempo que demora da CPU pedir um dado até ele chegar. Buscar u
 <hr>
 <h2 id="aulas-aula-05-2-os-impactos-da-latencia-lado-do-codigo">⏳ 2. Os Impactos da Latência (Lado do Código)</h2>
 <p>Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-05-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como consultar as camadas do processador Linux</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-05-__codelineno-0-2"></a><span class="gp">$ </span>lscpu<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Cache
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-05-__codelineno-0-3"></a><span class="go">L1d cache:                       64 KiB</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-05-__codelineno-0-4"></a><span class="go">L1i cache:                       64 KiB</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-05-__codelineno-0-5"></a><span class="go">L2 cache:                        1 MiB</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-05-__codelineno-0-6"></a><span class="go">L3 cache:                        12 MiB</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Como consultar as camadas do processador Linux</span><span data-ty="input" data-ty-prompt="$">lscpu | grep Cache</span><span data-ty>L1d cache:                       64 KiB<br>L1i cache:                       64 KiB<br>L2 cache:                        1 MiB<br>L3 cache:                        12 MiB<br></span></div>
+
 <p>A instrução e os dados descem da L3, saltam para L2, descem para L1 e se acoplam na ALU.</p>
 <hr>
 <h2 id="aulas-aula-05-3-optimizando-uso">🎯 3. Optimizando Uso</h2>
@@ -2187,20 +2156,8 @@ Stack Overflow! A Pilha nunca é infinita, sendo tipicamente restrita pelo S.O. 
 <hr>
 <h2 id="aulas-aula-07-2-o-monte-heap">📦 2. O Monte (Heap)</h2>
 <p>Enquanto a Pilha é rígida, restrita e pré-delimitada, o Monte (Heap) é um vasto oceano caótico de Gigabytes gerenciado pelo Kernel do S.O. (Sistemas Operacionais). Você requer pedaços de memória "sob demanda" (Alocação Dinâmica).</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-07-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você interage em baixo nível (C/C++)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-07-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>code.c
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-07-__codelineno-0-3"></a><span class="gp">#</span>include<span class="w"> </span>&lt;stdlib.h&gt;
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-07-__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-07-__codelineno-0-5"></a><span class="go">int main() {</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-07-__codelineno-0-6"></a><span class="go">    // malloc vai no Sistema Operacional e chora pedindo: "Me dê 10 inteiros!"</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-07-__codelineno-0-7"></a><span class="go">    int* array_gigante_dinamico = (int*)malloc(10 * sizeof(int));</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-07-__codelineno-0-8"></a>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-07-__codelineno-0-9"></a><span class="go">    // Se você não limpar usando free(), a RAM apodrecerá lentamente (LEAK)</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#aulas-aula-07-__codelineno-0-10"></a><span class="go">    free(array_gigante_dinamico);</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#aulas-aula-07-__codelineno-0-11"></a><span class="go">}</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Como você interage em baixo nível (C/C++)</span><span data-ty="input" data-ty-prompt="$">cat code.c</span><span data-ty>#include &lt;stdlib.h&gt;<br><br>int main() {<br>    // malloc vai no Sistema Operacional e chora pedindo: "Me dê 10 inteiros!"<br>    int* array_gigante_dinamico = (int*)malloc(10 * sizeof(int));<br>    <br>    // Se você não limpar usando free(), a RAM apodrecerá lentamente (LEAK)<br>    free(array_gigante_dinamico);<br>}<br></span></div>
+
 <div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked id="aulas-aula-07-__tabbed_2_1" name="aulas-aula-07-__tabbed_2" type="radio"><div class="tabbed-labels"><label for="aulas-aula-07-__tabbed_2_1">Diferenciais do C/C++</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
@@ -2426,18 +2383,8 @@ O HW (Processador) traduz internamente num RMW: <strong>R</strong>ead (<em>Puxa 
 <hr>
 <h2 id="aulas-aula-10-2-mutex-e-the-critical-section">🛡️ 2. Mutex e The Critical Section</h2>
 <p>A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As <strong>Locks (Travas)</strong> como padrão Ouro C++: <code>std::mutex</code> (Mutual Exclusion).</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-10-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Em C++, protege-se a variável central assim:</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-10-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>bank.cpp
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-10-__codelineno-0-3"></a><span class="go">std::mutex portaCorredor;</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-10-__codelineno-0-4"></a>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-10-__codelineno-0-5"></a><span class="go">void adiciona_10() {</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-10-__codelineno-0-6"></a><span class="go">    portaCorredor.lock();   // O Hardware garante atomicamente exclusão</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-10-__codelineno-0-7"></a><span class="go">    balance += 10;          // Apenas UM transita aqui adentro. </span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-10-__codelineno-0-8"></a><span class="go">    portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-10-__codelineno-0-9"></a><span class="go">}</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Em C++, protege-se a variável central assim:</span><span data-ty="input" data-ty-prompt="$">cat bank.cpp</span><span data-ty>std::mutex portaCorredor;<br><br>void adiciona_10() {<br>    portaCorredor.lock();   // O Hardware garante atomicamente exclusão<br>    balance += 10;          // Apenas UM transita aqui adentro. <br>    portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel<br>}<br></span></div>
+
 <p>A área demarcada pelo <em>lock</em> a <em>unlock</em> é intitulada <strong>Seção Crítica</strong>. O poder e o problema do design residem aí: Se você for preguiçoso e prender 10.000 linhas da sua transação atrás da Seção Crítica Mestre, o teu glorioso Processador <em>Multicore Ultra de 32 cores</em> se comportará como um ridículo e solitário Processador Antigo Pentium de <em>1 core</em> single Threaded, derrubando teu design ao zero! Tudo vai rodar Enfileirado (Serializado). O bom C++ trava com extrema granuladidade e rapidíssimo na variável.</p>
 <hr>
 <h2 id="aulas-aula-10-3-o-dilema-deadlock">🚦 3. O Dilema: Deadlock</h2>
@@ -2501,15 +2448,8 @@ O HW (Processador) traduz internamente num RMW: <strong>R</strong>ead (<em>Puxa 
 <h2 id="aulas-aula-11-2-hyper-threading-smt-symmetrical-multi-threading">🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)</h2>
 <p>A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógicos" para o Windows/Linux?</p>
 <p>Na aula 03, vimos que a execução cruza pelo Pipeline ou pode esbarrar em ciclos ociosos na CU aguardando a Memória Principal. O <em>Hyper-Threading</em> espeta um <strong>Segundo conjunto de Registradores</strong> e Hardware de Estado no mesmo Core. Enquanto o código da Thread "A" está 0.5 nanosegundo <em>travada</em> esperando chegar o dado lento da L3, o Core troca instantaneamente para o contexto da Thread "B", executando-o usando as mesmas Unidades Lógicas (ALU) num aproveitamento fabril monstruoso de 100%.</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-11-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-11-__codelineno-0-2"></a><span class="gp">$ </span>lscpu
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-11-__codelineno-0-3"></a><span class="go">CPU(s):                  8</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-11-__codelineno-0-4"></a><span class="go">On-line CPU(s) list:     0-7</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-11-__codelineno-0-5"></a><span class="go">Thread(s) per core:      2</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-11-__codelineno-0-6"></a><span class="go">Core(s) per socket:      4</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)</span><span data-ty="input" data-ty-prompt="$">lscpu</span><span data-ty>CPU(s):                  8<br>On-line CPU(s) list:     0-7<br>Thread(s) per core:      2<br>Core(s) per socket:      4<br></span></div>
+
 <blockquote>
 <p>Vemos 8 CPUs acima, mas fisicamente a máquina tem 4 motores reais. </p>
 </blockquote>
@@ -2854,14 +2794,8 @@ Usamos ferramentas robustas para que a Arquitetura Linux diga-nos onde os gargal
 <hr>
 <h2 id="aulas-aula-16-2-o-grande-desafio-mini-projeto-pratico">🔬 2. O Grande Desafio (Mini-Projeto Prático)</h2>
 <p>O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:</p>
-<div class="termy">
-<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-16-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Desafio do Iterador de Matriz Contínua</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-16-__codelineno-0-2"></a><span class="gp">$ </span>g++<span class="w"> </span>matriz_opt.cpp<span class="w"> </span>-O3<span class="w"> </span>-o<span class="w"> </span>matriz
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-16-__codelineno-0-3"></a><span class="gp">$ </span>./matriz<span class="w"> </span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-16-__codelineno-0-4"></a><span class="go">Iteração Horizontal (Hit L1): Tempo 140ms</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-16-__codelineno-0-5"></a><span class="go">Iteração Vertical (Miss L1): Tempo 2100ms</span>
-</span></code></pre></div>
-</div>
+<div class="termy" data-termynal data-ty-macos data-ty-title="shell"><span data-ty="input" data-ty-prompt="$"># Desafio do Iterador de Matriz Contínua</span><span data-ty="input" data-ty-prompt="$">g++ matriz_opt.cpp -O3 -o matriz</span><span data-ty="input" data-ty-prompt="$">./matriz </span><span data-ty>Iteração Horizontal (Hit L1): Tempo 140ms<br>Iteração Vertical (Miss L1): Tempo 2100ms<br></span></div>
+
 <p><strong>Requisitos do Projeto:</strong>
 1. Alocar um Array gigantesco Massivo no Heap Dinâmico via <code>malloc()</code> C (Não use vectors prontos para sentir a dor no braço).
 2. Criar duas lógicas for().

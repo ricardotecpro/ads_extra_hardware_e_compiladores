@@ -47,11 +47,14 @@ O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware
 
 ## 🔬 2. O Grande Desafio (Mini-Projeto Prático)
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Desafio do Iterador de Matriz Contínua
+$ g++ matriz_opt.cpp -O3 -o matriz
+$ ./matriz 
+Iteração Horizontal (Hit L1): Tempo 140ms
+Iteração Vertical (Miss L1): Tempo 2100ms
+```
 
 ---
 

@@ -54,11 +54,15 @@ Na aula 03, vimos que a execução cruza pelo Pipeline ou pode esbarrar em ciclo
 
 ## 🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)
+$ lscpu
+CPU(s):                  8
+On-line CPU(s) list:     0-7
+Thread(s) per core:      2
+Core(s) per socket:      4
+```
 
 ---
 

@@ -139,11 +139,16 @@ Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas
 
 ## 📐 3. ISA: O Contrato do Processador
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ gcc -O2 -S hello.c
+$ cat hello.s
+main:
+    pushq   %rbp
+    movq    %rsp, %rbp
+    leaq    .LC0(%rip), %rdi
+    call    puts@PLT
+```
 
 ---
 

@@ -1,0 +1,2851 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Curso focado em performance, C/C++ e baixo nível para desenvolvedores.">
+      
+      
+      
+        <link rel="canonical" href="https://ricardotecpro.github.io/ads_extra_hardware_e_compiladores/estavel/print_page/">
+      
+      
+      
+      
+        
+      
+      
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed de conteúdo atualizado" href="../feed_rss_updated.xml">
+      
+      <link rel="icon" href="../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.3">
+    
+    
+      
+        <title>Versão para Impressão - Hardware para Programadores</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../css/print-site.css">
+    
+      <link rel="stylesheet" href="../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="../assets/css/quiz.css">
+    
+      <link rel="stylesheet" href="../assets/css/home.css">
+    
+      <link rel="stylesheet" href="../assets/css/extra.css">
+    
+      <link rel="stylesheet" href="../termynal.css">
+    
+    <script>__md_scope=new URL("/ads_extra_hardware_e_compiladores/estavel",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#index" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+      </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="Hardware para Programadores" class="md-header__button md-logo" aria-label="Hardware para Programadores" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hardware para Programadores
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Versão para Impressão
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="teal" data-md-color-accent="amber"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ricardotecpro/ads_extra_hardware_e_compiladores" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ricardotecpro/ads_extra_hardware_e_compiladores
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../sobre/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Sobre
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../aulas/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Aulas
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../materiais/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Materiais
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Impressão
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Hardware para Programadores" class="md-nav__button md-logo" aria-label="Hardware para Programadores" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    Hardware para Programadores
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ricardotecpro/ads_extra_hardware_e_compiladores" title="Ir para repositório" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+  </div>
+  <div class="md-source__repository">
+    ricardotecpro/ads_extra_hardware_e_compiladores
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../sobre/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../aulas/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Aulas
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../materiais/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Materiais
+  
+
+    
+  </span>
+  
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Impressão
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#index" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Home
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sobre" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sobre
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aulas
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Aulas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aulas do Curso
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 1 – Fundamentos de Arquitetura de Computadores
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 1 – Fundamentos de Arquitetura de Computadores">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 01 - Como o Software Roda no Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 02 - Representação de Dados
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 03 - CPU: Estrutura e Funcionamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 04 - Arquiteturas RISC vs CISC
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 2 – Memória e Performance
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 2 – Memória e Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 05 - Hierarquia de Memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 06 - Cache e Localidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 07 - Stack vs Heap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 08 - Memória Virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 3 – Concorrência e Paralelismo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 3 – Concorrência e Paralelismo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 09 - Processos e Threads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 10 - Sincronização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 11 - Paralelismo em Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 12 - Modelo de Memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 4 – Armazenamento e I/O
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 4 – Armazenamento e I/O">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 13 - Dispositivos de Armazenamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 14 - Sistemas de Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 15 - Entrada e Saída (I/O)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-3-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Módulo 5 – Integração Prática
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Módulo 5 – Integração Prática">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#aulas-aula-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Aula 16 - Projeto Final: Otimização
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#section-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materiais
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Materiais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#materiais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Materiais
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Slides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#slides" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slides Interativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-01" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 01 - Como o Software Roda
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 02 - Representação
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-03" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 03 - CPU
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-04" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 04 - RISC vs CISC
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-05" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 05 - Hierarquia Memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-06" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 06 - Cache Localidade
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-07" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 07 - Stack vs Heap
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-08" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 08 - Memória Virtual
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-09" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 09 - Processos Threads
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 10 - Sincronização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 11 - Paralelismo Hardware
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 12 - Modelo Memória
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 13 - Dispositivos ARM
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 14 - Sis. Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 15 - IO
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slides-slide-16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Slide 16 - Projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercícios
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exercícios">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exercicios" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Listas de Exercícios Práticos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quizzes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Quizzes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quizzes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quizzes Interativos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projetos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Laboratórios de Projetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#section-4-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setups" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuração do Ambiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#print_page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Impressão
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<div id="print-site-page" class="">
+        <section class="print-page">
+            <div id="print-page-toc" data-toc-depth="3">
+                <nav role='navigation' class='print-page-toc-nav'>
+                <h1 class='print-page-toc-title'>Table of Contents</h1>
+                </nav>
+            </div>
+        </section>
+        <section class="print-page" id="index" heading-number="1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="curso-hardware-para-programadores">🎓 Curso: Hardware para Programadores</h1>
+<blockquote>
+<p>"Não basta o código compilar; é preciso entender como o silício e os elétrons o executam na prática."</p>
+</blockquote>
+<p>Bem-vindo à sua jornada no coração da tecnologia. Este curso foi projetado para capacitar desenvolvedores a compreender como o hardware influencia performance, paralelismo, uso de memória e eficiência em software, com ênfase prática em C/C++.</p>
+<hr>
+<h2 id="index-atalhos-rapidos">⚡ Atalhos Rápidos</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m19 2-5 4.5v11l5-4.5zM6.5 5C4.55 5 2.45 5.4 1 6.5v14.66c0 .25.25.5.5.5.1 0 .15-.07.25-.07 1.35-.65 3.3-1.09 4.75-1.09 1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.31 4.75 1.06.1.05.15.03.25.03.25 0 .5-.25.5-.5V6.5c-.6-.45-1.25-.75-2-1V19c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V6.5C10.55 5.4 8.45 5 6.5 5"></path></svg></span> <strong>Trilha de Aulas</strong>
+    ---
+    16 lições modernas englobando arquitetura, CPU, memória e I/O.
+    <a href="#aulas"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Iniciar Jornada</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <strong>Slides Interativos</strong>
+    ---
+    Material visual otimizado com transições e suporte Reveal.js.
+    <a href="#slides"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Slides</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <strong>Quizzes e Prática</strong>
+    ---
+    Avalie seu progresso com 160 questões técnicas exclusivas.
+    <a href="#quizzes"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Testar Conhecimento</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> <strong>Mini-Projetos</strong>
+    ---
+    Aplique conceitos de baixo nível, cache hit/miss e Profiling em C/C++.
+    <a href="#projetos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Ver Projetos</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <strong>Exercícios Progressivos</strong>
+    ---
+    Das questões conceituais ao desafio prático de código.
+    <a href="#exercicios"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Praticar Agora</a></p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <strong>Setup e Ferramentas</strong>
+    ---
+    Configurações essenciais: GCC, Clang, Memcheck, Valgrind.
+    <a href="#setups"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Configurar</a></p>
+</li>
+</ul>
+</div>
+<hr>
+<h2 id="index-mapa-da-jornada-modulos">🗺️ Mapa da Jornada (Módulos)</h2>
+<p>O curso está estruturado em <strong>5 Módulos</strong> cruciais para desenvolvedores backend/sistemas:</p>
+<h3 id="index-modulo-1-fundamentos-de-arquitetura-de-computadores">📦 Módulo 1: Fundamentos de Arquitetura de Computadores</h3>
+<p><em>Como transformar instruções lógicas em pulso elétrico.</em>
+- <strong>Aulas 01 a 04</strong>: Software x Hardware, Representação de Dados, Estrutura de CPU e RISC vs CISC.</p>
+<h3 id="index-modulo-2-memoria-e-performance">📐 Módulo 2: Memória e Performance</h3>
+<p><em>A anatomia do estado: velocidade versus capacidade.</em>
+- <strong>Aulas 05 a 08</strong>: Hierarquia de Memória, Cache (Hit vs Miss), Stack vs Heap em C/C++, e Memória Virtual.</p>
+<h3 id="index-modulo-3-concorrencia-e-paralelismo">🧠 Módulo 3: Concorrência e Paralelismo</h3>
+<p><em>Vencendo as limitações do chip único.</em>
+- <strong>Aulas 09 a 12</strong>: Processos, Threads, Deadlocks/Mutex, Multi-core e Memory Models.</p>
+<h3 id="index-modulo-4-armazenamento-e-io">💻 Módulo 4: Armazenamento e I/O</h3>
+<p><em>Onde a velocidade despenca: persistindo dados.</em>
+- <strong>Aulas 13 a 15</strong>: HDD/SSD/NVMe, Sistemas de Arquivos e DMA / Interrupções.</p>
+<h3 id="index-modulo-5-integracao-pratica">🚀 Módulo 5: Integração Prática</h3>
+<p><em>Colocando em prática.</em>
+- <strong>Aula 16</strong>: Otimização Baseada em Hardware e Profiling C/C++.</p>
+<hr>
+<h2 id="index-dicas-de-sucesso">💡 Dicas de Sucesso</h2>
+<ol>
+<li><strong>Entenda os Ponteiros</strong>: No Módulo 2, faremos intenso uso do entendimento de Heap e Call Stack.</li>
+<li><strong>Observe o Compilador</strong>: Use o Terminal e veja suas saídas; entenda como o código otimizado (-O2, -O3) age.</li>
+<li><strong>Diagramas são o Guia</strong>: Utilize os diagramas de bloco e as renderizações Mermaid para visualizar a arquitetura de processos e Threads.</li>
+</ol>
+<p><strong>Pronto para entender o Hardware?</strong> <a class="md-button md-button--primary" href="#aulas-aula-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> Ir para Aula 01</a></p></body></html></section><section class="print-page" id="sobre" heading-number="2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="sobre-o-curso">Sobre o Curso</h1>
+<h2 id="sobre-hardware-para-programadores-a-ponte-entre-silicio-e-software">🎓 Hardware para Programadores - A Ponte Entre Silício e Software</h2>
+<p>Este curso foi idealizado para preencher a lacuna entre código abstrato e os processadores que o executam. Durante 16 aulas focadas, especialmente ricas em exemplos C/C++, você aprenderá a dominar performance, concorrência, otimização de Cache e uso eficiente de Memória.</p>
+<h2 id="sobre-objetivos-do-curso">🎯 Objetivos do Curso</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M9 3v2H7a2 2 0 0 0-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2h2V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3M8 9h3.5v1.5h-3v.75h2a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4a1 1 0 0 1 1-1m4.5 0H14v2h1.5V9H17v6h-1.5v-2.5h-3m-4 .25v.75H10v-.75"></path></svg></span> <strong>Performance e Arquitetura</strong></p>
+<hr>
+<p>Compreender a diferença prática das arquiteturas RISC e CISC, pipeline, ciclo de instrução e como isso impacta seu código compilado.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M17 17H7V7h10m4 4V9h-2V7a2 2 0 0 0-2-2h-2V3h-2v2h-2V3H9v2H7c-1.11 0-2 .89-2 2v2H3v2h2v2H3v2h2v2a2 2 0 0 0 2 2h2v2h2v-2h2v2h2v-2h2a2 2 0 0 0 2-2v-2h2v-2h-2v-2m-6 2h-2v-2h2m2-2H9v6h6z"></path></svg></span> <strong>Uso Avançado de Memória</strong></p>
+<hr>
+<p>Dominar a dinâmica entre Stack e Heap, evitar vazamentos (Memory Leaks), dominar ponteiros e entender como o SO gerencia a memória virtual.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M19.5 17c-.14 0-.26 0-.39.04L17.5 13.8c.45-.45.75-1.09.75-1.8a2.5 2.5 0 0 0-2.5-2.5c-.14 0-.25 0-.4.04L13.74 6.3c.47-.46.76-1.09.76-1.8a2.5 2.5 0 0 0-5 0c0 .7.29 1.34.76 1.79L8.65 9.54c-.15-.04-.26-.04-.4-.04a2.5 2.5 0 0 0-2.5 2.5c0 .71.29 1.34.75 1.79l-1.61 3.25C4.76 17 4.64 17 4.5 17a2.5 2.5 0 0 0 0 5A2.5 2.5 0 0 0 7 19.5c0-.7-.29-1.34-.76-1.79l1.62-3.25c.14.04.26.04.39.04s.25 0 .38-.04l1.63 3.25c-.47.45-.76 1.09-.76 1.79a2.5 2.5 0 0 0 5 0A2.5 2.5 0 0 0 12 17c-.13 0-.26 0-.39.04L10 13.8c.45-.45.75-1.09.75-1.8 0-.7-.29-1.33-.75-1.79l1.61-3.25c.13.04.26.04.39.04s.26 0 .39-.04L14 10.21a2.5 2.5 0 0 0 1.75 4.29c.13 0 .25 0 .38-.04l1.63 3.25c-.47.45-.76 1.09-.76 1.79a2.5 2.5 0 0 0 5 0 2.5 2.5 0 0 0-2.5-2.5m-15 3.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1m8.5-1c0 .55-.45 1-1 1s-1-.45-1-1 .45-1 1-1 1 .45 1 1M7.25 12c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1M11 4.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1m3.75 7.5c0-.55.45-1 1-1s1 .45 1 1-.45 1-1 1-1-.45-1-1m4.75 8.5c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1"></path></svg></span> <strong>Concorrência e Paralelismo</strong></p>
+<hr>
+<p>Aprender a operar múltiplos cores com Threads e Processos, tratando condições de corrida com Mutex, Semáforos e conhecendo o Memory Consistency Model.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m6 2a6 6 0 0 0-6 6c0 3.31 2.69 6 6.1 6l-.88-2.23a1.01 1.01 0 0 1 .37-1.37l.86-.5a1.01 1.01 0 0 1 1.37.37l1.92 2.42A5.98 5.98 0 0 0 18 10a6 6 0 0 0-6-6m0 5a1 1 0 0 1 1 1 1 1 0 0 1-1 1 1 1 0 0 1-1-1 1 1 0 0 1 1-1m-5 9a1 1 0 0 0-1 1 1 1 0 0 0 1 1 1 1 0 0 0 1-1 1 1 0 0 0-1-1m5.09-4.73 2.49 6.31 2.59-1.5-4.22-5.31z"></path></svg></span> <strong>I/O e Armazenamento</strong></p>
+<hr>
+<p>Lidar com a latência de discos (SSD vs HDD vs NVMe), interrupções, system calls e as características críticas da persistência em Bancos de Dados / Backend.</p>
+</li>
+</ul>
+</div>
+<h2 id="sobre-o-que-voce-vai-aprender">📚 O Que Você Vai Aprender</h2>
+<h3 id="sobre-modulo-1-fundamentos-de-arquitetura-de-computadores">MÓDULO 1 – Fundamentos de Arquitetura de Computadores</h3>
+<ul>
+<li>Como o Software Roda no Hardware.</li>
+<li>Representação de Dados (Binário, Hex, IEEE 754).</li>
+<li>Estrutura e Ciclo de CPU (Control Unit e ALU).</li>
+<li>RISC vs CISC (ARM vs x86).</li>
+</ul>
+<h3 id="sobre-modulo-2-memoria-e-performance">MÓDULO 2 – Memória e Performance</h3>
+<ul>
+<li>Hierarquia de Memória.</li>
+<li>Cache, Localidade (Temporal e Espacial) e False Sharing.</li>
+<li>Stack vs Heap e Alocações em C/C++.</li>
+<li>Memória Virtual, TLB e Paginação.</li>
+</ul>
+<h3 id="sobre-modulo-3-concorrencia-e-paralelismo">MÓDULO 3 – Concorrência e Paralelismo</h3>
+<ul>
+<li>Diferenças entre Processos e Threads.</li>
+<li>Mutex, Semáforos e Prevenção de Deadlocks.</li>
+<li>Paralelismo no Hardware (Hyper-threading e GPUs).</li>
+<li>Modelo de Memória e Barrier de Instruções.</li>
+</ul>
+<h3 id="sobre-modulo-4-armazenamento-e-io">MÓDULO 4 – Armazenamento e I/O</h3>
+<ul>
+<li>Latência em Dispositivos de Armazenamento.</li>
+<li>Sistemas de Arquivos e Journaling.</li>
+<li>I/O, Interrupts e DMA.</li>
+</ul>
+<h3 id="sobre-modulo-5-integracao-pratica">MÓDULO 5 – Integração Prática</h3>
+<ul>
+<li>Projeto Final: Profiling e Análise de Gargalos.</li>
+</ul>
+<h2 id="sobre-metodologia">🛠️ Metodologia</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 21.5c-1.35-.85-3.8-1.5-5.5-1.5-1.65 0-3.35.3-4.75 1.05-.1.05-.15.05-.25.05-.25 0-.5-.25-.5-.5V6c.6-.45 1.25-.75 2-1 1.11-.35 2.33-.5 3.5-.5 1.95 0 4.05.4 5.5 1.5 1.45-1.1 3.55-1.5 5.5-1.5 1.17 0 2.39.15 3.5.5.75.25 1.4.55 2 1v14.6c0 .25-.25.5-.5.5-.1 0-.15 0-.25-.05-1.4-.75-3.1-1.05-4.75-1.05-1.7 0-4.15.65-5.5 1.5M12 8v11.5c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5V7c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5m1 3.5c1.11-.68 2.6-1 4.5-1 .91 0 1.76.09 2.5.28V9.23c-.87-.15-1.71-.23-2.5-.23q-2.655 0-4.5.84zm4.5.17c-1.71 0-3.21.26-4.5.79v1.69c1.11-.65 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24v-1.5c-.87-.16-1.71-.23-2.5-.23m2.5 2.9c-.87-.16-1.71-.24-2.5-.24-1.83 0-3.33.27-4.5.8v1.69c1.11-.66 2.6-.99 4.5-.99 1.04 0 1.88.08 2.5.24z"></path></svg></span> <strong>Aulas Didáticas</strong></p>
+<hr>
+<p>Teoria fundamentada, mesclada com animações e slides construídos com Reveal.js.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m14.6 16.6 4.6-4.6-4.6-4.6L16 6l6 6-6 6zm-5.2 0L4.8 12l4.6-4.6L8 6l-6 6 6 6z"></path></svg></span> <strong>Exercícios Progressivos</strong></p>
+<hr>
+<p>Listas que abordam problemas teóricos e implementações obrigatórias em C/C++.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m13.13 22.19-1.63-3.83c1.57-.58 3.04-1.36 4.4-2.27zM5.64 12.5l-3.83-1.63 6.1-2.77C7 9.46 6.22 10.93 5.64 12.5M21.61 2.39S16.66.269 11 5.93c-2.19 2.19-3.5 4.6-4.35 6.71-.28.75-.09 1.57.46 2.13l2.13 2.12c.55.56 1.37.74 2.12.46A19.1 19.1 0 0 0 18.07 13c5.66-5.66 3.54-10.61 3.54-10.61m-7.07 7.07c-.78-.78-.78-2.05 0-2.83s2.05-.78 2.83 0c.77.78.78 2.05 0 2.83s-2.05.78-2.83 0m-5.66 7.07-1.41-1.41zM6.24 22l3.64-3.64c-.34-.09-.67-.24-.97-.45L4.83 22zM2 22h1.41l4.77-4.76-1.42-1.41L2 20.59zm0-2.83 4.09-4.08c-.21-.3-.36-.62-.45-.97L2 17.76z"></path></svg></span> <strong>Projetos Práticos</strong></p>
+<hr>
+<p>Aplicações diretas para solidificar os desafios e observar melhorias tangíveis no tempo de execução.</p>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13 3C9.23 3 6.19 5.95 6 9.66l-1.92 2.53c-.24.31 0 .81.42.81H6v3c0 1.11.89 2 2 2h1v3h7v-4.69c2.37-1.12 4-3.51 4-6.31 0-3.86-3.12-7-7-7m1 11h-2v-2h2zm1.75-5.19c-.29.4-.66.69-1.11.93-.25.16-.42.33-.51.52-.09.18-.13.43-.13.74h-2c0-.5.11-.92.31-1.18.19-.27.54-.57 1.05-.91.26-.16.47-.36.61-.59.16-.23.23-.5.23-.82 0-.3-.08-.56-.26-.75-.18-.18-.44-.28-.75-.28a1 1 0 0 0-.66.23c-.18.16-.27.39-.28.69h-1.93l-.01-.03c-.01-.79.25-1.36.77-1.77.54-.39 1.24-.59 2.11-.59.93 0 1.66.23 2.19.68.54.45.81 1.06.81 1.82 0 .5-.15.91-.44 1.31"></path></svg></span> <strong>Quizzes Interativos</strong></p>
+<hr>
+<p>Avaliações modulares formatadas com feedback instantâneo para mensurar a retenção do saber.</p>
+</li>
+</ul>
+</div>
+<h2 id="sobre-para-quem-e-este-curso">👨‍🎓 Para Quem é Este Curso</h2>
+<ul>
+<li><strong>Desenvolvedores Intermediários a Avançados</strong> querendo melhorar a eficiência do seu código em linguagens de baixo nível ou alto nível.</li>
+<li><strong>Engenheiros Backend / Software</strong>.</li>
+<li><strong>Entusiastas de C e C++</strong> e programadores que almejam desenvolver embarcados, games e sistemas críticos.</li>
+</ul>
+<h2 id="sobre-pre-requisitos">📋 Pré-requisitos</h2>
+<ul>
+<li>Experiência prévia em programação (variáveis, loops, condicionais, funções).</li>
+<li>É recomendável (embora não obrigatório) ter lido ou estudado C/C++.</li>
+<li>Um sistema ou máquina virtual Linux (Ubuntu/Debian) configurada para compiladores e debugging.</li>
+</ul>
+<h2 id="sobre-o-que-voce-recebera">🎖️ O Que Você Receberá</h2>
+<ul>
+<li>✅ Domínio do funcionamento da CPU e memória (Cache Hit, Profiling).</li>
+<li>✅ Escrita de scripts eficientes e multi-processamento em sintonia fina com hardware.</li>
+<li>✅ Autonomia em diagnósticos de performance.</li>
+</ul>
+<h2 id="sobre-comece-agora">🚀 Comece Agora</h2>
+<p>Pronto para entender o silício?</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> Ir para Aula 01</a>
+<a class="md-button" href="#setups"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> Configurar Ambiente</a></p></body></html></section>
+                    <section class='print-page md-section' id='section-3' heading-number='3'>
+                        <h1>Aulas<a class='headerlink' href='#section-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas" heading-number="3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aulas-do-curso">Aulas do Curso</h1>
+<p>Bem-vindo à seção de aulas! Aqui você encontra todo o conteúdo do curso organizado por módulos.</p>
+<h2 id="aulas-modulos-do-curso">📚 Módulos do Curso</h2>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M14 17h-2V9h-2V7h4m5-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 1: O Coração Digital</strong>
+    ---</p>
+<ul>
+<li><a href="#aulas-aula-01">Aula 01 - Fundamentos e Bases</a></li>
+<li><a href="#aulas-aula-02">Aula 02 - Conversão Para Binário</a></li>
+<li><a href="#aulas-aula-03">Aula 03 - Conversão Para Decimal</a></li>
+<li><a href="#aulas-aula-04">Aula 04 - Octal e Permissões Unix</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 11a2 2 0 0 1-2 2h-2v2h4v2H9v-4a2 2 0 0 1 2-2h2V9H9V7h4a2 2 0 0 1 2 2m4-6H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 2: Arquitetura e Aritmética</strong>
+    ---</p>
+<ul>
+<li><a href="#aulas-aula-05">Aula 05 - Hexadecimal e Cores RGB</a></li>
+<li><a href="#aulas-aula-06">Aula 06 - Binário ↔ Hexadecimal</a></li>
+<li><a href="#aulas-aula-07">Aula 07 - Aritmética e Overflow</a></li>
+<li><a href="#aulas-aula-08">Aula 08 - Dados, ASCII e UTF-8</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 10.5a1.5 1.5 0 0 1-1.5 1.5c.84 0 1.5.67 1.5 1.5V15c0 1.11-.89 2-2 2H9v-2h4v-2h-2v-2h2V9H9V7h4c1.11 0 2 .89 2 2m4-6H5c-1.09 0-2 .9-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 3: Lógica e Engenharia</strong>
+    ---</p>
+<ul>
+<li><a href="#aulas-aula-09">Aula 09 - Operadores NOT, AND, OR</a></li>
+<li><a href="#aulas-aula-10">Aula 10 - Tabelas Verdade e XOR</a></li>
+<li><a href="#aulas-aula-11">Aula 11 - Engenharia de Portas</a></li>
+<li><a href="#aulas-aula-12">Aula 12 - CPU e Modelo Von Neumann</a></li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M15 17h-2v-4H9V7h2v4h2V7h2m4-4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2"></path></svg></span> <strong>Módulo 4: Software e Algoritmos</strong>
+    ---</p>
+<ul>
+<li><a href="#aulas-aula-13">Aula 13 - Hierarquia de Memórias</a></li>
+<li><a href="#aulas-aula-14">Aula 14 - Sistemas Operacionais</a></li>
+<li><a href="#aulas-aula-15">Aula 15 - Lógica e Fluxogramas</a></li>
+<li><a href="#aulas-aula-16">Aula 16 - Introdução à Programação</a></li>
+</ul>
+</li>
+</ul>
+</div></body></html></section>
+                    <section class='print-page md-section' id='section-3-2' heading-number='3.2'>
+                        <h1>Módulo 1 – Fundamentos de Arquitetura de Computadores<a class='headerlink' href='#section-3-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-01" heading-number="3.2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-01-como-o-software-roda-no-hardware">Aula 01 - Como o Software Roda no Hardware</h1>
+<p>Nesta aula introdutória, faremos a descida do nível abstrato (código-fonte) até a realidade elétrica (processador). A compreensão clássica da interface <em>Hardware/Software</em> é o que difere programadores comuns de engenheiros com visão arquitetural.</p>
+<hr>
+<h2 id="aulas-aula-01-1-o-abismo-entre-codigo-e-silicio">🏗️ 1. O Abismo entre Código e Silício</h2>
+<p>Escrevemos <em>software</em> (como C/C++, Java, Python) usando linguagens compreensíveis a humanos, porém processadores processam apenas <strong>Sinais Elétricos</strong> ou, abstraindo para o domínio digital, <strong>Binários (0 e 1)</strong>.</p>
+<p>Como a sua frase <code>printf("Hello World");</code> chega aos pinos do processador? Através de uma cadeia de ferramentas (<em>Toolchain</em>).</p>
+<h3 id="aulas-aula-01-o-processo-de-compilacao-cc">O Processo de Compilação (C/C++)</h3>
+<p>Linguagens compiladas de baixo nível seguem um caminho determinístico. Veja o diagrama abaixo de como um arquivo <code>.c</code> é fatiado:</p>
+<pre class="mermaid"><code>graph TD
+    A(["Código Fonte (hello.c)"]) --&gt; B("Pré-processador")
+    B --&gt; C("Compilador")
+    C --&gt; D("Assembly (hello.s)")
+    D --&gt; E("Assembler")
+    E --&gt; F("Código de Máquina / Objeto (hello.o)")
+    F --&gt; G{"Linker"}
+    H(["Bibliotecas (libc.a, libc.so)"]) --&gt; G
+    G --&gt; I((Executável Binário))</code></pre>
+<blockquote>
+<p>[!INFO]
+<strong>Você sabia?</strong> O compilador (ex: GCC) traduz o C/C++ não para 0s e 1s de imediato, mas para <strong>Assembly</strong> — a representação textual do código de máquina, única para cada arquitetura.</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-01-2-compiladores-vs-interpretadores">🛠️ 2. Compiladores vs Interpretadores</h2>
+<p>A forma como seu código vira máquina dita o perfil da performance:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked id="aulas-aula-01-__tabbed_1_1" name="aulas-aula-01-__tabbed_1" type="radio"><input id="aulas-aula-01-__tabbed_1_2" name="aulas-aula-01-__tabbed_1" type="radio"><input id="aulas-aula-01-__tabbed_1_3" name="aulas-aula-01-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-01-__tabbed_1_1">Linguagens Compiladas (C/C++, Rust, Go)</label><label for="aulas-aula-01-__tabbed_1_2">Linguagens Interpretadas (Python, Ruby)</label><label for="aulas-aula-01-__tabbed_1_3">Linguagens Híbridas (Java, C#)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>O código é 100% transformado em binário <em>antes</em> de executar (AOT - Ahead of Time).
+<strong>Pró</strong>: Alta velocidade de execução. Hardware direto.
+<strong>Contra</strong>: O executável construído em Linux-x86 não roda nativamente em Windows-ARM sem ser recompilado.</p>
+</div>
+<div class="tabbed-block">
+<p>Um programa (Interpretador) lê o seu código fonte em tempo de execução e executa as ações simulando o comando subjacente para o S.O.
+<strong>Pró</strong>: Roda em qualquer SO que tiver o interpretador.
+<strong>Contra</strong>: Muito mais lento, por sofrer <em>overhead</em> da interpretação.</p>
+</div>
+<div class="tabbed-block">
+<p>Compilam para um formato intermediário (<em>Bytecode</em>), e a JVM ou CLR as compila JIT (Just-In-Time) na máquina cliente no instante de executar.</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-01-3-isa-o-contrato-do-processador">📐 3. ISA: O Contrato do Processador</h2>
+<p><strong>ISA (Instruction Set Architecture)</strong> é o dicionário de um processador. É o conjunto de comandos numéricos que o CPU sabe, fisicamente, executar:</p>
+<ul>
+<li><em>Puxar da Memória (LOAD)</em></li>
+<li><em>Somar (ADD)</em></li>
+<li><em>Gravar na Memória (STORE)</em></li>
+</ul>
+<p>Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas operações ditadas pela ISA para rodar.</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-01-__codelineno-0-1"></a><span class="gp">$ </span>gcc<span class="w"> </span>-O2<span class="w"> </span>-S<span class="w"> </span>hello.c
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-01-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>hello.s
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-01-__codelineno-0-3"></a><span class="go">main:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-01-__codelineno-0-4"></a><span class="go">    pushq   %rbp</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-01-__codelineno-0-5"></a><span class="go">    movq    %rsp, %rbp</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-01-__codelineno-0-6"></a><span class="go">    leaq    .LC0(%rip), %rdi</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-01-__codelineno-0-7"></a><span class="go">    call    puts@PLT</span>
+</span></code></pre></div>
+</div>
+<p><em>Acima, o output é o assembly x86 do seu C. É a representação literal da série de instruções que formarão a ISA do seu microprocessador Intel/AMD.</em></p>
+<hr>
+<h2 id="aulas-aula-01-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Ao usar C/C++, você não lida com um motor intermediário te cobrindo (como a JVM), você escreve algoritmos cuja gestão é delegada ao S.O. e rodada pura em metal.</li>
+<li>O programador backend / performance critica deve inspecionar eventuais outputs em <em>Assembly</em> para verificar se a abordagem da linguagem otimiza tempo de registrador.</li>
+</ul>
+<p>Pronto para entender profundamente os dados no Módulo Binário?
+<a class="md-button md-button--primary" href="#aulas-aula-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 02</a></p></body></html></section><section class="print-page" id="aulas-aula-02" heading-number="3.2.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-02-representacao-de-dados">Aula 02 - Representação de Dados</h1>
+<p>Ao cruzar a fronteira entre <em>software</em> e a CPU, descobrimos que não existem "Strings" ou "Imagens", existem apenas correntes elétricas ligadas ou desligadas (1s e 0s). Vamos analisar a estrutura sob a ótica de C/C++.</p>
+<hr>
+<h2 id="aulas-aula-02-1-sistema-binario-e-hexadecimal">🔢 1. Sistema Binário e Hexadecimal</h2>
+<p>O computador compreende nativamente a base 2 (Binário). Como a escrita binária é muito longa para os humanos, nós a agrupamos em Blocos de 4 (Base 16 - Hexadecimal).</p>
+<ul>
+<li><strong>Bit</strong>: 0 ou 1</li>
+<li><strong>Byte</strong>: 8 bits (<code>00000000</code> a <code>11111111</code>, indo de 0 a 255 no decimal)</li>
+</ul>
+<p>Por que <code>Hexadecimal</code> é amado pelos desenvolvedores C/C++? Um <em>Byte</em> (8 bits) pode ser perfeitamente representado por exatos dois caracteres Hexadecimais. <code>FF</code> é o mesmo que <code>11111111</code>.</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-02-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você lida com Hex no C++?</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-02-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>var.cpp
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-02-__codelineno-0-3"></a><span class="go">int mascara_de_bits = 0xFF; // Representa 255</span>
+</span></code></pre></div>
+</div>
+<hr>
+<h2 id="aulas-aula-02-2-inteiros-com-e-sem-sinal-unsigned">🔋 2. Inteiros com e sem Sinal (Unsigned)</h2>
+<p>Em C/C++, o rigor nos tipos provém diretamente do hardware:</p>
+<div class="language-cpp highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#aulas-aula-02-__codelineno-1-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w">           </span><span class="c1">// Geralmente um int é 32 bits, comportando valores grandes, podendo ser negativo (signed).</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#aulas-aula-02-__codelineno-1-2"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">255</span><span class="p">;</span><span class="w"> </span><span class="c1">// 8 bits sem sinal (0 a 255)</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#aulas-aula-02-__codelineno-1-3"></a><span class="kt">signed</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">-1</span><span class="p">;</span><span class="w">    </span><span class="c1">// 8 bits com sinal (-128 a 127)</span>
+</span></code></pre></div>
+<p>No hardware, inteiros negativos são representados usando a regra de <strong>Complemento de 2</strong>. Para obtermos o binário do <code>-1</code>, invertemos todos os bits de <code>1</code> e somamos <code>1</code>.</p>
+<blockquote>
+<p>[!WARNING]
+<strong>Sempre avalie Overshoot.</strong> Um loop usando <code>unsigned int i = 10; while(i &gt;= 0)</code> será um loop infinito, porque quando <code>i</code> atingir 0 e for subtraído, ele <em>NUNCA</em> ficará negativo; ele executará o "Wrap-around" arquitetural, voltando ao valor limite de (<code>4.294.967.295</code>).</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-02-3-ponto-flutuante-ieee-754">🧮 3. Ponto Flutuante (IEEE 754)</h2>
+<p>Os famosos tipos <code>float</code> e <code>double</code>. O processador possui normalmente um setor dedicado de FPU (Floating Point Unit) para eles.</p>
+<p>A representação oficial <strong>IEEE 754</strong> os divide em 3 porções:</p>
+<pre class="mermaid"><code>flowchart LR
+    A["Sinal (1 bit)"] --- B["Expoente (8 bits)"] --- C["Fração/Mantissa (23 bits)"]
+    style A fill:#ff9999
+    style B fill:#99ccff
+    style C fill:#ccffcc</code></pre>
+<h3 id="aulas-aula-02-o-perigo-da-precisao">O Perigo da Precisão!</h3>
+<blockquote>
+<p>[!CAUTION]
+Ao somar decimais repetidamente, as variações de mantissa geram margens de erro: <code>0.1 + 0.2</code> raramente é exatamente <code>0.3</code> na FPU, mas sim <code>0.30000000000000004</code>! Evite comparadores igualitários (<code>==</code>) em floats. Jamais use floats transacionando valores bancários estritos em backend, use estruturas customizadas dimensionais inteiras.</p>
+</blockquote>
+<h2 id="aulas-aula-02-resumo-pratico">🚀 Resumo Prático</h2>
+<p>A maneira como você escolhe o tipo primitivo da variável modela a fisionomia do registrador acionado na máquina durante o <em>fetch</em>. Entender o <em>Overflow</em> é a proteção básica contra corrupção lógica do código.</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 03</a></p></body></html></section><section class="print-page" id="aulas-aula-03" heading-number="3.2.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-03-cpu-estrutura-e-funcionamento">Aula 03 - CPU: Estrutura e Funcionamento</h1>
+<p>Como as operações chegam e são tratadas pela verdadeira mente do computador? A CPU (Unidade Central de Processamento) não é mágica, ela segue um ciclo de pulso rígido orquestrado pelo <em>Clock</em>.</p>
+<hr>
+<h2 id="aulas-aula-03-1-o-triangulo-de-ouro-alu-cu-e-registradores">🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores</h2>
+<p>A arquitetura interna da CPU possui 3 órgãos vitais:</p>
+<ol>
+<li><strong>ALU (Unidade Lógica e Aritmética):</strong> O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.</li>
+<li><strong>CU (Unidade de Controle):</strong> O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).</li>
+<li><strong>Registradores:</strong> Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).</li>
+</ol>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-03-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você lê valores do processador direto em C?</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-03-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>register.c
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-03-__codelineno-0-3"></a><span class="go">int main() {</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-03-__codelineno-0-4"></a><span class="go">    register int i = 10; // "Dica" para o compilador usar um registrador direto!</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-03-__codelineno-0-5"></a><span class="go">    return i;</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-03-__codelineno-0-6"></a><span class="go">}</span>
+</span></code></pre></div>
+</div>
+<hr>
+<h2 id="aulas-aula-03-2-o-ciclo-de-instrucao-fetch-decode-execute">🔄 2. O Ciclo de Instrução (Fetch-Decode-Execute)</h2>
+<p>Cada operação ou linha de código C/C++ que você escreve é processada na cadência do <em>Clock</em> pelo ciclo clássico:</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    [*] --&gt; Fetch
+    Fetch --&gt; Decode
+    Decode --&gt; Execute
+    Execute --&gt; Store
+    Store --&gt; Fetch</code></pre>
+<ol>
+<li><strong>Fetch (Busca):</strong> A CU vai na Memória RAM e busca qual o <em>próximo</em> byte de comando, guiando-se pelo <strong>Program Counter (PC)</strong>.</li>
+<li><strong>Decode (Decodifica):</strong> A CU traduz o comando para entender o que é ("Ah, é para Somar 5!").</li>
+<li><strong>Execute:</strong> A ALU recebe os parâmetros e faz a conta física elétron a elétron.</li>
+<li><strong>Store (Armazena):</strong> O resultado volta para um registrador ou para a Memória RAM.</li>
+</ol>
+<hr>
+<h2 id="aulas-aula-03-3-pipeline-e-previsao-de-desvio-branch-prediction">⚡ 3. Pipeline e Previsão de Desvio (Branch Prediction)</h2>
+<p>Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa <strong>Pipelining</strong>: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch!</p>
+<h3 id="aulas-aula-03-o-perigo-do-if">O perigo do "IF"</h3>
+<p>Quando você usa muitos <code>if()</code>, o processador tenta "Adivinhar" o lado do <em>if</em> usando heurísticas para não frear o Pipeline (Isso é o <em>Branch Prediction</em>).</p>
+<blockquote>
+<p>[!WARNING]
+Errar a adivinhação do <code>if</code> corrompe todo o Pipeline que foi pré-carregado. Em código de alta performance C++, tentamos escrever loops minimizando saltos condicionais imprevistos.</p>
+</blockquote>
+<h2 id="aulas-aula-03-resumo-pratico">🚀 Resumo Prático</h2>
+<p>Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM.</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 04</a></p></body></html></section><section class="print-page" id="aulas-aula-04" heading-number="3.2.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-04-arquiteturas-risc-vs-cisc">Aula 04 - Arquiteturas RISC vs CISC</h1>
+<p>Por muito tempo, o ecossistema PC foi dominado pela Intel (CISC), enquanto celulares e embarcados (Raspberry Pi/STM32) focavam em ARM (RISC). Mas as linhas se cruzam hoje, especialmente com hardwares como a linha M da Apple operando em RISC com performance altíssima.</p>
+<hr>
+<h2 id="aulas-aula-04-1-entendendo-a-batalha">🥊 1. Entendendo a Batalha</h2>
+<p>A grande revolução do backend é: Seu <em>deploy</em> de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas?</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-04-__tabbed_1_1" name="aulas-aula-04-__tabbed_1" type="radio"><input id="aulas-aula-04-__tabbed_1_2" name="aulas-aula-04-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-04-__tabbed_1_1">CISC (Complex Instruction Set Computer)</label><label for="aulas-aula-04-__tabbed_1_2">RISC (Reduced Instruction Set Computer)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p><strong>Fios de Cabelo</strong>: Possui instruções complexas que podem realizar tarefas gigantescas de uma vez (ex: "Leia da memória X, mude o bit Y, grave em Z" em apenas UMA instrução assembly).
+<strong>Reis do pedaço</strong>: Processadores Intel e AMD (x86_64).
+<strong>Características</strong>: Hardware muito complexo, consome mais energia para decodificar instruções multiformes.</p>
+</div>
+<div class="tabbed-block">
+<p><strong>Lâmina Fina</strong>: Possui pouquíssimas instruções, todas rápidas, simples e uniformes. Fazer "Leia da memória X, mude o bit Y, grave em Z" leva 3 a 4 comandos curtos no assembly.
+<strong>Reis do pedaço</strong>: Arquitetura ARM (Snapdragon, Apple Silicon M1-M3, AWS Graviton).
+<strong>Características</strong>: Consome pouca bateria e se destaca muito em <em>Pipelines</em> agressivos.</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-04-2-como-isso-afeta-o-compilador-cc">🖨️ 2. Como isso afeta o Compilador C/C++?</h2>
+<p>Como programador, ao compilar nosso software, a <em>Target Architecture</em> é o divisor de águas:</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-04-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Compilando para a máquina local (digamos, x86_64 CISC)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-04-__codelineno-0-2"></a><span class="gp">$ </span>gcc<span class="w"> </span>app.c<span class="w"> </span>-o<span class="w"> </span>app
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-04-__codelineno-0-3"></a><span class="gp">$ </span><span class="c1"># Compilando Cruzado (Cross-Compiling) de um PC x86 para rodar num Raspberry Pi (ARMv8):</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-04-__codelineno-0-4"></a><span class="gp">$ </span>aarch64-linux-gnu-gcc<span class="w"> </span>app.c<span class="w"> </span>-o<span class="w"> </span>app_arm
+</span></code></pre></div>
+</div>
+<p>O código C++ original <code>app.c</code> não muda! Quem rala é o compilador, que na versão ARM gera dezenas de pequenas instruções curtas RISC, e na versão local gera um op-code gigante com microcódigos CISC internos da Intel.</p>
+<blockquote>
+<p>[!TIP]
+<strong>Na nuvem:</strong> A maioria dos serviços modernos baseados no Docker é Cross-Platform, mas as imagens contínuas não! Seu <code>Dockerfile</code> ou sua build em Go e Rust deve explicitamente compilar para as duplas natividades quando for fazer Load Balancer entre instâncias AWS Graviton (ARM) e Padrão (x86).</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-04-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Historicamente, servidores eram puramente CISC (Intel).</li>
+<li>Hoje, o mercado clama por RISC graças à sustentabilidade térmica (menos energia e calor).</li>
+<li>Um bom engenheiro percebe que a ISA (aula anterior) CISC vai conter milhares de comandos Assembly, requerendo compiladores muito agressivos, enquanto a ISA RISC exigirá compiladores muito detalhistas e otimizados linearmente na alocação de registradores C/C++.</li>
+</ul>
+<p>Caminho livre até aqui? Então agora vamos adentrar nas dores da "Memória".
+<a class="md-button md-button--primary" href="#aulas-aula-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 05</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-3' heading-number='3.3'>
+                        <h1>Módulo 2 – Memória e Performance<a class='headerlink' href='#section-3-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-05" heading-number="3.3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-05-hierarquia-de-memoria">Aula 05 - Hierarquia de Memória</h1>
+<p>A memória é o maior gargalo oculto no software moderno de alta concorrência. Quanto mais próximo o dado está da CPU, mais rápido é o acesso. Mas a velocidade custa dinheiro e escala térmica.</p>
+<hr>
+<h2 id="aulas-aula-05-1-a-piramide-de-alta-performance">🏛️ 1. A Pirâmide de Alta Performance</h2>
+<p>Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe <em>em qual camada</em> a variável se hospeda:</p>
+<pre class="mermaid"><code>graph TD
+    A("Registradores&lt;br/&gt;(1 Ciclo - Alguns Bytes)") --&gt; B["Cache L1&lt;br/&gt;(~4 Ciclos - ~64KB a 128KB)"]
+    B --&gt; C["Cache L2 e L3&lt;br/&gt;(~12 a ~40 Ciclos - Megabytes)"]
+    C --&gt; D[["RAM (Memória Principal)&lt;br/&gt;(~200 a ~300 Ciclos - Gigabytes)"]]
+    D --&gt; E[("Armazenamento (SSD / HDD)&lt;br/&gt;(Milhões de Ciclos - Terabytes)")]
+
+    style A fill:#ff9999
+    style B fill:#ffcc99
+    style C fill:#ffff99
+    style D fill:#ccffcc
+    style E fill:#99ccff</code></pre>
+<blockquote>
+<p>[!IMPORTANT]
+A latência é o tempo que demora da CPU pedir um dado até ele chegar. Buscar um byte da <strong>RAM</strong> demora ~200 ciclos. Buscar do <strong>SSD</strong> demora centenas de milhares. Essa diferença grotesca é mitigada pelo uso de Caches.</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-05-2-os-impactos-da-latencia-lado-do-codigo">⏳ 2. Os Impactos da Latência (Lado do Código)</h2>
+<p>Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-05-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como consultar as camadas do processador Linux</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-05-__codelineno-0-2"></a><span class="gp">$ </span>lscpu<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Cache
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-05-__codelineno-0-3"></a><span class="go">L1d cache:                       64 KiB</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-05-__codelineno-0-4"></a><span class="go">L1i cache:                       64 KiB</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-05-__codelineno-0-5"></a><span class="go">L2 cache:                        1 MiB</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-05-__codelineno-0-6"></a><span class="go">L3 cache:                        12 MiB</span>
+</span></code></pre></div>
+</div>
+<p>A instrução e os dados descem da L3, saltam para L2, descem para L1 e se acoplam na ALU.</p>
+<hr>
+<h2 id="aulas-aula-05-3-optimizando-uso">🎯 3. Optimizando Uso</h2>
+<p>Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading?
+Porque elas permitem <code>Alocação Estática e Constante</code> que é perfeitamente "encaixada" pelo compilador diretamente na memória <strong>Cache</strong>.</p>
+<p>Ao invés de carregar gigabytes de <em>Strings</em> na lenta RAM, as linguagens de baixo nível incentivam o uso de matrizes de tamanho delimitado (arrays fixos), cujo agrupamento contíguo força a arquitetura de <strong>Hardware Prefetching</strong> a adiantar os bytes do Array para a Cache nativamente, antes mesmo de você rodar a linha do código!</p>
+<h2 id="aulas-aula-05-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente).</li>
+<li>Tudo recai na técnica humana de amarrar dados juntos (Caches L1 e L2) e escrever <em>data-oriented code</em> se quiser ultra-latência C++.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 06</a></p></body></html></section><section class="print-page" id="aulas-aula-06" heading-number="3.3.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-06-cache-e-localidade">Aula 06 - Cache e Localidade</h1>
+<p>Se a Cache L1/L2 é tão crítica, como o Hardware adivinha o que o programador vai pedir? A CPU não lê bytes individuais da RAM; ela traz "blocos" contíguos chamados de <em>Cache Lines</em> (geralmente de 64 bytes).</p>
+<hr>
+<h2 id="aulas-aula-06-1-cache-hit-e-cache-miss">✅ 1. Cache Hit e Cache Miss</h2>
+<p>O desempenho do seu loop <code>for()</code> depende maciçamente da <em>Cache Hit Rate</em>.</p>
+<ul>
+<li><strong>Cache Hit:</strong> Acerto! A CPU pediu a posição <code>[1]</code>, ela já estava na Cache e a conta foi resolvida quase imediatamente.</li>
+<li><strong>Cache Miss:</strong> Erro! O processador precisou parar o Pipeline, ir até a RAM lenta, injetar o bloco de bytes na lenta escalada D-Cache/L3/L2/L1 e prosseguir.</li>
+</ul>
+<pre class="mermaid"><code>sequenceDiagram
+    participant P as Programador
+    participant C as Cache L1
+    participant R as RAM
+
+    P-&gt;&gt;C: Quero array[0]!
+    Note right of C: "Cache Hit" (Sucesso imediato)
+
+    P-&gt;&gt;C: Quero NodeLink-&gt;prox!
+    Note right of C: Não está aqui...
+    C-&gt;&gt;R: Buscar Posição Lenta na RAM...
+    R--&gt;&gt;C: Traz o bloco de 64bytes inteiro
+    Note right of C: "Cache Miss" (Atraso)</code></pre>
+<hr>
+<h2 id="aulas-aula-06-2-localidade-espacial-vs-temporal">🗺️ 2. Localidade Espacial vs Temporal</h2>
+<p>As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-06-__tabbed_1_1" name="aulas-aula-06-__tabbed_1" type="radio"><input id="aulas-aula-06-__tabbed_1_2" name="aulas-aula-06-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-06-__tabbed_1_1">Localidade Espacial</label><label for="aulas-aula-06-__tabbed_1_2">Localidade Temporal</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Se o programa acessou a variável na posição de memória <code>X</code>, há extrema probabilidade de que no ciclo de CPU seguinte ele acesse a variável de memória <code>X + 1</code>.
+<em>O clássico caso dos </em><em>Arrays Continuos (std::vector)</em><em>, garantindo varredura limpa em Hit sequencial absoluto de 64 em 64 bytes.</em></p>
+</div>
+<div class="tabbed-block">
+<p>Se o programa visitou a variável <code>Y</code> agora, há enorme probabilidade dele visitá-la nos próximos ms.
+<em>O clássico caso das </em><em>Variáveis Locais e Contadores Padrões (<code>int i = 0</code>)</em><em> retidos brutalmente no Registrador ou na L1.</em></p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-06-3-false-sharing-e-logica-invertida-a-morte-do-c">🧨 3. False Sharing e Lógica Invertida (A Morte do C++)</h2>
+<blockquote>
+<p>[!WARNING]
+O vilão máximo da performance: Iterar sobre matrizes pela <em>Coluna</em> ao invés da <em>Linha</em>. A imagem matriz na RAM C/C++ (Row-major order) exige saltos. E <em>False Sharing</em> ocorre quando threads isoladas atualizam variáveis contíguas da mesma linha de Cache de 64 bytes, forçando o Hardware (Cache Coherence Protocol) a invalidar repetitivas vezes L1/L2, triturando toda métrica.</p>
+</blockquote>
+<p>A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo.</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 07</a></p></body></html></section><section class="print-page" id="aulas-aula-07" heading-number="3.3.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-07-stack-vs-heap">Aula 07 - Stack vs Heap</h1>
+<p>Agora mergulhamos no coração cirúrgico da engenharia C/C++: "Onde o S.O. decide alocar e liberar a sua variável física real na memória?". Essa escolha define vida, morte e performance do algoritmo em tempo real.</p>
+<hr>
+<h2 id="aulas-aula-07-1-a-pilha-stack">🧱 1. A Pilha (Stack)</h2>
+<p>A Stack é a fundação natural de blocos de toda variável ordinariamente declarada dentro do escopo de funções em C/C++ (<code>int x</code>, <code>float y</code>). Ela trabalha rigorosamente sob o conceito LIFO (Last In, First Out). </p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="aulas-aula-07-__tabbed_1_1" name="aulas-aula-07-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-07-__tabbed_1_1">Vantagens C/C++ da Pilha</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Performance Imediata</strong>: Não sofre do atraso monumental do Sistema Operacional rodando scripts para achar buracos vazios. A CPU avança 1 pino de hardware no SP (Stack Pointer) e empilha na RAM. Retirou, ele decrementa. Super rápido.</li>
+<li><strong>Anti-Vazamento Automático</strong>: Funções extintas são imediatamente retiradas (<em>popped</em>) num clique atômico LIFO e as fatias voltam a uso global. Memória protegida contra vazamentos lógicos (<em>memory leaks</em>) por definição estrita.</li>
+<li><strong>Quente da CPU</strong>: Frequentemente preza por Cache Hit. A Stack costuma viver majoritariamente no limiar da L1 Data Cache.</li>
+</ul>
+</div>
+</div>
+</div>
+<blockquote>
+<p>[!CAUTION]
+Stack Overflow! A Pilha nunca é infinita, sendo tipicamente restrita pelo S.O. Windows/Linux (geralmente entre 1MB a 8MB max num Kernel Padrão X86). Tentar criar um <code>int array[9999999]</code> puro no escopo sem alocação dinâmica explodirá a Pilha e esmagará cruelmente (o temido <code>Segmentation Fault (core dumped)</code>).</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-07-2-o-monte-heap">📦 2. O Monte (Heap)</h2>
+<p>Enquanto a Pilha é rígida, restrita e pré-delimitada, o Monte (Heap) é um vasto oceano caótico de Gigabytes gerenciado pelo Kernel do S.O. (Sistemas Operacionais). Você requer pedaços de memória "sob demanda" (Alocação Dinâmica).</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-07-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Como você interage em baixo nível (C/C++)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-07-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>code.c
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-07-__codelineno-0-3"></a><span class="gp">#</span>include<span class="w"> </span>&lt;stdlib.h&gt;
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-07-__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-07-__codelineno-0-5"></a><span class="go">int main() {</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-07-__codelineno-0-6"></a><span class="go">    // malloc vai no Sistema Operacional e chora pedindo: "Me dê 10 inteiros!"</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-07-__codelineno-0-7"></a><span class="go">    int* array_gigante_dinamico = (int*)malloc(10 * sizeof(int));</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-07-__codelineno-0-8"></a>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-07-__codelineno-0-9"></a><span class="go">    // Se você não limpar usando free(), a RAM apodrecerá lentamente (LEAK)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#aulas-aula-07-__codelineno-0-10"></a><span class="go">    free(array_gigante_dinamico);</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#aulas-aula-07-__codelineno-0-11"></a><span class="go">}</span>
+</span></code></pre></div>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked id="aulas-aula-07-__tabbed_2_1" name="aulas-aula-07-__tabbed_2" type="radio"><div class="tabbed-labels"><label for="aulas-aula-07-__tabbed_2_1">Diferenciais do C/C++</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Você é o único árbitro. Diferente de Java, Python ou C# que usam complexos robôs vasculhadores ocultos (<em>Garbage Collectors</em>) na sombra consumindo até 20% do processador para auditar seu Heap e limpar os lixos. O Rust automatiza e barra alocações indevidas usando Ownership sem o robozinho. O C++ fornece ferramentas novas e maduras (<code>std::unique_ptr</code> ou <code>std::shared_ptr</code>) baseadas na contagem de referência.</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-07-3-memory-leaks-vazamentos-de-memoria">💀 3. Memory Leaks (Vazamentos de Memória)</h2>
+<p>Um clássico e letal bug de engenharia C++. Quando o desenvolvedor executa <code>new</code> ou <code>malloc</code> solicitando memória do <strong>Heap</strong>, mas quebra regras do fluxo perdendo o contato formal do <strong>ponteiro</strong> retornado do hardware sem antes ter reportado o fim via <code>delete</code> ou <code>free</code>.
+Resultado?  Aquela fatia na RAM física do servidor Linux ficará congelada, cega, retida unicamente pro seu app até que a nuvem AWS exaure toda a máquina do container num erro de Kernel <code>OOM Killer (Out Of Memory)</code>.</p>
+<p>Em contra-partida: <em>Dangling Pointers</em>. Usar a área que o ponteiro apontava <em>depois</em> da libertação formal do free provoca instabilidade instantânea e corrupção silenciosa nos endereços da placa-mãe.</p>
+<h2 id="aulas-aula-07-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Se não sabe onde colocar: Bote no STACK.</li>
+<li>É muito grande pra caber (Strings longas ou Arrays): Invoque HEAP com o <code>std::vector</code> (ele gerencia o malloc e free na destruição de escopo).</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 08</a></p></body></html></section><section class="print-page" id="aulas-aula-08" heading-number="3.3.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-08-memoria-virtual">Aula 08 - Memória Virtual</h1>
+<p>Se você pedir ao seu S.O. no Task Manager por quantos Gigabytes os aplicativos rodam, verá que a soma ultrapassa facilmente a capacidade real física do pente de RAM DDR inserido na placa mãe. Como isso é magicamente contido?</p>
+<hr>
+<h2 id="aulas-aula-08-1-o-abismo-logico-a-memoria-virtual">🕳️ 1. O Abismo Lógico: A Memória Virtual</h2>
+<p>Nenhum aplicativo C/C++ ou interpretador em execução roda interagindo fisicamente e sabendo explicitamente qual é o transistor fixo lá no pente da Kingston RAM na placa do data-center.</p>
+<p>Todo processo que o Linux constrói roda dentro de uma gigante <strong>Ilusão</strong>. O endereço do seu ponteiro <code>0x7ffeeB...</code> em C++ é falso (Endereço Lógico).</p>
+<p>O HW (Hardware MMU no processador) mais as planilhas do Sistema Operacional (Page Tables) formencem a ligação dinâmica e escondida pra sua aplicação.</p>
+<pre class="mermaid"><code>graph LR
+    A["Ponteiro em C++&lt;br/&gt;(Virtual 0x01)"] --&gt; B{"MMU e&lt;br/&gt;Page Table"}
+    B --&gt; C("Memória RAM&lt;br/&gt;(Física Pente 1)")
+    B -. "Se não houver espaço" .-&gt; D("Swap / Pagefile&lt;br/&gt;(SSD)")</code></pre>
+<p>A <strong>Memória Virtual (VM)</strong> é um sanduíche mental e isolador protetor usado pelo S.O.
+Ela entrega para o ponteiro do processo o pretexto visual de que ele tem toda a memória que ele quiser num universo contínuo livre.</p>
+<hr>
+<h2 id="aulas-aula-08-2-tlb-mmu-e-a-traducao-da-pagina">📄 2. TLB, MMU e a Tradução da Página</h2>
+<blockquote>
+<p>Cada tradução do falso ponteiro visual com base nas tabelas em RAM é custoso (Cycle Penalty).</p>
+</blockquote>
+<p>Para driblar isso, a arquitetura moderna usa a <strong>TLB (Translation Lookaside Buffer)</strong>. A TLB é uma Cache dentro da CPU que guarda apenas os dicionários recentes das planilhas de referências que dizem se o "0X7FFA falso vira bloco 344 do pente de DDR5 real".</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked id="aulas-aula-08-__tabbed_1_1" name="aulas-aula-08-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-08-__tabbed_1_1">Page Hit e Page Fault</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li><strong>Page Hit:</strong> A tradução ocorreu instatâneamente pela cache veloz na CPU (a TLB validou o ponteiro do C++ localizando logo onde está no metal a variável no chip Kingston).</li>
+<li><strong>Page Fault Limitrofico:</strong> A TLB errou e teve que rolar pra Main RAM puxando o endereço mapeado localizando num novo cluster na pilha. (100+ ciclos)</li>
+<li><strong>Page Fault Crítico (SWAP):</strong> A máquina não acha e entra em Swapping com o SSD (SSD Swap). É ali que ocorre as quedas colossais para "Travamento de Janela", a CPU foi pro SSD buscar um arquivo gigante que o Linux ejetou lá, pra trazer e rebotar pra cima pra Memória RAM física real, jogando pro seu código que achava estar "na memória" e dormiu (Milhões de ciclos).</li>
+</ul>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-08-3-driblando-a-paginacao-como-programador">💪 3. Driblando a Paginação como Programador</h2>
+<p>Ao iterarmos matrizes massivas (Matrizes 2D em C++) na ordem invertida ou em lógicas dispersas <code>LinkedList-&gt;prox</code>, você não causa apenas <em>Cache Miss</em> da Aula 06. Você também destrói toda a cache de pontes <em>TLB Misses</em>! Você induzirá Page Faults insanos que derrubarão o throughput (taxa de transferência de dados) em N fatores.</p>
+<p>Portanto: <strong>Localidade Espacial é sagrada em Dados C/C++</strong>.</p>
+<h2 id="aulas-aula-08-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>O ponteiro que o dev manipula com um <code>int *ptr = &amp;value</code> em qualquer IDE é puramente 100% Virtual. É o passaporte intermediário.</li>
+<li>Nunca dependa da paginação e arquivo local de Swap do Disco: os milésimos de segundo viram minutos na Nuvem se o app "estourar a cota da cloud", sofrendo <code>Thrashing</code> com o Disco local para falsificar a RAM que ele acreditou ter num loop mal codificado ou em Leaks do Módulo/Aula anterior.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 09</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-4' heading-number='3.4'>
+                        <h1>Módulo 3 – Concorrência e Paralelismo<a class='headerlink' href='#section-3-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-09" heading-number="3.4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-09-processos-e-threads">Aula 09 - Processos e Threads</h1>
+<p>É vital dominar como espalhar execuções concorrentes na topologia de múltiplos núcleos nos processadores de hoje. Caso contrário, um computador com 32 <em>cores</em> rodará seu backend Python (que possui GIL) de altíssima latência amargando 31 núcleos ociosos gastando energia.</p>
+<hr>
+<h2 id="aulas-aula-09-1-processos-isolamento-forte">🏃 1. Processos (Isolamento Forte)</h2>
+<p>O Processo é o contêiner mestre do <em>Sistema Operacional</em>. Quando a execução do seu binário em C/C++ se inicia via Terminal, vira um Processo (<code>PID 2900</code>).</p>
+<ul>
+<li>O S.O. dá ao Processo sua <em>própria e exclusiva Memória Virtual</em> (visto na Aula 8).</li>
+<li>O Processo tem sua <em>exclusiva Pilha</em> e não se mistura nunca. E isso isola falhas: se um Chrome (processo isolado) trava, não dá tela azul na outra aba.</li>
+<li>A comunicação entre Processos (IPC - Inter-process Communication) é pesada e necessita do S.O. através de Pipes ou Redes. </li>
+</ul>
+<hr>
+<h2 id="aulas-aula-09-2-threads-isolamento-fraco-partilha">🧵 2. Threads (Isolamento Fraco / Partilha)</h2>
+<p>Quando se está em um jogo e, ao mesmo tempo que carrega os gráficos na GPU, uma música de CD está lendo sem travar, estamos olhando para <strong>Multithreading</strong>!</p>
+<pre class="mermaid"><code>graph TD
+    A("Processo (ID: 5599) - Backend Web") --&gt; B[("Heap Memory (Compartilhado)")]
+    A --&gt; C["Thread 01 (Rota A)"]
+    A --&gt; D["Thread 02 (Rota B)"]
+    A --&gt; E["Thread 03 (Pool C)"]
+
+    C --&gt; F((Stack Exclusiva T1))
+    D --&gt; G((Stack Exclusiva T2))
+    E --&gt; H((Stack Exclusiva T3))
+
+    B --&gt; C
+    B --&gt; D
+    B --&gt; E</code></pre>
+<p>Uma Thread é simplesmente uma subdivisão leve controlada do processo. Elas todas orbitam e vivem na exata <strong>MESMA MEMÓRIA VIRTUAL (Heap) DO PROCESSO MESTRE</strong>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-09-__tabbed_1_1" name="aulas-aula-09-__tabbed_1" type="radio"><input id="aulas-aula-09-__tabbed_1_2" name="aulas-aula-09-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-09-__tabbed_1_1">Benefício</label><label for="aulas-aula-09-__tabbed_1_2">Catástrofe</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>Duas <code>std::thread</code> manipulando os ponteiros apontam rigorosamente rápido ao mesmo endereço na RAM sem nenhuma barreira do S.O., o que traz milisegundos imbatíveis versus IPC!</p>
+</div>
+<div class="tabbed-block">
+<p>Como ambas alteram ativamente a mesmíssima RAM viva desprotegidas, se elas lerem/sobreescreverem juntas o mesmo byte int da Conta Bancária C++, ocorre o letífero e maldoso <strong>Data Race</strong> (Condição de Corrida de Dados).</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-09-3-context-switch-a-faca-de-dois-gumes">⚙️ 3. Context Switch (A Faca de Dois Gumes)</h2>
+<p>Quando escrevemos <code>"Hello World"</code>, achamos que a CPU roda por horas sem interrupções. Engano.</p>
+<p>O S.O. possui um núcleo (Kernel Scheduler) que fatia milésimos de milésimos de segundos distribuindo uma core <code>i7-P</code> para a aba do Google, logo retira o Google e taca nos frames do VS-Code, em micro-loop alternante de <strong>Context Switches</strong>.
+O problema? Puxar e devolver o estado (registradores, program counter) na cache é hiper custoso e derruba o Pipeline se abusado (overhead em CPU bound apps).</p>
+<h2 id="aulas-aula-09-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Se a tarefa for CPU-Bound (requerer Matemática Bruta Massiva / Machine Learning), você cria Threads numerando-as próximo número oficial de núcleos estritos da CPU, evitando desperdício de overhead com <em>Context Switches</em> ilusórios.</li>
+<li>É muito fácil em C/C++ estragar a vida financeira do cliente numa Race Condition compartilhada pelo Heap se não protegida... mas isso é o tema da próxima aula!</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 10</a></p></body></html></section><section class="print-page" id="aulas-aula-10" heading-number="3.4.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-10-sincronizacao-e-concorrencia">Aula 10 - Sincronização e Concorrência</h1>
+<p>Como abordado na Aula 09, a vantagem da extrema performance das <em>Threads</em> nativas possuírem acesso irrestrito e descontrolado à mesma Memória do processo C++ pode culminar na tragédia iminente conhecida como de <strong>Condição de Corrida (Race Condition)</strong>. </p>
+<hr>
+<h2 id="aulas-aula-10-1-o-data-race-uma-colisao-inevitavel">🏎️ 1. O Data Race: Uma Colisão Inevitável</h2>
+<p>Imaginemos uma variável primitiva <code>int balance = 100;</code>. Em Assembly C/C++, aumentar uma quantia em <code>balance += 10;</code> não é "Um Único Movimento".
+O HW (Processador) traduz internamente num RMW: <strong>R</strong>ead (<em>Puxa os 100 da RAM para o Registrador EAX</em>), <strong>M</strong>odify (<em>Adiciona +10 e vira 110 na ALU</em>), e <strong>W</strong>rite (<em>Substitui na RAM os antigos 100 por 110</em>).</p>
+<p>Se na fresta entre a <strong>Thread 1</strong> preencher o EAX e depois descer ao RAM o valor 110... a <strong>Thread 2</strong> rodar e "puxar os mesmíssimos originais 100" para outro registrador (Context Switch), quando abas enviarem pra RAM final as sobreposições as contas, um dos <code>10</code> desvanecerá, o banco perde e a variável fica logicamente corrompida.</p>
+<hr>
+<h2 id="aulas-aula-10-2-mutex-e-the-critical-section">🛡️ 2. Mutex e The Critical Section</h2>
+<p>A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As <strong>Locks (Travas)</strong> como padrão Ouro C++: <code>std::mutex</code> (Mutual Exclusion).</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-10-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Em C++, protege-se a variável central assim:</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-10-__codelineno-0-2"></a><span class="gp">$ </span>cat<span class="w"> </span>bank.cpp
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-10-__codelineno-0-3"></a><span class="go">std::mutex portaCorredor;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-10-__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-10-__codelineno-0-5"></a><span class="go">void adiciona_10() {</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-10-__codelineno-0-6"></a><span class="go">    portaCorredor.lock();   // O Hardware garante atomicamente exclusão</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#aulas-aula-10-__codelineno-0-7"></a><span class="go">    balance += 10;          // Apenas UM transita aqui adentro. </span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#aulas-aula-10-__codelineno-0-8"></a><span class="go">    portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#aulas-aula-10-__codelineno-0-9"></a><span class="go">}</span>
+</span></code></pre></div>
+</div>
+<p>A área demarcada pelo <em>lock</em> a <em>unlock</em> é intitulada <strong>Seção Crítica</strong>. O poder e o problema do design residem aí: Se você for preguiçoso e prender 10.000 linhas da sua transação atrás da Seção Crítica Mestre, o teu glorioso Processador <em>Multicore Ultra de 32 cores</em> se comportará como um ridículo e solitário Processador Antigo Pentium de <em>1 core</em> single Threaded, derrubando teu design ao zero! Tudo vai rodar Enfileirado (Serializado). O bom C++ trava com extrema granuladidade e rapidíssimo na variável.</p>
+<hr>
+<h2 id="aulas-aula-10-3-o-dilema-deadlock">🚦 3. O Dilema: Deadlock</h2>
+<p>Mas e se o programador de <em>Backend C/C++</em> prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado?</p>
+<p>Ambos processos morrem na tela, dormindo inertes (<em>Blocked State</em>), enquanto a barra de % CPU despenca lentamente para ZERO! Seu Sistema Paralelo entrou em <strong>Deadlock</strong>. (O Abraço Mortal Padrão The Dining Philosophers). Um design multi-thread exige uma heuristica sagrada de adquirir as trancas Lock C++ em idêntica e constante ordem arquitetural através dos sistemas, ou apelar a mecânicas <code>std::lock()</code> que aplicam garantias subjacentes do Kernel.</p>
+<h2 id="aulas-aula-10-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li><strong>Mutex</strong>: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).</li>
+<li>Se a concorrência não tiver "Seção Crítica" que lida com Gravação e tiver "Só Read-only", não aplique trancas (Mutex) para não serializar as Threads da máquina.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 11</a></p></body></html></section><section class="print-page" id="aulas-aula-11" heading-number="3.4.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-11-paralelismo-no-hardware">Aula 11 - Paralelismo no Hardware</h1>
+<p>O código Multithreading (visto na Aula 09 e 10) é uma abstração do Sistema Operacional. Mas como a física do processador de fato abraça múltiplas frentes de execução simétrica simultânea?</p>
+<hr>
+<h2 id="aulas-aula-11-1-multi-core-multiplos-nucleos">🏗️ 1. Multi-Core (Múltiplos Núcleos)</h2>
+<p>Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).</p>
+<ul>
+<li><strong>Core Físico:</strong> É uma CPU completa e independente, com sua própria ALU, Unidade de Controle e Caches L1/L2 particulares.</li>
+<li><strong>Cache L3 Compartilhado:</strong> Na maioria dos designs AMD e Intel reais, os Múltiplos Cores (Ex: 8 Cores) conversam e trocam estados através de uma suntuosa e lenta área comum L3 que circunda todos os processadores ali impressos no wafer.</li>
+</ul>
+<blockquote>
+<p>[!TIP]
+<strong>Em Backend pesado:</strong> Se o banco mapear duas Threads puras <code>backend</code> em dois Cores puramente isolados (Ex: Core 0 e Core 1), e elas lerem/trabalharem na mesma matriz contínua, o Hardware forçará intercâmbios elétricos no <em>Cache Coherence Protocol (MESI)</em> rodando por toda placa mãe. Fiquem espertos com o <em>False Sharing</em>! </p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-11-2-hyper-threading-smt-symmetrical-multi-threading">🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)</h2>
+<p>A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógicos" para o Windows/Linux?</p>
+<p>Na aula 03, vimos que a execução cruza pelo Pipeline ou pode esbarrar em ciclos ociosos na CU aguardando a Memória Principal. O <em>Hyper-Threading</em> espeta um <strong>Segundo conjunto de Registradores</strong> e Hardware de Estado no mesmo Core. Enquanto o código da Thread "A" está 0.5 nanosegundo <em>travada</em> esperando chegar o dado lento da L3, o Core troca instantaneamente para o contexto da Thread "B", executando-o usando as mesmas Unidades Lógicas (ALU) num aproveitamento fabril monstruoso de 100%.</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-11-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-11-__codelineno-0-2"></a><span class="gp">$ </span>lscpu
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-11-__codelineno-0-3"></a><span class="go">CPU(s):                  8</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-11-__codelineno-0-4"></a><span class="go">On-line CPU(s) list:     0-7</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-11-__codelineno-0-5"></a><span class="go">Thread(s) per core:      2</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-11-__codelineno-0-6"></a><span class="go">Core(s) per socket:      4</span>
+</span></code></pre></div>
+</div>
+<blockquote>
+<p>Vemos 8 CPUs acima, mas fisicamente a máquina tem 4 motores reais. </p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-11-3-gpus-o-paralelismo-macico">🎮 3. GPUs: O Paralelismo Maciço</h2>
+<p>CPUs (Processadores) foram feitos para "Serem Rápidos executando sequências lógicas e IFs complexos". Possuem Caches gigantes.
+GPUs (Placas de Vídeo) foram feitas para "Executar a MESMÍSSIMA MINÚSCULA matemática simultaneamente em milhares de pixels fracos". Sem grandes condicionais, focando no <em>Throughput</em>. </p>
+<p>NVIDIA e CUDA (plataforma de C++) reinam supremas em <em>Deep Learning</em> e Criptografia exatamente porque pegam <em>Loops For</em> gigantescos de Álgebra Linear, e fracionam em <strong>8.000 mini-núcleos (CUDA cores)</strong> esmagando qualquer Intel Core i9 na latência matemática contínua pura.</p>
+<h2 id="aulas-aula-11-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li><strong>Task Paralelism</strong>: Se tens lógica variada, use a <em>CPU Multi-Core C++ thread pool</em>.</li>
+<li><strong>Data Paralelism</strong>: Se a conta for a repetição retumbante de um algoritmo idêntico sobre 2 milhões de dados sem dependência de saltos complexos, mova-a da RAM à VRAM da <em>GPU via CUDA/OpenCL</em>. A métrica vai das horas paras os décimos de segundo.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 12</a></p></body></html></section><section class="print-page" id="aulas-aula-12" heading-number="3.4.4"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-12-o-modelo-de-memoria">Aula 12 - O Modelo de Memória</h1>
+<p>Ao nos aventurarmos com <code>C/C++</code> moderno em sistemas de Alta-Concorrência, a própria sanidade da ordem do código é subvertida e o que julgávamos executar "em sequência", esfacela-se nos pipelines de CPU. Bem-vindos ao labirinto da Reordenação.</p>
+<hr>
+<h2 id="aulas-aula-12-1-a-reordenacao-do-compilador-e-cpu-out-of-order-execution">🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)</h2>
+<p>Você codifica:
+</p><div class="language-cpp highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-12-__codelineno-0-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-12-__codelineno-0-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">FLAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-12-__codelineno-0-3"></a>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-12-__codelineno-0-4"></a><span class="c1">// Em uma Thread Secundária</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-12-__codelineno-0-5"></a><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span><span class="w">         </span><span class="c1">// PASSO A</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#aulas-aula-12-__codelineno-0-6"></a><span class="n">FLAG</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w">    </span><span class="c1">// PASSO B</span>
+</span></code></pre></div><p></p>
+<p>Um programador esperançoso diz: "Vou ler a váriavel na Thread Oposta (Main)... e quando <code>FLAG</code> for <em>true</em>, sei que <code>X</code> é impreterivelmente <em>42</em> pois executei a linha acima primeiro na tela!"</p>
+<p><strong>FALSO! MORTALMENTE FALSO!</strong></p>
+<ol>
+<li>O <strong>Compilador C++ (GCC -O3)</strong> pode achar que o PASSO B é irrelevante para o PASSO A (não usam das mesmas métricas) e <em>reordenar</em> por conta própria o seu executável para gravar a FLAG e depois o 42 nas linhas do assembly.</li>
+<li>O <strong>CISC (Intel x86) Processador Superscalar Out-Of-Order</strong> percebe que a posição de <code>x</code> estava fria na Cache L3, mas a variável <code>FLAG</code> estava quente presa na L1D. Ele salva na FLAG imediatamente (<em>Store Buffers</em>), adiantando a etapa 2, antes da 1, para não morrer de ócio no Pipeline. E seu código multi-thread infarta com B chegando a ser lido remotamente como <em>TRUE</em> com A ainda em <code>0</code> (<em>zero</em>)!!</li>
+</ol>
+<hr>
+<h2 id="aulas-aula-12-2-o-memory-model-consistencias-e-barreiras">🚧 2. O Memory Model (Consistências e Barreiras)</h2>
+<p>O C++11 emitiu formalmente o seu universal <strong>Memory Model</strong> definindo através da biblioteca <code>std::atomic</code> o que o Hardware tem permições para <em>Adiantar</em> vs <em>Trancar</em>.</p>
+<ol>
+<li><strong>Relaxed Consistensy</strong> (<code>std::memory_order_relaxed</code>): A CPU é dona, reordene como quiser em torno da sua vizinhança na RAM, apenas aplique na thread isolada em segurança. Performance brutal.</li>
+<li><strong>Release / Acquire</strong> (<code>std::memory_order_acquire / release</code>): O padrão para transferir fardos (como ler a Fila sem locks e sem medo da Out-Of-Order embaralhar <em>flags</em> finalizadoras de <em>Loop</em> C++ no hardware alheio do *Core 2).</li>
+<li><strong>Sequential Consistency</strong> (<code>std::memory_order_seq_cst</code>): O C++ por default invoca barreiras completas absolutas elétricas. Força todas as cores (L1/L2) da CPU e do compilador a não alterarem NADA a ordem que seu texto determinou. Seguro, mas castrador de velocidade em processadores ARM.</li>
+</ol>
+<hr>
+<h2 id="aulas-aula-12-3-memory-barriers-fences-nas-cpus">🧱 3. Memory Barriers (Fences) nas CPUs</h2>
+<p>Se não tivessemos essa lei <code>std::atomic</code> no standard oficial do GCC, programávamos via "Gambiarra Intrinseca" de Processador (Ex: Comando Assembler <strong>MFENCE</strong> ou <strong>SFENCE</strong> no Intel). Os Fences proíbem categoricamente a travessia de saltos das sub-operações em Assembly, estancando a execução como um sinaleiro fechado.</p>
+<blockquote>
+<p>[!INFO]
+É por isso que programar Software Infra-estrutural de Baixo Nível (Databases, Motores de Redes Socket, SO Kernel Driver) é extremamente difícil: As reordenações da CPU nunca acontecem quando você depura linha a linha na IDE (pois a paralela não é instigada). Elas só geram <em>corrupções bizarras randômicas 1x na vida e morrem meses na escura neblina de servidores reais operando 100 mil Requests por Minuto no DataCenter</em>. Onde a pressão elástica exaure as Caches e expõe seus Bugs de Memory Models relaxados.</p>
+</blockquote>
+<h2 id="aulas-aula-12-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam <code>std::mutex</code> da aula 10 as blindando, USE <strong><code>std::atomic&lt;bool&gt;</code></strong>. Do contrário você é uma vítima da <em>Superscalar Out Of Order Intel Architecture Pipeline</em> (a reordenação elétrica).</li>
+</ul>
+<p>Isso enterra as nuances sombrias das memórias RAM + Cache. Agora mergulhemos no escuro do "Lento Discovoador": Os Armazenamentos (Avançar).
+<a class="md-button md-button--primary" href="#aulas-aula-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 13</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-5' heading-number='3.5'>
+                        <h1>Módulo 4 – Armazenamento e I/O<a class='headerlink' href='#section-3-5' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-13" heading-number="3.5.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-13-dispositivos-de-armazenamento">Aula 13 - Dispositivos de Armazenamento</h1>
+<p>Descendo a pirâmide de memória, deixamos a rápida (porém volátil) RAM e caímos no domínio da persistência permanente. O armazenamento é inerentemente mais lento, e sua taxonomia dita o <em>Design do seu Banco de Dados Central</em>.</p>
+<hr>
+<h2 id="aulas-aula-13-1-hdd-hard-disk-drive-vs-ssd-sata">💽 1. HDD (Hard Disk Drive) vs SSD (SATA)</h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked id="aulas-aula-13-__tabbed_1_1" name="aulas-aula-13-__tabbed_1" type="radio"><input id="aulas-aula-13-__tabbed_1_2" name="aulas-aula-13-__tabbed_1" type="radio"><div class="tabbed-labels"><label for="aulas-aula-13-__tabbed_1_1">HDD Magnético</label><label for="aulas-aula-13-__tabbed_1_2">SSD (Solid State Drive SATA)</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<p>O disco de pratos giratórios com uma agulha física. 
+<strong>Latência</strong>: O motor precisa literalmente girar (Seek Time e Latência Rotacional) até o bloco desejado. As leituras sequenciais (filmes grandes contínuos) são aceitáveis, mas <em>Random Access</em> (leitura randômica de pequenos arquivos) é catastrófica, beirando a eternidade computacional.</p>
+</div>
+<div class="tabbed-block">
+<p>Armazenamento em chips de memória Flash (NAND). Zero partes móveis.
+<strong>Latência</strong>: Mil vezes superior ao HDD em acesso Randômico. Seu Banco de Dados Relacional MySQL renasce num SSD porque consegue varrer os índices disparatadamente sem esperar "O disco girar". Ele satura, porém, a banda do Barramento SATA (máx. 600 MB/s).</p>
+</div>
+</div>
+</div>
+<hr>
+<h2 id="aulas-aula-13-2-nvme-o-limite-pcie">⚡ 2. NVMe (O Limite PCIe)</h2>
+<p>Para ultrapassar o gargalo da conexão SATA antiga, a tecnologia moveu os SSDs diretamente para injetarem dados nas pistas ultra-rápidas da placa-mãe (PCI-Express). Módulos NVMe M.2 se comunicam fisicamente por canais em que passam Gigabytes por segundo (ex: Gen4 cruza <em>7.000 MB/s</em>).</p>
+<p>Isto alterou para sempre o Backend moderno: Os Softwares de Memória In-Memory (Redis) estão repensando paradigmas pois o Disco NVMe moderno às vezes responde com velocidade que roça a velha memória RAM DDR3!</p>
+<hr>
+<h2 id="aulas-aula-13-3-iops-a-metrica-real-do-servidor">📈 3. IOPS - A Métrica Real do Servidor</h2>
+<p>Se a banda (MB/s) diz o volume da mangueira, os <strong>IOPS (Input/Output Operations Per Second)</strong> dizem quantos golpes a mangueira dá por segundo. </p>
+<ul>
+<li>Quando você hospeda um App Node/Python que grava 1 milhão de pequenos logs <code>.txt</code> de 1KB, não importa se você tem 7000 MB/s. Você precisa de IOPS Altíssimos, para que a fila matemática de <em>Write Requests</em> não trave seu servidor (<code>I/O Wait / Blocked</code>). </li>
+</ul>
+<blockquote>
+<p>[!CAUTION]
+Ao configurar a AWS (Amazon Cloud), instâncias EBS (Discos elásticos anexados) cobram mais caro pela volumetria de <strong>IOPS</strong>. O gargalo da sua API lenta de CRUD nunca é a CPU, geralmente é porque o Disco Estourou sua cota de Burst de IOPS. </p>
+</blockquote>
+<h2 id="aulas-aula-13-resumo-pratico">🚀 Resumo Prático</h2>
+<p>O desenvolvedor C++ entende isso programando a I/O por grandes lotes (<code>Buffers</code>). Não escreva no disco <code>1 byte</code> no laço for por <code>1 milhão de vezes</code> (Destruição de IOPS).
+Acumule os dados num Buffer gigântico de <code>1 MB</code> na RAM, e comande gravar os dados no SSD em único e massivo Request! (Otimização máxima de Throughput).</p>
+<p><a class="md-button md-button--primary" href="#aulas-aula-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 14</a></p></body></html></section><section class="print-page" id="aulas-aula-14" heading-number="3.5.2"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-14-sistemas-de-arquivos">Aula 14 - Sistemas de Arquivos</h1>
+<p>Um Hardware (SSD vazio) nada mais é que um deserto de bilhões de celulas silício aptas a guardar carga estática. Sem um <code>Software Organizador</code>, é indomávél. O <strong>File System (Sistema de Arquivos)</strong> é esse gerenciador fornecido pelo Sistema Operacional.</p>
+<hr>
+<h2 id="aulas-aula-14-1-o-v-node-inode">🗂️ 1. O V-Node / Inode</h2>
+<p>Se no seu PC existe a pasta <code>Docs/foto.jpg</code>, no fundo, o Linux não rastreia o texto "foto.jpg" para pular de cluster em cluster. 
+O FS usa de índices numéricos ultra-rápidos: os <strong>Inodes</strong>. </p>
+<pre class="mermaid"><code>graph LR
+    A["Diretório /Docs"] --&gt;|12345| B("Inode 12345")
+    B --&gt; C["Tamanho: 2MB"]
+    B --&gt; D["Permissões: rwxr-xr-x"]
+    B --&gt; E["Blocos Físicos de Dados"]
+    E --&gt; F["Cluster 80 no SSD"]
+    E --&gt; G["Cluster 89 no SSD"]</code></pre>
+<blockquote>
+<p>[!INFO]
+Por que o comando de <em>Deletar (rm)</em> um arquivo grande é quase instantâneo, mas copiar é lento?
+O <code>rm</code> apaga apenas a entrada no Índice (Inode), fingindo pro SO que o espaço tá livre. O dado mesmo ainda tá lá magnetizado até algo escrever por cima (Por isso existem softwares de recuperação de dados!)</p>
+</blockquote>
+<hr>
+<h2 id="aulas-aula-14-2-journaling-a-prova-contra-quedas">🛡️ 2. Journaling (A Prova contra Quedas)</h2>
+<p>Mudar um arquivo é uma transação: Apagar o velho, escrever o novo, mudar o Inode.
+E se faltar luz na etapa 2? A partição <strong>corromperia inteiramente</strong> para sempre (Problema antigo do FAT32).</p>
+<p>FSs modernos (NTFS, EXT4) usam <strong>Journaling</strong>. Antes de aplicar qualquer mudança no Inode oficial, eles "anotam a intenção do que vão fazer" num Diário Oculto (Journal). Se a luz cai, ao ligar o PC, ele lê o diário oculto incompleto, reverte o estrago e devolve sua máquina salva! É a essência do conceito <em>Atomicidade</em>.</p>
+<hr>
+<h2 id="aulas-aula-14-3-buffers-e-page-cache-por-que-linux-e-rapido">🚄 3. Buffers e Page Cache (Por que Linux é Rápido)</h2>
+<p>"Escrever no disco" via SysCall C++ <code>write()</code> ou <code>fwrite()</code> raramente vai pro HD!
+O Linux usa de forma abusiva toda a <strong>RAM ociosa do seu computador</strong> como um gigantesco <em>Cache File</em>. Ele capta suas writes e diz "Gravei amigão!" mas jogou na RAM (Page Cache). Posteriormente ele realiza os envios reais para o Hardware agrupados (<em>Flush / Sync</em>).</p>
+<p>Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgaste das celulas NAND) e simula uma ilusão de lentidão zero ao usuário.</p>
+<h2 id="aulas-aula-14-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Ao usar C/C++, chame o instrínseco <code>fsync()</code> se seu App for um Banco de Dados ou Software Crítico Bancário forçando a Cache RAM descarregar a força e salvar permanentemente no silício do disco.</li>
+<li>Nunca dependa da nomenclatura C: <code>/usr/foto.jpg</code>. Leia descritores de arquivo, file-pointers e fluxos binários se for transitar redes em baixo nível.</li>
+</ul>
+<p><a class="md-button md-button--primary" href="#aulas-aula-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 15</a></p></body></html></section><section class="print-page" id="aulas-aula-15" heading-number="3.5.3"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-15-entrada-e-saida-io">Aula 15 - Entrada e Saída (I/O)</h1>
+<p>Se o Processador e a Memória trabalham num relógio bilionário (GHz), como eles se comunicam com o Teclado USB do seu usuário ou sua Placa de Rede cuja resposta se mede nas lentas métricas de milissegundos?</p>
+<hr>
+<h2 id="aulas-aula-15-1-system-calls-o-pedagio-do-kernel">🚪 1. System Calls (O Pedágio do Kernel)</h2>
+<p>Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminante encerramento compulsório pelo Processador através do bloqueio de Anéis de Proteção.</p>
+<p>Para acionar a Rede, o C++ precisa paralisar, invocar a sagrada <strong>System Call</strong> (Syscall, ex: <em>write</em>, <em>sendto</em>, <em>read</em>) que abre o portal para o S.O (Kernel Space). É o Kernel Linux quem vai orquestrar a placa C de Ethernet.</p>
+<hr>
+<h2 id="aulas-aula-15-2-interrupcoes-vs-polling">⚠️ 2. Interrupções vs Polling</h2>
+<p>Seu App em Python/C diz: "Puxe o dado que está vindo no mouse".
+1. <strong>Polling (Desastroso)</strong>: A CPU fica travada rodando <code>while(mouse_is_empty) {}</code> perguntando de nano em nanosegundo "Chegou? E agora? E Agora?". (Suga 100% da CPU por um mouse inerte).
+2. <strong>Interrupts (Moderno)</strong>: A CPU delega para o controlador USB rodar a escuta passiva, e a CPU volta a fechar os frames de Game. Quando o usuário clica com o dedo, o Controlador injeta um choque elétrico no pino do Processador. <strong>Interrupt request (IRQ)!</strong> A CPU congela subitamente o Game, salva o contexto, trata o clique do Mouse rapidamente, e exuma a cena do Game novamente do congelamento.</p>
+<hr>
+<h2 id="aulas-aula-15-3-dma-memoria-com-acesso-direto">🚀 3. DMA (Memória com Acesso Direto)</h2>
+<p>Mesmo com as Interrupções ajudando a não ficar paralisado <em>Polling</em>... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets.</p>
+<p>A revolução moderna chama-se <strong>Direct Memory Access (DMA)</strong>. Placas de Captura, NVMe e Placas de Rede conversam <em>Diretamente com a Memória RAM por vias de bypass</em>.</p>
+<pre class="mermaid"><code>graph BT
+    A["Placa de Rede"] -- "Caminho Direto (DMA)" --&gt; B["Memória RAM"]
+    A -. "Aviso via IRQ\n(Terminei!)" .-&gt; C["CPU"]
+    C -. "Ordens Lentas" .-&gt; B</code></pre>
+<p>A CPU diz: "Placa, baixe o NetFlix do Ponto P pro Q na RAM". A Placa faz todo os trabalho violento por trás. A CPU usa seu pipeline pra cálculos e matemática puros, enquanto sua memória vai sendo injetada pela placa de vídeo via túneis secretos pelas pontes.</p>
+<h2 id="aulas-aula-15-resumo-pratico">🚀 Resumo Prático</h2>
+<ul>
+<li>Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os famigerados Interrupts de retorno. </li>
+</ul>
+<p>Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento na Otimização Pura (Aula Final).
+<a class="md-button md-button--primary" href="#aulas-aula-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Avançar para Aula 16</a></p></body></html></section></section>
+                    <section class='print-page md-section' id='section-3-6' heading-number='3.6'>
+                        <h1>Módulo 5 – Integração Prática<a class='headerlink' href='#section-3-6' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="aulas-aula-16" heading-number="3.6.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="aula-16-projeto-final-otimizacao-baseada-em-hardware">Aula 16 - Projeto Final: Otimização Baseada em Hardware</h1>
+<p>A teoria desacompanhada de medições empíricas se torna pura retórica. A maturidade no universo <strong>Hardware/Software Interface</strong> em C/C++ ocorre ao expormos nosso código compilado aos utilitários pesados de medição (Profiling).</p>
+<hr>
+<h2 id="aulas-aula-16-1-profiling-classico-a-vida-real">⏱️ 1. Profiling Clássico (A Vida Real)</h2>
+<p>Adivinhar onde o código está lento é a armadilha suprema do júnior.
+Usamos ferramentas robustas para que a Arquitetura Linux diga-nos onde os gargalos fervem a CPU.</p>
+<ul>
+<li><strong>gprof</strong>: O padrão antigo C++. Ele recompila injetando marcações contábeis nas idas e vindas de funções, revelando "Quais chamadas consumiram O Tempo Global".</li>
+<li><strong>Valgrind (Callgrind / Cachegrind):</strong> Ferramenta extrema rodando seu executável numa sandbox virtual que mapeia cada instrução assembly. Traz gráficos massivos de onde <strong>Ocorreram os Caches Misses</strong> da Memória L1 de nossa Aula 06!</li>
+<li><strong>Perf</strong>: O utilitário nativo dos programadores Linux Kernel, extraindo informações métricas em Eventos de Desvio (Branch Mispired da Aula 03) usando relógios internos dos registradores ocultos <code>PMU</code> do seu próprio Processador em tempo real, sem overhead sintético.</li>
+</ul>
+<hr>
+<h2 id="aulas-aula-16-2-o-grande-desafio-mini-projeto-pratico">🔬 2. O Grande Desafio (Mini-Projeto Prático)</h2>
+<p>O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:</p>
+<div class="termy">
+<div class="language-console highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#aulas-aula-16-__codelineno-0-1"></a><span class="gp">$ </span><span class="c1"># Desafio do Iterador de Matriz Contínua</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#aulas-aula-16-__codelineno-0-2"></a><span class="gp">$ </span>g++<span class="w"> </span>matriz_opt.cpp<span class="w"> </span>-O3<span class="w"> </span>-o<span class="w"> </span>matriz
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#aulas-aula-16-__codelineno-0-3"></a><span class="gp">$ </span>./matriz<span class="w"> </span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#aulas-aula-16-__codelineno-0-4"></a><span class="go">Iteração Horizontal (Hit L1): Tempo 140ms</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#aulas-aula-16-__codelineno-0-5"></a><span class="go">Iteração Vertical (Miss L1): Tempo 2100ms</span>
+</span></code></pre></div>
+</div>
+<p><strong>Requisitos do Projeto:</strong>
+1. Alocar um Array gigantesco Massivo no Heap Dinâmico via <code>malloc()</code> C (Não use vectors prontos para sentir a dor no braço).
+2. Criar duas lógicas for().
+3. A primeira varre a matriz na exata sequencia algébrica <em>Row-Major</em>. Explorando a TLB/Localidade da Aula 08 e 06.
+4. O segundo <em>For</em> varre as colunas saltando a intervalos gigantescos. Omissões grotescas de Cache Miss.
+5. Invoquem o <code>std::chrono</code> em volta das funções, meçam os Mils e relatem num documento Markdown o porquê de um Software ser 10 vezes mais rápido que o outro mesmo usando "a cópia mental perfeitamente idêntica das mesmíssimas operações de if e soma na ALU".</p>
+<hr>
+<h2 id="aulas-aula-16-3-conclusao-da-trilha">🏆 3. Conclusão da Trilha</h2>
+<p>Você navegou nas extremas profundezas da arquitetura da Computação Modernizada.
+Um engenheiro de Backend jamais olhará para <code>int x;</code> ou <code>for()</code> sem recordar os impactos térmicos, cache hits mortais de linha, L1 local, reordenações do std::atomic Memory Model ou Page Faults nos clusters de Sistema e Processos em Swap.</p>
+<p>Parabéns pela resiliência no vale do Silício e da Matemática discreta profunda.
+Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.</p>
+<p><a class="md-button md-button--primary" href="#projetos"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> Finalizar e Visitar Projetos</a></p></body></html></section></section></section>
+                    <section class='print-page md-section' id='section-4' heading-number='4'>
+                        <h1>Materiais<a class='headerlink' href='#section-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="materiais" heading-number="4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="materiais">Materiais</h1>
+<p>Bem-vindo à seção de materiais complementares do curso. Aqui você encontra recursos adicionais para apoiar seus estudos.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M2 3h8a2 2 0 0 1 2-2 2 2 0 0 1 2 2h8v2h-1v11h-5.75L17 22h-2l-1.75-6h-2.5L9 22H7l1.75-6H3V5H2zm3 2v9h14V5z"></path></svg></span> <a href="#slides"><strong>Slides</strong></a></p>
+<ul>
+<li>Acesse os slides de todas as aulas para revisão.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.57 14.86 22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29z"></path></svg></span> <a href="#exercicios"><strong>Exercícios</strong></a></p>
+<ul>
+<li>Pratique com listas de exercícios para cada módulo.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 3 1 9l11 6 9-4.91V17h2V9M5 13.18v4L12 21l7-3.82v-4L12 17z"></path></svg></span> <a href="#quizzes"><strong>Quizzes</strong></a></p>
+<ul>
+<li>Teste seus conhecimentos com quizzes interativos.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72zM7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2"></path></svg></span> <a href="#projetos"><strong>Projetos</strong></a></p>
+<ul>
+<li>Desenvolva projetos práticos para aplicar o que aprendeu.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 15.5A3.5 3.5 0 0 1 8.5 12 3.5 3.5 0 0 1 12 8.5a3.5 3.5 0 0 1 3.5 3.5 3.5 3.5 0 0 1-3.5 3.5m7.43-2.53c.04-.32.07-.64.07-.97s-.03-.66-.07-1l2.11-1.63c.19-.15.24-.42.12-.64l-2-3.46c-.12-.22-.39-.31-.61-.22l-2.49 1c-.52-.39-1.06-.73-1.69-.98l-.37-2.65A.506.506 0 0 0 14 2h-4c-.25 0-.46.18-.5.42l-.37 2.65c-.63.25-1.17.59-1.69.98l-2.49-1c-.22-.09-.49 0-.61.22l-2 3.46c-.13.22-.07.49.12.64L4.57 11c-.04.34-.07.67-.07 1s.03.65.07.97l-2.11 1.66c-.19.15-.25.42-.12.64l2 3.46c.12.22.39.3.61.22l2.49-1.01c.52.4 1.06.74 1.69.99l.37 2.65c.04.24.25.42.5.42h4c.25 0 .46-.18.5-.42l.37-2.65c.63-.26 1.17-.59 1.69-.99l2.49 1.01c.22.08.49 0 .61-.22l2-3.46c.12-.22.07-.49-.12-.64z"></path></svg></span> <a href="#setups"><strong>Setup</strong></a></p>
+<ul>
+<li>Guias de instalação e configuração do ambiente.</li>
+</ul>
+</li>
+</ul>
+</div></body></html></section>
+                    <section class='print-page md-section' id='section-4-2' heading-number='4.2'>
+                        <h1>Slides<a class='headerlink' href='#section-4-2' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="slides" heading-number="4.2.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="slides-interativos">Slides Interativos</h1>
+<p>Nesta seção você acessa os slides completos de cada uma das 16 aulas do Curso. As apresentações foram desenhadas com visual otimizado Reveal.js. </p>
+<p>Para utilizar as transições (como as setas do teclado) em tela-cheia, pressione a tecla <code>F</code>.</p>
+<h2 id="slides-modulo-1-fundamentos-de-arquitetura-de-computadores">Módulo 1 – Fundamentos de Arquitetura de Computadores</h2>
+<ul>
+<li><a href="#slides-slide-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 01 - Como o Software Roda no Hardware</a></li>
+<li><a href="#slides-slide-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 02 - Representação de Dados</a></li>
+<li><a href="#slides-slide-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 03 - CPU: Estrutura e Funcionamento</a></li>
+<li><a href="#slides-slide-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 04 - Arquiteturas RISC vs CISC</a></li>
+</ul>
+<h2 id="slides-modulo-2-memoria-e-performance">Módulo 2 – Memória e Performance</h2>
+<ul>
+<li><a href="#slides-slide-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 05 - Hierarquia de Memória</a></li>
+<li><a href="#slides-slide-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 06 - Cache e Localidade</a></li>
+<li><a href="#slides-slide-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 07 - Stack vs Heap em C/C++</a></li>
+<li><a href="#slides-slide-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 08 - Memória Virtual</a></li>
+</ul>
+<h2 id="slides-modulo-3-concorrencia-e-paralelismo">Módulo 3 – Concorrência e Paralelismo</h2>
+<ul>
+<li><a href="#slides-slide-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 09 - Processos e Threads</a></li>
+<li><a href="#slides-slide-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 10 - Sincronização - Mutex, Semáforos</a></li>
+<li><a href="#slides-slide-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 11 - Paralelismo em Hardware</a></li>
+<li><a href="#slides-slide-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 12 - Modelo de Memória</a></li>
+</ul>
+<h2 id="slides-modulo-4-e-5-armazenamento-io-e-pratica">Módulo 4 e 5 – Armazenamento, I/O e Prática</h2>
+<ul>
+<li><a href="#slides-slide-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 13 - Dispositivos de Armazenamento</a></li>
+<li><a href="#slides-slide-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 14 - Sistemas de Arquivos</a></li>
+<li><a href="#slides-slide-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 15 - Entrada e Saída / I/O</a></li>
+<li><a href="#slides-slide-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Aula 16 - Projeto Final: Otimização</a></li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-3' heading-number='4.3'>
+                        <h1>Exercícios<a class='headerlink' href='#section-4-3' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="exercicios" heading-number="4.3.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="listas-de-exercicios-praticos">Listas de Exercícios Práticos</h1>
+<p>Cada sessão de atividades progressivas envolve as dinâmicas mais comuns em arquitetura de baixo nível C/C++.</p>
+<h2 id="exercicios-modulo-1-fundamentos-de-arquitetura-de-computadores">Módulo 1 – Fundamentos de Arquitetura de Computadores</h2>
+<ul>
+<li><a href="#exercicios-exercicio-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 01 - Como o Software Roda no Hardware</a></li>
+<li><a href="#exercicios-exercicio-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 02 - Representação de Dados</a></li>
+<li><a href="#exercicios-exercicio-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 03 - CPU: Estrutura e Funcionamento</a></li>
+<li><a href="#exercicios-exercicio-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 04 - Arquiteturas RISC vs CISC</a></li>
+</ul>
+<h2 id="exercicios-modulo-2-memoria-e-performance">Módulo 2 – Memória e Performance</h2>
+<ul>
+<li><a href="#exercicios-exercicio-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 05 - Hierarquia de Memória</a></li>
+<li><a href="#exercicios-exercicio-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 06 - Cache e Localidade</a></li>
+<li><a href="#exercicios-exercicio-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 07 - Stack vs Heap em C/C++</a></li>
+<li><a href="#exercicios-exercicio-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 08 - Memória Virtual</a></li>
+</ul>
+<h2 id="exercicios-modulo-3-concorrencia-e-paralelismo">Módulo 3 – Concorrência e Paralelismo</h2>
+<ul>
+<li><a href="#exercicios-exercicio-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 09 - Processos e Threads</a></li>
+<li><a href="#exercicios-exercicio-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 10 - Sincronização - Mutex, Semáforos</a></li>
+<li><a href="#exercicios-exercicio-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 11 - Paralelismo em Hardware</a></li>
+<li><a href="#exercicios-exercicio-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 12 - Modelo de Memória</a></li>
+</ul>
+<h2 id="exercicios-modulo-4-e-5-armazenamento-io-e-pratica">Módulo 4 e 5 – Armazenamento, I/O e Prática</h2>
+<ul>
+<li><a href="#exercicios-exercicio-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 13 - Dispositivos de Armazenamento</a></li>
+<li><a href="#exercicios-exercicio-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 14 - Sistemas de Arquivos</a></li>
+<li><a href="#exercicios-exercicio-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 15 - Entrada e Saída / I/O</a></li>
+<li><a href="#exercicios-exercicio-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Prática 16 - Projeto Final: Otimização</a></li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-4' heading-number='4.4'>
+                        <h1>Quizzes<a class='headerlink' href='#section-4-4' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="quizzes" heading-number="4.4.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="quizzes-interativos">Quizzes Interativos</h1>
+<p>Teste os seus conhecimentos adquiridos durantes as explorações teóricas.</p>
+<h2 id="quizzes-modulo-1-fundamentos-de-arquitetura-de-computadores">Módulo 1 – Fundamentos de Arquitetura de Computadores</h2>
+<ul>
+<li><a href="#quizzes-quiz-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 01 - Como o Software Roda no Hardware</a></li>
+<li><a href="#quizzes-quiz-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 02 - Representação de Dados</a></li>
+<li><a href="#quizzes-quiz-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 03 - CPU: Estrutura e Funcionamento</a></li>
+<li><a href="#quizzes-quiz-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 04 - Arquiteturas RISC vs CISC</a></li>
+</ul>
+<h2 id="quizzes-modulo-2-memoria-e-performance">Módulo 2 – Memória e Performance</h2>
+<ul>
+<li><a href="#quizzes-quiz-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 05 - Hierarquia de Memória</a></li>
+<li><a href="#quizzes-quiz-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 06 - Cache e Localidade</a></li>
+<li><a href="#quizzes-quiz-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 07 - Stack vs Heap em C/C++</a></li>
+<li><a href="#quizzes-quiz-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 08 - Memória Virtual</a></li>
+</ul>
+<h2 id="quizzes-modulo-3-concorrencia-e-paralelismo">Módulo 3 – Concorrência e Paralelismo</h2>
+<ul>
+<li><a href="#quizzes-quiz-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 09 - Processos e Threads</a></li>
+<li><a href="#quizzes-quiz-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 10 - Sincronização - Mutex, Semáforos</a></li>
+<li><a href="#quizzes-quiz-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 11 - Paralelismo em Hardware</a></li>
+<li><a href="#quizzes-quiz-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 12 - Modelo de Memória</a></li>
+</ul>
+<h2 id="quizzes-modulo-4-e-5-armazenamento-io-e-pratica">Módulo 4 e 5 – Armazenamento, I/O e Prática</h2>
+<ul>
+<li><a href="#quizzes-quiz-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 13 - Dispositivos de Armazenamento</a></li>
+<li><a href="#quizzes-quiz-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 14 - Sistemas de Arquivos</a></li>
+<li><a href="#quizzes-quiz-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 15 - Entrada e Saída / I/O</a></li>
+<li><a href="#quizzes-quiz-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Quiz 16 - Projeto Final: Otimização</a></li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-5' heading-number='4.5'>
+                        <h1>Projetos<a class='headerlink' href='#section-4-5' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="projetos" heading-number="4.5.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="laboratorios-de-projetos">Laboratórios de Projetos</h1>
+<p>Coloque em prática seu aprendizado de Hardware implementando ferramentas reais com otimização C/C++.</p>
+<h2 id="projetos-modulo-1-fundamentos-de-arquitetura-de-computadores">Módulo 1 – Fundamentos de Arquitetura de Computadores</h2>
+<ul>
+<li><a href="#projetos-projeto-01"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 01 - Como o Software Roda no Hardware</a></li>
+<li><a href="#projetos-projeto-02"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 02 - Representação de Dados</a></li>
+<li><a href="#projetos-projeto-03"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 03 - CPU: Estrutura e Funcionamento</a></li>
+<li><a href="#projetos-projeto-04"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 04 - Arquiteturas RISC vs CISC</a></li>
+</ul>
+<h2 id="projetos-modulo-2-memoria-e-performance">Módulo 2 – Memória e Performance</h2>
+<ul>
+<li><a href="#projetos-projeto-05"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 05 - Hierarquia de Memória</a></li>
+<li><a href="#projetos-projeto-06"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 06 - Cache e Localidade</a></li>
+<li><a href="#projetos-projeto-07"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 07 - Stack vs Heap em C/C++</a></li>
+<li><a href="#projetos-projeto-08"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 08 - Memória Virtual</a></li>
+</ul>
+<h2 id="projetos-modulo-3-concorrencia-e-paralelismo">Módulo 3 – Concorrência e Paralelismo</h2>
+<ul>
+<li><a href="#projetos-projeto-09"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 09 - Processos e Threads</a></li>
+<li><a href="#projetos-projeto-10"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 10 - Sincronização - Mutex, Semáforos</a></li>
+<li><a href="#projetos-projeto-11"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 11 - Paralelismo em Hardware</a></li>
+<li><a href="#projetos-projeto-12"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 12 - Modelo de Memória</a></li>
+</ul>
+<h2 id="projetos-modulo-4-e-5-armazenamento-io-e-pratica">Módulo 4 e 5 – Armazenamento, I/O e Prática</h2>
+<ul>
+<li><a href="#projetos-projeto-13"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 13 - Dispositivos de Armazenamento</a></li>
+<li><a href="#projetos-projeto-14"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 14 - Sistemas de Arquivos</a></li>
+<li><a href="#projetos-projeto-15"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 15 - Entrada e Saída / I/O</a></li>
+<li><a href="#projetos-projeto-16"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M13.22 19.03a.75.75 0 0 1 0-1.06L18.19 13H3.75a.75.75 0 0 1 0-1.5h14.44l-4.97-4.97a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0"></path></svg></span> Lab 16 - Projeto Final: Otimização</a></li>
+</ul></body></html></section></section>
+                    <section class='print-page md-section' id='section-4-6' heading-number='4.6'>
+                        <h1>Configuração<a class='headerlink' href='#section-4-6' title='Permanent link'></a>
+                        </h1>
+                    <section class="print-page" id="setups" heading-number="4.6.1"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="configuracao-do-ambiente">Configuração do Ambiente</h1>
+<p>Bem-vindo à seção de configuração! Prepare seu ambiente para acompanhar as aulas de Fundamentos da Computação.</p>
+<div class="grid cards">
+<ul>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M3 12V6.75l6-1.32v6.48zm17-9v8.75l-10 .15V5.21zM3 13l6 .09v6.81l-6-1.15zm17 .25V22l-10-1.91V13.1z"></path></svg></span> <strong>Visual Studio Code</strong></p>
+<ul>
+<li><a href="#setups-setup-01">Setup VS Code</a></li>
+<li>Instalação do Editor</li>
+<li>Extensões recomendadas</li>
+<li>Configuração de Tema</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M20.56 18H3.44C2.65 18 2 17.37 2 16.59V7.41C2 6.63 2.65 6 3.44 6h17.12c.79 0 1.44.63 1.44 1.41v9.18c0 .78-.65 1.41-1.44 1.41M6.81 15.19v-3.66l1.92 2.35 1.92-2.35v3.66h1.93V8.81h-1.93l-1.92 2.35-1.92-2.35H4.89v6.38zM19.69 12h-1.92V8.81h-1.92V12h-1.93l2.89 3.28z"></path></svg></span> <strong>Ferramentas Úteis</strong></p>
+<ul>
+<li><a href="#setups-setup-02">Setup Markdown</a></li>
+<li>Pré-visualização de Markdown</li>
+<li>Extensão Mermaid (Diagramas)</li>
+<li>Terminal Integrado</li>
+</ul>
+</li>
+</ul>
+</div>
+<h2 id="setups-proximos-passos">📋 Próximos Passos</h2>
+<p>Após configurar seu ambiente:</p>
+<ol>
+<li>✅ <strong>Conheça o VS Code</strong>: Familiarize-se com a interface.</li>
+<li>📚 <strong>Instale as extensões</strong>: Procure por "Markdown All in One" e "Mermaid Editor".</li>
+<li>🚀 <strong>Comece as aulas</strong>: <a href="#aulas-aula-01">Aula 01</a></li>
+</ol></body></html></section></section></section><section class="print-page" id="print_page" heading-number="5"><html><head>
+        <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            remove_material_navigation();remove_mkdocs_theme_navigation();generate_toc();
+        })
+        </script>
+        </head><body><h1 id="versao-para-impressao">Versão para Impressão</h1>
+<p>Esta página foi gerada automaticamente para impressão.</p></body></html></section></div><style>.print-site-enumerate-headings #index > h1:before { content: '1 ' }
+
+                .print-site-enumerate-headings #index h2:before { content: '1.' counter(counter-index-2) ' ' }
+                .print-site-enumerate-headings #index h2 {  counter-reset: counter-index-3 ;  counter-increment: counter-index-2 }
+            
+                .print-site-enumerate-headings #index h3:before { content: '1.' counter(counter-index-2) '.' counter(counter-index-3) ' ' }
+                .print-site-enumerate-headings #index h3 {  counter-increment: counter-index-3 }
+            
+.print-site-enumerate-headings #sobre > h1:before { content: '2 ' }
+
+                .print-site-enumerate-headings #sobre h2:before { content: '2.' counter(counter-sobre-2) ' ' }
+                .print-site-enumerate-headings #sobre h2 {  counter-reset: counter-sobre-3 ;  counter-increment: counter-sobre-2 }
+            
+                .print-site-enumerate-headings #sobre h3:before { content: '2.' counter(counter-sobre-2) '.' counter(counter-sobre-3) ' ' }
+                .print-site-enumerate-headings #sobre h3 {  counter-increment: counter-sobre-3 }
+            
+.print-site-enumerate-headings #section-3 > h1:before { content: '3 ' }
+.print-site-enumerate-headings #aulas > h1:before { content: '3.1 ' }
+
+                .print-site-enumerate-headings #aulas h2:before { content: '3.1.' counter(counter-aulas-2) ' ' }
+                .print-site-enumerate-headings #aulas h2 {  counter-increment: counter-aulas-2 }
+            
+.print-site-enumerate-headings #section-3-2 > h1:before { content: '3.2 ' }
+.print-site-enumerate-headings #aulas-aula-01 > h1:before { content: '3.2.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-02 > h1:before { content: '3.2.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-03 > h1:before { content: '3.2.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-04 > h1:before { content: '3.2.4 ' }
+
+.print-site-enumerate-headings #section-3-3 > h1:before { content: '3.3 ' }
+.print-site-enumerate-headings #aulas-aula-05 > h1:before { content: '3.3.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-06 > h1:before { content: '3.3.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-07 > h1:before { content: '3.3.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-08 > h1:before { content: '3.3.4 ' }
+
+.print-site-enumerate-headings #section-3-4 > h1:before { content: '3.4 ' }
+.print-site-enumerate-headings #aulas-aula-09 > h1:before { content: '3.4.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-10 > h1:before { content: '3.4.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-11 > h1:before { content: '3.4.3 ' }
+
+.print-site-enumerate-headings #aulas-aula-12 > h1:before { content: '3.4.4 ' }
+
+.print-site-enumerate-headings #section-3-5 > h1:before { content: '3.5 ' }
+.print-site-enumerate-headings #aulas-aula-13 > h1:before { content: '3.5.1 ' }
+
+.print-site-enumerate-headings #aulas-aula-14 > h1:before { content: '3.5.2 ' }
+
+.print-site-enumerate-headings #aulas-aula-15 > h1:before { content: '3.5.3 ' }
+
+.print-site-enumerate-headings #section-3-6 > h1:before { content: '3.6 ' }
+.print-site-enumerate-headings #aulas-aula-16 > h1:before { content: '3.6.1 ' }
+
+.print-site-enumerate-headings #section-4 > h1:before { content: '4 ' }
+.print-site-enumerate-headings #materiais > h1:before { content: '4.1 ' }
+
+                .print-site-enumerate-headings #materiais h2:before { content: '4.1.' counter(counter-materiais-2) ' ' }
+                .print-site-enumerate-headings #materiais h2 {  counter-increment: counter-materiais-2 }
+            
+.print-site-enumerate-headings #section-4-2 > h1:before { content: '4.2 ' }
+.print-site-enumerate-headings #slides > h1:before { content: '4.2.1 ' }
+
+.print-site-enumerate-headings #slides-slide-01 > h1:before { content: '4.2.2 ' }
+.print-site-enumerate-headings #slides-slide-02 > h1:before { content: '4.2.3 ' }
+.print-site-enumerate-headings #slides-slide-03 > h1:before { content: '4.2.4 ' }
+.print-site-enumerate-headings #slides-slide-04 > h1:before { content: '4.2.5 ' }
+.print-site-enumerate-headings #slides-slide-05 > h1:before { content: '4.2.6 ' }
+.print-site-enumerate-headings #slides-slide-06 > h1:before { content: '4.2.7 ' }
+.print-site-enumerate-headings #slides-slide-07 > h1:before { content: '4.2.8 ' }
+.print-site-enumerate-headings #slides-slide-08 > h1:before { content: '4.2.9 ' }
+.print-site-enumerate-headings #slides-slide-09 > h1:before { content: '4.2.10 ' }
+.print-site-enumerate-headings #slides-slide-10 > h1:before { content: '4.2.11 ' }
+.print-site-enumerate-headings #slides-slide-11 > h1:before { content: '4.2.12 ' }
+.print-site-enumerate-headings #slides-slide-12 > h1:before { content: '4.2.13 ' }
+.print-site-enumerate-headings #slides-slide-13 > h1:before { content: '4.2.14 ' }
+.print-site-enumerate-headings #slides-slide-14 > h1:before { content: '4.2.15 ' }
+.print-site-enumerate-headings #slides-slide-15 > h1:before { content: '4.2.16 ' }
+.print-site-enumerate-headings #slides-slide-16 > h1:before { content: '4.2.17 ' }
+.print-site-enumerate-headings #section-4-3 > h1:before { content: '4.3 ' }
+.print-site-enumerate-headings #exercicios > h1:before { content: '4.3.1 ' }
+
+.print-site-enumerate-headings #section-4-4 > h1:before { content: '4.4 ' }
+.print-site-enumerate-headings #quizzes > h1:before { content: '4.4.1 ' }
+
+.print-site-enumerate-headings #section-4-5 > h1:before { content: '4.5 ' }
+.print-site-enumerate-headings #projetos > h1:before { content: '4.5.1 ' }
+
+.print-site-enumerate-headings #section-4-6 > h1:before { content: '4.6 ' }
+.print-site-enumerate-headings #setups > h1:before { content: '4.6.1 ' }
+
+.print-site-enumerate-headings #print_page > h1:before { content: '5 ' }
+
+                .print-site-enumerate-headings #print_page h2:before { content: '5.' counter(counter-print_page-2) ' ' }
+                .print-site-enumerate-headings #print_page h2 {  counter-reset: counter-print_page-3 ;  counter-increment: counter-print_page-2 }
+            
+                .print-site-enumerate-headings #print_page h3:before { content: '5.' counter(counter-print_page-2) '.' counter(counter-print_page-3) ' ' }
+                .print-site-enumerate-headings #print_page h3 {  counter-increment: counter-print_page-3 }
+            </style>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ricardotecpro" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/ricardotecpro" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://ricardotecpro.github.io/" target="_blank" rel="noopener" title="ricardotecpro.github.io" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M351.9 280H161c2.9 64.5 17.2 123.9 37.5 167.4 11.4 24.5 23.7 41.8 35.1 52.4 11.2 10.5 18.9 12.2 22.9 12.2s11.7-1.7 22.9-12.2c11.4-10.6 23.7-28 35.1-52.4 20.3-43.5 34.6-102.9 37.5-167.4zm-191-48h190.9c-2.8-64.5-17.1-123.9-37.4-167.4-11.4-24.4-23.7-41.8-35.1-52.4C268.1 1.7 260.4 0 256.4 0s-11.7 1.7-22.9 12.2c-11.4 10.6-23.7 28-35.1 52.4-20.3 43.5-34.6 102.9-37.5 167.4m-48 0c3.5-85.6 25.6-165.1 57.9-217.3C78.7 47.3 10.9 131.2 1.5 232zM1.5 280c9.4 100.8 77.2 184.7 169.3 217.3-32.3-52.2-54.4-131.7-57.9-217.3zm398.4 0c-3.5 85.6-25.6 165.1-57.9 217.3 92.1-32.7 159.9-116.5 169.3-217.3zm111.4-48C501.9 131.2 434.1 47.3 342 14.7c32.3 52.2 54.4 131.7 57.9 217.3z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.youtube.com/@ricardotecpro" target="_blank" rel="noopener" title="www.youtube.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M549.7 124.1c-6.2-23.7-24.8-42.3-48.3-48.6C458.9 64 288.1 64 288.1 64S117.3 64 74.7 75.5c-23.5 6.3-42 24.9-48.3 48.6C15 167 15 256.4 15 256.4s0 89.4 11.4 132.3c6.3 23.6 24.8 41.5 48.3 47.8C117.3 448 288.1 448 288.1 448s170.8 0 213.4-11.5c23.5-6.3 42-24.2 48.3-47.8 11.4-42.9 11.4-132.3 11.4-132.3s0-89.4-11.4-132.3zM232.2 337.6V175.2l142.7 81.2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/ricardotecpro" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M357.2 48h70.6L273.6 224.2 455 464H313L201.7 318.6 74.5 464H3.8l164.9-188.5L-5.2 48h145.6l100.5 132.9zm-24.8 373.8h39.1L119.1 88h-42z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "/ads_extra_hardware_e_compiladores/estavel", "features": ["navigation.tracking", "navigation.tabs", "navigation.sections", "navigation.path", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "navigation.instant", "navigation.prune", "toc.follow", "content.code.copy", "content.code.annotate", "search.share", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": {"default": "estavel", "provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../js/print-site.js"></script>
+      
+        <script src="../assets/js/quiz.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js"></script>
+      
+        <script src="../assets/js/mermaid-init.js"></script>
+      
+        <script src="../assets/js/custom_termynal.js"></script>
+      
+        <script src="../assets/js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="../termynal.js"></script>
+      
+    
+  </body>
+</html>

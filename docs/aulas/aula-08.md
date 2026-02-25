@@ -48,4 +48,47 @@ Portanto: **Localidade Espacial é sagrada em Dados C/C++**.
 - O ponteiro que o dev manipula com um `int *ptr = &value` em qualquer IDE é puramente 100% Virtual. É o passaporte intermediário.
 - Nunca dependa da paginação e arquivo local de Swap do Disco: os milésimos de segundo viram minutos na Nuvem se o app "estourar a cota da cloud", sofrendo `Thrashing` com o Disco local para falsificar a RAM que ele acreditou ter num loop mal codificado ou em Leaks do Módulo/Aula anterior.
 
+
+
+---
+
+## 🎯 Próximos Passos
+
+<div class="grid cards" markdown>
+
+-   :octicons-video-24: **Acessar Slides**
+
+    ---
+    
+    Reveja a apresentação visual desta aula.
+    
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-08.html)
+
+-   :octicons-tasklist-24: **Quiz**
+
+    ---
+    
+    Teste seu entendimento básico com perguntas rápidas.
+    
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-08.html)
+
+-   :octicons-pencil-24: **Exercícios**
+
+    ---
+    
+    Prática avançada e dissertativa com consulta.
+    
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-08.md)
+
+-   :octicons-rocket-24: **Projeto**
+
+    ---
+    
+    Laboratório prático de codificação em C/C++.
+    
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-08.md)
+
+</div>
+
+
 [:octicons-arrow-right-24: Avançar para Aula 09](aula-09.md){ .md-button .md-button--primary }

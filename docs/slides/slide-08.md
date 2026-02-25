@@ -14,7 +14,7 @@ O HW (Hardware MMU no processador) mais as planilhas do Sistema Operacional (Pag
 
 ```mermaid
 graph LR
-    A["Ponteiro em C++<br/>(Virtual 0x01)"] --> B{"MMU e<br/>Page Table"}
+    A[Ponteiro em C++<br/>(Virtual 0x01)] --> B{"MMU e<br/>Page Table"}
     B --> C("Memória RAM<br/>(Física Pente 1)")
     B -. "Se não houver espaço" .-> D("Swap / Pagefile<br/>(SSD)")
 ```

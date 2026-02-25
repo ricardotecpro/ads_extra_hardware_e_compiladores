@@ -48,4 +48,47 @@ Ambos processos morrem na tela, dormindo inertes (*Blocked State*), enquanto a b
 - **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).
 - Se a concorrência não tiver "Seção Crítica" que lida com Gravação e tiver "Só Read-only", não aplique trancas (Mutex) para não serializar as Threads da máquina.
 
+
+
+---
+
+## 🎯 Próximos Passos
+
+<div class="grid cards" markdown>
+
+-   :octicons-video-24: **Acessar Slides**
+
+    ---
+    
+    Reveja a apresentação visual desta aula.
+    
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-10.html)
+
+-   :octicons-tasklist-24: **Quiz**
+
+    ---
+    
+    Teste seu entendimento básico com perguntas rápidas.
+    
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-10.html)
+
+-   :octicons-pencil-24: **Exercícios**
+
+    ---
+    
+    Prática avançada e dissertativa com consulta.
+    
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-10.md)
+
+-   :octicons-rocket-24: **Projeto**
+
+    ---
+    
+    Laboratório prático de codificação em C/C++.
+    
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-10.md)
+
+</div>
+
+
 [:octicons-arrow-right-24: Avançar para Aula 11](aula-11.md){ .md-button .md-button--primary }

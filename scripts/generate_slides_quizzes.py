@@ -3,6 +3,7 @@ Script para gerar automaticamente todos os slides HTML e quizzes interativos
 Baseado nos formatos antigos que funcionavam
 """
 import pathlib
+import re
 from rich import print
 from rich.progress import track
 
@@ -30,18 +31,16 @@ def generate_slide_html(lesson_number: int) -> str:
                      data-separator-vertical="^\\n--\\n$">
             </section>
     <style>
-        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) */
+        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) e Fundo Transparente c/ Cor de Navegação */
         .reveal .slide-number {{
-            background-color: #ffb300 !important;
-            color: #000 !important;
-            font-size: 16px !important;
+            background-color: transparent !important;
+            color: var(--r-controls-color, var(--r-link-color, #42affa)) !important;
+            font-size: 18px !important;
             font-weight: bold !important;
-            border-radius: 6px !important;
-            padding: 6px 10px !important;
             bottom: 20px !important;
             left: 20px !important;
             right: auto !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: none !important;
         }}
     </style>
     <!-- Dicas de Atalhos Centro Removidas Conforme Padrão V2 -->
@@ -146,10 +145,32 @@ def generate_all_slides():
             
             # Remove classes Marp (legado)
             lines = content.split('\n')
-            content = '\n'.join([l for l in lines if not l.strip().startswith('<!-- _class:')])
             
-            # Converte fragmentos: { .fragment } -> <!-- .element: class="fragment" -->
+            # Análise inteligente e injeção de fragmentos visando primeiro Mostrar o Tópico (Ex: **Byte**) e depois a Descrição
+            processed_lines = []
+            for l in lines:
+                if l.strip().startswith('<!-- _class:'):
+                    continue
+                
+                # Se for um item de lista forte seguido de dois pontos, separa as fases da animação
+                # Ex: * **Byte**: 8 bits (etc)
+                if re.match(r'^[\*\-] \*\*.*?\*\*:$', l.strip()):
+                    processed_lines.append(l)
+                elif re.match(r'^[\*\-] \*\*.*?\*\*: (.*)$', l.strip()):
+                    # Separa o título do resto para fragmentar o resto
+                    match = re.match(r'^([\*\-] \*\*.*?\*\*: )(.*)$', l.strip())
+                    if match:
+                        processed_lines.append(f"{match.group(1)} <!-- .element: class=\"fragment\" --> {match.group(2)}")
+                else:
+                    processed_lines.append(l)
+
+            content = '\n'.join(processed_lines)
+            
+            # Converte fragmentos antigos
             content = content.replace('{ .fragment }', '<!-- .element: class="fragment" -->')
+            
+            # Fix Mermaid parse errors: replace quotes in brackets A["text"] -> A[text] to avoid &quot; collision
+            content = re.sub(r'\["(.*?)"\]', r'[\1]', content)
             
             # 3. Escrever Markdown runtime em docs/slides/
             dst_md_path.write_text(content.strip(), encoding='utf-8')

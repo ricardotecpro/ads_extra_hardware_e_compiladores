@@ -49,3 +49,44 @@ Parabéns pela resiliência no vale do Silício e da Matemática discreta profun
 Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
 [:material-rocket: Finalizar e Visitar Projetos](../projetos/index.md){ .md-button .md-button--primary }
+
+
+---
+
+## 🎯 Próximos Passos
+
+<div class="grid cards" markdown>
+
+-   :octicons-video-24: **Acessar Slides**
+
+    ---
+    
+    Reveja a apresentação visual desta aula.
+    
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-16.html)
+
+-   :octicons-tasklist-24: **Quiz**
+
+    ---
+    
+    Teste seu entendimento básico com perguntas rápidas.
+    
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-16.html)
+
+-   :octicons-pencil-24: **Exercícios**
+
+    ---
+    
+    Prática avançada e dissertativa com consulta.
+    
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-16.md)
+
+-   :octicons-rocket-24: **Projeto**
+
+    ---
+    
+    Laboratório prático de codificação em C/C++.
+    
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-16.md)
+
+</div>

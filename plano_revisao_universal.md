@@ -52,6 +52,7 @@ Expandir o aprofundamento do conhecimento das `aula-XX.md` de nível básico par
 
 ### 📚 `/docs/aulas/` (16 aulas fixas)
 - Manter os 16 arquivos existentes, expandindo-os e os padronizando conforme a arquitetura proposta acima.
+- **Roteamento Interno (Próximos Passos)**: Todo arquivo de aula **deve finalisticamente ser ancorado internamente no fundo com cards (`<div class="grid cards" markdown>`) apontando diretamente aos 4 materiais complementares subjacentes a ele:** Slide, Quiz prático, Exercícios elaborados e Projeto sugerido. Nunca deixar as pontas soltas.
 
 ### 📝 `/docs/exercicios/`
 - Cada aula terá seu arquivo de exercícios refletindo inteiramente a profundidade abordada no texto da aula correspondente.

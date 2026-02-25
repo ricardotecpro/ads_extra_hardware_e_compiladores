@@ -45,5 +45,5 @@ Ambos processos morrem na tela, dormindo inertes (*Blocked State*), enquanto a b
 
 ## 🚀 Resumo Prático
 
-- **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).
+- **Mutex**:  <!-- .element: class="fragment" --> Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).
 - Se a concorrência não tiver "Seção Crítica" que lida com Gravação e tiver "Só Read-only", não aplique trancas (Mutex) para não serializar as Threads da máquina.

@@ -46,4 +46,47 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
 - Ao usar C/C++, chame o instrínseco `fsync()` se seu App for um Banco de Dados ou Software Crítico Bancário forçando a Cache RAM descarregar a força e salvar permanentemente no silício do disco.
 - Nunca dependa da nomenclatura C: `/usr/foto.jpg`. Leia descritores de arquivo, file-pointers e fluxos binários se for transitar redes em baixo nível.
 
+
+
+---
+
+## 🎯 Próximos Passos
+
+<div class="grid cards" markdown>
+
+-   :octicons-video-24: **Acessar Slides**
+
+    ---
+    
+    Reveja a apresentação visual desta aula.
+    
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-14.html)
+
+-   :octicons-tasklist-24: **Quiz**
+
+    ---
+    
+    Teste seu entendimento básico com perguntas rápidas.
+    
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-14.html)
+
+-   :octicons-pencil-24: **Exercícios**
+
+    ---
+    
+    Prática avançada e dissertativa com consulta.
+    
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-14.md)
+
+-   :octicons-rocket-24: **Projeto**
+
+    ---
+    
+    Laboratório prático de codificação em C/C++.
+    
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-14.md)
+
+</div>
+
+
 [:octicons-arrow-right-24: Avançar para Aula 15](aula-15.md){ .md-button .md-button--primary }

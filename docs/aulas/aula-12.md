@@ -47,4 +47,47 @@ Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programáv
 - Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da aula 10 as blindando, USE **`std::atomic<bool>`**. Do contrário você é uma vítima da *Superscalar Out Of Order Intel Architecture Pipeline* (a reordenação elétrica).
 
 Isso enterra as nuances sombrias das memórias RAM + Cache. Agora mergulhemos no escuro do "Lento Discovoador": Os Armazenamentos (Avançar).
+
+
+---
+
+## 🎯 Próximos Passos
+
+<div class="grid cards" markdown>
+
+-   :octicons-video-24: **Acessar Slides**
+
+    ---
+    
+    Reveja a apresentação visual desta aula.
+    
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-12.html)
+
+-   :octicons-tasklist-24: **Quiz**
+
+    ---
+    
+    Teste seu entendimento básico com perguntas rápidas.
+    
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-12.html)
+
+-   :octicons-pencil-24: **Exercícios**
+
+    ---
+    
+    Prática avançada e dissertativa com consulta.
+    
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-12.md)
+
+-   :octicons-rocket-24: **Projeto**
+
+    ---
+    
+    Laboratório prático de codificação em C/C++.
+    
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-12.md)
+
+</div>
+
+
 [:octicons-arrow-right-24: Avançar para Aula 13](aula-13.md){ .md-button .md-button--primary }

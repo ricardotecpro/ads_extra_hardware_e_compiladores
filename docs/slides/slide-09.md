@@ -23,9 +23,9 @@ Quando se está em um jogo e, ao mesmo tempo que carrega os gráficos na GPU, um
 ```mermaid
 graph TD
     A("Processo (ID: 5599) - Backend Web") --> B[("Heap Memory (Compartilhado)")]
-    A --> C["Thread 01 (Rota A)"]
-    A --> D["Thread 02 (Rota B)"]
-    A --> E["Thread 03 (Pool C)"]
+    A --> C[Thread 01 (Rota A)]
+    A --> D[Thread 02 (Rota B)]
+    A --> E[Thread 03 (Pool C)]
     
     C --> F((Stack Exclusiva T1))
     D --> G((Stack Exclusiva T2))

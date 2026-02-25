@@ -11,12 +11,12 @@ O FS usa de índices numéricos ultra-rápidos: os **Inodes**.
 
 ```mermaid
 graph LR
-    A["Diretório /Docs"] -->|12345| B("Inode 12345")
-    B --> C["Tamanho: 2MB"]
-    B --> D["Permissões: rwxr-xr-x"]
-    B --> E["Blocos Físicos de Dados"]
-    E --> F["Cluster 80 no SSD"]
-    E --> G["Cluster 89 no SSD"]
+    A[Diretório /Docs] -->|12345| B("Inode 12345")
+    B --> C[Tamanho: 2MB]
+    B --> D[Permissões: rwxr-xr-x]
+    B --> E[Blocos Físicos de Dados]
+    E --> F[Cluster 80 no SSD]
+    E --> G[Cluster 89 no SSD]
 ```
 
 > [!INFO]

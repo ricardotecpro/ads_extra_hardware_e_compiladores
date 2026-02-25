@@ -19,18 +19,16 @@
                      data-separator-vertical="^\n--\n$">
             </section>
     <style>
-        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) */
+        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) e Fundo Transparente c/ Cor de Navegação */
         .reveal .slide-number {
-            background-color: #ffb300 !important;
-            color: #000 !important;
-            font-size: 16px !important;
+            background-color: transparent !important;
+            color: var(--r-controls-color, var(--r-link-color, #42affa)) !important;
+            font-size: 18px !important;
             font-weight: bold !important;
-            border-radius: 6px !important;
-            padding: 6px 10px !important;
             bottom: 20px !important;
             left: 20px !important;
             right: auto !important;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            box-shadow: none !important;
         }
     </style>
     <!-- Dicas de Atalhos Centro Removidas Conforme Padrão V2 -->

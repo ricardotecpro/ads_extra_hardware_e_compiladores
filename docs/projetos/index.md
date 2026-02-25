@@ -1,39 +1,27 @@
-# Projetos Práticos
+# Laboratórios de Projetos
 
-Aprenda Fundamentos da Computação criando projetos práticos desde os bits até a lógica!
+Coloque em prática seu aprendizado de Hardware implementando ferramentas reais com otimização C/C++.
 
-<div class="grid cards" markdown>
+## Módulo 1 – Fundamentos de Arquitetura de Computadores
+- [:octicons-arrow-right-24: Lab 01 - Como o Software Roda no Hardware](projeto-01.md)
+- [:octicons-arrow-right-24: Lab 02 - Representação de Dados](projeto-02.md)
+- [:octicons-arrow-right-24: Lab 03 - CPU: Estrutura e Funcionamento](projeto-03.md)
+- [:octicons-arrow-right-24: Lab 04 - Arquiteturas RISC vs CISC](projeto-04.md)
 
--   :material-numeric-1-box: **Módulo 1: O Coração Digital**
-    ---
-    - [Projeto 01 - Organização Dados](projeto-01.md)
-    - [Projeto 02 - Calculadora Bin](projeto-02.md)
-    - [Projeto 03 - Decifrando Máquina](projeto-03.md)
-    - [Projeto 04 - Auditoria Unix](projeto-04.md)
+## Módulo 2 – Memória e Performance
+- [:octicons-arrow-right-24: Lab 05 - Hierarquia de Memória](projeto-05.md)
+- [:octicons-arrow-right-24: Lab 06 - Cache e Localidade](projeto-06.md)
+- [:octicons-arrow-right-24: Lab 07 - Stack vs Heap em C/C++](projeto-07.md)
+- [:octicons-arrow-right-24: Lab 08 - Memória Virtual](projeto-08.md)
 
--   :material-numeric-2-box: **Módulo 2: Arquitetura e Aritmética**
-    ---
-    - [Projeto 05 - Arquiteto RGB](projeto-05.md)
-    - [Projeto 06 - Mapa de Rede](projeto-06.md)
-    - [Projeto 07 - Simulador ALU](projeto-07.md)
-    - [Projeto 08 - Codificador Seguro](projeto-08.md)
+## Módulo 3 – Concorrência e Paralelismo
+- [:octicons-arrow-right-24: Lab 09 - Processos e Threads](projeto-09.md)
+- [:octicons-arrow-right-24: Lab 10 - Sincronização - Mutex, Semáforos](projeto-10.md)
+- [:octicons-arrow-right-24: Lab 11 - Paralelismo em Hardware](projeto-11.md)
+- [:octicons-arrow-right-24: Lab 12 - Modelo de Memória](projeto-12.md)
 
--   :material-numeric-3-box: **Módulo 3: Lógica e Engenharia**
-    ---
-    - [Projeto 09 - Enigma Lógico](projeto-09.md)
-    - [Projeto 10 - Auditor de Verdade](projeto-10.md)
-    - [Projeto 11 - Engenheiro Lógico](projeto-11.md)
-    - [Projeto 12 - Mapeador Neumann](projeto-12.md)
-
--   :material-numeric-4-box: **Módulo 4: Software e Algoritmos**
-    ---
-    - [Projeto 13 - Guia de Upgrade](projeto-13.md)
-    - [Projeto 14 - Missão Terminal](projeto-14.md)
-    - [Projeto 15 - Arquiteto Fluxo](projeto-15.md)
-    - [Projeto 16 - O Primeiro Script](projeto-16.md)
-
-</div>
-
-## 🚀 Sobre o Projeto do Curso
-
-Neste curso, você não fará projetos aleatórios. Você construirá, passo a passo, seu **Portfólio Profissional** hospedado no GitHub Pages. Cada aula adiciona uma nova camada de conhecimento e funcionalidade ao seu portfólio.
+## Módulo 4 e 5 – Armazenamento, I/O e Prática
+- [:octicons-arrow-right-24: Lab 13 - Dispositivos de Armazenamento](projeto-13.md)
+- [:octicons-arrow-right-24: Lab 14 - Sistemas de Arquivos](projeto-14.md)
+- [:octicons-arrow-right-24: Lab 15 - Entrada e Saída / I/O](projeto-15.md)
+- [:octicons-arrow-right-24: Lab 16 - Projeto Final: Otimização](projeto-16.md)

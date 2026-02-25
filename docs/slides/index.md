@@ -1,42 +1,29 @@
-# Slides das Aulas
+# Slides Interativos
 
-Aqui você encontra os slides apresentados em cada aula, prontos para revisão ou apresentação.
+Nesta seção você acessa os slides completos de cada uma das 16 aulas do Curso. As apresentações foram desenhadas com visual otimizado Reveal.js. 
 
-<div class="grid cards" markdown>
+Para utilizar as transições (como as setas do teclado) em tela-cheia, pressione a tecla `F`.
 
--   :material-numeric-1-box: **Módulo 1: O Coração Digital**
-    ---
-    - [Slide 01 - Introdução e Bases Numéricas](../slides/slide-01.html)
-    - [Slide 02 - De Decimal para Binário](../slides/slide-02.html)
-    - [Slide 03 - De Binário para Decimal](../slides/slide-03.html)
-    - [Slide 04 - Sistema Octal e Permissões](../slides/slide-04.html)
+## Módulo 1 – Fundamentos de Arquitetura de Computadores
+- [:octicons-arrow-right-24: Aula 01 - Como o Software Roda no Hardware](slide-01.html)
+- [:octicons-arrow-right-24: Aula 02 - Representação de Dados](slide-02.html)
+- [:octicons-arrow-right-24: Aula 03 - CPU: Estrutura e Funcionamento](slide-03.html)
+- [:octicons-arrow-right-24: Aula 04 - Arquiteturas RISC vs CISC](slide-04.html)
 
--   :material-numeric-2-box: **Módulo 2: Arquitetura e Aritmética**
-    ---
-    - [Slide 05 - Hexadecimal e Cores RGB](../slides/slide-05.html)
-    - [Slide 06 - Binário ↔ Hexadecimal](../slides/slide-06.html)
-    - [Slide 07 - Aritmética e Somadores](../slides/slide-07.html)
-    - [Slide 08 - ASCII, UTF-8 e Dados](../slides/slide-08.html)
+## Módulo 2 – Memória e Performance
+- [:octicons-arrow-right-24: Aula 05 - Hierarquia de Memória](slide-05.html)
+- [:octicons-arrow-right-24: Aula 06 - Cache e Localidade](slide-06.html)
+- [:octicons-arrow-right-24: Aula 07 - Stack vs Heap em C/C++](slide-07.html)
+- [:octicons-arrow-right-24: Aula 08 - Memória Virtual](slide-08.html)
 
--   :material-numeric-3-box: **Módulo 3: Lógica e Engenharia**
-    ---
-    - [Slide 09 - Operadores NOT, AND, OR](../slides/slide-09.html)
-    - [Slide 10 - Tabelas Verdade e Lógica](../slides/slide-10.html)
-    - [Slide 11 - Portas Lógicas e Circuitos](../slides/slide-11.html)
-    - [Slide 12 - CPU e Modelo Von Neumann](../slides/slide-12.html)
+## Módulo 3 – Concorrência e Paralelismo
+- [:octicons-arrow-right-24: Aula 09 - Processos e Threads](slide-09.html)
+- [:octicons-arrow-right-24: Aula 10 - Sincronização - Mutex, Semáforos](slide-10.html)
+- [:octicons-arrow-right-24: Aula 11 - Paralelismo em Hardware](slide-11.html)
+- [:octicons-arrow-right-24: Aula 12 - Modelo de Memória](slide-12.html)
 
--   :material-numeric-4-box: **Módulo 4: Software e Programação**
-    ---
-    - [Slide 13 - RAM, SSD e Hierarquia](../slides/slide-13.html)
-    - [Slide 14 - Kernel, Shell e S.O.](../slides/slide-14.html)
-    - [Slide 15 - Lógica e Fluxogramas](../slides/slide-15.html)
-    - [Slide 16 - Introdução à Programação](../slides/slide-16.html)
-
-</div>
-
-## :material-presentation: Como Usar
-
-- Os slides usam **RevealJS** para interatividade.
-- Clique nos links acima para abrir em tela cheia.
-- Use as setas do teclado (⬅️ ➡️) para navegar.
-- Pressione `F` para entrar em modo tela cheia.
+## Módulo 4 e 5 – Armazenamento, I/O e Prática
+- [:octicons-arrow-right-24: Aula 13 - Dispositivos de Armazenamento](slide-13.html)
+- [:octicons-arrow-right-24: Aula 14 - Sistemas de Arquivos](slide-14.html)
+- [:octicons-arrow-right-24: Aula 15 - Entrada e Saída / I/O](slide-15.html)
+- [:octicons-arrow-right-24: Aula 16 - Projeto Final: Otimização](slide-16.html)

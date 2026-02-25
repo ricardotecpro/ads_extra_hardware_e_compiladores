@@ -1,41 +1,27 @@
 # Quizzes Interativos
 
-Teste seus conhecimentos com quizzes interativos para cada aula!
+Teste os seus conhecimentos adquiridos durantes as explorações teóricas.
 
-<div class="grid cards" markdown>
+## Módulo 1 – Fundamentos de Arquitetura de Computadores
+- [:octicons-arrow-right-24: Quiz 01 - Como o Software Roda no Hardware](quiz-01.md)
+- [:octicons-arrow-right-24: Quiz 02 - Representação de Dados](quiz-02.md)
+- [:octicons-arrow-right-24: Quiz 03 - CPU: Estrutura e Funcionamento](quiz-03.md)
+- [:octicons-arrow-right-24: Quiz 04 - Arquiteturas RISC vs CISC](quiz-04.md)
 
--   :material-numeric-1-box: **Módulo 1: O Coração Digital**
-    ---
-    - [Quiz 01 - Bases Numéricas](quiz-01.md)
-    - [Quiz 02 - Rumo ao Binário](quiz-02.md)
-    - [Quiz 03 - Lendo Binário](quiz-03.md)
-    - [Quiz 04 - Octal e Acesso](quiz-04.md)
+## Módulo 2 – Memória e Performance
+- [:octicons-arrow-right-24: Quiz 05 - Hierarquia de Memória](quiz-05.md)
+- [:octicons-arrow-right-24: Quiz 06 - Cache e Localidade](quiz-06.md)
+- [:octicons-arrow-right-24: Quiz 07 - Stack vs Heap em C/C++](quiz-07.md)
+- [:octicons-arrow-right-24: Quiz 08 - Memória Virtual](quiz-08.md)
 
--   :material-numeric-2-box: **Módulo 2: Arquitetura e Aritmética**
-    ---
-    - [Quiz 05 - Hexadecimal](quiz-05.md)
-    - [Quiz 06 - Conversão Rápida](quiz-06.md)
-    - [Quiz 07 - Aritmética CPU](quiz-07.md)
-    - [Quiz 08 - Codificação Dados](quiz-08.md)
+## Módulo 3 – Concorrência e Paralelismo
+- [:octicons-arrow-right-24: Quiz 09 - Processos e Threads](quiz-09.md)
+- [:octicons-arrow-right-24: Quiz 10 - Sincronização - Mutex, Semáforos](quiz-10.md)
+- [:octicons-arrow-right-24: Quiz 11 - Paralelismo em Hardware](quiz-11.md)
+- [:octicons-arrow-right-24: Quiz 12 - Modelo de Memória](quiz-12.md)
 
--   :material-numeric-3-box: **Módulo 3: Lógica e Engenharia**
-    ---
-    - [Quiz 09 - Lógica Booleana](quiz-09.md)
-    - [Quiz 10 - Tabelas Verdade](quiz-10.md)
-    - [Quiz 11 - Circuitos Lógicos](quiz-11.md)
-    - [Quiz 12 - Arquitetura CPU](quiz-12.md)
-
--   :material-numeric-4-box: **Módulo 4: Software e Programação**
-    ---
-    - [Quiz 13 - Memória RAM/SSD](quiz-13.md)
-    - [Quiz 14 - Sistema Operacional](quiz-14.md)
-    - [Quiz 15 - Lógica e Fluxo](quiz-15.md)
-    - [Quiz 16 - Programação](quiz-16.md)
-
-</div>
-
-## 🎯 Como Usar
-
-- Responda todas as perguntas antes de verificar o resultado
-- Use os quizzes para revisar o conteúdo das aulas
-- Refaça os quizzes até acertar 100%!
+## Módulo 4 e 5 – Armazenamento, I/O e Prática
+- [:octicons-arrow-right-24: Quiz 13 - Dispositivos de Armazenamento](quiz-13.md)
+- [:octicons-arrow-right-24: Quiz 14 - Sistemas de Arquivos](quiz-14.md)
+- [:octicons-arrow-right-24: Quiz 15 - Entrada e Saída / I/O](quiz-15.md)
+- [:octicons-arrow-right-24: Quiz 16 - Projeto Final: Otimização](quiz-16.md)

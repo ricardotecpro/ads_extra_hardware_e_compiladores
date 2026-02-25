@@ -31,8 +31,7 @@ graph TD
 
 Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Como consultar as camadas do processador Linux
 $ lscpu | grep Cache
@@ -41,8 +40,6 @@ L1i cache:                       64 KiB
 L2 cache:                        1 MiB
 L3 cache:                        12 MiB
 ```
-
-</div>
 
 A instrução e os dados descem da L3, saltam para L2, descem para L1 e se acoplam na ALU.
 

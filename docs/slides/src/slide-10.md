@@ -50,11 +50,18 @@ A solução em qualquer projeto multi-thread backend/C++ é envolver as memória
 
 ## 🛡️ 2. Mutex e The Critical Section
 
-<div class="termy" markdown="1">
+<!-- termynal -->
+```console
+$ # Em C++, protege-se a variável central assim:
+$ cat bank.cpp
+std::mutex portaCorredor;
 
-__CODE_BLOCK_0__
-
-</div>
+void adiciona_10() {
+    portaCorredor.lock();   // O Hardware garante atomicamente exclusão
+    balance += 10;          // Apenas UM transita aqui adentro. 
+    portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel
+}
+```
 
 ---
 

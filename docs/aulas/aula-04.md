@@ -24,16 +24,13 @@ A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure pre
 
 Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas:
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Compilando para a máquina local (digamos, x86_64 CISC)
 $ gcc app.c -o app
 $ # Compilando Cruzado (Cross-Compiling) de um PC x86 para rodar num Raspberry Pi (ARMv8):
 $ aarch64-linux-gnu-gcc app.c -o app_arm
 ```
-
-</div>
 
 O código C++ original `app.c` não muda! Quem rala é o compilador, que na versão ARM gera dezenas de pequenas instruções curtas RISC, e na versão local gera um op-code gigante com microcódigos CISC internos da Intel.
 

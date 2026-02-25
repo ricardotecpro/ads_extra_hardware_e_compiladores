@@ -19,8 +19,7 @@ Usamos ferramentas robustas para que a Arquitetura Linux diga-nos onde os gargal
 
 O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Desafio do Iterador de Matriz Contínua
 $ g++ matriz_opt.cpp -O3 -o matriz
@@ -28,8 +27,6 @@ $ ./matriz
 Iteração Horizontal (Hit L1): Tempo 140ms
 Iteração Vertical (Miss L1): Tempo 2100ms
 ```
-
-</div>
 
 **Requisitos do Projeto:**
 1. Alocar um Array gigantesco Massivo no Heap Dinâmico via `malloc()` C (Não use vectors prontos para sentir a dor no braço).

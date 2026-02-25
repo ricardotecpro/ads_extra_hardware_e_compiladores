@@ -64,11 +64,20 @@ Enquanto a Pilha é rígida, restrita e pré-delimitada, o Monte (Heap) é um va
 
 ## 📦 2. O Monte (Heap)
 
-<div class="termy" markdown="1">
+<!-- termynal -->
+```console
+$ # Como você interage em baixo nível (C/C++)
+$ cat code.c
+#include <stdlib.h>
 
-__CODE_BLOCK_0__
-
-</div>
+int main() {
+    // malloc vai no Sistema Operacional e chora pedindo: "Me dê 10 inteiros!"
+    int* array_gigante_dinamico = (int*)malloc(10 * sizeof(int));
+    
+    // Se você não limpar usando free(), a RAM apodrecerá lentamente (LEAK)
+    free(array_gigante_dinamico);
+}
+```
 
 ---
 

@@ -22,8 +22,7 @@ A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fi
 
 Na aula 03, vimos que a execução cruza pelo Pipeline ou pode esbarrar em ciclos ociosos na CU aguardando a Memória Principal. O *Hyper-Threading* espeta um **Segundo conjunto de Registradores** e Hardware de Estado no mesmo Core. Enquanto o código da Thread "A" está 0.5 nanosegundo *travada* esperando chegar o dado lento da L3, o Core troca instantaneamente para o contexto da Thread "B", executando-o usando as mesmas Unidades Lógicas (ALU) num aproveitamento fabril monstruoso de 100%.
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)
 $ lscpu
@@ -32,8 +31,6 @@ On-line CPU(s) list:     0-7
 Thread(s) per core:      2
 Core(s) per socket:      4
 ```
-
-</div>
 
 > Vemos 8 CPUs acima, mas fisicamente a máquina tem 4 motores reais. 
 

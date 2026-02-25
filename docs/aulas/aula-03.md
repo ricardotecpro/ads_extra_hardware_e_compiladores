@@ -12,8 +12,7 @@ A arquitetura interna da CPU possui 3 órgãos vitais:
 2. **CU (Unidade de Controle):** O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
 3. **Registradores:** Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Como você lê valores do processador direto em C?
 $ cat register.c
@@ -22,8 +21,6 @@ int main() {
     return i;
 }
 ```
-
-</div>
 
 ---
 

@@ -33,11 +33,15 @@ A arquitetura interna da CPU possui 3 órgãos vitais:
 
 ## 🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores
 
-<div class="termy" markdown="1">
-
-__CODE_BLOCK_0__
-
-</div>
+<!-- termynal -->
+```console
+$ # Como você lê valores do processador direto em C?
+$ cat register.c
+int main() {
+    register int i = 10; // "Dica" para o compilador usar um registrador direto!
+    return i;
+}
+```
 
 ---
 

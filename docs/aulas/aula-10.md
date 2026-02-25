@@ -17,8 +17,7 @@ Se na fresta entre a **Thread 1** preencher o EAX e depois descer ao RAM o valor
 
 A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion).
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Em C++, protege-se a variável central assim:
 $ cat bank.cpp
@@ -30,8 +29,6 @@ void adiciona_10() {
     portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel
 }
 ```
-
-</div>
 
 A área demarcada pelo *lock* a *unlock* é intitulada **Seção Crítica**. O poder e o problema do design residem aí: Se você for preguiçoso e prender 10.000 linhas da sua transação atrás da Seção Crítica Mestre, o teu glorioso Processador *Multicore Ultra de 32 cores* se comportará como um ridículo e solitário Processador Antigo Pentium de *1 core* single Threaded, derrubando teu design ao zero! Tudo vai rodar Enfileirado (Serializado). O bom C++ trava com extrema granuladidade e rapidíssimo na variável.
 

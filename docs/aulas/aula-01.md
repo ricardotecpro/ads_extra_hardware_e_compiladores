@@ -60,8 +60,7 @@ A forma como seu código vira máquina dita o perfil da performance:
 
 Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas operações ditadas pela ISA para rodar.
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ gcc -O2 -S hello.c
 $ cat hello.s
@@ -71,8 +70,6 @@ main:
     leaq    .LC0(%rip), %rdi
     call    puts@PLT
 ```
-
-</div>
 
 *Acima, o output é o assembly x86 do seu C. É a representação literal da série de instruções que formarão a ISA do seu microprocessador Intel/AMD.*
 

@@ -13,15 +13,12 @@ O computador compreende nativamente a base 2 (Binário). Como a escrita binária
 
 Por que `Hexadecimal` é amado pelos desenvolvedores C/C++? Um *Byte* (8 bits) pode ser perfeitamente representado por exatos dois caracteres Hexadecimais. `FF` é o mesmo que `11111111`.
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Como você lida com Hex no C++?
 $ cat var.cpp
 int mascara_de_bits = 0xFF; // Representa 255
 ```
-
-</div>
 
 ---
 

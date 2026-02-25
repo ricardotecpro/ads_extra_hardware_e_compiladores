@@ -22,8 +22,7 @@ A Stack é a fundação natural de blocos de toda variável ordinariamente decla
 
 Enquanto a Pilha é rígida, restrita e pré-delimitada, o Monte (Heap) é um vasto oceano caótico de Gigabytes gerenciado pelo Kernel do S.O. (Sistemas Operacionais). Você requer pedaços de memória "sob demanda" (Alocação Dinâmica).
 
-<div class="termy" markdown="1">
-
+<!-- termynal -->
 ```console
 $ # Como você interage em baixo nível (C/C++)
 $ cat code.c
@@ -37,8 +36,6 @@ int main() {
     free(array_gigante_dinamico);
 }
 ```
-
-</div>
 
 === "Diferenciais do C/C++"
     Você é o único árbitro. Diferente de Java, Python ou C# que usam complexos robôs vasculhadores ocultos (*Garbage Collectors*) na sombra consumindo até 20% do processador para auditar seu Heap e limpar os lixos. O Rust automatiza e barra alocações indevidas usando Ownership sem o robozinho. O C++ fornece ferramentas novas e maduras (`std::unique_ptr` ou `std::shared_ptr`) baseadas na contagem de referência.

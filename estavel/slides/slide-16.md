@@ -90,6 +90,6 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
 ## 🏆 3. Conclusão da Trilha
 
-[:material-rocket: Finalizar e Visitar Projetos](../projetos/index.md){ .md-button .md-button--primary }
+[:material-rocket: Finalizar e Visitar Projetos](../../projetos/index.md){ .md-button .md-button--primary }
 
 ---

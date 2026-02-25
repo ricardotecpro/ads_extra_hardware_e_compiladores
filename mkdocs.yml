@@ -97,6 +97,7 @@ plugins:
       lang: pt
   - mkdocs-jupyter
   - glightbox
+  - awesome-pages
 
   - git-authors:
       show_contribution: true

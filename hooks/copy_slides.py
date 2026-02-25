@@ -46,9 +46,9 @@ def copy_slides(config, **kwargs):
         md_copied += 1
     
     if html_copied > 0:
-        print(f"[green]✓ {html_copied} slide(s) HTML copiados[/green]")
+        print(f"[green]OK {html_copied} slide(s) HTML copiados[/green]")
     if md_copied > 0:
-        print(f"[green]✓ {md_copied} slide(s) Markdown copiados[/green]")
+        print(f"[green]OK {md_copied} slide(s) Markdown copiados[/green]")
     
     if html_copied == 0 and md_copied == 0:
         print("[yellow]⚠ Nenhum slide encontrado em docs/slides/[/yellow]")

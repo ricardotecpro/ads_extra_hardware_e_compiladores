@@ -1,305 +1,50 @@
 <!-- .element: class="fragment" -->
-# Modelo de Memória
+# O Modelo de Memória
 ## Aula 12
 
 ---
 
-## Tópico 1: Modelo de Memória
+## 🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)
 
-Bem vindo à explicação do tópico 1.
-
+Você codifica:
 ```cpp
-// Exemplo de código 1
-int var_1 = 0;
+int x = 0;
+int FLAG = false;
+
+// Em uma Thread Secundária
+x = 42;         // PASSO A
+FLAG = true;    // PASSO B
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Um programador esperançoso diz: "Vou ler a váriavel na Thread Oposta (Main)... e quando `FLAG` for *true*, sei que `X` é impreterivelmente *42* pois executei a linha acima primeiro na tela!"
+
+**FALSO! MORTALMENTE FALSO!**
 
 ---
 
-## Tópico 2: Modelo de Memória
+## 🚧 2. O Memory Model (Consistências e Barreiras)
 
-Bem vindo à explicação do tópico 2.
+O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::atomic` o que o Hardware tem permições para *Adiantar* vs *Trancar*.
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+1. **Relaxed Consistensy** (`std::memory_order_relaxed`): A CPU é dona, reordene como quiser em torno da sua vizinhança na RAM, apenas aplique na thread isolada em segurança. Performance brutal.
+2. **Release / Acquire** (`std::memory_order_acquire / release`): O padrão para transferir fardos (como ler a Fila sem locks e sem medo da Out-Of-Order embaralhar *flags* finalizadoras de *Loop* C++ no hardware alheio do *Core 2).
+3. **Sequential Consistency** (`std::memory_order_seq_cst`): O C++ por default invoca barreiras completas absolutas elétricas. Força todas as cores (L1/L2) da CPU e do compilador a não alterarem NADA a ordem que seu texto determinou. Seguro, mas castrador de velocidade em processadores ARM.
 
 ---
 
-## Tópico 3: Modelo de Memória
+---
 
-Bem vindo à explicação do tópico 3.
+## 🧱 3. Memory Barriers (Fences) nas CPUs
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programávamos via "Gambiarra Intrinseca" de Processador (Ex: Comando Assembler **MFENCE** ou **SFENCE** no Intel). Os Fences proíbem categoricamente a travessia de saltos das sub-operações em Assembly, estancando a execução como um sinaleiro fechado.
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+> [!INFO]
+> É por isso que programar Software Infra-estrutural de Baixo Nível (Databases, Motores de Redes Socket, SO Kernel Driver) é extremamente difícil: As reordenações da CPU nunca acontecem quando você depura linha a linha na IDE (pois a paralela não é instigada). Elas só geram *corrupções bizarras randômicas 1x na vida e morrem meses na escura neblina de servidores reais operando 100 mil Requests por Minuto no DataCenter*. Onde a pressão elástica exaure as Caches e expõe seus Bugs de Memory Models relaxados.
 
 ---
 
-## Tópico 4: Modelo de Memória
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
+- Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da aula 10 as blindando, USE **`std::atomic<bool>`**. Do contrário você é uma vítima da *Superscalar Out Of Order Intel Architecture Pipeline* (a reordenação elétrica).
 
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Modelo de Memória
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Modelo de Memória
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Modelo de Memória
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Modelo de Memória
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Modelo de Memória
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Modelo de Memória
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Modelo de Memória
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Modelo de Memória
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Modelo de Memória
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Modelo de Memória
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Modelo de Memória
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Modelo de Memória
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Modelo de Memória
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Modelo de Memória
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Modelo de Memória
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Modelo de Memória
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+Isso enterra as nuances sombrias das memórias RAM + Cache. Agora mergulhemos no escuro do "Lento Discovoador": Os Armazenamentos (Avançar).

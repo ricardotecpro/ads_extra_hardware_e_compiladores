@@ -4,302 +4,60 @@
 
 ---
 
-## Tópico 1: Hierarquia de Memória
+## 🏛️ 1. A Pirâmide de Alta Performance
 
-Bem vindo à explicação do tópico 1.
+Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda:
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
+```mermaid
+graph TD
+    A("Registradores<br/>(1 Ciclo - Alguns Bytes)") --> B["Cache L1<br/>(~4 Ciclos - ~64KB a 128KB)"]
+    B --> C["Cache L2 e L3<br/>(~12 a ~40 Ciclos - Megabytes)"]
+    C --> D[["RAM (Memória Principal)<br/>(~200 a ~300 Ciclos - Gigabytes)"]]
+    D --> E[("Armazenamento (SSD / HDD)<br/>(Milhões de Ciclos - Terabytes)")]
+    
+    style A fill:#ff9999
+    style B fill:#ffcc99
+    style C fill:#ffff99
+    style D fill:#ccffcc
+    style E fill:#99ccff
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+> [!IMPORTANT]
+> A latência é o tempo que demora da CPU pedir um dado até ele chegar. Buscar um byte da **RAM** demora ~200 ciclos. Buscar do **SSD** demora centenas de milhares. Essa diferença grotesca é mitigada pelo uso de Caches.
 
 ---
 
-## Tópico 2: Hierarquia de Memória
+---
 
-Bem vindo à explicação do tópico 2.
+## ⏳ 2. Os Impactos da Latência (Lado do Código)
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
+Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.
+
+<div class="termy" markdown="1">
+
+```console
+$ # Como consultar as camadas do processador Linux
+$ lscpu | grep Cache
+L1d cache:                       64 KiB
+L1i cache:                       64 KiB
+L2 cache:                        1 MiB
+L3 cache:                        12 MiB
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+</div>
 
 ---
 
-## Tópico 3: Hierarquia de Memória
+## 🎯 3. Optimizando Uso
 
-Bem vindo à explicação do tópico 3.
+Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading?
+Porque elas permitem `Alocação Estática e Constante` que é perfeitamente "encaixada" pelo compilador diretamente na memória **Cache**.
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Ao invés de carregar gigabytes de *Strings* na lenta RAM, as linguagens de baixo nível incentivam o uso de matrizes de tamanho delimitado (arrays fixos), cujo agrupamento contíguo força a arquitetura de **Hardware Prefetching** a adiantar os bytes do Array para a Cache nativamente, antes mesmo de você rodar a linha do código!
 
 ---
 
-## Tópico 4: Hierarquia de Memória
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Hierarquia de Memória
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente).
+- Tudo recai na técnica humana de amarrar dados juntos (Caches L1 e L2) e escrever *data-oriented code* se quiser ultra-latência C++.

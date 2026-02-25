@@ -1,19 +1,16 @@
-# Mini-Projeto 11 - Paralelismo em Hardware
+# Projeto: Aula 11 - Paralelismo no Hardware
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Paralelismo em Hardware**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **🏗️ 1. Multi-Core (Múltiplos Núcleos)**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **🏗️ 1. Multi-Core (Múltiplos Núcleos)**
+- [ ] Implementar ou demonstrar estruturalmente: **🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)**
+- [ ] Implementar ou demonstrar estruturalmente: **🎮 3. GPUs: O Paralelismo Maciço**
+- [ ] Implementar ou demonstrar estruturalmente: **🚀 Resumo Prático**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

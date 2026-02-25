@@ -9,303 +9,44 @@ transition: convex
 
 ---
 
-## Tópico 1: Projeto Final: Otimização Baseada em Hardware
+## ⏱️ 1. Profiling Clássico (A Vida Real)
 
-Bem vindo à explicação do tópico 1.
+Adivinhar onde o código está lento é a armadilha suprema do júnior.
+Usamos ferramentas robustas para que a Arquitetura Linux diga-nos onde os gargalos fervem a CPU.
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+* **gprof**: O padrão antigo C++. Ele recompila injetando marcações contábeis nas idas e vindas de funções, revelando "Quais chamadas consumiram O Tempo Global".
+* **Valgrind (Callgrind / Cachegrind):** Ferramenta extrema rodando seu executável numa sandbox virtual que mapeia cada instrução assembly. Traz gráficos massivos de onde **Ocorreram os Caches Misses** da Memória L1 de nossa Aula 06!
+* **Perf**: O utilitário nativo dos programadores Linux Kernel, extraindo informações métricas em Eventos de Desvio (Branch Mispired da Aula 03) usando relógios internos dos registradores ocultos `PMU` do seu próprio Processador em tempo real, sem overhead sintético.
 
 ---
 
-## Tópico 2: Projeto Final: Otimização Baseada em Hardware
+---
 
-Bem vindo à explicação do tópico 2.
+## 🔬 2. O Grande Desafio (Mini-Projeto Prático)
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
+O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:
+
+<div class="termy" markdown="1">
+
+```console
+$ # Desafio do Iterador de Matriz Contínua
+$ g++ matriz_opt.cpp -O3 -o matriz
+$ ./matriz 
+Iteração Horizontal (Hit L1): Tempo 140ms
+Iteração Vertical (Miss L1): Tempo 2100ms
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+</div>
 
 ---
 
-## Tópico 3: Projeto Final: Otimização Baseada em Hardware
+## 🏆 3. Conclusão da Trilha
 
-Bem vindo à explicação do tópico 3.
+Você navegou nas extremas profundezas da arquitetura da Computação Modernizada.
+Um engenheiro de Backend jamais olhará para `int x;` ou `for()` sem recordar os impactos térmicos, cache hits mortais de linha, L1 local, reordenações do std::atomic Memory Model ou Page Faults nos clusters de Sistema e Processos em Swap.
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+Parabéns pela resiliência no vale do Silício e da Matemática discreta profunda.
+Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 4: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Projeto Final: Otimização Baseada em Hardware
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+:material-rocket: Finalizar e Visitar Projetos{ .md-button .md-button--primary }
 

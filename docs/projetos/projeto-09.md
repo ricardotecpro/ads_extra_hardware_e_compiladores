@@ -1,19 +1,16 @@
-# Mini-Projeto 09 - Processos e Threads
+# Projeto: Aula 09 - Processos e Threads
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Processos e Threads**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **🏃 1. Processos (Isolamento Forte)**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** O Processo é o contêiner mestre do *Sistema Operacional*. Quando a execução do seu binário em C/C++ se inicia via Terminal, vira um Processo (`PID 2900`).
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **🏃 1. Processos (Isolamento Forte)**
+- [ ] Implementar ou demonstrar estruturalmente: **🧵 2. Threads (Isolamento Fraco / Partilha)**
+- [ ] Implementar ou demonstrar estruturalmente: **⚙️ 3. Context Switch (A Faca de Dois Gumes)**
+- [ ] Implementar ou demonstrar estruturalmente: **🚀 Resumo Prático**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

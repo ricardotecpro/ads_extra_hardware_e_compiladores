@@ -9,303 +9,63 @@ transition: convex
 
 ---
 
-## Tópico 1: CPU: Estrutura e Funcionamento
+## 🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores
 
-Bem vindo à explicação do tópico 1.
+A arquitetura interna da CPU possui 3 órgãos vitais:
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
+1. **ALU (Unidade Lógica e Aritmética):** O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.
+2. **CU (Unidade de Controle):** O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
+3. **Registradores:** Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
+
+<div class="termy" markdown="1">
+
+```console
+$ # Como você lê valores do processador direto em C?
+$ cat register.c
+int main() {
+    register int i = 10; // "Dica" para o compilador usar um registrador direto!
+    return i;
+}
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 2: CPU: Estrutura e Funcionamento
+## 🔄 2. O Ciclo de Instrução (Fetch-Decode-Execute)
 
-Bem vindo à explicação do tópico 2.
+Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico:
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
+```mermaid
+stateDiagram-v2
+    [*] --> Fetch
+    Fetch --> Decode
+    Decode --> Execute
+    Execute --> Store
+    Store --> Fetch
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+1. **Fetch (Busca):** A CU vai na Memória RAM e busca qual o *próximo* byte de comando, guiando-se pelo **Program Counter (PC)**.
+2. **Decode (Decodifica):** A CU traduz o comando para entender o que é ("Ah, é para Somar 5!").
+3. **Execute:** A ALU recebe os parâmetros e faz a conta física elétron a elétron.
+4. **Store (Armazena):** O resultado volta para um registrador ou para a Memória RAM.
 
 ---
 
-## Tópico 3: CPU: Estrutura e Funcionamento
+---
 
-Bem vindo à explicação do tópico 3.
+## ⚡ 3. Pipeline e Previsão de Desvio (Branch Prediction)
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch!
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+### O perigo do "IF"
+
+Quando você usa muitos `if()`, o processador tenta "Adivinhar" o lado do *if* usando heurísticas para não frear o Pipeline (Isso é o *Branch Prediction*).
+
+> [!WARNING]
+> Errar a adivinhação do `if` corrompe todo o Pipeline que foi pré-carregado. Em código de alta performance C++, tentamos escrever loops minimizando saltos condicionais imprevistos.
 
 ---
 
-## Tópico 4: CPU: Estrutura e Funcionamento
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: CPU: Estrutura e Funcionamento
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM.
 

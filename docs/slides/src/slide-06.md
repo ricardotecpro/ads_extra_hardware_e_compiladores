@@ -9,303 +9,53 @@ transition: convex
 
 ---
 
-## Tópico 1: Cache e Localidade
+## ✅ 1. Cache Hit e Cache Miss
 
-Bem vindo à explicação do tópico 1.
+O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
+- **Cache Hit:** Acerto! A CPU pediu a posição `[1]`, ela já estava na Cache e a conta foi resolvida quase imediatamente.
+- **Cache Miss:** Erro! O processador precisou parar o Pipeline, ir até a RAM lenta, injetar o bloco de bytes na lenta escalada D-Cache/L3/L2/L1 e prosseguir.
+
+```mermaid
+sequenceDiagram
+    participant P as Programador
+    participant C as Cache L1
+    participant R as RAM
+    
+    P->>C: Quero array[0]!
+    Note right of C: "Cache Hit" (Sucesso imediato)
+    
+    P->>C: Quero NodeLink->prox!
+    Note right of C: Não está aqui...
+    C->>R: Buscar Posição Lenta na RAM...
+    R-->>C: Traz o bloco de 64bytes inteiro
+    Note right of C: "Cache Miss" (Atraso)
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 2: Cache e Localidade
+---
 
-Bem vindo à explicação do tópico 2.
+## 🗺️ 2. Localidade Espacial vs Temporal
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
+As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+
+    Se o programa acessou a variável na posição de memória `X`, há extrema probabilidade de que no ciclo de CPU seguinte ele acesse a variável de memória `X + 1`.
+    *O clássico caso dos **Arrays Continuos (std::vector)**, garantindo varredura limpa em Hit sequencial absoluto de 64 em 64 bytes.*
+
+
+    Se o programa visitou a variável `Y` agora, há enorme probabilidade dele visitá-la nos próximos ms.
+    *O clássico caso das **Variáveis Locais e Contadores Padrões (`int i = 0`)** retidos brutalmente no Registrador ou na L1.*
 
 ---
 
-## Tópico 3: Cache e Localidade
-
-Bem vindo à explicação do tópico 3.
-
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
 ---
 
-## Tópico 4: Cache e Localidade
+## 🧨 3. False Sharing e Lógica Invertida (A Morte do C++)
 
-Bem vindo à explicação do tópico 4.
+> [!WARNING]
+> O vilão máximo da performance: Iterar sobre matrizes pela *Coluna* ao invés da *Linha*. A imagem matriz na RAM C/C++ (Row-major order) exige saltos. E *False Sharing* ocorre quando threads isoladas atualizam variáveis contíguas da mesma linha de Cache de 64 bytes, forçando o Hardware (Cache Coherence Protocol) a invalidar repetitivas vezes L1/L2, triturando toda métrica.
 
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Cache e Localidade
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Cache e Localidade
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Cache e Localidade
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Cache e Localidade
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Cache e Localidade
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Cache e Localidade
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Cache e Localidade
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Cache e Localidade
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Cache e Localidade
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Cache e Localidade
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Cache e Localidade
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Cache e Localidade
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Cache e Localidade
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Cache e Localidade
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Cache e Localidade
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Cache e Localidade
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo.
 

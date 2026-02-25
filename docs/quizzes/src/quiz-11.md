@@ -1,74 +1,32 @@
-# Quiz 11 - Paralelismo em Hardware
+# Quiz 11 - Aula 11 - Paralelismo no Hardware
 
 **Avaliação Sistemática**
 
-1. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
+1. Sobre **🏗️ 1. Multi-Core (Múltiplos Núcleos)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje t... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-2. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
+2. Sobre **🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógi... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-3. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
+3. Sobre **🎮 3. GPUs: O Paralelismo Maciço**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] CPUs (Processadores) foram feitos para "Serem Rápidos executando sequências lógicas e IFs complexos"... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-4. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
+4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-5. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-6. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-7. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-8. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-9. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-10. Sobre o tema de Paralelismo em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] - **Task Paralelism**: Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*. *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 

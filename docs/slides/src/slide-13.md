@@ -9,303 +9,42 @@ transition: convex
 
 ---
 
-## Tópico 1: Dispositivos de Armazenamento
+## 💽 1. HDD (Hard Disk Drive) vs SSD (SATA)
 
-Bem vindo à explicação do tópico 1.
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
+    O disco de pratos giratórios com uma agulha física. 
+    **Latência**: O motor precisa literalmente girar (Seek Time e Latência Rotacional) até o bloco desejado. As leituras sequenciais (filmes grandes contínuos) são aceitáveis, mas *Random Access* (leitura randômica de pequenos arquivos) é catastrófica, beirando a eternidade computacional.
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+    Armazenamento em chips de memória Flash (NAND). Zero partes móveis.
+    **Latência**: Mil vezes superior ao HDD em acesso Randômico. Seu Banco de Dados Relacional MySQL renasce num SSD porque consegue varrer os índices disparatadamente sem esperar "O disco girar". Ele satura, porém, a banda do Barramento SATA (máx. 600 MB/s).
 
 ---
 
-## Tópico 2: Dispositivos de Armazenamento
+---
 
-Bem vindo à explicação do tópico 2.
+## ⚡ 2. NVMe (O Limite PCIe)
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
+Para ultrapassar o gargalo da conexão SATA antiga, a tecnologia moveu os SSDs diretamente para injetarem dados nas pistas ultra-rápidas da placa-mãe (PCI-Express). Módulos NVMe M.2 se comunicam fisicamente por canais em que passam Gigabytes por segundo (ex: Gen4 cruza *7.000 MB/s*).
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Isto alterou para sempre o Backend moderno: Os Softwares de Memória In-Memory (Redis) estão repensando paradigmas pois o Disco NVMe moderno às vezes responde com velocidade que roça a velha memória RAM DDR3!
 
 ---
 
-## Tópico 3: Dispositivos de Armazenamento
+---
 
-Bem vindo à explicação do tópico 3.
+## 📈 3. IOPS - A Métrica Real do Servidor
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+Se a banda (MB/s) diz o volume da mangueira, os **IOPS (Input/Output Operations Per Second)** dizem quantos golpes a mangueira dá por segundo. 
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+- Quando você hospeda um App Node/Python que grava 1 milhão de pequenos logs `.txt` de 1KB, não importa se você tem 7000 MB/s. Você precisa de IOPS Altíssimos, para que a fila matemática de *Write Requests* não trave seu servidor (`I/O Wait / Blocked`). 
+
+> [!CAUTION]
+> Ao configurar a AWS (Amazon Cloud), instâncias EBS (Discos elásticos anexados) cobram mais caro pela volumetria de **IOPS**. O gargalo da sua API lenta de CRUD nunca é a CPU, geralmente é porque o Disco Estourou sua cota de Burst de IOPS.
 
 ---
 
-## Tópico 4: Dispositivos de Armazenamento
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Dispositivos de Armazenamento
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+O desenvolvedor C++ entende isso programando a I/O por grandes lotes (`Buffers`). Não escreva no disco `1 byte` no laço for por `1 milhão de vezes` (Destruição de IOPS).
+Acumule os dados num Buffer gigântico de `1 MB` na RAM, e comande gravar os dados no SSD em único e massivo Request! (Otimização máxima de Throughput).
 

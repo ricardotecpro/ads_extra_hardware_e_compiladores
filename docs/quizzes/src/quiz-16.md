@@ -1,74 +1,25 @@
-# Quiz 16 - Projeto Final: Otimização Baseada em Hardware
+# Quiz 16 - Aula 16 - Projeto Final: Otimização Baseada em Hardware
 
 **Avaliação Sistemática**
 
-1. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
+1. Sobre **⏱️ 1. Profiling Clássico (A Vida Real)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-2. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
+2. Sobre **🔬 2. O Grande Desafio (Mini-Projeto Prático)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-3. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
+3. Sobre **🏆 3. Conclusão da Trilha**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-4. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-5. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-6. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-7. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-8. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-9. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-10. Sobre o tema de Projeto Final: Otimização Baseada em Hardware, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 

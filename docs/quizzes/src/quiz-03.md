@@ -1,74 +1,32 @@
-# Quiz 03 - CPU: Estrutura e Funcionamento
+# Quiz 03 - Aula 03 - CPU: Estrutura e Funcionamento
 
 **Avaliação Sistemática**
 
-1. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
+1. Sobre **🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-2. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
+2. Sobre **🔄 2. O Ciclo de Instrução (Fetch-Decode-Execute)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo cic... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-3. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
+3. Sobre **⚡ 3. Pipeline e Previsão de Desvio (Branch Prediction)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquant... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-4. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
+4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-5. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-6. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-7. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-8. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-9. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-10. Sobre o tema de CPU: Estrutura e Funcionamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 

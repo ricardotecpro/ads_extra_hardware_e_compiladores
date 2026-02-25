@@ -4,308 +4,60 @@ transition: convex
 ---
 
 <!-- .element: class="fragment" -->
-# Stack vs Heap em C/C++
+# Stack vs Heap
 ## Aula 07
 
 ---
 
-## Tópico 1: Stack vs Heap em C/C++
+## 🧱 1. A Pilha (Stack)
 
-Bem vindo à explicação do tópico 1.
+A Stack é a fundação natural de blocos de toda variável ordinariamente declarada dentro do escopo de funções em C/C++ (`int x`, `float y`). Ela trabalha rigorosamente sob o conceito LIFO (Last In, First Out). 
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+    - **Performance Imediata**: Não sofre do atraso monumental do Sistema Operacional rodando scripts para achar buracos vazios. A CPU avança 1 pino de hardware no SP (Stack Pointer) e empilha na RAM. Retirou, ele decrementa. Super rápido.
+    - **Anti-Vazamento Automático**: Funções extintas são imediatamente retiradas (*popped*) num clique atômico LIFO e as fatias voltam a uso global. Memória protegida contra vazamentos lógicos (*memory leaks*) por definição estrita.
+    - **Quente da CPU**: Frequentemente preza por Cache Hit. A Stack costuma viver majoritariamente no limiar da L1 Data Cache.
 
----
-
-## Tópico 2: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 2.
-
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+> [!CAUTION]
+> Stack Overflow! A Pilha nunca é infinita, sendo tipicamente restrita pelo S.O. Windows/Linux (geralmente entre 1MB a 8MB max num Kernel Padrão X86). Tentar criar um `int array[9999999]` puro no escopo sem alocação dinâmica explodirá a Pilha e esmagará cruelmente (o temido `Segmentation Fault (core dumped)`).
 
 ---
 
-## Tópico 3: Stack vs Heap em C/C++
+---
 
-Bem vindo à explicação do tópico 3.
+## 📦 2. O Monte (Heap)
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
+Enquanto a Pilha é rígida, restrita e pré-delimitada, o Monte (Heap) é um vasto oceano caótico de Gigabytes gerenciado pelo Kernel do S.O. (Sistemas Operacionais). Você requer pedaços de memória "sob demanda" (Alocação Dinâmica).
+
+<div class="termy" markdown="1">
+
+```console
+$ # Como você interage em baixo nível (C/C++)
+$ cat code.c
+#include <stdlib.h>
+
+int main() {
+    // malloc vai no Sistema Operacional e chora pedindo: "Me dê 10 inteiros!"
+    int* array_gigante_dinamico = (int*)malloc(10 * sizeof(int));
+    
+    // Se você não limpar usando free(), a RAM apodrecerá lentamente (LEAK)
+    free(array_gigante_dinamico);
+}
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 4: Stack vs Heap em C/C++
+## 💀 3. Memory Leaks (Vazamentos de Memória)
 
-Bem vindo à explicação do tópico 4.
+Um clássico e letal bug de engenharia C++. Quando o desenvolvedor executa `new` ou `malloc` solicitando memória do **Heap**, mas quebra regras do fluxo perdendo o contato formal do **ponteiro** retornado do hardware sem antes ter reportado o fim via `delete` ou `free`.
+Resultado?  Aquela fatia na RAM física do servidor Linux ficará congelada, cega, retida unicamente pro seu app até que a nuvem AWS exaure toda a máquina do container num erro de Kernel `OOM Killer (Out Of Memory)`.
 
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Em contra-partida: *Dangling Pointers*. Usar a área que o ponteiro apontava *depois* da libertação formal do free provoca instabilidade instantânea e corrupção silenciosa nos endereços da placa-mãe.
 
 ---
 
-## Tópico 5: Stack vs Heap em C/C++
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Stack vs Heap em C/C++
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- Se não sabe onde colocar: Bote no STACK.
+- É muito grande pra caber (Strings longas ou Arrays): Invoque HEAP com o `std::vector` (ele gerencia o malloc e free na destruição de escopo).
 

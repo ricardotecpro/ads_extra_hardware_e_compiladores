@@ -1,15 +1,17 @@
-# Exercícios de Fixação: Aula 16 - Projeto Final: Otimização Baseada em Hardware
+# Exercícios: Aula 16 - Projeto Final: Otimização Baseada em Hardware
 
-=== "Básico"
-    **Exercício 1**: Descreva os conceitos teóricos fundamentais vistos na aula de hoje.
+Resolver esses exercícios ajudará na fixação do conteúdo da aula.
 
-    **Exercício 2**: Faça um mapa mental sobre como C/C++ lida com este conceito.
+## Questão 1 - ⏱️ 1. Profiling Clássico (A Vida Real)
+Explique com suas palavras o conceito de **⏱️ 1. Profiling Clássico (A Vida Real)** e como ele se aplica no desenvolvimento de baixo nível.
 
-=== "Intermediário"
-    **Exercício 3**: Escreva um pequeno trecho de código em C++ invocando as premissas deste módulo.
+## Questão 2 - 🔬 2. O Grande Desafio (Mini-Projeto Prático)
+Explique com suas palavras o conceito de **🔬 2. O Grande Desafio (Mini-Projeto Prático)** e como ele se aplica no desenvolvimento de baixo nível.
 
-    **Exercício 4**: Utilizando o terminal Linux, audite esse comportamento nativo no S.O.
+## Questão 3 - 🏆 3. Conclusão da Trilha
+Explique com suas palavras o conceito de **🏆 3. Conclusão da Trilha** e como ele se aplica no desenvolvimento de baixo nível.
 
-=== "Desafio"
-    **Exercício 5 (Avançado)**: Integre ponteiros, System Calls e tente quebrar o kernel local propositalmente com memory leaks, para então consertar!
 
+---
+
+[:octicons-light-bulb-24: Ver Solução](solucao-16.md){ .md-button .md-button--primary }

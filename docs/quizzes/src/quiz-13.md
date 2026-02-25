@@ -1,74 +1,32 @@
-# Quiz 13 - Dispositivos de Armazenamento
+# Quiz 13 - Aula 13 - Dispositivos de Armazenamento
 
 **Avaliação Sistemática**
 
-1. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
+1. Sobre **💽 1. HDD (Hard Disk Drive) vs SSD (SATA)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x]  *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-2. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
+2. Sobre **⚡ 2. NVMe (O Limite PCIe)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Para ultrapassar o gargalo da conexão SATA antiga, a tecnologia moveu os SSDs diretamente para injet... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-3. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
+3. Sobre **📈 3. IOPS - A Métrica Real do Servidor**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Se a banda (MB/s) diz o volume da mangueira, os **IOPS (Input/Output Operations Per Second)** dizem ... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-4. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
+4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-5. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-6. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-7. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-8. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-9. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-10. Sobre o tema de Dispositivos de Armazenamento, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] O desenvolvedor C++ entende isso programando a I/O por grandes lotes (`Buffers`). Não escreva no dis... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 

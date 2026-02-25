@@ -1,74 +1,32 @@
-# Quiz 12 - Modelo de Memória
+# Quiz 12 - Aula 12 - O Modelo de Memória
 
 **Avaliação Sistemática**
 
-1. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
+1. Sobre **🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Você codifica: *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-2. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
+2. Sobre **🚧 2. O Memory Model (Consistências e Barreiras)**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::at... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-3. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
+3. Sobre **🧱 3. Memory Barriers (Fences) nas CPUs**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programávamos via "Gambiarra In... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 
-4. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
+4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
 
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-5. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-6. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-7. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-8. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-9. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
-
-10. Sobre o tema de Modelo de Memória, qual das alternativas é a mais coerente?
-
-    - [ ] Alternativa A está incorreta.
-    - [x] Alternativa B está correta e embasada. *feedback: Sim, o C++ se comporta assim na Arquitetura.*
-    - [ ] Alternativa C é um erro comum.
-    - [ ] Alternativa D é uma falsa equivalência.
+    - [x] - Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da... *feedback: Exato! Essa é a premissa fundamental.* 
+    - [ ] É um conceito obsoleto na programação moderna em C/C++.
+    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
+    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
 

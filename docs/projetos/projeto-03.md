@@ -1,19 +1,16 @@
-# Mini-Projeto 03 - CPU: Estrutura e Funcionamento
+# Projeto: Aula 03 - CPU: Estrutura e Funcionamento
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **CPU: Estrutura e Funcionamento**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** A arquitetura interna da CPU possui 3 órgãos vitais:
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **🏗️ 1. O Triângulo de Ouro: ALU, CU e Registradores**
+- [ ] Implementar ou demonstrar estruturalmente: **🔄 2. O Ciclo de Instrução (Fetch-Decode-Execute)**
+- [ ] Implementar ou demonstrar estruturalmente: **⚡ 3. Pipeline e Previsão de Desvio (Branch Prediction)**
+- [ ] Implementar ou demonstrar estruturalmente: **🚀 Resumo Prático**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

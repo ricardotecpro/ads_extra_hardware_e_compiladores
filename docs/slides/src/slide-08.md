@@ -9,303 +9,48 @@ transition: convex
 
 ---
 
-## Tópico 1: Memória Virtual
+## 🕳️ 1. O Abismo Lógico: A Memória Virtual
 
-Bem vindo à explicação do tópico 1.
+Nenhum aplicativo C/C++ ou interpretador em execução roda interagindo fisicamente e sabendo explicitamente qual é o transistor fixo lá no pente da Kingston RAM na placa do data-center.
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
+Todo processo que o Linux constrói roda dentro de uma gigante **Ilusão**. O endereço do seu ponteiro `0x7ffeeB...` em C++ é falso (Endereço Lógico).
+
+O HW (Hardware MMU no processador) mais as planilhas do Sistema Operacional (Page Tables) formencem a ligação dinâmica e escondida pra sua aplicação.
+
+```mermaid
+graph LR
+    A["Ponteiro em C++<br/>(Virtual 0x01)"] --> B{"MMU e<br/>Page Table"}
+    B --> C("Memória RAM<br/>(Física Pente 1)")
+    B -. "Se não houver espaço" .-> D("Swap / Pagefile<br/>(SSD)")
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 2: Memória Virtual
+## 📄 2. TLB, MMU e a Tradução da Página
 
-Bem vindo à explicação do tópico 2.
+> Cada tradução do falso ponteiro visual com base nas tabelas em RAM é custoso (Cycle Penalty).
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
+Para driblar isso, a arquitetura moderna usa a **TLB (Translation Lookaside Buffer)**. A TLB é uma Cache dentro da CPU que guarda apenas os dicionários recentes das planilhas de referências que dizem se o "0X7FFA falso vira bloco 344 do pente de DDR5 real".
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+
+    - **Page Hit:** A tradução ocorreu instatâneamente pela cache veloz na CPU (a TLB validou o ponteiro do C++ localizando logo onde está no metal a variável no chip Kingston).
+    - **Page Fault Limitrofico:** A TLB errou e teve que rolar pra Main RAM puxando o endereço mapeado localizando num novo cluster na pilha. (100+ ciclos)
+    - **Page Fault Crítico (SWAP):** A máquina não acha e entra em Swapping com o SSD (SSD Swap). É ali que ocorre as quedas colossais para "Travamento de Janela", a CPU foi pro SSD buscar um arquivo gigante que o Linux ejetou lá, pra trazer e rebotar pra cima pra Memória RAM física real, jogando pro seu código que achava estar "na memória" e dormiu (Milhões de ciclos).
 
 ---
 
-## Tópico 3: Memória Virtual
+---
 
-Bem vindo à explicação do tópico 3.
+## 💪 3. Driblando a Paginação como Programador
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+Ao iterarmos matrizes massivas (Matrizes 2D em C++) na ordem invertida ou em lógicas dispersas `LinkedList->prox`, você não causa apenas *Cache Miss* da Aula 06. Você também destrói toda a cache de pontes *TLB Misses*! Você induzirá Page Faults insanos que derrubarão o throughput (taxa de transferência de dados) em N fatores.
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Portanto: **Localidade Espacial é sagrada em Dados C/C++**.
 
 ---
 
-## Tópico 4: Memória Virtual
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Memória Virtual
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Memória Virtual
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Memória Virtual
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Memória Virtual
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Memória Virtual
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Memória Virtual
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Memória Virtual
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Memória Virtual
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Memória Virtual
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Memória Virtual
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Memória Virtual
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Memória Virtual
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Memória Virtual
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Memória Virtual
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Memória Virtual
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Memória Virtual
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- O ponteiro que o dev manipula com um `int *ptr = &value` em qualquer IDE é puramente 100% Virtual. É o passaporte intermediário.
+- Nunca dependa da paginação e arquivo local de Swap do Disco: os milésimos de segundo viram minutos na Nuvem se o app "estourar a cota da cloud", sofrendo `Thrashing` com o Disco local para falsificar a RAM que ele acreditou ter num loop mal codificado ou em Leaks do Módulo/Aula anterior.
 

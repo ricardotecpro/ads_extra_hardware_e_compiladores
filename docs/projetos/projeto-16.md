@@ -1,19 +1,15 @@
-# Mini-Projeto 16 - Projeto Final: Otimização Baseada em Hardware
+# Projeto: Aula 16 - Projeto Final: Otimização Baseada em Hardware
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Projeto Final: Otimização Baseada em Hardware**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **⏱️ 1. Profiling Clássico (A Vida Real)**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** Adivinhar onde o código está lento é a armadilha suprema do júnior.
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **⏱️ 1. Profiling Clássico (A Vida Real)**
+- [ ] Implementar ou demonstrar estruturalmente: **🔬 2. O Grande Desafio (Mini-Projeto Prático)**
+- [ ] Implementar ou demonstrar estruturalmente: **🏆 3. Conclusão da Trilha**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

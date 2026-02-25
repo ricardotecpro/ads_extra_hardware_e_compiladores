@@ -4,308 +4,55 @@ transition: convex
 ---
 
 <!-- .element: class="fragment" -->
-# Paralelismo em Hardware
+# Paralelismo no Hardware
 ## Aula 11
 
 ---
 
-## Tópico 1: Paralelismo em Hardware
+## 🏗️ 1. Multi-Core (Múltiplos Núcleos)
 
-Bem vindo à explicação do tópico 1.
+Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
+- **Core Físico:** É uma CPU completa e independente, com sua própria ALU, Unidade de Controle e Caches L1/L2 particulares.
+- **Cache L3 Compartilhado:** Na maioria dos designs AMD e Intel reais, os Múltiplos Cores (Ex: 8 Cores) conversam e trocam estados através de uma suntuosa e lenta área comum L3 que circunda todos os processadores ali impressos no wafer.
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+> [!TIP]
+> **Em Backend pesado:** Se o banco mapear duas Threads puras `backend` em dois Cores puramente isolados (Ex: Core 0 e Core 1), e elas lerem/trabalharem na mesma matriz contínua, o Hardware forçará intercâmbios elétricos no *Cache Coherence Protocol (MESI)* rodando por toda placa mãe. Fiquem espertos com o *False Sharing*! 
 
 ---
 
-## Tópico 2: Paralelismo em Hardware
+---
 
-Bem vindo à explicação do tópico 2.
+## 🧬 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
+A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógicos" para o Windows/Linux?
+
+Na aula 03, vimos que a execução cruza pelo Pipeline ou pode esbarrar em ciclos ociosos na CU aguardando a Memória Principal. O *Hyper-Threading* espeta um **Segundo conjunto de Registradores** e Hardware de Estado no mesmo Core. Enquanto o código da Thread "A" está 0.5 nanosegundo *travada* esperando chegar o dado lento da L3, o Core troca instantaneamente para o contexto da Thread "B", executando-o usando as mesmas Unidades Lógicas (ALU) num aproveitamento fabril monstruoso de 100%.
+
+<div class="termy" markdown="1">
+
+```console
+$ # Lendo o processador em Linux (Ex: i7 4-Core com HyperThreading)
+$ lscpu
+CPU(s):                  8
+On-line CPU(s) list:     0-7
+Thread(s) per core:      2
+Core(s) per socket:      4
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 3: Paralelismo em Hardware
+## 🎮 3. GPUs: O Paralelismo Maciço
 
-Bem vindo à explicação do tópico 3.
+CPUs (Processadores) foram feitos para "Serem Rápidos executando sequências lógicas e IFs complexos". Possuem Caches gigantes.
+GPUs (Placas de Vídeo) foram feitas para "Executar a MESMÍSSIMA MINÚSCULA matemática simultaneamente em milhares de pixels fracos". Sem grandes condicionais, focando no *Throughput*. 
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptografia exatamente porque pegam *Loops For* gigantescos de Álgebra Linear, e fracionam em **8.000 mini-núcleos (CUDA cores)** esmagando qualquer Intel Core i9 na latência matemática contínua pura.
 
 ---
 
-## Tópico 4: Paralelismo em Hardware
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Paralelismo em Hardware
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- **Task Paralelism**: Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*.
+- **Data Paralelism**: Se a conta for a repetição retumbante de um algoritmo idêntico sobre 2 milhões de dados sem dependência de saltos complexos, mova-a da RAM à VRAM da *GPU via CUDA/OpenCL*. A métrica vai das horas paras os décimos de segundo.
 

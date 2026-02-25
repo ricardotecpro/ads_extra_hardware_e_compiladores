@@ -1,19 +1,16 @@
-# Mini-Projeto 08 - Memória Virtual
+# Projeto: Aula 08 - Memória Virtual
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Memória Virtual**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **🕳️ 1. O Abismo Lógico: A Memória Virtual**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** Nenhum aplicativo C/C++ ou interpretador em execução roda interagindo fisicamente e sabendo explicitamente qual é o transistor fixo lá no pente da Kingston RAM na placa do data-center.
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **🕳️ 1. O Abismo Lógico: A Memória Virtual**
+- [ ] Implementar ou demonstrar estruturalmente: **📄 2. TLB, MMU e a Tradução da Página**
+- [ ] Implementar ou demonstrar estruturalmente: **💪 3. Driblando a Paginação como Programador**
+- [ ] Implementar ou demonstrar estruturalmente: **🚀 Resumo Prático**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

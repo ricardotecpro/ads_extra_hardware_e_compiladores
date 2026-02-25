@@ -1,305 +1,48 @@
 <!-- .element: class="fragment" -->
-# Entrada e Saída / I/O
+# Entrada e Saída (I/O)
 ## Aula 15
 
 ---
 
-## Tópico 1: Entrada e Saída / I/O
+## 🚪 1. System Calls (O Pedágio do Kernel)
 
-Bem vindo à explicação do tópico 1.
+Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminante encerramento compulsório pelo Processador através do bloqueio de Anéis de Proteção.
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Para acionar a Rede, o C++ precisa paralisar, invocar a sagrada **System Call** (Syscall, ex: _write_, _sendto_, _read_) que abre o portal para o S.O (Kernel Space). É o Kernel Linux quem vai orquestrar a placa C de Ethernet.
 
 ---
 
-## Tópico 2: Entrada e Saída / I/O
+---
 
-Bem vindo à explicação do tópico 2.
+## ⚠️ 2. Interrupções vs Polling
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Seu App em Python/C diz: "Puxe o dado que está vindo no mouse".
+1. **Polling (Desastroso)**: A CPU fica travada rodando `while(mouse_is_empty) {}` perguntando de nano em nanosegundo "Chegou? E agora? E Agora?". (Suga 100% da CPU por um mouse inerte).
+2. **Interrupts (Moderno)**: A CPU delega para o controlador USB rodar a escuta passiva, e a CPU volta a fechar os frames de Game. Quando o usuário clica com o dedo, o Controlador injeta um choque elétrico no pino do Processador. **Interrupt request (IRQ)!** A CPU congela subitamente o Game, salva o contexto, trata o clique do Mouse rapidamente, e exuma a cena do Game novamente do congelamento.
 
 ---
 
-## Tópico 3: Entrada e Saída / I/O
+---
 
-Bem vindo à explicação do tópico 3.
+## 🚀 3. DMA (Memória com Acesso Direto)
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
+Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets.
+
+A revolução moderna chama-se **Direct Memory Access (DMA)**. Placas de Captura, NVMe e Placas de Rede conversam *Diretamente com a Memória RAM por vias de bypass*.
+
+```mermaid
+graph BT
+    A["Placa de Rede"] -- "Caminho Direto (DMA)" --> B["Memória RAM"]
+    A -. "Aviso via IRQ\n(Terminei!)" .-> C["CPU"]
+    C -. "Ordens Lentas" .-> B
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+A CPU diz: "Placa, baixe o NetFlix do Ponto P pro Q na RAM". A Placa faz todo os trabalho violento por trás. A CPU usa seu pipeline pra cálculos e matemática puros, enquanto sua memória vai sendo injetada pela placa de vídeo via túneis secretos pelas pontes.
 
 ---
 
-## Tópico 4: Entrada e Saída / I/O
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
+- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os famigerados Interrupts de retorno. 
 
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Entrada e Saída / I/O
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento na Otimização Pura (Aula Final).

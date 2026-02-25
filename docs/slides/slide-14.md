@@ -4,302 +4,50 @@
 
 ---
 
-## Tópico 1: Sistemas de Arquivos
+## 🗂️ 1. O V-Node / Inode
 
-Bem vindo à explicação do tópico 1.
+Se no seu PC existe a pasta `Docs/foto.jpg`, no fundo, o Linux não rastreia o texto "foto.jpg" para pular de cluster em cluster. 
+O FS usa de índices numéricos ultra-rápidos: os **Inodes**. 
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
+```mermaid
+graph LR
+    A["Diretório /Docs"] -->|12345| B("Inode 12345")
+    B --> C["Tamanho: 2MB"]
+    B --> D["Permissões: rwxr-xr-x"]
+    B --> E["Blocos Físicos de Dados"]
+    E --> F["Cluster 80 no SSD"]
+    E --> G["Cluster 89 no SSD"]
 ```
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+> [!INFO]
+> Por que o comando de *Deletar (rm)* um arquivo grande é quase instantâneo, mas copiar é lento?
+> O `rm` apaga apenas a entrada no Índice (Inode), fingindo pro SO que o espaço tá livre. O dado mesmo ainda tá lá magnetizado até algo escrever por cima (Por isso existem softwares de recuperação de dados!)
 
 ---
 
-## Tópico 2: Sistemas de Arquivos
+---
 
-Bem vindo à explicação do tópico 2.
+## 🛡️ 2. Journaling (A Prova contra Quedas)
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
-```
+Mudar um arquivo é uma transação: Apagar o velho, escrever o novo, mudar o Inode.
+E se faltar luz na etapa 2? A partição **corromperia inteiramente** para sempre (Problema antigo do FAT32).
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+FSs modernos (NTFS, EXT4) usam **Journaling**. Antes de aplicar qualquer mudança no Inode oficial, eles "anotam a intenção do que vão fazer" num Diário Oculto (Journal). Se a luz cai, ao ligar o PC, ele lê o diário oculto incompleto, reverte o estrago e devolve sua máquina salva! É a essência do conceito *Atomicidade*.
 
 ---
 
-## Tópico 3: Sistemas de Arquivos
+---
 
-Bem vindo à explicação do tópico 3.
+## 🚄 3. Buffers e Page Cache (Por que Linux é Rápido)
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
+"Escrever no disco" via SysCall C++ `write()` ou `fwrite()` raramente vai pro HD!
+O Linux usa de forma abusiva toda a **RAM ociosa do seu computador** como um gigantesco *Cache File*. Ele capta suas writes e diz "Gravei amigão!" mas jogou na RAM (Page Cache). Posteriormente ele realiza os envios reais para o Hardware agrupados (*Flush / Sync*).
 
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgaste das celulas NAND) e simula uma ilusão de lentidão zero ao usuário.
 
 ---
 
-## Tópico 4: Sistemas de Arquivos
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Sistemas de Arquivos
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- Ao usar C/C++, chame o instrínseco `fsync()` se seu App for um Banco de Dados ou Software Crítico Bancário forçando a Cache RAM descarregar a força e salvar permanentemente no silício do disco.
+- Nunca dependa da nomenclatura C: `/usr/foto.jpg`. Leia descritores de arquivo, file-pointers e fluxos binários se for transitar redes em baixo nível.

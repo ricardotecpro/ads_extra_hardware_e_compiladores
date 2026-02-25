@@ -1,15 +1,20 @@
-# Exercícios de Fixação: Aula 07 - Stack vs Heap em C/C++
+# Exercícios: Aula 07 - Stack vs Heap
 
-=== "Básico"
-    **Exercício 1**: Descreva os conceitos teóricos fundamentais vistos na aula de hoje.
+Resolver esses exercícios ajudará na fixação do conteúdo da aula.
 
-    **Exercício 2**: Faça um mapa mental sobre como C/C++ lida com este conceito.
+## Questão 1 - 🧱 1. A Pilha (Stack)
+Explique com suas palavras o conceito de **🧱 1. A Pilha (Stack)** e como ele se aplica no desenvolvimento de baixo nível.
 
-=== "Intermediário"
-    **Exercício 3**: Escreva um pequeno trecho de código em C++ invocando as premissas deste módulo.
+## Questão 2 - 📦 2. O Monte (Heap)
+Explique com suas palavras o conceito de **📦 2. O Monte (Heap)** e como ele se aplica no desenvolvimento de baixo nível.
 
-    **Exercício 4**: Utilizando o terminal Linux, audite esse comportamento nativo no S.O.
+## Questão 3 - 💀 3. Memory Leaks (Vazamentos de Memória)
+Explique com suas palavras o conceito de **💀 3. Memory Leaks (Vazamentos de Memória)** e como ele se aplica no desenvolvimento de baixo nível.
 
-=== "Desafio"
-    **Exercício 5 (Avançado)**: Integre ponteiros, System Calls e tente quebrar o kernel local propositalmente com memory leaks, para então consertar!
+## Questão 4 - 🚀 Resumo Prático
+Explique com suas palavras o conceito de **🚀 Resumo Prático** e como ele se aplica no desenvolvimento de baixo nível.
 
+
+---
+
+[:octicons-light-bulb-24: Ver Solução](solucao-07.md){ .md-button .md-button--primary }

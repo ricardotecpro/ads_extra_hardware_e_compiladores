@@ -1,19 +1,15 @@
-# Mini-Projeto 06 - Cache e Localidade
+# Projeto: Aula 06 - Cache e Localidade
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Cache e Localidade**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **✅ 1. Cache Hit e Cache Miss**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **✅ 1. Cache Hit e Cache Miss**
+- [ ] Implementar ou demonstrar estruturalmente: **🗺️ 2. Localidade Espacial vs Temporal**
+- [ ] Implementar ou demonstrar estruturalmente: **🧨 3. False Sharing e Lógica Invertida (A Morte do C++)**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

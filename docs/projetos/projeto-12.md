@@ -1,19 +1,16 @@
-# Mini-Projeto 12 - Modelo de Memória
+# Projeto: Aula 12 - O Modelo de Memória
 
-## 🎯 Objetivo Prático
-Implemente um simulador robusto focado em **Modelo de Memória**.
+## Desafio Prático
+O objetivo deste projeto é desenvolver uma pequena aplicação em C/C++ que demonstre na prática o conceito de **🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)**.
 
-## 💡 Requisitos Tecnológicos
-- Utilizar GC nulo (C/C++ nativo).
-- Evitar falsos compartilhamentos (False Sharing).
+**Contexto da Aula:** Você codifica:
 
-<div class="termy" markdown="1">
+## Tarefas do Projeto
+- [ ] Implementar ou demonstrar estruturalmente: **🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)**
+- [ ] Implementar ou demonstrar estruturalmente: **🚧 2. O Memory Model (Consistências e Barreiras)**
+- [ ] Implementar ou demonstrar estruturalmente: **🧱 3. Memory Barriers (Fences) nas CPUs**
+- [ ] Implementar ou demonstrar estruturalmente: **🚀 Resumo Prático**
 
-```console
-$ gcc projeto.cpp -O2 -o projeto
-$ ./projeto
-
-Resultados Otimizados com Sucesso!
-```
-
-</div>
+## Critérios de Avaliação
+- A aplicação executa sem *Segmentation Fault*.
+- O código reflete os fundamentos de *Hardware*.

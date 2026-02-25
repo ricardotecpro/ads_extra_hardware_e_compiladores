@@ -1,22 +1,20 @@
 # Configuração do Ambiente
 
-Bem-vindo à seção de configuração! Prepare seu ambiente para acompanhar as aulas de Fundamentos da Computação.
+Bem-vindo à seção de configuração! Prepare seu ambiente para acompanhar as aulas de Hardware para Programadores focando na linguagem C e C++.
 
 <div class="grid cards" markdown>
 
--   :material-microsoft-windows: **Visual Studio Code**
+-   :material-microsoft-windows: **Configuração no Windows**
     
-    - [Setup VS Code](setup-01.md)
-    - Instalação do Editor
-    - Extensões recomendadas
-    - Configuração de Tema
+    - [Setup C/C++ (MSYS2)](setup-01.md)
+    - Download dos Compiladores GCC/G++ em ambiente MSYS2
+    - Instalação e Extensões no Visual Studio Code (C/C++ e Code Runner)
 
--   :material-language-markdown: **Ferramentas Úteis**
+-   :material-linux: **Configuração no Linux**
     
-    - [Setup Markdown](setup-02.md)
-    - Pré-visualização de Markdown
-    - Extensão Mermaid (Diagramas)
-    - Terminal Integrado
+    - [Setup C/C++ (build-essential)](setup-02.md)
+    - Configurações com Aptitude usando pacotes base `build-essential` e `gdb`
+    - Adicionando de forma nativa no VS Code
 
 </div>
 
@@ -24,6 +22,6 @@ Bem-vindo à seção de configuração! Prepare seu ambiente para acompanhar as 
 
 Após configurar seu ambiente:
 
-1. ✅ **Conheça o VS Code**: Familiarize-se com a interface.
-2. 📚 **Instale as extensões**: Procure por "Markdown All in One" e "Mermaid Editor".
-3. 🚀 **Comece as aulas**: [Aula 01](../aulas/aula-01.md)
+1. ✅ **Comprove o Compilador**: Teste a saída de comando do `g++ --version` ou `gcc --version`.
+2. 📚 **Instale as extensões obrigatórias**: Adicione as bibliotecas do C/C++ da Microsoft em sua IDE conforme listado nos *setups*.
+3. 🚀 **Comece a aventura**: [Mergulhe na Aula 01](../aulas/aula-01.md)

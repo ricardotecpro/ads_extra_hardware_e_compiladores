@@ -6,32 +6,32 @@ Bem-vindo à seção de aulas! Aqui você encontra todo o conteúdo do curso org
 
 <div class="grid cards" markdown>
 
--   :material-numeric-1-box: **Módulo 1: O Coração Digital**
+-   :material-numeric-1-box: **Módulo 1: Fundamentos de Arquitetura de Computadores**
     ---
-    - [Aula 01 - Fundamentos e Bases](aula-01.md)
-    - [Aula 02 - Conversão Para Binário](aula-02.md)
-    - [Aula 03 - Conversão Para Decimal](aula-03.md)
-    - [Aula 04 - Octal e Permissões Unix](aula-04.md)
+    - [Aula 01 - Como o Software Roda no Hardware](aula-01.md)
+    - [Aula 02 - Representação de Dados](aula-02.md)
+    - [Aula 03 - CPU: Estrutura e Funcionamento](aula-03.md)
+    - [Aula 04 - Arquiteturas RISC vs CISC](aula-04.md)
 
--   :material-numeric-2-box: **Módulo 2: Arquitetura e Aritmética**
+-   :material-numeric-2-box: **Módulo 2: Memória e Performance**
     ---
-    - [Aula 05 - Hexadecimal e Cores RGB](aula-05.md)
-    - [Aula 06 - Binário ↔ Hexadecimal](aula-06.md)
-    - [Aula 07 - Aritmética e Overflow](aula-07.md)
-    - [Aula 08 - Dados, ASCII e UTF-8](aula-08.md)
+    - [Aula 05 - Hierarquia de Memória](aula-05.md)
+    - [Aula 06 - Cache e Localidade](aula-06.md)
+    - [Aula 07 - Stack vs Heap](aula-07.md)
+    - [Aula 08 - Memória Virtual](aula-08.md)
 
--   :material-numeric-3-box: **Módulo 3: Lógica e Engenharia**
+-   :material-numeric-3-box: **Módulo 3: Concorrência e Paralelismo**
     ---
-    - [Aula 09 - Operadores NOT, AND, OR](aula-09.md)
-    - [Aula 10 - Tabelas Verdade e XOR](aula-10.md)
-    - [Aula 11 - Engenharia de Portas](aula-11.md)
-    - [Aula 12 - CPU e Modelo Von Neumann](aula-12.md)
+    - [Aula 09 - Processos e Threads](aula-09.md)
+    - [Aula 10 - Sincronização e Concorrência](aula-10.md)
+    - [Aula 11 - Paralelismo no Hardware](aula-11.md)
+    - [Aula 12 - O Modelo de Memória](aula-12.md)
 
--   :material-numeric-4-box: **Módulo 4: Software e Algoritmos**
+-   :material-numeric-4-box: **Módulo 4: Armazenamento, I/O e Prática**
     ---
-    - [Aula 13 - Hierarquia de Memórias](aula-13.md)
-    - [Aula 14 - Sistemas Operacionais](aula-14.md)
-    - [Aula 15 - Lógica e Fluxogramas](aula-15.md)
-    - [Aula 16 - Introdução à Programação](aula-16.md)
+    - [Aula 13 - Dispositivos de Armazenamento](aula-13.md)
+    - [Aula 14 - Sistemas de Arquivos](aula-14.md)
+    - [Aula 15 - Entrada e Saída (I/O)](aula-15.md)
+    - [Aula 16 - Projeto Final: Otimização Baseada em Hardware](aula-16.md)
 
 </div>

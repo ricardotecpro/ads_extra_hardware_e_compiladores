@@ -1,4 +1,4 @@
-# 🎓 Curso: Hardware para Programadores
+# 🎓 Curso: Hardware para Programadores (C/C++)
 
 > "Não basta o código compilar; é preciso entender como o silício e os elétrons o executam na prática."
 
@@ -25,9 +25,9 @@ Bem-vindo à sua jornada no coração da tecnologia. Este curso foi projetado pa
     Avalie seu progresso com 160 questões técnicas exclusivas.
     [:octicons-arrow-right-24: Testar Conhecimento](quizzes/index.md)
 
--   :material-rocket: **Mini-Projetos**
+-   :material-rocket: **Laboratórios e Projetos**
     ---
-    Aplique conceitos de baixo nível, cache hit/miss e Profiling em C/C++.
+    Aplique conceitos de baixo nível em C/C++.
     [:octicons-arrow-right-24: Ver Projetos](projetos/index.md)
 
 -   :material-dumbbell: **Exercícios Progressivos**
@@ -37,7 +37,7 @@ Bem-vindo à sua jornada no coração da tecnologia. Este curso foi projetado pa
 
 -   :material-cog: **Setup e Ferramentas**
     ---
-    Configurações essenciais: GCC, Clang, Memcheck, Valgrind.
+    Configurações essenciais para ecossistema C/C++ (GCC/G++).
     [:octicons-arrow-right-24: Configurar](setups/index.md)
 
 </div>
@@ -46,7 +46,7 @@ Bem-vindo à sua jornada no coração da tecnologia. Este curso foi projetado pa
 
 ## 🗺️ Mapa da Jornada (Módulos)
 
-O curso está estruturado em **5 Módulos** cruciais para desenvolvedores backend/sistemas:
+O curso está estruturado em **4 Módulos** cruciais para desenvolvedores backend/sistemas:
 
 ### 📦 Módulo 1: Fundamentos de Arquitetura de Computadores
 *Como transformar instruções lógicas em pulso elétrico.*
@@ -54,26 +54,22 @@ O curso está estruturado em **5 Módulos** cruciais para desenvolvedores backen
 
 ### 📐 Módulo 2: Memória e Performance
 *A anatomia do estado: velocidade versus capacidade.*
-- **Aulas 05 a 08**: Hierarquia de Memória, Cache (Hit vs Miss), Stack vs Heap em C/C++, e Memória Virtual.
+- **Aulas 05 a 08**: Hierarquia de Memória, Cache e Localidade, Stack vs Heap, e Memória Virtual.
 
 ### 🧠 Módulo 3: Concorrência e Paralelismo
 *Vencendo as limitações do chip único.*
-- **Aulas 09 a 12**: Processos, Threads, Deadlocks/Mutex, Multi-core e Memory Models.
+- **Aulas 09 a 12**: Processos e Threads, Sincronização, Paralelismo no Hardware e Modelo de Memória.
 
-### 💻 Módulo 4: Armazenamento e I/O
-*Onde a velocidade despenca: persistindo dados.*
-- **Aulas 13 a 15**: HDD/SSD/NVMe, Sistemas de Arquivos e DMA / Interrupções.
-
-### 🚀 Módulo 5: Integração Prática
-*Colocando em prática.*
-- **Aula 16**: Otimização Baseada em Hardware e Profiling C/C++.
+### 💻 Módulo 4: Armazenamento, I/O e Prática
+*Onde a velocidade despenca e integrando todos os conceitos.*
+- **Aulas 13 a 16**: Dispositivos de Armazenamento, Sistemas de Arquivos, I/O e Projeto Final Analítico.
 
 ---
 
 ## 💡 Dicas de Sucesso
 
 1. **Entenda os Ponteiros**: No Módulo 2, faremos intenso uso do entendimento de Heap e Call Stack.
-2. **Observe o Compilador**: Use o Terminal e veja suas saídas; entenda como o código otimizado (-O2, -O3) age.
-3. **Diagramas são o Guia**: Utilize os diagramas de bloco e as renderizações Mermaid para visualizar a arquitetura de processos e Threads.
+2. **Observe o Compilador**: Use o Terminal e veja suas saídas; entenda como o código compila nativamente.
+3. **Diagramas são o Guia**: Utilize as tabelas verdade e fluxogramas para visualizar as decisões arquiteturais.
 
 **Pronto para entender o Hardware?** [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }

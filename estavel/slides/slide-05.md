@@ -1,12 +1,28 @@
 <!-- .element: class="fragment" -->
-# Hierarquia de Memória
-## Aula 05
+# Aula 05 - Hierarquia de Memória
+## Apresentação
+
+---
+
+A memória é o maior gargalo oculto no software moderno de alta concorrência. Quanto mais próximo o dado está da CPU, mais rápido é o acesso. Mas a velocidade custa dinheiro e escala térmica.
+
+---
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🏛️ 1. A Pirâmide de Alta Performance
 
 ---
 
 ## 🏛️ 1. A Pirâmide de Alta Performance
 
 Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda:
+
+---
+
+## 🏛️ 1. A Pirâmide de Alta Performance
 
 ```mermaid
 graph TD
@@ -22,10 +38,24 @@ graph TD
     style E fill:#99ccff
 ```
 
+---
+
+## 🏛️ 1. A Pirâmide de Alta Performance
+
 > [!IMPORTANT]
 > A latência é o tempo que demora da CPU pedir um dado até ele chegar. Buscar um byte da **RAM** demora ~200 ciclos. Buscar do **SSD** demora centenas de milhares. Essa diferença grotesca é mitigada pelo uso de Caches.
 
 ---
+
+## 🏛️ 1. A Pirâmide de Alta Performance
+
+---
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## ⏳ 2. Os Impactos da Latência (Lado do Código)
 
 ---
 
@@ -33,18 +63,29 @@ graph TD
 
 Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.
 
+---
+
+## ⏳ 2. Os Impactos da Latência (Lado do Código)
+
 <div class="termy" markdown="1">
 
-```console
-$ # Como consultar as camadas do processador Linux
-$ lscpu | grep Cache
-L1d cache:                       64 KiB
-L1i cache:                       64 KiB
-L2 cache:                        1 MiB
-L3 cache:                        12 MiB
-```
+__CODE_BLOCK_0__
 
 </div>
+
+---
+
+## ⏳ 2. Os Impactos da Latência (Lado do Código)
+
+A instrução e os dados descem da L3, saltam para L2, descem para L1 e se acoplam na ALU.
+
+---
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🎯 3. Optimizando Uso
 
 ---
 
@@ -57,6 +98,12 @@ Ao invés de carregar gigabytes de *Strings* na lenta RAM, as linguagens de baix
 
 ---
 
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🚀 Resumo Prático
+
+---
+
 ## 🚀 Resumo Prático
 
 - Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente).
@@ -64,186 +111,6 @@ Ao invés de carregar gigabytes de *Strings* na lenta RAM, as linguagens de baix
 
 ---
 
-<!-- .element: class="fragment" -->
-# 🧠 Quiz Rápido
-## Prática de Fixação
+## 🚀 Resumo Prático
 
 ---
-
-### ❓ Pergunta 1
-Sobre o funcionamento prático de **1. A Pirâmide de Alta Performance** explicado em sala, indique a afirmativa verdadeira:
-
-- **Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 1
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 2
-No contexto analítico de **2. Os Impactos da Latência (Lado do Código)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 2
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 3
-Ao avaliar a característica inerente a **3. Optimizando Uso** explicado em sala, indique a afirmativa verdadeira:
-
-- **Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 3
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 4
-A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
-
-- **- Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 4
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">- Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 5
-No que tange diretamente a lógica de **1. A Pirâmide de Alta Performance** explicado em sala, indique a afirmativa verdadeira:
-
-- **Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 5
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 6
-Sobre o funcionamento prático de **2. Os Impactos da Latência (Lado do Código)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 6
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 7
-No contexto analítico de **3. Optimizando Uso** explicado em sala, indique a afirmativa verdadeira:
-
-- **Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 7
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 8
-Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
-
-- **- Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 8
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">- Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 9
-A respeito da arquitetura sistêmica conectada a **1. A Pirâmide de Alta Performance** explicado em sala, indique a afirmativa verdadeira:
-
-- **Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 9
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 10
-No que tange diretamente a lógica de **2. Os Impactos da Latência (Lado do Código)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 10
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>

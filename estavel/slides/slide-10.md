@@ -1,305 +1,49 @@
 <!-- .element: class="fragment" -->
-# Sincronização - Mutex, Semáforos
+# Sincronização e Concorrência
 ## Aula 10
 
 ---
 
-## Tópico 1: Sincronização - Mutex, Semáforos
+## 🏎️ 1. O Data Race: Uma Colisão Inevitável
 
-Bem vindo à explicação do tópico 1.
+Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento".
+O HW (Processador) traduz internamente num RMW: **R**ead (*Puxa os 100 da RAM para o Registrador EAX*), **M**odify (*Adiciona +10 e vira 110 na ALU*), e **W**rite (*Substitui na RAM os antigos 100 por 110*).
 
-```cpp
-// Exemplo de código 1
-int var_1 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Se na fresta entre a **Thread 1** preencher o EAX e depois descer ao RAM o valor 110... a **Thread 2** rodar e "puxar os mesmíssimos originais 100" para outro registrador (Context Switch), quando abas enviarem pra RAM final as sobreposições as contas, um dos `10` desvanecerá, o banco perde e a variável fica logicamente corrompida.
 
 ---
 
-## Tópico 2: Sincronização - Mutex, Semáforos
+---
 
-Bem vindo à explicação do tópico 2.
+## 🛡️ 2. Mutex e The Critical Section
 
-```cpp
-// Exemplo de código 2
-int var_2 = 0;
+A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion).
+
+<div class="termy" markdown="1">
+
+```console
+$ # Em C++, protege-se a variável central assim:
+$ cat bank.cpp
+std::mutex portaCorredor;
+
+void adiciona_10() {
+    portaCorredor.lock();   // O Hardware garante atomicamente exclusão
+    balance += 10;          // Apenas UM transita aqui adentro. 
+    portaCorredor.unlock(); // O primeiro sai da sala, e notifica o Kernel
+}
 ```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
 
 ---
 
-## Tópico 3: Sincronização - Mutex, Semáforos
+## 🚦 3. O Dilema: Deadlock
 
-Bem vindo à explicação do tópico 3.
+Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado?
 
-```cpp
-// Exemplo de código 3
-int var_3 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
+Ambos processos morrem na tela, dormindo inertes (*Blocked State*), enquanto a barra de % CPU despenca lentamente para ZERO! Seu Sistema Paralelo entrou em **Deadlock**. (O Abraço Mortal Padrão The Dining Philosophers). Um design multi-thread exige uma heuristica sagrada de adquirir as trancas Lock C++ em idêntica e constante ordem arquitetural através dos sistemas, ou apelar a mecânicas `std::lock()` que aplicam garantias subjacentes do Kernel.
 
 ---
 
-## Tópico 4: Sincronização - Mutex, Semáforos
+## 🚀 Resumo Prático
 
-Bem vindo à explicação do tópico 4.
-
-```cpp
-// Exemplo de código 4
-int var_4 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 5: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 5.
-
-```cpp
-// Exemplo de código 5
-int var_5 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 6: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 6.
-
-```cpp
-// Exemplo de código 6
-int var_6 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 7: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 7.
-
-```cpp
-// Exemplo de código 7
-int var_7 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 8: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 8.
-
-```cpp
-// Exemplo de código 8
-int var_8 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 9: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 9.
-
-```cpp
-// Exemplo de código 9
-int var_9 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 10: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 10.
-
-```cpp
-// Exemplo de código 10
-int var_10 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 11: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 11.
-
-```cpp
-// Exemplo de código 11
-int var_11 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 12: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 12.
-
-```cpp
-// Exemplo de código 12
-int var_12 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 13: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 13.
-
-```cpp
-// Exemplo de código 13
-int var_13 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 14: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 14.
-
-```cpp
-// Exemplo de código 14
-int var_14 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 15: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 15.
-
-```cpp
-// Exemplo de código 15
-int var_15 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 16: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 16.
-
-```cpp
-// Exemplo de código 16
-int var_16 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 17: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 17.
-
-```cpp
-// Exemplo de código 17
-int var_17 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 18: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 18.
-
-```cpp
-// Exemplo de código 18
-int var_18 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 19: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 19.
-
-```cpp
-// Exemplo de código 19
-int var_19 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
-
-## Tópico 20: Sincronização - Mutex, Semáforos
-
-Bem vindo à explicação do tópico 20.
-
-```cpp
-// Exemplo de código 20
-int var_20 = 0;
-```
-
-<!-- .element: class="fragment" -->
-> [!NOTE]
-> Ponto importante de Hardware.
-
----
+- **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).
+- Se a concorrência não tiver "Seção Crítica" que lida com Gravação e tiver "Só Read-only", não aplique trancas (Mutex) para não serializar as Threads da máquina.

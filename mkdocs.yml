@@ -87,6 +87,8 @@ markdown_extensions:
       base_path: docs
   - pymdownx.arithmatex:
       generic: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
 
 plugins:
   - social:

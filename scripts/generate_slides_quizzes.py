@@ -31,12 +31,14 @@ def generate_slide_html(lesson_number: int) -> str:
                      data-separator-vertical="^\\n--\\n$">
             </section>
     <style>
-        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) e Fundo Transparente c/ Cor de Navegação */
+        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) com a Cor de Navegação */
         .reveal .slide-number {{
-            background-color: transparent !important;
-            color: var(--r-controls-color, var(--r-link-color, #42affa)) !important;
+            background-color: var(--r-controls-color, #42affa) !important;
+            color: #ffffff !important;
             font-size: 18px !important;
             font-weight: bold !important;
+            border-radius: 4px !important;
+            padding: 4px 8px !important;
             bottom: 20px !important;
             left: 20px !important;
             right: auto !important;
@@ -157,10 +159,10 @@ def generate_all_slides():
                 if re.match(r'^[\*\-] \*\*.*?\*\*:$', l.strip()):
                     processed_lines.append(l)
                 elif re.match(r'^[\*\-] \*\*.*?\*\*: (.*)$', l.strip()):
-                    # Separa o título do resto para fragmentar o resto
+                    # Separa o título do resto para embutir tag inline span fragment
                     match = re.match(r'^([\*\-] \*\*.*?\*\*: )(.*)$', l.strip())
                     if match:
-                        processed_lines.append(f"{match.group(1)} <!-- .element: class=\"fragment\" --> {match.group(2)}")
+                        processed_lines.append(f"{match.group(1)}<span class=\"fragment\">{match.group(2)}</span>")
                 else:
                     processed_lines.append(l)
 

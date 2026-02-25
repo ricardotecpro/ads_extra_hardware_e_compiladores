@@ -56,7 +56,7 @@ theme:
   static_templates:
     - 404.html
 
-copyright: 'Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.'
+copyright: 'Copyright &copy; 2026 Ricardo Tec Pro'
 
 markdown_extensions:
   - pymdownx.critic
@@ -219,4 +219,5 @@ nav:
           - projetos/index.md
       - Configuração:
           - setups/index.md
+          - 'Mac (Intel/Apple Silicon)': setups/setup-03.md
   - Impressão: print_page.md

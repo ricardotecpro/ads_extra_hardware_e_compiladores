@@ -83,6 +83,7 @@ Expandir o aprofundamento do conhecimento das `aula-XX.md` de nível básico par
 ### ⚙️ `/docs/setups/`
 - `setup-01.md`: Para o ambiente **Windows** (instalação específica da linguagem-alvo do curso).
 - `setup-02.md`: Para o ecossistema GNU **Linux**.
+- `setup-03.md`: Configuração robusta via **macOS/Apple Silicon** (enfatizando ambiente UNIX-like do Clang, Xcode Command Line e Homebrew).
 
 ### 📂 Log e Legados (`_legado` e `logs`)
 - Nunca deletar pastas legadas.

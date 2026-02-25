@@ -16,6 +16,12 @@ Bem-vindo à seção de configuração! Prepare seu ambiente para acompanhar as 
     - Configurações com Aptitude usando pacotes base `build-essential` e `gdb`
     - Adicionando de forma nativa no VS Code
 
+-   :material-apple: **Configuração no macOS**
+    
+    - [Setup C/C++ (Apple Clang)](setup-03.md)
+    - Ferramentas Command Line Tools do Xcode e terminal UNIX
+    - Gerenciamento com Homebrew e VS Code
+
 </div>
 
 ## 📋 Próximos Passos

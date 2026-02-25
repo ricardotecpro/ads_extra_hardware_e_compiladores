@@ -27,11 +27,11 @@ def test_homepage_structure(page: Page, base_url):
     page.goto(base_url)
     
     # Check title
-    expect(page).to_have_title("Fundamentos da Computação - Curso")
+    expect(page).to_have_title("Hardware para Programadores")
     
     # Check main heading
     heading = page.locator("h1")
-    expect(heading).to_contain_text("Fundamentos da Computação")
+    expect(heading).to_contain_text("Hardware para Programadores")
     
     # Check navigation cards exist
     # Material uses .md-typeset .grid.cards
@@ -44,7 +44,7 @@ def test_lesson_01_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-01/")
     
     # Check title (flexible match)
-    expect(page).to_have_title(re.compile(r"Aula 01.*Introdução"))
+    expect(page).to_have_title(re.compile(r"Aula 01.*Hardware"))
     
     # Check main heading
     heading = page.locator("h1")
@@ -96,7 +96,7 @@ def test_lesson_16_page(page: Page, base_url):
     page.goto(f"{base_url}/aulas/aula-16/")
     
     # Check title
-    expect(page).to_have_title(re.compile(r"Aula 16.*Introdução"))
+    expect(page).to_have_title(re.compile(r"Aula 16.*Hardware"))
     
     # Check quiz containers
     quiz_containers = page.locator(".quiz-container")

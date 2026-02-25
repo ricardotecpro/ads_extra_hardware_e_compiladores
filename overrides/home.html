@@ -1,0 +1,32 @@
+{% extends "main.html" %}
+
+{% block tabs %}
+{{ super() }}
+<style>
+  /* Hide the hero section from index.md if present, or handle via CSS */
+  .md-content__inner {
+    margin-top: 0;
+    padding-top: 0;
+  }
+</style>
+
+<section class="hero-container">
+  <div class="hero-content">
+    <div class="hero-overlay">
+      <h1 class="hero-title">Fundamentos da Computação</h1>
+      <p class="hero-subtitle">Bases Numéricas, Hardware, Software e Lógica</p>
+      <div class="hero-actions">
+        <a href="aulas/aula-01.md" class="md-button md-button--primary">Começar Agora</a>
+        <a href="aulas/" class="md-button">Ver Módulos</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block content %}
+<!-- Render the rest of index.md content below the parallax header -->
+<div class="mdx-container">
+  {{ super() }}
+</div>
+{% endblock %}

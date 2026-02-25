@@ -1,0 +1,221 @@
+site_name: Hardware para Programadores
+site_url: https://ricardotecpro.github.io/ads_extra_hardware_e_compiladores
+repo_url: https://github.com/ricardotecpro/ads_extra_hardware_e_compiladores
+repo_name: ricardotecpro/ads_extra_hardware_e_compiladores
+site_description: Curso focado em performance, C/C++ e baixo nível para desenvolvedores.
+
+theme:
+  name: material
+  language: pt-BR
+  favicon: assets/images/logo.png
+  logo: assets/images/logo.png
+  custom_dir: overrides
+  features:
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.path
+    - navigation.expand
+    - navigation.top
+    - navigation.footer
+    - navigation.indexes
+    - navigation.instant
+    - navigation.prune
+    - toc.follow
+    - content.code.copy
+    - content.code.annotate
+    - search.share
+    - search.suggest
+    - search.highlight
+  palette:
+    # Light Mode (Default)
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-sunny
+        name: Mudar para modo escuro
+    # Dark Mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+      toggle:
+        icon: material/weather-night
+        name: Mudar para modo claro
+  icon:
+    repo: fontawesome/brands/github
+  font:
+    text: Roboto
+    code: Roboto Mono
+  # Privacidade: Fontes locais sem Google Fonts CDN
+  font_display: swap
+  font_style: normal
+  # Nota: O Material for MkDocs baixa as fontes automaticamente se configurado no ambiente de build
+  static_templates:
+    - 404.html
+
+copyright: 'Copyright &copy; 2026 Ricardo. Feito com <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">Material for MkDocs</a>.'
+
+markdown_extensions:
+  - pymdownx.critic
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.keys
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - footnotes
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.snippets:
+      base_path: docs
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  - social:
+      cards: false
+  - tags:
+  - mkdocs-revealjs
+  - search:
+      lang: pt
+  - mkdocs-jupyter
+  - glightbox
+
+  - git-authors:
+      show_contribution: true
+      show_line_count: true
+      count_empty_lines: false
+      fallback_to_empty: false
+      sort_authors_by: contribution
+      authorship_threshold_percent: 10
+      exclude:
+        - index.md
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: datetime
+  - macros
+  - mkdocs-video
+  - termynal:
+      title: shell
+      buttons: macos
+      prompt_literal_start:
+        - "$"
+  - rss:
+      match_path: .*
+      date_from_meta:
+        datetime_format: '%Y-%m-%d %H:%M:%S'
+  - minify:
+      minify_html: true
+      minify_js: true
+      minify_css: true
+  - print-site:
+      add_to_navigation: false
+      print_page_title: 'Versão para Impressão'
+      add_print_site_banner: false
+      enumerate_headings: false
+      enumerate_figures: false
+
+hooks:
+  - hooks/copy_slides.py
+
+extra_css:
+  - assets/css/quiz.css
+  - assets/css/home.css
+  - assets/css/extra.css
+
+extra_javascript:
+  - assets/js/quiz.js
+  - https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js
+  - assets/js/mermaid-init.js
+  - assets/js/custom_termynal.js
+  - assets/js/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ricardotecpro
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/ricardotecpro
+    - icon: fontawesome/solid/globe
+      link: https://ricardotecpro.github.io/
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@ricardotecpro
+    - icon: fontawesome/brands/x-twitter
+      link: https://twitter.com/ricardotecpro
+  version:
+    provider: mike
+    default: estavel
+
+nav:
+  - Home: index.md
+  - Sobre: sobre.md
+  - Aulas:
+    - aulas/index.md
+    - Módulo 1 – Fundamentos de Arquitetura de Computadores:
+      - 'Aula 01 - Como o Software Roda no Hardware': aulas/aula-01.md
+      - 'Aula 02 - Representação de Dados': aulas/aula-02.md
+      - 'Aula 03 - CPU: Estrutura e Funcionamento': aulas/aula-03.md
+      - 'Aula 04 - Arquiteturas RISC vs CISC': aulas/aula-04.md
+    - Módulo 2 – Memória e Performance:
+      - 'Aula 05 - Hierarquia de Memória': aulas/aula-05.md
+      - 'Aula 06 - Cache e Localidade': aulas/aula-06.md
+      - 'Aula 07 - Stack vs Heap': aulas/aula-07.md
+      - 'Aula 08 - Memória Virtual': aulas/aula-08.md
+    - Módulo 3 – Concorrência e Paralelismo:
+      - 'Aula 09 - Processos e Threads': aulas/aula-09.md
+      - 'Aula 10 - Sincronização': aulas/aula-10.md
+      - 'Aula 11 - Paralelismo em Hardware': aulas/aula-11.md
+      - 'Aula 12 - Modelo de Memória': aulas/aula-12.md
+    - Módulo 4 – Armazenamento e I/O:
+      - 'Aula 13 - Dispositivos de Armazenamento': aulas/aula-13.md
+      - 'Aula 14 - Sistemas de Arquivos': aulas/aula-14.md
+      - 'Aula 15 - Entrada e Saída (I/O)': aulas/aula-15.md
+    - Módulo 5 – Integração Prática:
+      - 'Aula 16 - Projeto Final: Otimização': aulas/aula-16.md
+  - Materiais:
+      - materiais.md
+      - Slides:
+          - slides/index.md
+          - 'Slide 01 - Como o Software Roda': slides/slide-01.html
+          - 'Slide 02 - Representação': slides/slide-02.html
+          - 'Slide 03 - CPU': slides/slide-03.html
+          - 'Slide 04 - RISC vs CISC': slides/slide-04.html
+          - 'Slide 05 - Hierarquia Memória': slides/slide-05.html
+          - 'Slide 06 - Cache Localidade': slides/slide-06.html
+          - 'Slide 07 - Stack vs Heap': slides/slide-07.html
+          - 'Slide 08 - Memória Virtual': slides/slide-08.html
+          - 'Slide 09 - Processos Threads': slides/slide-09.html
+          - 'Slide 10 - Sincronização': slides/slide-10.html
+          - 'Slide 11 - Paralelismo Hardware': slides/slide-11.html
+          - 'Slide 12 - Modelo Memória': slides/slide-12.html
+          - 'Slide 13 - Dispositivos ARM': slides/slide-13.html
+          - 'Slide 14 - Sis. Arquivos': slides/slide-14.html
+          - 'Slide 15 - IO': slides/slide-15.html
+          - 'Slide 16 - Projeto': slides/slide-16.html
+      - Exercícios:
+          - exercicios/index.md
+      - Quizzes:
+          - quizzes/index.md
+      - Projetos:
+          - projetos/index.md
+      - Configuração:
+          - setups/index.md
+  - Impressão: print_page.md

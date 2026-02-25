@@ -1,0 +1,195 @@
+HERE= C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\mkdocs_revealjs
+DIRNAME= docs/revealjs
+INFO    -  DeprecationWarning: Support for bleach <5 will be removed in a future version of nbconvert
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\nbconvert\filters\strings.py", line 23, in <module>
+    from nbconvert.preprocessors.sanitize import _get_default_css_sanitizer
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\nbconvert\preprocessors\sanitize.py", line 30, in <module>
+    warnings.warn(
+
+INFO    -  [macros] - No default module `main` found
+INFO    -  [macros] - Config variables: ['extra', 'config', 'environment', 'plugin', 'git', 'social', 'version', 'macros', 'filters', 'filters_builtin']
+INFO    -  [macros] - Config macros: ['context', 'macros_info', 'now', 'fix_url']
+INFO    -  [macros] - Config filters: ['pretty', 'relative_url']
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: D:\SourceCode\REPOS\github.io\ads_mod_01_fundamentos_da_computacao\site
+INFO    -  The following pages exist in the docs directory, but are not included in the "nav" configuration:
+  - project_roadmap.md
+  - exercicios\exercicio-01.md
+  - exercicios\exercicio-02.md
+  - exercicios\exercicio-03.md
+  - exercicios\exercicio-04.md
+  - exercicios\exercicio-05.md
+  - exercicios\exercicio-06.md
+  - exercicios\exercicio-07.md
+  - exercicios\exercicio-08.md
+  - exercicios\exercicio-09.md
+  - exercicios\exercicio-10.md
+  - exercicios\exercicio-11.md
+  - exercicios\exercicio-12.md
+  - exercicios\exercicio-13.md
+  - exercicios\exercicio-14.md
+  - exercicios\exercicio-15.md
+  - exercicios\exercicio-16.md
+  - projetos\projeto-01.md
+  - projetos\projeto-02.md
+  - projetos\projeto-03.md
+  - projetos\projeto-04.md
+  - projetos\projeto-05.md
+  - projetos\projeto-06.md
+  - projetos\projeto-07.md
+  - projetos\projeto-08.md
+  - projetos\projeto-09.md
+  - projetos\projeto-10.md
+  - projetos\projeto-11.md
+  - projetos\projeto-12.md
+  - projetos\projeto-13.md
+  - projetos\projeto-14.md
+  - projetos\projeto-15.md
+  - projetos\projeto-16.md
+  - quizzes\quiz-01.md
+  - quizzes\quiz-02.md
+  - quizzes\quiz-03.md
+  - quizzes\quiz-04.md
+  - quizzes\quiz-05.md
+  - quizzes\quiz-06.md
+  - quizzes\quiz-07.md
+  - quizzes\quiz-08.md
+  - quizzes\quiz-09.md
+  - quizzes\quiz-10.md
+  - quizzes\quiz-11.md
+  - quizzes\quiz-12.md
+  - quizzes\quiz-13.md
+  - quizzes\quiz-14.md
+  - quizzes\quiz-15.md
+  - quizzes\quiz-16.md
+  - setups\setup-01.md
+  - setups\setup-02.md
+  - slides\slide-01.md
+  - slides\slide-02.md
+  - slides\slide-03.md
+  - slides\slide-04.md
+  - slides\slide-05.md
+  - slides\slide-06.md
+  - slides\slide-07.md
+  - slides\slide-08.md
+  - slides\slide-09.md
+  - slides\slide-10.md
+  - slides\slide-11.md
+  - slides\slide-12.md
+  - slides\slide-13.md
+  - slides\slide-14.md
+  - slides\slide-15.md
+  - slides\slide-16.md
+  - slides\slides-01.md
+  - slides\slides-02.md
+  - slides\slides-03.md
+  - slides\slides-04.md
+  - slides\slides-05.md
+  - slides\slides-06.md
+  - slides\slides-07.md
+  - slides\slides-08.md
+  - slides\slides-09.md
+  - slides\slides-10.md
+  - slides\slides-11.md
+  - slides\slides-12.md
+  - slides\slides-13.md
+  - slides\slides-14.md
+  - slides\slides-15.md
+  - slides\slides-16.md
+WARNING -  [mkdocs-print-site] 'aulas\aula-01.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 01 - IntroduþÒo Ó ComputaþÒo e Bases NumÚricas'
+WARNING -  [mkdocs-print-site] 'aulas\aula-02.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 02 - ConversÒo de Decimal para Binßrio'
+WARNING -  [mkdocs-print-site] 'aulas\aula-03.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 03 - ConversÒo Binßrio para Decimal'
+WARNING -  [mkdocs-print-site] 'aulas\aula-04.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 04 - Sistema Octal'
+WARNING -  [mkdocs-print-site] 'aulas\aula-05.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 05 - ConversÒo Decimal Hexadecimal'
+WARNING -  [mkdocs-print-site] 'aulas\aula-06.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 06 - ConversÒo Binßrio Hexadecimal'
+WARNING -  [mkdocs-print-site] 'aulas\aula-07.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 07 - AritmÚtica Binßria'
+WARNING -  [mkdocs-print-site] 'aulas\aula-08.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 08 - RepresentaþÒo de Dados'
+WARNING -  [mkdocs-print-site] 'aulas\aula-09.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 09 - L¾gica Booleana'
+WARNING -  [mkdocs-print-site] 'aulas\aula-10.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 10 - Tabelas Verdade'
+WARNING -  [mkdocs-print-site] 'aulas\aula-11.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 11 - Circuitos L¾gicos'
+WARNING -  [mkdocs-print-site] 'aulas\aula-12.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 12 - Arquitetura de Computadores'
+WARNING -  [mkdocs-print-site] 'aulas\aula-13.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 13 - Mem¾ria e Armazenamento'
+WARNING -  [mkdocs-print-site] 'aulas\aula-14.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 14 - Sistemas Operacionais'
+WARNING -  [mkdocs-print-site] 'aulas\aula-15.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 15 - Algoritmos e Fluxogramas'
+WARNING -  [mkdocs-print-site] 'aulas\aula-16.md' file is missing a leading h1 tag. Added to the print-page with title 'Aula 16 - IntroduþÒo Ó ProgramaþÒo'
+Copiando slides HTML...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Scripts\mkdocs.exe\__main__.py", line 7, in <module>
+    sys.exit(cli())
+             ~~~^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\click\core.py", line 1485, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\click\core.py", line 1406, in main
+    rv = self.invoke(ctx)
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\click\core.py", line 1873, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+                           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\click\core.py", line 1269, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\click\core.py", line 824, in invoke
+    return callback(*args, **kwargs)
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\mkdocs\__main__.py", line 288, in build_command
+    build.build(cfg, dirty=not clean)
+    ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\mkdocs\commands\build.py", line 347, in build
+    config.plugins.on_post_build(config=config)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\mkdocs\plugins.py", line 602, in on_post_build
+    return self.run_event('post_build', config=config)
+           ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\mkdocs\plugins.py", line 568, in run_event
+    result = method(**kwargs)
+  File "D:\SourceCode\REPOS\github.io\ads_mod_01_fundamentos_da_computacao\hooks\copy_slides.py", line 59, in on_post_build
+    copy_slides(config)
+    ~~~~~~~~~~~^^^^^^^^
+  File "D:\SourceCode\REPOS\github.io\ads_mod_01_fundamentos_da_computacao\hooks\copy_slides.py", line 37, in copy_slides
+    print(f"  [blue]\u2192 {slide.name}[/blue]")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\__init__.py", line 74, in print
+    return write_console.print(*objects, sep=sep, end=end)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\console.py", line 1697, in print
+    with self:
+         ^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\console.py", line 870, in __exit__
+    self._exit_buffer()
+    ~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\console.py", line 826, in _exit_buffer
+    self._check_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\console.py", line 2042, in _check_buffer
+    self._write_buffer()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\console.py", line 2078, in _write_buffer
+    legacy_windows_render(buffer, LegacyWindowsTerm(self.file))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\_windows_renderer.py", line 17, in legacy_windows_render
+    term.write_styled(text, style)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\_win32_console.py", line 441, in write_styled
+    self.write_text(text)
+    ~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\rich\_win32_console.py", line 402, in write_text
+    self.write(text)
+    ~~~~~~~~~~^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\colorama\ansitowin32.py", line 47, in write
+    self.__convertor.write(text)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\colorama\ansitowin32.py", line 177, in write
+    self.write_and_convert(text)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\colorama\ansitowin32.py", line 205, in write_and_convert
+    self.write_plain_text(text, cursor, len(text))
+    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\rlp\AppData\Local\pypoetry\Cache\virtualenvs\ads-spec-backend-com-python-UQs95u0N-py3.13\Lib\site-packages\colorama\ansitowin32.py", line 210, in write_plain_text
+    self.wrapped.write(text[start:end])
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Python\Python313\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2192' in position 0: character maps to <undefined>
+  

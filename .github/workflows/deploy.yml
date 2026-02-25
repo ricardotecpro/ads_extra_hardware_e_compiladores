@@ -1,0 +1,29 @@
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches: [main, master]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          
+      - name: Instalar dependências
+        run: pip install -r requirements.txt
+        
+      - name: Build e deploy com Mike
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          python scripts/generate_slides_quizzes.py
+          python scripts/convert_quizzes.py
+          mike deploy estavel --push --allow-empty
+          mike set-default estavel --push

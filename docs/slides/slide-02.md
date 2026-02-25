@@ -42,7 +42,7 @@ A representação oficial **IEEE 754** os divide em 3 porções:
 
 ```mermaid
 flowchart LR
-    A["Sinal (1 bit)"] --- B["Expoente (8 bits)"] --- C["Fração/Mantissa (23 bits)"]
+    A[Sinal - 1 bit] --- B[Expoente - 8 bits] --- C[Fração / Mantissa - 23 bits]
     style A fill:#ff9999
     style B fill:#99ccff
     style C fill:#ccffcc

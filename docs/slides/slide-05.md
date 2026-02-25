@@ -10,10 +10,10 @@ Um programador ingênuo acha que "variável vai na memória". Um engenheiro de s
 
 ```mermaid
 graph TD
-    A("Registradores<br/>(1 Ciclo - Alguns Bytes)") --> B["Cache L1<br/>(~4 Ciclos - ~64KB a 128KB)"]
-    B --> C["Cache L2 e L3<br/>(~12 a ~40 Ciclos - Megabytes)"]
-    C --> D[["RAM (Memória Principal)<br/>(~200 a ~300 Ciclos - Gigabytes)"]]
-    D --> E[("Armazenamento (SSD / HDD)<br/>(Milhões de Ciclos - Terabytes)")]
+    A[Registradores<br/>1 Ciclo - Alguns Bytes] --> B[Cache L1<br/>~4 Ciclos - ~64KB a 128KB]
+    B --> C[Cache L2 e L3<br/>~12 a ~40 Ciclos - Megabytes]
+    C --> D[RAM Memória Principal<br/>~200 a ~300 Ciclos - Gigabytes]
+    D --> E[Armazenamento SSD / HDD<br/>Milhões de Ciclos - Terabytes]
     
     style A fill:#ff9999
     style B fill:#ffcc99

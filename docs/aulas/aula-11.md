@@ -65,7 +65,7 @@ NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptogra
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-11.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-11.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -73,7 +73,7 @@ NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptogra
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-11.html)
+    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-11.html)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -81,7 +81,7 @@ NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptogra
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-11.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-11.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -89,7 +89,7 @@ NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptogra
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-11.md)
+    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-11.md)
 
 </div>
 

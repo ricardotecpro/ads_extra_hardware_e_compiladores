@@ -48,7 +48,7 @@ Um engenheiro de Backend jamais olhará para `int x;` ou `for()` sem recordar os
 Parabéns pela resiliência no vale do Silício e da Matemática discreta profunda.
 Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
-[:material-rocket: Finalizar e Visitar Projetos](../projetos/index.md){ .md-button .md-button--primary }
+[:material-rocket: Finalizar e Visitar Projetos](/ads_extra_hardware_e_compiladores/projetos/index.md){ .md-button .md-button--primary }
 
 
 ---
@@ -63,7 +63,7 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-16.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-16.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -71,7 +71,7 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-16.html)
+    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-16.html)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -79,7 +79,7 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-16.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-16.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -87,6 +87,6 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-16.md)
+    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-16.md)
 
 </div>

@@ -50,7 +50,7 @@ Acumule os dados num Buffer gigântico de `1 MB` na RAM, e comande gravar os dad
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-13.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-13.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -58,7 +58,7 @@ Acumule os dados num Buffer gigântico de `1 MB` na RAM, e comande gravar os dad
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-13.html)
+    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-13.html)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -66,7 +66,7 @@ Acumule os dados num Buffer gigântico de `1 MB` na RAM, e comande gravar os dad
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-13.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-13.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -74,7 +74,7 @@ Acumule os dados num Buffer gigântico de `1 MB` na RAM, e comande gravar os dad
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-13.md)
+    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-13.md)
 
 </div>
 

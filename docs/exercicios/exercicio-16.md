@@ -2,20 +2,40 @@
 
 Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula 16**.
 
-## Questão 1 - 1. Profiling Clássico (A Vida Real)
-**Contexto:** Adivinhar onde o código está lento é a armadilha suprema do júnior.
+## Questão 1 - 1. Profiling Clássico (A Vida Real) (Básico 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **1. Profiling Clássico (A Vida Real)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Adivinhar onde o código está lento é a armadilha suprema do júnior.
 
-## Questão 2 - 2. O Grande Desafio (Mini-Projeto Prático)
-**Contexto:** O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:
+**Pergunta:** Descreva o conceito fundamental de **1. Profiling Clássico (A Vida Real)** e liste duas vantagens de seu uso.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **2. O Grande Desafio (Mini-Projeto Prático)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+## Questão 2 - 2. O Grande Desafio (Mini-Projeto Prático) (Básico 2)
+**Contexto:** 
 
-## Questão 3 - 3. Conclusão da Trilha
-**Contexto:** Você navegou nas extremas profundezas da arquitetura da Computação Modernizada.
+> O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **3. Conclusão da Trilha**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+**Pergunta:** Descreva o conceito fundamental de **2. O Grande Desafio (Mini-Projeto Prático)** e liste duas vantagens de seu uso.
+
+## Questão 3 - 3. Conclusão da Trilha (Intermediário 1)
+**Contexto:** 
+
+> Você navegou nas extremas profundezas da arquitetura da Computação Modernizada.
+
+**Pergunta:** Analisando o funcionamento de **3. Conclusão da Trilha**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 4 - 1. Profiling Clássico (A Vida Real) (Intermediário 2)
+**Contexto:** 
+
+> Adivinhar onde o código está lento é a armadilha suprema do júnior.
+
+**Pergunta:** Analisando o funcionamento de **1. Profiling Clássico (A Vida Real)**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 5 - 2. O Grande Desafio (Mini-Projeto Prático) (Desafio)
+**Contexto:** 
+
+> O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware:
+
+**Pergunta (Desafio):** Elabore um cenário de arquitetura onde o uso incorreto ou a falta de entendimento de **2. O Grande Desafio (Mini-Projeto Prático)** cause um problema grave de performance ou vazamento de memória. Como você mitigaria estruturalmente esse gargalo?
 
 
 ---

@@ -2,25 +2,40 @@
 
 Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula 11**.
 
-## Questão 1 - 1. Multi-Core (Múltiplos Núcleos)
-**Contexto:** Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).
+## Questão 1 - 1. Multi-Core (Múltiplos Núcleos) (Básico 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **1. Multi-Core (Múltiplos Núcleos)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).
 
-## Questão 2 - 2. Hyper-Threading (SMT - Symmetrical Multi-Threading)
-**Contexto:** A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógicos" para o Windows/Linux?
+**Pergunta:** Descreva o conceito fundamental de **1. Multi-Core (Múltiplos Núcleos)** e liste duas vantagens de seu uso.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **2. Hyper-Threading (SMT - Symmetrical Multi-Threading)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+## Questão 2 - 2. Hyper-Threading (SMT - Symmetrical Multi-Threading) (Básico 2)
+**Contexto:** 
 
-## Questão 3 - 3. GPUs: O Paralelismo Maciço
-**Contexto:** CPUs (Processadores) foram feitos para "Serem Rápidos executando sequências lógicas e IFs complexos". Possuem Caches gigantes.
+> A mágica comercial da Intel e AMD nos anos 2000. Como fazer "1 Core Físico" fingir ser "2 Cores Lógicos" para o Windows/Linux?
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **3. GPUs: O Paralelismo Maciço**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+**Pergunta:** Descreva o conceito fundamental de **2. Hyper-Threading (SMT - Symmetrical Multi-Threading)** e liste duas vantagens de seu uso.
 
-## Questão 4 - Resumo Prático
-**Contexto:** - **Task Paralelism**: Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*.
+## Questão 3 - 3. GPUs: O Paralelismo Maciço (Intermediário 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **Resumo Prático**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> CPUs (Processadores) foram feitos para "Serem Rápidos executando sequências lógicas e IFs complexos". Possuem Caches gigantes.
+
+**Pergunta:** Analisando o funcionamento de **3. GPUs: O Paralelismo Maciço**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 4 - Resumo Prático (Intermediário 2)
+**Contexto:** 
+
+> - **Task Paralelism**: Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*.
+
+**Pergunta:** Analisando o funcionamento de **Resumo Prático**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 5 - 1. Multi-Core (Múltiplos Núcleos) (Desafio)
+**Contexto:** 
+
+> Diferente do passado, onde havia um único núcleo saltando entre aplicativos (Context Switch), hoje temos vários núcleos físicos no mesmo invólucro (Chip).
+
+**Pergunta (Desafio):** Elabore um cenário de arquitetura onde o uso incorreto ou a falta de entendimento de **1. Multi-Core (Múltiplos Núcleos)** cause um problema grave de performance ou vazamento de memória. Como você mitigaria estruturalmente esse gargalo?
 
 
 ---

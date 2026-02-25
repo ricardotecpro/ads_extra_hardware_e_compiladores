@@ -2,25 +2,40 @@
 
 Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula 05**.
 
-## Questão 1 - 1. A Pirâmide de Alta Performance
-**Contexto:** Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda:
+## Questão 1 - 1. A Pirâmide de Alta Performance (Básico 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **1. A Pirâmide de Alta Performance**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda:
 
-## Questão 2 - 2. Os Impactos da Latência (Lado do Código)
-**Contexto:** Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.
+**Pergunta:** Descreva o conceito fundamental de **1. A Pirâmide de Alta Performance** e liste duas vantagens de seu uso.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **2. Os Impactos da Latência (Lado do Código)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+## Questão 2 - 2. Os Impactos da Latência (Lado do Código) (Básico 2)
+**Contexto:** 
 
-## Questão 3 - 3. Optimizando Uso
-**Contexto:** Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading?
+> Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **3. Optimizando Uso**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+**Pergunta:** Descreva o conceito fundamental de **2. Os Impactos da Latência (Lado do Código)** e liste duas vantagens de seu uso.
 
-## Questão 4 - Resumo Prático
-**Contexto:** - Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente).
+## Questão 3 - 3. Optimizando Uso (Intermediário 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **Resumo Prático**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Por que linguagens como C e C++ dominam infraestrutura de servidores High Frequency Trading?
+
+**Pergunta:** Analisando o funcionamento de **3. Optimizando Uso**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 4 - Resumo Prático (Intermediário 2)
+**Contexto:** 
+
+> - Se processadores hoje são mísseis atingindo +4GHz, a RAM parou no tempo (Latência de CAS não baixa proporcionalmente).
+
+**Pergunta:** Analisando o funcionamento de **Resumo Prático**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 5 - 1. A Pirâmide de Alta Performance (Desafio)
+**Contexto:** 
+
+> Um programador ingênuo acha que "variável vai na memória". Um engenheiro de software C/C++ sabe *em qual camada* a variável se hospeda:
+
+**Pergunta (Desafio):** Elabore um cenário de arquitetura onde o uso incorreto ou a falta de entendimento de **1. A Pirâmide de Alta Performance** cause um problema grave de performance ou vazamento de memória. Como você mitigaria estruturalmente esse gargalo?
 
 
 ---

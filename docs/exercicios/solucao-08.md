@@ -2,7 +2,7 @@
 
 Abaixo estão as respostas esperadas e o embasamento teórico para os exercícios propostos na **Aula 08**.
 
-## Solução da Questão 1 - 1. O Abismo Lógico: A Memória Virtual
+## Solução da Questão 1 - 1. O Abismo Lógico: A Memória Virtual (Básico 1)
 **Explicação Detalhada do Assunto:**
 
 Nenhum aplicativo C/C++ ou interpretador em execução roda interagindo fisicamente e sabendo explicitamente qual é o transistor fixo lá no pente da Kingston RAM na placa do data-center.
@@ -17,9 +17,10 @@ Ela entrega para o ponteiro do processo o pretexto visual de que ele tem toda a 
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *1. O Abismo Lógico: A Memória Virtual* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. O Abismo Lógico: A Memória Virtual* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 2 - 2. TLB, MMU e a Tradução da Página
+## Solução da Questão 2 - 2. TLB, MMU e a Tradução da Página (Básico 2)
 **Explicação Detalhada do Assunto:**
 
 Para driblar isso, a arquitetura moderna usa a **TLB (Translation Lookaside Buffer)**. A TLB é uma Cache dentro da CPU que guarda apenas os dicionários recentes das planilhas de referências que dizem se o "0X7FFA falso vira bloco 344 do pente de DDR5 real".
@@ -34,18 +35,20 @@ Para driblar isso, a arquitetura moderna usa a **TLB (Translation Lookaside Buff
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *2. TLB, MMU e a Tradução da Página* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *2. TLB, MMU e a Tradução da Página* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 3 - 3. Driblando a Paginação como Programador
+## Solução da Questão 3 - 3. Driblando a Paginação como Programador (Intermediário 1)
 **Explicação Detalhada do Assunto:**
 
 Ao iterarmos matrizes massivas (Matrizes 2D em C++) na ordem invertida ou em lógicas dispersas `LinkedList->prox`, você não causa apenas *Cache Miss* da Aula 06. Você também destrói toda a cache de pontes *TLB Misses*! Você induzirá Page Faults insanos que derrubarão o throughput (taxa de transferência de dados) em N fatores.
 
 Portanto: **Localidade Espacial é sagrada em Dados C/C++**.
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *3. Driblando a Paginação como Programador* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *3. Driblando a Paginação como Programador* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 4 - Resumo Prático
+## Solução da Questão 4 - Resumo Prático (Intermediário 2)
 **Explicação Detalhada do Assunto:**
 
 - O ponteiro que o dev manipula com um `int *ptr = &value` em qualquer IDE é puramente 100% Virtual. É o passaporte intermediário.
@@ -54,7 +57,26 @@ Portanto: **Localidade Espacial é sagrada em Dados C/C++**.
 
 
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *Resumo Prático* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *Resumo Prático* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
+
+## Solução da Questão 5 - 1. O Abismo Lógico: A Memória Virtual (Desafio)
+**Explicação Detalhada do Assunto:**
+
+Nenhum aplicativo C/C++ ou interpretador em execução roda interagindo fisicamente e sabendo explicitamente qual é o transistor fixo lá no pente da Kingston RAM na placa do data-center.
+
+Todo processo que o Linux constrói roda dentro de uma gigante **Ilusão**. O endereço do seu ponteiro `0x7ffeeB...` em C++ é falso (Endereço Lógico).
+
+O HW (Hardware MMU no processador) mais as planilhas do Sistema Operacional (Page Tables) formencem a ligação dinâmica e escondida pra sua aplicação.
+
+A **Memória Virtual (VM)** é um sanduíche mental e isolador protetor usado pelo S.O.
+
+Ela entrega para o ponteiro do processo o pretexto visual de que ele tem toda a memória que ele quiser num universo contínuo livre.
+
+---
+
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. O Abismo Lógico: A Memória Virtual* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
 
 ---

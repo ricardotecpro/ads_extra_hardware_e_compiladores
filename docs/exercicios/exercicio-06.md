@@ -2,20 +2,40 @@
 
 Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula 06**.
 
-## Questão 1 - 1. Cache Hit e Cache Miss
-**Contexto:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
+## Questão 1 - 1. Cache Hit e Cache Miss (Básico 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **1. Cache Hit e Cache Miss**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
 
-## Questão 2 - 2. Localidade Espacial vs Temporal
-**Contexto:** As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):
+**Pergunta:** Descreva o conceito fundamental de **1. Cache Hit e Cache Miss** e liste duas vantagens de seu uso.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **2. Localidade Espacial vs Temporal**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+## Questão 2 - 2. Localidade Espacial vs Temporal (Básico 2)
+**Contexto:** 
 
-## Questão 3 - 3. False Sharing e Lógica Invertida (A Morte do C++)
-**Contexto:** A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo.
+> As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **3. False Sharing e Lógica Invertida (A Morte do C++)**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+**Pergunta:** Descreva o conceito fundamental de **2. Localidade Espacial vs Temporal** e liste duas vantagens de seu uso.
+
+## Questão 3 - 3. False Sharing e Lógica Invertida (A Morte do C++) (Intermediário 1)
+**Contexto:** 
+
+> A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo.
+
+**Pergunta:** Analisando o funcionamento de **3. False Sharing e Lógica Invertida (A Morte do C++)**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 4 - 1. Cache Hit e Cache Miss (Intermediário 2)
+**Contexto:** 
+
+> O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
+
+**Pergunta:** Analisando o funcionamento de **1. Cache Hit e Cache Miss**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 5 - 2. Localidade Espacial vs Temporal (Desafio)
+**Contexto:** 
+
+> As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):
+
+**Pergunta (Desafio):** Elabore um cenário de arquitetura onde o uso incorreto ou a falta de entendimento de **2. Localidade Espacial vs Temporal** cause um problema grave de performance ou vazamento de memória. Como você mitigaria estruturalmente esse gargalo?
 
 
 ---

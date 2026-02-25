@@ -1,18 +1,23 @@
-# Projeto: Aula 15 - Entrada e Saída (I/O)
+# Projeto 15: Aula 15 - Entrada e Saída (I/O)
 
-## Desafio Prático
-O objetivo deste projeto é desenvolver ou analisar uma pequena aplicação em C/C++ que comprove na prática os conceitos ensinados na Aula 15, com ênfase em **1. System Calls (O Pedágio do Kernel)**.
+## 🚀 Laboratório Prático: **Aula 15 - Entrada e Saída (I/O)**
 
-**Contexto Teórico Extraído da Aula:**
+Construa uma simulação lógica ou um roteiro analítico em linguagem C/C++ focado no fenômeno real ocorrido no Hardware baseando-se em:
 
-> Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminante encerramento compulsório pelo Processador através do bloqueio de Anéis de Proteção.
+> Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera u...
 
-## Tarefas do Projeto (Implementação/Verificação)
-- [ ] **Módulo de 1. System Calls (O Pedágio do Kernel)**: Demonstrar estruturalmente ou em código a afirmação de que _Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO..._
-- [ ] **Módulo de 2. Interrupções vs Polling**: Demonstrar estruturalmente ou em código a afirmação de que _Seu App em Python/C diz: "Puxe o dado que está vindo no mouse"...._
-- [ ] **Módulo de 3. DMA (Memória com Acesso Direto)**: Demonstrar estruturalmente ou em código a afirmação de que _Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a P..._
-- [ ] **Módulo de Resumo Prático**: Demonstrar estruturalmente ou em código a afirmação de que _- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava m..._
+> Seu App em Python/C diz: "Puxe o dado que está vindo no mouse"....
 
-## Critérios de Qualidade e Avaliação
-- O código executa de maneira segura, com gestão correta de memória.
-- A modelagem está aderente aos conceitos explicados no material teórico (não apenas funciona superficialmente).
+> Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Et...
+
+### Tarefas do Projeto
+- [ ] **Setup Inicial**: Alocar perfeitamente os arquivos como `main.cpp` em sua IDE configurando compilador GCC/Clang.
+- [ ] **Módulo 1**: Implementar, prototipar ou demonstrar funcionalmente _1. System Calls (O Pedágio do Kernel)_ no código.
+- [ ] **Módulo 2**: Implementar, prototipar ou demonstrar funcionalmente _2. Interrupções vs Polling_ no código.
+- [ ] **Módulo 3**: Implementar, prototipar ou demonstrar funcionalmente _3. DMA (Memória com Acesso Direto)_ no código.
+- [ ] **Validação E Benchmark**: Fazer o build via terminal e testar limites de velocidade analiticamente comparando o log de transição.
+
+### 🏆 Critérios de Qualidade (Review)
+1. Compila estritamente sem nenhum warning de memory loss ou fallback.
+2. Adere e representa fielmente 100% à teoria aprendida do Markdown da Aula correspondente.
+3. Estruturação modular limpa para fácil manutenção.

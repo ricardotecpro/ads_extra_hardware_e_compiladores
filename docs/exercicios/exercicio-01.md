@@ -2,25 +2,40 @@
 
 Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula 01**.
 
-## Questão 1 - 1. O Abismo entre Código e Silício
-**Contexto:** Escrevemos *software* (como C/C++, Java, Python) usando linguagens compreensíveis a humanos, porém processadores processam apenas **Sinais Elétricos** ou, abstraindo para o domínio digital, **Binários (0 e 1)**.
+## Questão 1 - 1. O Abismo entre Código e Silício (Básico 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **1. O Abismo entre Código e Silício**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Escrevemos *software* (como C/C++, Java, Python) usando linguagens compreensíveis a humanos, porém processadores processam apenas **Sinais Elétricos** ou, abstraindo para o domínio digital, **Binários (0 e 1)**.
 
-## Questão 2 - 2. Compiladores vs Interpretadores
-**Contexto:** A forma como seu código vira máquina dita o perfil da performance:
+**Pergunta:** Descreva o conceito fundamental de **1. O Abismo entre Código e Silício** e liste duas vantagens de seu uso.
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **2. Compiladores vs Interpretadores**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+## Questão 2 - 2. Compiladores vs Interpretadores (Básico 2)
+**Contexto:** 
 
-## Questão 3 - 3. ISA: O Contrato do Processador
-**Contexto:** Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas operações ditadas pela ISA para rodar.
+> A forma como seu código vira máquina dita o perfil da performance:
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **3. ISA: O Contrato do Processador**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+**Pergunta:** Descreva o conceito fundamental de **2. Compiladores vs Interpretadores** e liste duas vantagens de seu uso.
 
-## Questão 4 - Resumo Prático
-**Contexto:** - Ao usar C/C++, você não lida com um motor intermediário te cobrindo (como a JVM), você escreve algoritmos cuja gestão é delegada ao S.O. e rodada pura em metal.
+## Questão 3 - 3. ISA: O Contrato do Processador (Intermediário 1)
+**Contexto:** 
 
-**Pergunta:** Com base nos conceitos discutidos na aula sobre **Resumo Prático**, elabore uma explicação sobre sua importância, funcionamento prático e impactos no desenvolvimento de software de baixo nível em C/C++.
+> Todo código, por mais sofisticado que seja, precisa ser reduzido a estas poucas operações ditadas pela ISA para rodar.
+
+**Pergunta:** Analisando o funcionamento de **3. ISA: O Contrato do Processador**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 4 - Resumo Prático (Intermediário 2)
+**Contexto:** 
+
+> - Ao usar C/C++, você não lida com um motor intermediário te cobrindo (como a JVM), você escreve algoritmos cuja gestão é delegada ao S.O. e rodada pura em metal.
+
+**Pergunta:** Analisando o funcionamento de **Resumo Prático**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+
+## Questão 5 - 1. O Abismo entre Código e Silício (Desafio)
+**Contexto:** 
+
+> Escrevemos *software* (como C/C++, Java, Python) usando linguagens compreensíveis a humanos, porém processadores processam apenas **Sinais Elétricos** ou, abstraindo para o domínio digital, **Binários (0 e 1)**.
+
+**Pergunta (Desafio):** Elabore um cenário de arquitetura onde o uso incorreto ou a falta de entendimento de **1. O Abismo entre Código e Silício** cause um problema grave de performance ou vazamento de memória. Como você mitigaria estruturalmente esse gargalo?
 
 
 ---

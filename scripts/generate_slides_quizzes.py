@@ -29,18 +29,29 @@ def generate_slide_html(lesson_number: int) -> str:
                      data-separator="^\\n---\\n$"
                      data-separator-vertical="^\\n--\\n$">
             </section>
-        </div>
-    </div>
-    
-    <!-- Dicas de Atalhos -->
-    <div class="reveal-shortcuts">
-        Atalhos: F (Tela Cheia) | S (Speaker View)
-    </div>
+    <style>
+        /* Personalização do badge de número de slides (Canto Inferior Esquerdo) */
+        .reveal .slide-number {{
+            background-color: #ffb300 !important;
+            color: #000 !important;
+            font-size: 16px !important;
+            font-weight: bold !important;
+            border-radius: 6px !important;
+            padding: 6px 10px !important;
+            bottom: 20px !important;
+            left: 20px !important;
+            right: auto !important;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+        }}
+    </style>
+    <!-- Dicas de Atalhos Centro Removidas Conforme Padrão V2 -->
 
     <script src="https://unpkg.com/reveal.js@4.5.0/dist/reveal.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/markdown/markdown.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/highlight/highlight.js"></script>
     <script src="https://unpkg.com/reveal.js@4.5.0/plugin/notes/notes.js"></script>
+    <script src="https://unpkg.com/reveal.js@4.5.0/plugin/math/math.js"></script>
+    <script src="https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js"></script>
     <script>
         Reveal.initialize({{
             hash: true,
@@ -51,31 +62,30 @@ def generate_slide_html(lesson_number: int) -> str:
             transition: 'slide',
             transitionSpeed: 'default',
             backgroundTransition: 'fade',
-            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+            plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ],
+            mathjax3: {{
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                tex: {{
+                    inlineMath: [ [ '$', '$' ], [ '\\\\(', '\\\\)' ] ]
+                }},
+                options: {{
+                    skipHtmlTags: [ 'script', 'noscript', 'style', 'textarea', 'pre' ]
+                }}
+            }}
+        }}).then(() => {{
+            // Após o build do Reveal, transpilar classes markdown Mermaid para renders SVG reais
+            document.querySelectorAll('pre code.language-mermaid').forEach(code => {{
+                const pre = code.parentElement;
+                const div = document.createElement('div');
+                div.className = 'mermaid';
+                div.textContent = code.textContent;
+                pre.replaceWith(div);
+            }});
+            mermaid.initialize({{ startOnLoad: false, theme: 'dark' }});
+            mermaid.run({{ querySelector: '.mermaid' }});
         }});
 
-        // Ocultar atalhos em tela cheia
-        function updateShortcutsVisibility() {{
-            console.log('fullscreenchange event detected');
-            const isFullscreen = document.fullscreenElement || 
-                                 document.webkitFullscreenElement || 
-                                 document.mozFullScreenElement || 
-                                 document.msFullscreenElement;
-            console.log('isFullscreen:', !!isFullscreen);
-            
-            const shortcuts = document.querySelector('.reveal-shortcuts');
-            if (shortcuts) {{
-                shortcuts.style.display = isFullscreen ? 'none' : 'block';
-                console.log('Set display to:', shortcuts.style.display);
-            }} else {{
-                console.log('Shortcuts element not found');
-            }}
-        }}
-
-        document.addEventListener('fullscreenchange', updateShortcutsVisibility);
-        document.addEventListener('webkitfullscreenchange', updateShortcutsVisibility);
-        document.addEventListener('mozfullscreenchange', updateShortcutsVisibility);
-        document.addEventListener('MSFullscreenChange', updateShortcutsVisibility);
+        // JS Customizado Removido (Dicas Ocultadas)
     </script>
 </body>
 </html>

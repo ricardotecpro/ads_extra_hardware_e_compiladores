@@ -1,17 +1,23 @@
-# Projeto: Aula 06 - Cache e Localidade
+# Projeto 06: Aula 06 - Cache e Localidade
 
-## Desafio Prático
-O objetivo deste projeto é desenvolver ou analisar uma pequena aplicação em C/C++ que comprove na prática os conceitos ensinados na Aula 06, com ênfase em **1. Cache Hit e Cache Miss**.
+## 🚀 Laboratório Prático: **Aula 06 - Cache e Localidade**
 
-**Contexto Teórico Extraído da Aula:**
+Construa uma simulação lógica ou um roteiro analítico em linguagem C/C++ focado no fenômeno real ocorrido no Hardware baseando-se em:
 
-> O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*.
+> O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*....
 
-## Tarefas do Projeto (Implementação/Verificação)
-- [ ] **Módulo de 1. Cache Hit e Cache Miss**: Demonstrar estruturalmente ou em código a afirmação de que _O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*...._
-- [ ] **Módulo de 2. Localidade Espacial vs Temporal**: Demonstrar estruturalmente ou em código a afirmação de que _As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fun..._
-- [ ] **Módulo de 3. False Sharing e Lógica Invertida (A Morte do C++)**: Demonstrar estruturalmente ou em código a afirmação de que _A estrutura define a localidade espacial. Prefira dezenas de minúsculas variávei..._
+> As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada):...
 
-## Critérios de Qualidade e Avaliação
-- O código executa de maneira segura, com gestão correta de memória.
-- A modelagem está aderente aos conceitos explicados no material teórico (não apenas funciona superficialmente).
+> A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo....
+
+### Tarefas do Projeto
+- [ ] **Setup Inicial**: Alocar perfeitamente os arquivos como `main.cpp` em sua IDE configurando compilador GCC/Clang.
+- [ ] **Módulo 1**: Implementar, prototipar ou demonstrar funcionalmente _1. Cache Hit e Cache Miss_ no código.
+- [ ] **Módulo 2**: Implementar, prototipar ou demonstrar funcionalmente _2. Localidade Espacial vs Temporal_ no código.
+- [ ] **Módulo 3**: Implementar, prototipar ou demonstrar funcionalmente _3. False Sharing e Lógica Invertida (A Morte do C++)_ no código.
+- [ ] **Validação E Benchmark**: Fazer o build via terminal e testar limites de velocidade analiticamente comparando o log de transição.
+
+### 🏆 Critérios de Qualidade (Review)
+1. Compila estritamente sem nenhum warning de memory loss ou fallback.
+2. Adere e representa fielmente 100% à teoria aprendida do Markdown da Aula correspondente.
+3. Estruturação modular limpa para fácil manutenção.

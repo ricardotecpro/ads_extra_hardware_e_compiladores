@@ -1,18 +1,23 @@
-# Projeto: Aula 02 - Representação de Dados
+# Projeto 02: Aula 02 - Representação de Dados
 
-## Desafio Prático
-O objetivo deste projeto é desenvolver ou analisar uma pequena aplicação em C/C++ que comprove na prática os conceitos ensinados na Aula 02, com ênfase em **1. Sistema Binário e Hexadecimal**.
+## 🚀 Laboratório Prático: **Aula 02 - Representação de Dados**
 
-**Contexto Teórico Extraído da Aula:**
+Construa uma simulação lógica ou um roteiro analítico em linguagem C/C++ focado no fenômeno real ocorrido no Hardware baseando-se em:
 
-> O computador compreende nativamente a base 2 (Binário). Como a escrita binária é muito longa para os humanos, nós a agrupamos em Blocos de 4 (Base 16 - Hexadecimal).
+> O computador compreende nativamente a base 2 (Binário). Como a escrita binária é muito longa para os humanos, nós a agrupamos em Blocos de 4 (Base 16 - Hexadecimal)....
 
-## Tarefas do Projeto (Implementação/Verificação)
-- [ ] **Módulo de 1. Sistema Binário e Hexadecimal**: Demonstrar estruturalmente ou em código a afirmação de que _O computador compreende nativamente a base 2 (Binário). Como a escrita binária é..._
-- [ ] **Módulo de 2. Inteiros com e sem Sinal (Unsigned)**: Demonstrar estruturalmente ou em código a afirmação de que _Em C/C++, o rigor nos tipos provém diretamente do hardware:..._
-- [ ] **Módulo de 3. Ponto Flutuante (IEEE 754)**: Demonstrar estruturalmente ou em código a afirmação de que _Os famosos tipos `float` e `double`. O processador possui normalmente um setor d..._
-- [ ] **Módulo de Resumo Prático**: Demonstrar estruturalmente ou em código a afirmação de que _A maneira como você escolhe o tipo primitivo da variável modela a fisionomia do ..._
+> Em C/C++, o rigor nos tipos provém diretamente do hardware:...
 
-## Critérios de Qualidade e Avaliação
-- O código executa de maneira segura, com gestão correta de memória.
-- A modelagem está aderente aos conceitos explicados no material teórico (não apenas funciona superficialmente).
+> Os famosos tipos `float` e `double`. O processador possui normalmente um setor dedicado de FPU (Floating Point Unit) para eles....
+
+### Tarefas do Projeto
+- [ ] **Setup Inicial**: Alocar perfeitamente os arquivos como `main.cpp` em sua IDE configurando compilador GCC/Clang.
+- [ ] **Módulo 1**: Implementar, prototipar ou demonstrar funcionalmente _1. Sistema Binário e Hexadecimal_ no código.
+- [ ] **Módulo 2**: Implementar, prototipar ou demonstrar funcionalmente _2. Inteiros com e sem Sinal (Unsigned)_ no código.
+- [ ] **Módulo 3**: Implementar, prototipar ou demonstrar funcionalmente _3. Ponto Flutuante (IEEE 754)_ no código.
+- [ ] **Validação E Benchmark**: Fazer o build via terminal e testar limites de velocidade analiticamente comparando o log de transição.
+
+### 🏆 Critérios de Qualidade (Review)
+1. Compila estritamente sem nenhum warning de memory loss ou fallback.
+2. Adere e representa fielmente 100% à teoria aprendida do Markdown da Aula correspondente.
+3. Estruturação modular limpa para fácil manutenção.

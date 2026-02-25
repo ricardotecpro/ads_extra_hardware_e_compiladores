@@ -2,7 +2,7 @@
 
 Abaixo estão as respostas esperadas e o embasamento teórico para os exercícios propostos na **Aula 09**.
 
-## Solução da Questão 1 - 1. Processos (Isolamento Forte)
+## Solução da Questão 1 - 1. Processos (Isolamento Forte) (Básico 1)
 **Explicação Detalhada do Assunto:**
 
 O Processo é o contêiner mestre do *Sistema Operacional*. Quando a execução do seu binário em C/C++ se inicia via Terminal, vira um Processo (`PID 2900`).
@@ -15,9 +15,10 @@ O Processo é o contêiner mestre do *Sistema Operacional*. Quando a execução 
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *1. Processos (Isolamento Forte)* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. Processos (Isolamento Forte)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 2 - 2. Threads (Isolamento Fraco / Partilha)
+## Solução da Questão 2 - 2. Threads (Isolamento Fraco / Partilha) (Básico 2)
 **Explicação Detalhada do Assunto:**
 
 Quando se está em um jogo e, ao mesmo tempo que carrega os gráficos na GPU, uma música de CD está lendo sem travar, estamos olhando para **Multithreading**!
@@ -34,9 +35,10 @@ Como ambas alteram ativamente a mesmíssima RAM viva desprotegidas, se elas lere
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *2. Threads (Isolamento Fraco / Partilha)* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *2. Threads (Isolamento Fraco / Partilha)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 3 - 3. Context Switch (A Faca de Dois Gumes)
+## Solução da Questão 3 - 3. Context Switch (A Faca de Dois Gumes) (Intermediário 1)
 **Explicação Detalhada do Assunto:**
 
 Quando escrevemos `"Hello World"`, achamos que a CPU roda por horas sem interrupções. Engano.
@@ -45,9 +47,10 @@ O S.O. possui um núcleo (Kernel Scheduler) que fatia milésimos de milésimos d
 
 O problema? Puxar e devolver o estado (registradores, program counter) na cache é hiper custoso e derruba o Pipeline se abusado (overhead em CPU bound apps).
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *3. Context Switch (A Faca de Dois Gumes)* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *3. Context Switch (A Faca de Dois Gumes)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 4 - Resumo Prático
+## Solução da Questão 4 - Resumo Prático (Intermediário 2)
 **Explicação Detalhada do Assunto:**
 
 - Se a tarefa for CPU-Bound (requerer Matemática Bruta Massiva / Machine Learning), você cria Threads numerando-as próximo número oficial de núcleos estritos da CPU, evitando desperdício de overhead com *Context Switches* ilusórios.
@@ -56,7 +59,24 @@ O problema? Puxar e devolver o estado (registradores, program counter) na cache 
 
 
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *Resumo Prático* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *Resumo Prático* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
+
+## Solução da Questão 5 - 1. Processos (Isolamento Forte) (Desafio)
+**Explicação Detalhada do Assunto:**
+
+O Processo é o contêiner mestre do *Sistema Operacional*. Quando a execução do seu binário em C/C++ se inicia via Terminal, vira um Processo (`PID 2900`).
+
+- O S.O. dá ao Processo sua *própria e exclusiva Memória Virtual* (visto na Aula 8).
+
+- O Processo tem sua *exclusiva Pilha* e não se mistura nunca. E isso isola falhas: se um Chrome (processo isolado) trava, não dá tela azul na outra aba.
+
+- A comunicação entre Processos (IPC - Inter-process Communication) é pesada e necessita do S.O. através de Pipes ou Redes.
+
+---
+
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. Processos (Isolamento Forte)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
 
 ---

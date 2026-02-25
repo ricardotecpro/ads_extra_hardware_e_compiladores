@@ -2,7 +2,7 @@
 
 Abaixo estão as respostas esperadas e o embasamento teórico para os exercícios propostos na **Aula 14**.
 
-## Solução da Questão 1 - 1. O V-Node / Inode
+## Solução da Questão 1 - 1. O V-Node / Inode (Básico 1)
 **Explicação Detalhada do Assunto:**
 
 Se no seu PC existe a pasta `Docs/foto.jpg`, no fundo, o Linux não rastreia o texto "foto.jpg" para pular de cluster em cluster.
@@ -11,9 +11,10 @@ O FS usa de índices numéricos ultra-rápidos: os **Inodes**.
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *1. O V-Node / Inode* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. O V-Node / Inode* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 2 - 2. Journaling (A Prova contra Quedas)
+## Solução da Questão 2 - 2. Journaling (A Prova contra Quedas) (Básico 2)
 **Explicação Detalhada do Assunto:**
 
 Mudar um arquivo é uma transação: Apagar o velho, escrever o novo, mudar o Inode.
@@ -24,9 +25,10 @@ FSs modernos (NTFS, EXT4) usam **Journaling**. Antes de aplicar qualquer mudanç
 
 ---
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *2. Journaling (A Prova contra Quedas)* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *2. Journaling (A Prova contra Quedas)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 3 - 3. Buffers e Page Cache (Por que Linux é Rápido)
+## Solução da Questão 3 - 3. Buffers e Page Cache (Por que Linux é Rápido) (Intermediário 1)
 **Explicação Detalhada do Assunto:**
 
 "Escrever no disco" via SysCall C++ `write()` ou `fwrite()` raramente vai pro HD!
@@ -35,9 +37,10 @@ O Linux usa de forma abusiva toda a **RAM ociosa do seu computador** como um gig
 
 Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgaste das celulas NAND) e simula uma ilusão de lentidão zero ao usuário.
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *3. Buffers e Page Cache (Por que Linux é Rápido)* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *3. Buffers e Page Cache (Por que Linux é Rápido)* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
-## Solução da Questão 4 - Resumo Prático
+## Solução da Questão 4 - Resumo Prático (Intermediário 2)
 **Explicação Detalhada do Assunto:**
 
 - Ao usar C/C++, chame o instrínseco `fsync()` se seu App for um Banco de Dados ou Software Crítico Bancário forçando a Cache RAM descarregar a força e salvar permanentemente no silício do disco.
@@ -46,7 +49,20 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
 
 
 
-> **Expectativa de Resposta do Aluno:** O aluno deve compreender a mecânica exata detalhada no texto acima. A resposta deve transparecer o entendimento arquitetural de que *Resumo Prático* não é apenas uma teoria, mas impacta diretamente a compilação, performance e os sinais elétricos controlados pelo código.
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *Resumo Prático* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
+
+## Solução da Questão 5 - 1. O V-Node / Inode (Desafio)
+**Explicação Detalhada do Assunto:**
+
+Se no seu PC existe a pasta `Docs/foto.jpg`, no fundo, o Linux não rastreia o texto "foto.jpg" para pular de cluster em cluster.
+
+O FS usa de índices numéricos ultra-rápidos: os **Inodes**.
+
+---
+
+!!! info "Expectativa de Resposta"
+    O aluno deve inferir com clareza que o conceito de *1. O V-Node / Inode* determina o desempenho global e não pode ser ignorado nas linguagens compiladas. Para níveis intermediários e desafio, exige-se consciência das integrações entre RAM, CPU e Kernel.
 
 
 ---

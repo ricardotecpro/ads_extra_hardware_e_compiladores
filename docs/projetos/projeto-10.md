@@ -1,18 +1,23 @@
-# Projeto: Aula 10 - Sincronização e Concorrência
+# Projeto 10: Aula 10 - Sincronização e Concorrência
 
-## Desafio Prático
-O objetivo deste projeto é desenvolver ou analisar uma pequena aplicação em C/C++ que comprove na prática os conceitos ensinados na Aula 10, com ênfase em **1. O Data Race: Uma Colisão Inevitável**.
+## 🚀 Laboratório Prático: **Aula 10 - Sincronização e Concorrência**
 
-**Contexto Teórico Extraído da Aula:**
+Construa uma simulação lógica ou um roteiro analítico em linguagem C/C++ focado no fenômeno real ocorrido no Hardware baseando-se em:
 
-> Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento".
+> Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento"....
 
-## Tarefas do Projeto (Implementação/Verificação)
-- [ ] **Módulo de 1. O Data Race: Uma Colisão Inevitável**: Demonstrar estruturalmente ou em código a afirmação de que _Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumen..._
-- [ ] **Módulo de 2. Mutex e The Critical Section**: Demonstrar estruturalmente ou em código a afirmação de que _A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou..._
-- [ ] **Módulo de 3. O Dilema: Deadlock**: Demonstrar estruturalmente ou em código a afirmação de que _Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A es..._
-- [ ] **Módulo de Resumo Prático**: Demonstrar estruturalmente ou em código a afirmação de que _- **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (..._
+> A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclus...
 
-## Critérios de Qualidade e Avaliação
-- O código executa de maneira segura, com gestão correta de memória.
-- A modelagem está aderente aos conceitos explicados no material teórico (não apenas funciona superficialmente).
+> Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado?...
+
+### Tarefas do Projeto
+- [ ] **Setup Inicial**: Alocar perfeitamente os arquivos como `main.cpp` em sua IDE configurando compilador GCC/Clang.
+- [ ] **Módulo 1**: Implementar, prototipar ou demonstrar funcionalmente _1. O Data Race: Uma Colisão Inevitável_ no código.
+- [ ] **Módulo 2**: Implementar, prototipar ou demonstrar funcionalmente _2. Mutex e The Critical Section_ no código.
+- [ ] **Módulo 3**: Implementar, prototipar ou demonstrar funcionalmente _3. O Dilema: Deadlock_ no código.
+- [ ] **Validação E Benchmark**: Fazer o build via terminal e testar limites de velocidade analiticamente comparando o log de transição.
+
+### 🏆 Critérios de Qualidade (Review)
+1. Compila estritamente sem nenhum warning de memory loss ou fallback.
+2. Adere e representa fielmente 100% à teoria aprendida do Markdown da Aula correspondente.
+3. Estruturação modular limpa para fácil manutenção.

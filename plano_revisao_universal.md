@@ -27,7 +27,6 @@ Todo o conteúdo sem exceções deve estar **100% em Português (Brasil)**:
 ### 🎨 Padrão Visual Obrigatório e Componentes (UX/UI)
 Cada aula deve obrigatoriamente conter a adoção dos plugins do Material for MkDocs:
 - 😊 **Emojis**: Coerentes e moderados para sinalizar intenção visual.
-- 📊 **Diagramas Mermaid**: Pelo menos 1 diagrama `mermaid` relevante (versão `11.12.3` recomendada).
 - 💻 **Terminais Interativos**: Pelo menos 1 bloco de código/terminal simulado usando `TermynalJS` (`<div class="termy" markdown>`).
 - 🧠 **Admonitions (Callouts)**: Uso padronizado de:
   - `!!! info` para Conceitos-chave.
@@ -35,70 +34,65 @@ Cada aula deve obrigatoriamente conter a adoção dos plugins do Material for Mk
   - `!!! tip` para Dicas.
   - Assegurar espaçamento (*blank line*) garantido entre o sumário de um Admonition e o conteúdo/blocos adjacentes.
 - 🗂️ **Content Tabs**: Uso de abas `=== "Abordagem A"` conectadas logicamente para transições teóricas sem espaços soltos quebradores.
-- 📝 **Exercícios Progressivos**
-- 🚀 **Mini-projetos**
 - 📇 **Padrão de Cards**: Atualizar todos os arquivos `index.md` utilizando as sintaxes de layout moderno com a tag `<div class="grid cards" markdown>`.
 
+### 🧮 Diagramas Mermaid e Fórmulas Matemáticas (MathJax)
+- 📊 **Diagramas Mermaid**: A versão a ser instanciada no site deve ser `11.12.3` (via unpkg CDN). 
+  - Regra OBRIGATÓRIA JS Reveal: Em slides, o HTML gerado deve ter um transpilador pós-build transformando `class="language-mermaid"` em `<div class="mermaid">` seguidos da init manual do renderizador.
+  - Regra OBRIGATÓRIA MkDocs Macros: **Nunca** utilize strings como `{{ TEXTO }}` dentro do Mermaid. O MkDocs tentará parsear como macro jinja2 e abortará a compilação.
+  - Regra OBRIGATÓRIA Typeset UML: A notação de visibilidade deve preceder o tipo (`+String` ou `+int`), e a setagem de herança `<|--` colocada obrigatoriamente *ao final* do gráfico instanciado.
+- ➕ **Fórmulas Matemáticas (LaTeX/Mathjax)**: Testar compilação `$$` em equações. Em views que não usam o renderizador base Markdown (como os Slides RevealJS), deve-se EXPLICITAMENTE incluir o plugin `<script src=".../mathjax3/math.js">` e referenciar o array de init no Javascript da página.
+
 ### 📈 Progressão Cognitiva
-Expandir o aprofundamento do conhecimento das `aula-XX.md` de nível básico para **intermediário**, garantindo uma progressão cognitiva fluida. Falta mais exemplos de uso real e listação nos conteúdos das aulas.
+Expandir o aprofundamento do conhecimento das `aula-XX.md` de nível básico para **intermediário**, garantindo uma progressão cognitiva fluida profunda com exemplos de software / compilação / SO reais.
 
 ---
 
 ## 📂 2. PLANO POR DIRETÓRIO (RESUMO DO CONTEÚDO)
 
 ### 📚 `/docs/aulas/` (16 aulas fixas)
-- Manter os 16 arquivos existentes, expandindo-os e os padronizando conforme a arquitetura proposta (Mermaid, Termynal, Admonitions).
+- Manter os 16 arquivos existentes, expandindo-os e os padronizando conforme a arquitetura proposta acima.
 
 ### 📝 `/docs/exercicios/`
-- Cada aula terá seu arquivo de exercícios e cada exercício deve **REFLETIR ABSOLUTAMENTE O CONTEÚDO** explícito na aula respectiva. Sem enunciados genéricos soltos.
-- **Sempre `VERIFICAR` a pertinência dos exercícios com os parágrafos teóricos.**
-- Estrutura: exatos **5 exercícios por página**.
-  - 2 básicos.
-  - 2 intermediários.
-  - 1 desafio.
-- Para cada `exercicio-XX.md`, deve ser gerado ou criado um `solucao-XX.md` vinculado.
-- **Conectividade**: O rodapé de todo documento de exercício possuirá um link/botão exato e direto direcionando para o documento de sua Solução correspondente e explicação detalhada.
+- Cada aula terá seu arquivo de exercícios refletindo inteiramente a profundidade abordada no texto da aula correspondente.
+- A **Geração Automática (Scripts Python)** deve rigorosamente criar: **5 exercícios por página**.
+  - 2 nível Básico.
+  - 2 nível Intermediário.
+  - 1 nível Desafio Arquitetural.
+- Arquivos paralelos `solucao-XX.md` devem ser gerados.
+- **Conectividade**: Rodapés obrigatoriamente apresentarão links cruzando exercício para solução através de botões `.md-button`.
 
 ### 🚀 `/docs/projetos/`
-- Devem, também, representar implementações baseadas no conhecimento exato abordado em sua respectiva `aula-XX.md` base. `VERIFICAR` compatibilidade.
-- Um roteiro claro numerado de `Projeto 01` a `Projeto 16`.
+- Implementações baseadas no conhecimento da `aula-XX.md` base. `VERIFICAR` compatibilidade.
+- Um roteiro claro numerado de `Projeto 01` a `Projeto 16` constando simulações reais/laboratórios.
 
 ### ❓ `/docs/quizzes/`
-- Configuração a partir dos originais na subpasta `src/`.
-- Cada quiz deve ter:
-  - Um mínimo de **10 perguntas**.
-  - Alternativas coerentes.
-  - Explicação imediata na marcação de `feedback` detalhando a justificativa da resposta.
-  - Aderência total ao conteúdo da sua aula (`VERIFICAR`).
-- **Correção Visual de Interface**: O CSS do construtor de botões de Quiz deve receber `flex-shrink: 0` para garantir círculos perfeitamente desenhados, e o conversor Python garantir a quebra do feedback não mesclado com a string de alternativa.
+- Extraídos do Markdown `/docs/quizzes/src/` para HTML.
+- **Geração Automática (Scripts)**: O script deve gerar incríveis **10 perguntas por Quiz** com abordagens de questionamento multi-ângulos.
+  - Alternativas com marcações contextuais e Explicação/Feedback imediato justificado da alternativa verdadeira.
+- **Micro-Correção de UI**: O CSS global de Quiz injetado no repositório DEVE ter `flex-shrink: 0` sob as esferas `radio-button` para garantir círculos perfeitamente isométricos renderizados pelo navegador.
 
 ### 🎞 `/docs/slides/`
-- Acessados via subpasta fonte `src/` transpilados ao site. `VERIFICAR` alinhamento integral com as aulas.
-- Padronizar mesmo visual através dos módulos; emojis moderados, código em tamanho visível legível, Mermaids injetadas.
-- Mínimo de **20 frames/lâminas** progressivas por Aula/Slide.
-- Adoção das animações modernas do *Reveal.js* nos Headers de formatação (`transition: convex/slide` etc.).
-- **Otimização Visual de UX no HTML Gerado (Reveal JS)**:
-  - Eliminar ou ocultar do Footer HTML o menu central de dica crua de teclado (ex: "Press F for Fullscreen").
-  - Modificar o CSS injetado em `slide-number` no canto esquerdo, garantindo contraste vibrante e moderno e proeminência em relação ao bg.
+- Acessados de `src/` e transpilados a `docs/slides/...html`.
+- **Animações (Fragments)**: O interpretador Python gerador (`generate_slides_quizzes.py`) precisa realizar a conversão explícita Regex que *Substitua* o bloco `{ .fragment }` por `<!-- .element: class="fragment" -->`, ou os slides não exibirão animações gradativas.
+- **Otimização Visual do HTML Gerado (Reveal JS UX)**:
+  - Eliminar ou ocultar do Footer da grade HTML estática o menu central de dica crua de teclado (ex: "Atalhos: F (Tela Cheia)").
+  - Customização CSS severa injetada em `.reveal .slide-number` no canto inferior esquerdo, garantindo contraste vibrante (Ex: #ffb300) moderno e proeminência em relação ao plano de fundo.
 
 ### ⚙️ `/docs/setups/`
-- Os artefatos devem cobrir o cenário completo do stack da máquina virtual do estudante em vez de serem "chavões".
 - `setup-01.md`: Para o ambiente **Windows** (instalação específica da linguagem-alvo do curso).
 - `setup-02.md`: Para o ecossistema GNU **Linux**.
-- Outros `.md` preexistentes podem ser mantidos.
-- Sempre realizar `VERIFICAR` em como essas dependências convergem pra matéria desenvolvida.
 
-### 📂 Diretório de Arquitetura do Repositório (`_legado` e `logs`)
-- **Nunca** deletar/modificar a subpasta `_legado`.
-- Auditar minuciosamente no root (`index.md`, `materiais.md`, `plano-ensino.md`, `project_roadmap.md`, `sobre.md`, `README.md`) e deletar rastro histórico residual do curso genérico e reescrever descrevendo a matéria atual ativa.
-- **Log Central**: Todos os logs textuais do root (exceto `requirements.txt`) e relatórios Python devem ser limpos e expurgados para dentro de uma pasta fixa `logs/`.
+### 📂 Log e Legados (`_legado` e `logs`)
+- Nunca deletar pastas legadas.
+- Todo output ou varredura em massa disparando avisos em execução de IA, realocar saídas (txt obsoletos) pra ramificação root `/logs/`.
 
 ---
 
 ## ⚙️ 3. PLANO DE CORREÇÕES TÉCNICAS E CONFIGURAÇÕES MKDOCS
 
 ### Mkdocs.yml - Dark Mode & Color Scheme Override
-Atualizar a paleta gráfica abolindo a mecânica genérica de clique manual via _scheme default_ e injetando leitura pelo OS (media query preferences) adotando cor de alerta moderna (*amber*).
+Atualizar a paleta gráfica abolindo a mecânica genérica de clique manual via _scheme default_ e injetando leitura nativa pelo OS (media query) adotando cor de alerta moderna (*amber*).
 
 ```yaml
   palette:
@@ -121,7 +115,7 @@ Atualizar a paleta gráfica abolindo a mecânica genérica de clique manual via 
 ```
 
 ### Mkdocs.yml - Social Links Integrados
-Substituir radicalmente o namespace `extra.social` antigo pelo blueprint global:
+Assegurar o tracking dos dados profissionais correspondente a marca registrada do professor nas footers:
 ```yaml
 extra:
   social:
@@ -135,56 +129,22 @@ extra:
       link: https://www.youtube.com/@ricardotecpro
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/ricardotecpro
-  version:
-    provider: mike
-    default: estavel
 ```
 
-### Otimizações Premium de Navegação & SEO (no mkdocs.yml)
--  `navigation.sections`: *Ativar*.
--  `navigation.path` e `navigation.top`: *Ativar*.
--  Garantir a existência de `site_description` polida e instanciar uso de plugins de SEO e Meta cards e tags.
--  **Mermaid Script JS Update**: Trocar qualquer CDN antiga do pipeline de diagrama para `https://unpkg.com/mermaid@11.12.3/dist/mermaid.min.js` mitigando fatal crashes por _Syntax Error_ do renderizador antigo.
-
-### Metadados Dinâmicos (pyproject.toml)
-Garantir o match exato do nome de projeto com o *folder name* onde executa-se a IA submetida. Atualizar metadados dos autores para a fonte oficial.
-```toml
-[project]
-name = "[nome_exato_da_pasta_em_underscores]"
-version = "1.0.0"
-description = "[nome_exato_da_pasta_em_underscores]"
-authors = [
-    {name = "Ricardo Tec Pro", email = "ricardotecpro@hotmail.com"}
-]
-```
-
-### Prevenção de Falhas Críticas em Código / Mermaid e Mkdocs-Macros
-- **Classes/Relacionamento (Mermaid)**: Primeiro, definir a Entidade/Typeset (`+String nome` invés de duplo pontuação), e posicionar a relação de ligação `<|--` *somente abaixo no fim do script UML* provendo estabilidade ao parser Mermaid V11.
-- **Choque MkDocs Macros**: **NUNCA** construa caixas no Mermaid englobando duplo curley braces de sintaxe jinja (ex: `{{ Caixa }}`). Isso colidirá perigosamente com as macros! Use substitutos como `([ Conteudo ])`.
-- **Termynal Blocks**: A tag pai nativa `<div class="termy">` necessita obrigatoriamente do marcador `markdown` embutido acompanhado de blank spacing de quebra de linhas para compilar devidamente a renderização no MkDocs.
-- Fórmulas Matemáticas `MathJax` DEVEM sempre serem testadas compiladas se ativas (Ex: equação COCOMO) garantindo *syntax-safe* load-time.
+### Otimizações Premium de Navegação & Metadados (SEOs)
+1. `navigation.sections`, `navigation.path` e `navigation.top`: *Ativados no YML*.
+2. Em `pyproject.toml`, unificar as keys `name`, `description` garantindo que reflitam 1 para 1 a pasta de root local e com a tag de autores configurada em `Ricardo Tec Pro`.
+3. Os índices mestres (`index.md`) de todo diretório do projeto deverão ser reescritos em Python impedindo qualquer URL *hardcoded* legada errônea.
 
 ---
 
-## 🐍 4. OTIMIZAÇÃO DE SCRIPTS PYTHON CUSTUMIZÁVEIS
+## 📋 4. PLANO E ORDEM DE VALIDAÇÃO FINAL (QA RIGOROSO)
 
-Os sub-sistemas de Python locais precisam aplicar duas medidas resolutivas críticas na pipeline MkDocs perante aos Slides & Quizzes:
+**O curso só será comissionado pro repositório live através destas validações cirúrgicas:**
+1. [ ] A branch (Deploy Pipeline) estrita apontando estático no Github Actions (`gh-pages`).
+2. [ ] Validação do Site Estático através do comando master: `mkdocs build --strict`. O framework não perdoará nenhum link quebrado e abortará instantaneamente em código de Saída *1* se algo colidir.
+3. [ ] Todos os novos arquivos e correções gerados salvos em um novo commit `git add .` previamente à submissão do GitHub Action para retroalimentar o plugin Mkdocs de timestamp e controle versionado (`git-authors / git-revision`).
+4. [ ] Inspecionar fisicamente os slides em HTML via browser assegurando a injeção funcional do MathJax e Mermaid pós-compilação.
 
-1. **Scripts de Índices**: Os `index.md` no root e de todas a malha navegacional (`aulas/index.md`, `quizzes/index.md`) não devem ter sub-URLs hard-coded. O Script em Python reescreverá a arquitetura e deverá assinar explicitamente `*.html` nas chamadas ao subgrupo `slides/`.
-2. **Resolução de Fragment Animation Bug nos Slides**: Havia falha renderizando em runtime as palavras soltas `{ .fragment }`. O interpretador Python gerador (`generate_slides_quizzes.py`) precisa realizar a conversão explícita Regex que *Substitua*:
- `{ .fragment }` >> `<!-- .element: class="fragment" -->`
-3. **Paths de Varredura**: Refatorar qualquer script Python que busquava em diretórios errôneos como `.src/` para assegurar que eles miram diretórios validados públicos `src/`.
-
----
-
-## 📋 5. PLANO E ORDEM DE VALIDAÇÃO FINAL (QA RIGOROSO)
-
-**O curso só será embalado se preencher estritamente estas condições finais:**
-1. [ ] A branch para Deploy e Build no Github Actions ser comissionada propriamente no canal `gh-pages`.
-2. [ ] Testes de navegação `mkdocs build --strict` compilar com status impecável *Exit Code 0* (Nenhum warning, loop de link relacional quebrado).
-3. [ ] Todos os novos arquivos e correções gerados salvos em um novo commit `git add .` para alimentar plugin de verificação de timestamp (`git-authors / git-revision`).
-4. [ ] Menu de navegação íntegro e condizente (Módulos reais do curso). Absolutamente nada solto do Antigo Currículo presente.
-5. [ ] **Verificação Manual**: 16 Aulas formatadas para jovens/adultos de forma neutra em PT-BR; Termynais interativos brilhando, transição de slides atinente.
-
-**🏁 RESULTADO ESPERADO DA IA NESTE CHECKLIST**:
-O projeto reformulado não apresentará buracos lógicos no frontend educativo, será didaticamente rico (nível intermediário pautado) e visualizado com temas Premium atrativos aos estudantes e recrutadores.
+**🏁 RESULTADO ESPERADO DA MÁQUINA DE AUTOMAÇÃO NESTE CHECKLIST**:
+Um super-repositório educacional blindado contra ambiguidades UI e bugs do MkDocs material, ostentando recursos dinâmicos (Mermaid/Terminals) irretocáveis, exercicios de ponta coerentes extraídos das Aulas Core e deploys robustos e seguros com layouts sombrios autônomos.

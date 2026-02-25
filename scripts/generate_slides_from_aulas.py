@@ -1,90 +1,109 @@
-import os
+import pathlib
 import re
-from pathlib import Path
 
-LESSONS_DIR = Path("docs/aulas")
-SLIDES_SRC_DIR = Path("docs/slides/src")
+AULAS_DIR = pathlib.Path("docs/aulas")
+SLIDES_SRC_DIR = pathlib.Path("docs/slides/src")
 
-def extract_sections(content):
-    # Split content by H2 headers
-    sections = re.split(r'\n## ', content)
+def parse_aula_to_slides(aula_path: pathlib.Path, slide_path: pathlib.Path):
+    text = aula_path.read_text(encoding='utf-8')
     
-    intro = sections[0]
-    
-    title_match = re.search(r'^# (.*?)$', intro, re.MULTILINE)
-    title = title_match.group(1) if title_match else "Aula"
-    
-    # Extract subtitle if any (like Aula 01 - Titulo -> Aula 01 \n Titulo)
-    parts = title.split(' - ', 1)
-    if len(parts) == 2:
-        main_title = parts[1]
-        sub_title = parts[0]
-    else:
-        main_title = title
-        sub_title = ""
+    if "## 🎯 Próximos Passos" in text:
+        text = text.split("## 🎯 Próximos Passos")[0]
         
     slides = []
+    slides.append("---\ntheme: white\ntransition: convex\n---")
     
-    title_slide = f"<!-- .element: class=\"fragment\" -->\n# {main_title}"
-    if sub_title:
-        title_slide += f"\n## {sub_title}"
+    m_h1 = re.search(r'^# (.*?)$', text, re.MULTILINE)
+    title = m_h1.group(1) if m_h1 else "Aula"
+    slides.append(f"<!-- .element: class=\"fragment\" -->\n# {title}\n## Apresentação")
     
-    title_slide += "\n\n---"
-    slides.append(title_slide)
-
-    for sec in sections[1:]:
-        lines = sec.split('\n')
-        sec_title = lines[0].strip()
-        sec_content = '\n'.join(lines[1:]).strip()
+    if m_h1:
+        text = text.replace(m_h1.group(0), "")
         
-        # Clean up some markdown that doesn't render well in slides
-        sec_content = re.sub(r'\[:octicons-.*?\]\(.*?\)\{.*?\}', '', sec_content)
-        sec_content = re.sub(r'=== ".*?"', '', sec_content)
+    sections = re.split(r'^(## .*)$', text, flags=re.MULTILINE)
+    
+    current_h2 = ""
+    for sec in sections:
+        if not sec.strip():
+            continue
+            
+        if sec.startswith("## "):
+            current_h2 = sec.strip()
+            slides.append(f"---\n\n<!-- .element: class=\"fragment\" -->\n# Novo Tópico\n{current_h2}")
+            continue
+            
+        # Regex to tokenize the section without breaking multi-line blocks
+        # We will extract special blocks first, replace them with placeholders, split by \n\n, then restore
+        blocks = []
         
-        # Remover links de estilo Markdown para evitar que o MkDocs strict quebre em dois níveis de diretórios diferentes
-        sec_content = re.sub(r'(?<!\!)\[([^\]]+)\]\(([^)]+)\)', r'\1', sec_content)
+        # Protect Code blocks
+        code_blocks = re.findall(r'```.*?```', sec, flags=re.DOTALL)
+        for i, cb in enumerate(code_blocks):
+            sec = sec.replace(cb, f"__CODE_BLOCK_{i}__")
+            
+        # Protect DIVs
+        div_blocks = re.findall(r'<div.*?>.*?</div>', sec, flags=re.DOTALL)
+        for i, db in enumerate(div_blocks):
+            sec = sec.replace(db, f"__DIV_BLOCK_{i}__")
+            
+        raw_blocks = re.split(r'\n\n+', sec.strip())
         
-        slide_content = f"## {sec_title}\n\n"
+        current_slide_content = []
         
-        # Keep only the first few blocks to avoid overcrowded slides
-        paragraphs = re.split(r'\n\n', sec_content)
-        short_content = []
-        for p in paragraphs:
-            if not p.strip():
-                continue
-            short_content.append(p)
-            if len(short_content) > 3: # limit to ~3-4 blocks
-                break
+        def push_slide(content_list):
+            if not content_list: return
+            content = "\n\n".join(content_list)
+            
+            # Restore protected blocks
+            for i, cb in enumerate(code_blocks):
+                content = content.replace(f"__CODE_BLOCK_{i}__", cb)
+            for i, db in enumerate(div_blocks):
+                content = content.replace(f"__DIV_BLOCK_{i}__", db)
                 
-        slide_content += '\n\n'.join(short_content)
-        slides.append(slide_content + "\n\n---")
+            slide_str = f"---\n\n{current_h2}\n\n{content}" if current_h2 else f"---\n\n{content}"
+            slides.append(slide_str.strip())
+            content_list.clear()
 
-    # Remove the last ---
-    if slides:
-        slides[-1] = slides[-1][:-4]
-        
-    return "\n\n".join(slides)
+        for b in raw_blocks:
+            b = b.strip()
+            if not b: continue
+            
+            is_special = (
+                "__CODE_BLOCK_" in b or 
+                "__DIV_BLOCK_" in b or 
+                b.startswith(">") or 
+                b.startswith("===") or 
+                b.startswith("### ")
+            )
+            
+            if is_special:
+                push_slide(current_slide_content)
+                
+                if b.startswith("==="):
+                    m_tab = re.match(r'^===\s+"(.*?)"\n(.*)$', b, re.DOTALL)
+                    if m_tab:
+                        b = f"### {m_tab.group(1)}\n\n<span class=\"fragment\">{m_tab.group(2).strip()}</span>"
+                
+                push_slide([b])
+            else:
+                current_slide_content.append(b)
+                if len(current_slide_content) >= 2 or b.startswith("-") or b.startswith("*"):
+                    push_slide(current_slide_content)
+                    
+        push_slide(current_slide_content)
+
+    slide_path.write_text("\n\n".join(slides), encoding='utf-8')
+    return len(slides)
 
 def main():
     SLIDES_SRC_DIR.mkdir(parents=True, exist_ok=True)
     
     for i in range(1, 17):
-        num = f"{i:02d}"
-        lesson_file = LESSONS_DIR / f"aula-{num}.md"
+        aula_file = AULAS_DIR / f"aula-{i:02d}.md"
+        slide_file = SLIDES_SRC_DIR / f"slide-{i:02d}.md"
         
-        if not lesson_file.exists():
-            continue
-            
-        print(f"Processing {lesson_file.name}...")
-        content = lesson_file.read_text(encoding="utf-8")
-        
-        slide_md = extract_sections(content)
-        
-        final_md = f"---\ntheme: white\ntransition: convex\n---\n\n{slide_md}\n"
-        
-        slide_path = SLIDES_SRC_DIR / f"slide-{num}.md"
-        slide_path.write_text(final_md, encoding="utf-8")
-        print(f"Generated {slide_path}")
+        if aula_file.exists():
+            count = parse_aula_to_slides(aula_file, slide_file)
+            print(f"Aula {i:02d} processada: {count} slides gerados.")
 
-if __name__ == "__main__":
-    main()
+main()

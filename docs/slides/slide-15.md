@@ -1,6 +1,18 @@
 <!-- .element: class="fragment" -->
-# Entrada e Saída (I/O)
-## Aula 15
+# Aula 15 - Entrada e Saída (I/O)
+## Apresentação
+
+---
+
+Se o Processador e a Memória trabalham num relógio bilionário (GHz), como eles se comunicam com o Teclado USB do seu usuário ou sua Placa de Rede cuja resposta se mede nas lentas métricas de milissegundos?
+
+---
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🚪 1. System Calls (O Pedágio do Kernel)
 
 ---
 
@@ -11,6 +23,16 @@ Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃ
 Para acionar a Rede, o C++ precisa paralisar, invocar a sagrada **System Call** (Syscall, ex: _write_, _sendto_, _read_) que abre o portal para o S.O (Kernel Space). É o Kernel Linux quem vai orquestrar a placa C de Ethernet.
 
 ---
+
+## 🚪 1. System Calls (O Pedágio do Kernel)
+
+---
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## ⚠️ 2. Interrupções vs Polling
 
 ---
 
@@ -24,11 +46,21 @@ Seu App em Python/C diz: "Puxe o dado que está vindo no mouse".
 
 ---
 
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🚀 3. DMA (Memória com Acesso Direto)
+
+---
+
 ## 🚀 3. DMA (Memória com Acesso Direto)
 
 Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets.
 
 A revolução moderna chama-se **Direct Memory Access (DMA)**. Placas de Captura, NVMe e Placas de Rede conversam *Diretamente com a Memória RAM por vias de bypass*.
+
+---
+
+## 🚀 3. DMA (Memória com Acesso Direto)
 
 ```mermaid
 graph BT
@@ -37,198 +69,28 @@ graph BT
     C -. "Ordens Lentas" .-> B
 ```
 
+---
+
+## 🚀 3. DMA (Memória com Acesso Direto)
+
 A CPU diz: "Placa, baixe o NetFlix do Ponto P pro Q na RAM". A Placa faz todo os trabalho violento por trás. A CPU usa seu pipeline pra cálculos e matemática puros, enquanto sua memória vai sendo injetada pela placa de vídeo via túneis secretos pelas pontes.
+
+---
+
+<!-- .element: class="fragment" -->
+# Novo Tópico
+## 🚀 Resumo Prático
 
 ---
 
 ## 🚀 Resumo Prático
 
-- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os famigerados Interrupts de retorno. 
+- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os famigerados Interrupts de retorno.
+
+---
+
+## 🚀 Resumo Prático
 
 Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento na Otimização Pura (Aula Final).
 
 ---
-
-<!-- .element: class="fragment" -->
-# 🧠 Quiz Rápido
-## Prática de Fixação
-
----
-
-### ❓ Pergunta 1
-Sobre o funcionamento prático de **1. System Calls (O Pedágio do Kernel)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 1
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 2
-No contexto analítico de **2. Interrupções vs Polling** explicado em sala, indique a afirmativa verdadeira:
-
-- **Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 2
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 3
-Ao avaliar a característica inerente a **3. DMA (Memória com Acesso Direto)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 3
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 4
-A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
-
-- **- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os fami... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 4
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os fami... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 5
-No que tange diretamente a lógica de **1. System Calls (O Pedágio do Kernel)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 5
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 6
-Sobre o funcionamento prático de **2. Interrupções vs Polling** explicado em sala, indique a afirmativa verdadeira:
-
-- **Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 6
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 7
-No contexto analítico de **3. DMA (Memória com Acesso Direto)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 7
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era impraticável em Gigabit Ethernets. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 8
-Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
-
-- **- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os fami... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 8
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">- Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto orquestra Event-Loops aguardando os fami... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 9
-A respeito da arquitetura sistêmica conectada a **1. System Calls (O Pedágio do Kernel)** explicado em sala, indique a afirmativa verdadeira:
-
-- **Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 9
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tentar burlar isso gera um sumário e fulminan... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-### ❓ Pergunta 10
-No que tange diretamente a lógica de **2. Interrupções vs Polling** explicado em sala, indique a afirmativa verdadeira:
-
-- **Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
-- É uma limitação exclusiva de linguagens interpretadas muito antigas, sem nenhuma relação ao universo avançado do C/C++ moderno e CPUs atuais.
-- Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
-- A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
-
----
-
-### ✅ Resposta - Pergunta 10
-
-**A alternativa correta é:**
-
-<span style="color:#42affa">Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>

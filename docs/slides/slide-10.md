@@ -48,8 +48,6 @@ Ambos processos morrem na tela, dormindo inertes (*Blocked State*), enquanto a b
 - **Mutex**: <span class="fragment">Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM).</span>
 - Se a concorrência não tiver "Seção Crítica" que lida com Gravação e tiver "Só Read-only", não aplique trancas (Mutex) para não serializar as Threads da máquina.
 
-
-
 ---
 
 <!-- .element: class="fragment" -->
@@ -58,7 +56,7 @@ Ambos processos morrem na tela, dormindo inertes (*Blocked State*), enquanto a b
 
 ---
 
-### Pergunta 1
+### ❓ Pergunta 1
 Sobre o funcionamento prático de **1. O Data Race: Uma Colisão Inevitável** explicado em sala, indique a afirmativa verdadeira:
 
 - **Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -66,16 +64,17 @@ Sobre o funcionamento prático de **1. O Data Race: Uma Colisão Inevitável** e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 1
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 2
+### ❓ Pergunta 2
 No contexto analítico de **2. Mutex e The Critical Section** explicado em sala, indique a afirmativa verdadeira:
 
 - **A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -83,16 +82,17 @@ No contexto analítico de **2. Mutex e The Critical Section** explicado em sala,
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 2
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 3
+### ❓ Pergunta 3
 Ao avaliar a característica inerente a **3. O Dilema: Deadlock** explicado em sala, indique a afirmativa verdadeira:
 
 - **Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -100,16 +100,17 @@ Ao avaliar a característica inerente a **3. O Dilema: Deadlock** explicado em s
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 3
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 4
+### ❓ Pergunta 4
 A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **- **Mutex**: <span class="fragment">Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***</span>
@@ -117,16 +118,17 @@ A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** - **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 4
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">- **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 5
+### ❓ Pergunta 5
 No que tange diretamente a lógica de **1. O Data Race: Uma Colisão Inevitável** explicado em sala, indique a afirmativa verdadeira:
 
 - **Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -134,16 +136,17 @@ No que tange diretamente a lógica de **1. O Data Race: Uma Colisão Inevitável
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 5
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 6
+### ❓ Pergunta 6
 Sobre o funcionamento prático de **2. Mutex e The Critical Section** explicado em sala, indique a afirmativa verdadeira:
 
 - **A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -151,16 +154,17 @@ Sobre o funcionamento prático de **2. Mutex e The Critical Section** explicado 
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 6
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 7
+### ❓ Pergunta 7
 No contexto analítico de **3. O Dilema: Deadlock** explicado em sala, indique a afirmativa verdadeira:
 
 - **Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -168,16 +172,17 @@ No contexto analítico de **3. O Dilema: Deadlock** explicado em sala, indique a
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 7
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Mas e se o programador de *Backend C/C++* prender (usou lock() ou Mutex) em A esperando que B seja terminado.. mas B só termina porque B precisa pegar lock() em A que tá bloqueado? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 8
+### ❓ Pergunta 8
 Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **- **Mutex**: <span class="fragment">Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***</span>
@@ -185,16 +190,17 @@ Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, i
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** - **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 8
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">- **Mutex**: Usa o sistema do núcleo para trancar áreas exclusivas do Hardware (RAM). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 9
+### ❓ Pergunta 9
 A respeito da arquitetura sistêmica conectada a **1. O Data Race: Uma Colisão Inevitável** explicado em sala, indique a afirmativa verdadeira:
 
 - **Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -202,16 +208,17 @@ A respeito da arquitetura sistêmica conectada a **1. O Data Race: Uma Colisão 
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 9
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Imaginemos uma variável primitiva `int balance = 100;`. Em Assembly C/C++, aumentar uma quantia em `balance += 10;` não é "Um Único Movimento". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 10
+### ❓ Pergunta 10
 No que tange diretamente a lógica de **2. Mutex e The Critical Section** explicado em sala, indique a afirmativa verdadeira:
 
 - **A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -219,9 +226,27 @@ No que tange diretamente a lógica de **2. Mutex e The Critical Section** explic
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 10
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A solução em qualquer projeto multi-thread backend/C++ é envolver as memórias ou o fluxo com objetos pesados atômicos do Kernel: As **Locks (Travas)** como padrão Ouro C++: `std::mutex` (Mutual Exclusion). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
+
+---
+
+<!-- .element: class="fragment" -->
+# 🥇 Conclusão Teórica
+## Tópicos Superados
+
+Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
+
+---
+
+### 🚀 Próximas Etapas (Prática)
+
+Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
+
+- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
+- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

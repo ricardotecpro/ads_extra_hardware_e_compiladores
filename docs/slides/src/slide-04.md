@@ -52,9 +52,6 @@ $ aarch64-linux-gnu-gcc app.c -o app_arm
 
 Caminho livre até aqui? Então agora vamos adentrar nas dores da "Memória".
 
-
-
-
 ---
 
 <!-- .element: class="fragment" -->
@@ -63,7 +60,7 @@ Caminho livre até aqui? Então agora vamos adentrar nas dores da "Memória".
 
 ---
 
-### Pergunta 1
+### ❓ Pergunta 1
 Sobre o funcionamento prático de **1. Entendendo a Batalha** explicado em sala, indique a afirmativa verdadeira:
 
 - **A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -71,16 +68,17 @@ Sobre o funcionamento prático de **1. Entendendo a Batalha** explicado em sala,
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 1
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 2
+### ❓ Pergunta 2
 No contexto analítico de **2. Como isso afeta o Compilador C/C++?** explicado em sala, indique a afirmativa verdadeira:
 
 - **Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -88,16 +86,17 @@ No contexto analítico de **2. Como isso afeta o Compilador C/C++?** explicado e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 2
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 3
+### ❓ Pergunta 3
 Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -105,16 +104,17 @@ Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, i
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** - Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 3
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 4
+### ❓ Pergunta 4
 A respeito da arquitetura sistêmica conectada a **1. Entendendo a Batalha** explicado em sala, indique a afirmativa verdadeira:
 
 - **A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -122,16 +122,17 @@ A respeito da arquitetura sistêmica conectada a **1. Entendendo a Batalha** exp
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 4
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 5
+### ❓ Pergunta 5
 No que tange diretamente a lógica de **2. Como isso afeta o Compilador C/C++?** explicado em sala, indique a afirmativa verdadeira:
 
 - **Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -139,16 +140,17 @@ No que tange diretamente a lógica de **2. Como isso afeta o Compilador C/C++?**
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 5
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 6
+### ❓ Pergunta 6
 Sobre o funcionamento prático de **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -156,16 +158,17 @@ Sobre o funcionamento prático de **Resumo Prático** explicado em sala, indique
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** - Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 6
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 7
+### ❓ Pergunta 7
 No contexto analítico de **1. Entendendo a Batalha** explicado em sala, indique a afirmativa verdadeira:
 
 - **A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -173,16 +176,17 @@ No contexto analítico de **1. Entendendo a Batalha** explicado em sala, indique
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 7
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 8
+### ❓ Pergunta 8
 Ao avaliar a característica inerente a **2. Como isso afeta o Compilador C/C++?** explicado em sala, indique a afirmativa verdadeira:
 
 - **Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -190,16 +194,17 @@ Ao avaliar a característica inerente a **2. Como isso afeta o Compilador C/C++?
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 8
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 9
+### ❓ Pergunta 9
 A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -207,16 +212,17 @@ A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** - Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 9
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">- Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 10
+### ❓ Pergunta 10
 No que tange diretamente a lógica de **1. Entendendo a Batalha** explicado em sala, indique a afirmativa verdadeira:
 
 - **A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -224,10 +230,28 @@ No que tange diretamente a lógica de **1. Entendendo a Batalha** explicado em s
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 10
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normalmente são mais baratas? *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
+
+---
+
+<!-- .element: class="fragment" -->
+# 🥇 Conclusão Teórica
+## Tópicos Superados
+
+Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
+
+---
+
+### 🚀 Próximas Etapas (Prática)
+
+Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
+
+- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
+- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.
 

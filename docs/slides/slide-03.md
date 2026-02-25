@@ -64,8 +64,6 @@ Quando você usa muitos `if()`, o processador tenta "Adivinhar" o lado do *if* u
 
 Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM.
 
-
-
 ---
 
 <!-- .element: class="fragment" -->
@@ -74,7 +72,7 @@ Registradores são seus maiores amigos de performance. Códigos C++ que permitem
 
 ---
 
-### Pergunta 1
+### ❓ Pergunta 1
 Sobre o funcionamento prático de **1. O Triângulo de Ouro: ALU, CU e Registradores** explicado em sala, indique a afirmativa verdadeira:
 
 - **A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -82,16 +80,17 @@ Sobre o funcionamento prático de **1. O Triângulo de Ouro: ALU, CU e Registrad
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 1
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 2
+### ❓ Pergunta 2
 No contexto analítico de **2. O Ciclo de Instrução (Fetch-Decode-Execute)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -99,16 +98,17 @@ No contexto analítico de **2. O Ciclo de Instrução (Fetch-Decode-Execute)** e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 2
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 3
+### ❓ Pergunta 3
 Ao avaliar a característica inerente a **3. Pipeline e Previsão de Desvio (Branch Prediction)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: <span class="fragment">Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***</span>
@@ -116,16 +116,17 @@ Ao avaliar a característica inerente a **3. Pipeline e Previsão de Desvio (Bra
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 3
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 4
+### ❓ Pergunta 4
 A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -133,16 +134,17 @@ A respeito da arquitetura sistêmica conectada a **Resumo Prático** explicado e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 4
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 5
+### ❓ Pergunta 5
 No que tange diretamente a lógica de **1. O Triângulo de Ouro: ALU, CU e Registradores** explicado em sala, indique a afirmativa verdadeira:
 
 - **A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -150,16 +152,17 @@ No que tange diretamente a lógica de **1. O Triângulo de Ouro: ALU, CU e Regis
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 5
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 6
+### ❓ Pergunta 6
 Sobre o funcionamento prático de **2. O Ciclo de Instrução (Fetch-Decode-Execute)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -167,16 +170,17 @@ Sobre o funcionamento prático de **2. O Ciclo de Instrução (Fetch-Decode-Exec
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 6
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 7
+### ❓ Pergunta 7
 No contexto analítico de **3. Pipeline e Previsão de Desvio (Branch Prediction)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: <span class="fragment">Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***</span>
@@ -184,16 +188,17 @@ No contexto analítico de **3. Pipeline e Previsão de Desvio (Branch Prediction
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 7
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Seu processador não faz essas 4 etapas de forma burra (uma por vez). Ele usa **Pipelining**: Enquanto a Instrução A está em Execute, a Instrução B já está em Decode e a Instrução C está em Fetch! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 8
+### ❓ Pergunta 8
 Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, indique a afirmativa verdadeira:
 
 - **Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -201,16 +206,17 @@ Ao avaliar a característica inerente a **Resumo Prático** explicado em sala, i
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 8
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Registradores são seus maiores amigos de performance. Códigos C++ que permitem ao compilador prender cálculos pesados 100% dentro dos Registradores rodam em Nanossegundos, contra Milissegundos lendo sempre pela RAM. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 9
+### ❓ Pergunta 9
 A respeito da arquitetura sistêmica conectada a **1. O Triângulo de Ouro: ALU, CU e Registradores** explicado em sala, indique a afirmativa verdadeira:
 
 - **A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -218,16 +224,17 @@ A respeito da arquitetura sistêmica conectada a **1. O Triângulo de Ouro: ALU,
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 9
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A arquitetura interna da CPU possui 3 órgãos vitais: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 10
+### ❓ Pergunta 10
 No que tange diretamente a lógica de **2. O Ciclo de Instrução (Fetch-Decode-Execute)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -235,9 +242,27 @@ No que tange diretamente a lógica de **2. O Ciclo de Instrução (Fetch-Decode-
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 10
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
+
+---
+
+<!-- .element: class="fragment" -->
+# 🥇 Conclusão Teórica
+## Tópicos Superados
+
+Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
+
+---
+
+### 🚀 Próximas Etapas (Prática)
+
+Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
+
+- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
+- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

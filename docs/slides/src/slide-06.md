@@ -59,8 +59,6 @@ As duas premissas arquiteturais da Localidade em Sistemas de Computação (que f
 
 A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo.
 
-
-
 ---
 
 <!-- .element: class="fragment" -->
@@ -69,7 +67,7 @@ A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáv
 
 ---
 
-### Pergunta 1
+### ❓ Pergunta 1
 Sobre o funcionamento prático de **1. Cache Hit e Cache Miss** explicado em sala, indique a afirmativa verdadeira:
 
 - **O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -77,16 +75,17 @@ Sobre o funcionamento prático de **1. Cache Hit e Cache Miss** explicado em sal
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 1
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 2
+### ❓ Pergunta 2
 No contexto analítico de **2. Localidade Espacial vs Temporal** explicado em sala, indique a afirmativa verdadeira:
 
 - **As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -94,16 +93,17 @@ No contexto analítico de **2. Localidade Espacial vs Temporal** explicado em sa
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 2
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 3
+### ❓ Pergunta 3
 Ao avaliar a característica inerente a **3. False Sharing e Lógica Invertida (A Morte do C++)** explicado em sala, indique a afirmativa verdadeira:
 
 - **A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -111,16 +111,17 @@ Ao avaliar a característica inerente a **3. False Sharing e Lógica Invertida (
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 3
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 4
+### ❓ Pergunta 4
 A respeito da arquitetura sistêmica conectada a **1. Cache Hit e Cache Miss** explicado em sala, indique a afirmativa verdadeira:
 
 - **O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -128,16 +129,17 @@ A respeito da arquitetura sistêmica conectada a **1. Cache Hit e Cache Miss** e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 4
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 5
+### ❓ Pergunta 5
 No que tange diretamente a lógica de **2. Localidade Espacial vs Temporal** explicado em sala, indique a afirmativa verdadeira:
 
 - **As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -145,16 +147,17 @@ No que tange diretamente a lógica de **2. Localidade Espacial vs Temporal** exp
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 5
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 6
+### ❓ Pergunta 6
 Sobre o funcionamento prático de **3. False Sharing e Lógica Invertida (A Morte do C++)** explicado em sala, indique a afirmativa verdadeira:
 
 - **A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -162,16 +165,17 @@ Sobre o funcionamento prático de **3. False Sharing e Lógica Invertida (A Mort
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 6
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 7
+### ❓ Pergunta 7
 No contexto analítico de **1. Cache Hit e Cache Miss** explicado em sala, indique a afirmativa verdadeira:
 
 - **O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -179,16 +183,17 @@ No contexto analítico de **1. Cache Hit e Cache Miss** explicado em sala, indiq
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 7
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 8
+### ❓ Pergunta 8
 Ao avaliar a característica inerente a **2. Localidade Espacial vs Temporal** explicado em sala, indique a afirmativa verdadeira:
 
 - **As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -196,16 +201,17 @@ Ao avaliar a característica inerente a **2. Localidade Espacial vs Temporal** e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 8
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">As duas premissas arquiteturais da Localidade em Sistemas de Computação (que fundamentam toda escrita C/C++ otimizada): *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 9
+### ❓ Pergunta 9
 A respeito da arquitetura sistêmica conectada a **3. False Sharing e Lógica Invertida (A Morte do C++)** explicado em sala, indique a afirmativa verdadeira:
 
 - **A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -213,16 +219,17 @@ A respeito da arquitetura sistêmica conectada a **3. False Sharing e Lógica In
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 9
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáveis sequenciais nos métodos a usar longos grafos com saltos randômicos baseados em ponteiros, se for iterar a esmo. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 10
+### ❓ Pergunta 10
 No que tange diretamente a lógica de **1. Cache Hit e Cache Miss** explicado em sala, indique a afirmativa verdadeira:
 
 - **O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -230,10 +237,28 @@ No que tange diretamente a lógica de **1. Cache Hit e Cache Miss** explicado em
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 10
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O desempenho do seu loop `for()` depende maciçamente da *Cache Hit Rate*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
+
+---
+
+<!-- .element: class="fragment" -->
+# 🥇 Conclusão Teórica
+## Tópicos Superados
+
+Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
+
+---
+
+### 🚀 Próximas Etapas (Prática)
+
+Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
+
+- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
+- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.
 

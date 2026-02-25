@@ -174,6 +174,18 @@ def generate_all_slides():
             # Fix Mermaid parse errors: replace quotes in brackets A["text"] -> A[text] to avoid &quot; collision
             content = re.sub(r'\["(.*?)"\]', r'[\1]', content)
             
+            # Normalizar shapes complexos do Mermaid (ex. A("...") -> A[...]) para evitar Syntax Error in Text por conta do parser Markdown HTML
+            def normalize_mermaid(match):
+                m_code = match.group(0)
+                m_code = m_code.replace('"', '')
+                # Substituir formas complexas do Mermaid (parênteses e colchetes duplos ou cilíndricos) para simples colchetes
+                m_code = re.sub(r'([A-Z0-9a-z_]+)\((.*?)\)', r'\1[\2]', m_code)
+                m_code = re.sub(r'([A-Z0-9a-z_]+)\[\((.*?)\)\]', r'\1[\2]', m_code)
+                m_code = re.sub(r'([A-Z0-9a-z_]+)\[\[(.*?)\]\]', r'\1[\2]', m_code)
+                return m_code
+                
+            content = re.sub(r'```mermaid.*?```', normalize_mermaid, content, flags=re.DOTALL)
+            
             # 3. Escrever Markdown runtime em docs/slides/
             dst_md_path.write_text(content.strip(), encoding='utf-8')
             

@@ -50,8 +50,6 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
 :material-rocket: Finalizar e Visitar Projetos{ .md-button .md-button--primary }
 
-
-
 ---
 
 <!-- .element: class="fragment" -->
@@ -60,7 +58,7 @@ Nunca pare de medir e Otimizar. O Hardware dita as leis; o Software obedece.
 
 ---
 
-### Pergunta 1
+### ❓ Pergunta 1
 Sobre o funcionamento prático de **1. Profiling Clássico (A Vida Real)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -68,16 +66,17 @@ Sobre o funcionamento prático de **1. Profiling Clássico (A Vida Real)** expli
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 1
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 2
+### ❓ Pergunta 2
 No contexto analítico de **2. O Grande Desafio (Mini-Projeto Prático)** explicado em sala, indique a afirmativa verdadeira:
 
 - **O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -85,16 +84,17 @@ No contexto analítico de **2. O Grande Desafio (Mini-Projeto Prático)** explic
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 2
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 3
+### ❓ Pergunta 3
 Ao avaliar a característica inerente a **3. Conclusão da Trilha** explicado em sala, indique a afirmativa verdadeira:
 
 - **Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -102,16 +102,17 @@ Ao avaliar a característica inerente a **3. Conclusão da Trilha** explicado em
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 3
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 4
+### ❓ Pergunta 4
 A respeito da arquitetura sistêmica conectada a **1. Profiling Clássico (A Vida Real)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -119,16 +120,17 @@ A respeito da arquitetura sistêmica conectada a **1. Profiling Clássico (A Vid
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 4
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 5
+### ❓ Pergunta 5
 No que tange diretamente a lógica de **2. O Grande Desafio (Mini-Projeto Prático)** explicado em sala, indique a afirmativa verdadeira:
 
 - **O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -136,16 +138,17 @@ No que tange diretamente a lógica de **2. O Grande Desafio (Mini-Projeto Práti
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 5
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 6
+### ❓ Pergunta 6
 Sobre o funcionamento prático de **3. Conclusão da Trilha** explicado em sala, indique a afirmativa verdadeira:
 
 - **Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -153,16 +156,17 @@ Sobre o funcionamento prático de **3. Conclusão da Trilha** explicado em sala,
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 6
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 7
+### ❓ Pergunta 7
 No contexto analítico de **1. Profiling Clássico (A Vida Real)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -170,16 +174,17 @@ No contexto analítico de **1. Profiling Clássico (A Vida Real)** explicado em 
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 7
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 8
+### ❓ Pergunta 8
 Ao avaliar a característica inerente a **2. O Grande Desafio (Mini-Projeto Prático)** explicado em sala, indique a afirmativa verdadeira:
 
 - **O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -187,16 +192,17 @@ Ao avaliar a característica inerente a **2. O Grande Desafio (Mini-Projeto Prá
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 8
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">O curso desafia todo programador C/C++ a desenvolver a Prova de Fogo do Hardware: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 9
+### ❓ Pergunta 9
 A respeito da arquitetura sistêmica conectada a **3. Conclusão da Trilha** explicado em sala, indique a afirmativa verdadeira:
 
 - **Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -204,16 +210,17 @@ A respeito da arquitetura sistêmica conectada a **3. Conclusão da Trilha** exp
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 9
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Você navegou nas extremas profundezas da arquitetura da Computação Modernizada. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
 ---
 
-### Pergunta 10
+### ❓ Pergunta 10
 No que tange diretamente a lógica de **1. Profiling Clássico (A Vida Real)** explicado em sala, indique a afirmativa verdadeira:
 
 - **Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.***
@@ -221,10 +228,28 @@ No que tange diretamente a lógica de **1. Profiling Clássico (A Vida Real)** e
 - Este paradigma foi totalmente descontinuado das arquiteturas vigentes porque o processador atua hoje com barramentos perfeitamente abstratos.
 - A execução desse sub-processo opera de maneira paralela puramente abstrata, eximindo o Kernel do SO de gerenciar filas de execução.
 
-<span class="fragment">
+---
 
-**✅ Resposta:** Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*
+### ✅ Resposta - Pergunta 10
 
-**
-</span>
+**A alternativa correta é:**
+
+<span style="color:#42affa">Adivinhar onde o código está lento é a armadilha suprema do júnior. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
+
+---
+
+<!-- .element: class="fragment" -->
+# 🥇 Conclusão Teórica
+## Tópicos Superados
+
+Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
+
+---
+
+### 🚀 Próximas Etapas (Prática)
+
+Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
+
+- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
+- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.
 

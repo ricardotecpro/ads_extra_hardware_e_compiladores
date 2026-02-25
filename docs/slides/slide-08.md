@@ -14,9 +14,9 @@ O HW (Hardware MMU no processador) mais as planilhas do Sistema Operacional (Pag
 
 ```mermaid
 graph LR
-    A[Ponteiro em C++<br/>(Virtual 0x01)] --> B{MMU e<br/>Page Table}
-    B --> C[Memória RAM<br/>(Física Pente 1])
-    B -. Se não houver espaço .-> D[Swap / Pagefile<br/>(SSD])
+    A["Ponteiro em C++<br/>(Virtual 0x01)"] --> B{"MMU e<br/>Page Table"}
+    B --> C("Memória RAM<br/>(Física Pente 1)")
+    B -. "Se não houver espaço" .-> D("Swap / Pagefile<br/>(SSD)")
 ```
 
 ---
@@ -234,20 +234,3 @@ No que tange diretamente a lógica de **2. TLB, MMU e a Tradução da Página** 
 **A alternativa correta é:**
 
 <span style="color:#42affa">Para driblar isso, a arquitetura moderna usa a **TLB (Translation Lookaside Buffer)**. A TLB é uma Cache dentro da CPU que guarda apenas os dicionários recentes das planilhas de referências que dizem se o "0X7FFA falso v... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

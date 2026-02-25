@@ -228,20 +228,3 @@ No que tange diretamente a lógica de **2. NVMe (O Limite PCIe)** explicado em s
 **A alternativa correta é:**
 
 <span style="color:#42affa">Para ultrapassar o gargalo da conexão SATA antiga, a tecnologia moveu os SSDs diretamente para injetarem dados nas pistas ultra-rápidas da placa-mãe (PCI-Express). Módulos NVMe M.2 se comunicam fisicamente por canais em ... *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

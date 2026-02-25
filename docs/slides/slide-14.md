@@ -11,12 +11,12 @@ O FS usa de índices numéricos ultra-rápidos: os **Inodes**.
 
 ```mermaid
 graph LR
-    A[Diretório /Docs] -->|12345| B[Inode 12345]
-    B --> C[Tamanho: 2MB]
-    B --> D[Permissões: rwxr-xr-x]
-    B --> E[Blocos Físicos de Dados]
-    E --> F[Cluster 80 no SSD]
-    E --> G[Cluster 89 no SSD]
+    A["Diretório /Docs"] -->|12345| B("Inode 12345")
+    B --> C["Tamanho: 2MB"]
+    B --> D["Permissões: rwxr-xr-x"]
+    B --> E["Blocos Físicos de Dados"]
+    E --> F["Cluster 80 no SSD"]
+    E --> G["Cluster 89 no SSD"]
 ```
 
 > [!INFO]
@@ -237,20 +237,3 @@ No que tange diretamente a lógica de **2. Journaling (A Prova contra Quedas)** 
 **A alternativa correta é:**
 
 <span style="color:#42affa">Mudar um arquivo é uma transação: Apagar o velho, escrever o novo, mudar o Inode. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

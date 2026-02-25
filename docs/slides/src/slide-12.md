@@ -240,20 +240,3 @@ No que tange diretamente a lógica de **2. O Memory Model (Consistências e Barr
 
 <span style="color:#42affa">O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::atomic` o que o Hardware tem permições para *Adiantar* vs *Trancar*. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
 
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.
-

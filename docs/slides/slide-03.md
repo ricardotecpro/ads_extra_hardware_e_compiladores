@@ -249,20 +249,3 @@ No que tange diretamente a lógica de **2. O Ciclo de Instrução (Fetch-Decode-
 **A alternativa correta é:**
 
 <span style="color:#42affa">Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico: *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

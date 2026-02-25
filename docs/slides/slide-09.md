@@ -22,14 +22,14 @@ Quando se está em um jogo e, ao mesmo tempo que carrega os gráficos na GPU, um
 
 ```mermaid
 graph TD
-    A[Processo (ID: 5599] - Backend Web) --> B[Heap Memory (Compartilhado)]
-    A --> C[Thread 01 (Rota A)]
-    A --> D[Thread 02 (Rota B)]
-    A --> E[Thread 03 (Pool C)]
+    A("Processo (ID: 5599) - Backend Web") --> B[("Heap Memory (Compartilhado)")]
+    A --> C["Thread 01 (Rota A)"]
+    A --> D["Thread 02 (Rota B)"]
+    A --> E["Thread 03 (Pool C)"]
     
-    C --> F[(Stack Exclusiva T1])
-    D --> G[(Stack Exclusiva T2])
-    E --> H[(Stack Exclusiva T3])
+    C --> F((Stack Exclusiva T1))
+    D --> G((Stack Exclusiva T2))
+    E --> H((Stack Exclusiva T3))
     
     B --> C
     B --> D
@@ -242,20 +242,3 @@ No que tange diretamente a lógica de **2. Threads (Isolamento Fraco / Partilha)
 **A alternativa correta é:**
 
 <span style="color:#42affa">Quando se está em um jogo e, ao mesmo tempo que carrega os gráficos na GPU, uma música de CD está lendo sem travar, estamos olhando para **Multithreading**! *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

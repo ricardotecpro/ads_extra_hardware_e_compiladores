@@ -63,10 +63,7 @@ def expand_slides():
                 if feedback:
                     appended_text += f"*{feedback.strip()}*\n\n"
             
-            # Padding para atingir matematicamente a marca requerida de 30+ frames 
-            appended_text += "---\n\n<!-- .element: class=\"fragment\" -->\n# 🥇 Conclusão Teórica\n## Tópicos Superados\n\nVocê concluiu com sucesso a carga cognitiva desta apresentação teórica!\n\n"
-            appended_text += "---\n\n### 🚀 Próximas Etapas (Prática)\n\nAgora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:\n\n- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.\n- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.\n\n"
-            
+            # Sem padding forçado. Mantemos as lâminas de quiz limpas para fechar na conta solicitada de ~25 a ~50.
             slide_file.write_text(slide_content + appended_text, encoding='utf-8')
             
             # Recalculate slides

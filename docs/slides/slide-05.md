@@ -10,10 +10,10 @@ Um programador ingênuo acha que "variável vai na memória". Um engenheiro de s
 
 ```mermaid
 graph TD
-    A[Registradores<br/>(1 Ciclo - Alguns Bytes]) --> B[Cache L1<br/>(~4 Ciclos - ~64KB a 128KB)]
-    B --> C[Cache L2 e L3<br/>(~12 a ~40 Ciclos - Megabytes)]
-    C --> D[RAM (Memória Principal)<br/>(~200 a ~300 Ciclos - Gigabytes)]
-    D --> E[Armazenamento (SSD / HDD)<br/>(Milhões de Ciclos - Terabytes)]
+    A("Registradores<br/>(1 Ciclo - Alguns Bytes)") --> B["Cache L1<br/>(~4 Ciclos - ~64KB a 128KB)"]
+    B --> C["Cache L2 e L3<br/>(~12 a ~40 Ciclos - Megabytes)"]
+    C --> D[["RAM (Memória Principal)<br/>(~200 a ~300 Ciclos - Gigabytes)"]]
+    D --> E[("Armazenamento (SSD / HDD)<br/>(Milhões de Ciclos - Terabytes)")]
     
     style A fill:#ff9999
     style B fill:#ffcc99
@@ -247,20 +247,3 @@ No que tange diretamente a lógica de **2. Os Impactos da Latência (Lado do Có
 **A alternativa correta é:**
 
 <span style="color:#42affa">Quando escrevemos um código com constantes consultas não linearizadas ao Banco de Dados (ou SSD local), pagamos a mais cara taxa processual: o I/O disk penalty. *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

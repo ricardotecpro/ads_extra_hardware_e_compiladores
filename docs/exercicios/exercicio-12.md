@@ -7,28 +7,28 @@ Resolver esses exercícios ajudará na fixação do conteúdo abordado na **Aula
 
 > Você codifica:
 
-**Pergunta:** Descreva o conceito fundamental de **1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)** e liste duas vantagens de seu uso.
+**Pergunta:** Descreva o conceito fundamental de 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution) e liste duas vantagens de seu uso.
 
 ## Questão 2 - 2. O Memory Model (Consistências e Barreiras) (Básico 2)
 **Contexto:** 
 
 > O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::atomic` o que o Hardware tem permições para *Adiantar* vs *Trancar*.
 
-**Pergunta:** Descreva o conceito fundamental de **2. O Memory Model (Consistências e Barreiras)** e liste duas vantagens de seu uso.
+**Pergunta:** Descreva o conceito fundamental de 2. O Memory Model (Consistências e Barreiras) e liste duas vantagens de seu uso.
 
 ## Questão 3 - 3. Memory Barriers (Fences) nas CPUs (Intermediário 1)
 **Contexto:** 
 
 > Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programávamos via "Gambiarra Intrinseca" de Processador (Ex: Comando Assembler **MFENCE** ou **SFENCE** no Intel). Os Fences proíbem categoricamente a travessia de saltos das sub-operações em Assembly, estancando a execução como um sinaleiro fechado.
 
-**Pergunta:** Analisando o funcionamento de **3. Memory Barriers (Fences) nas CPUs**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+**Pergunta:** Analisando o funcionamento de 3. Memory Barriers (Fences) nas CPUs, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
 
 ## Questão 4 - Resumo Prático (Intermediário 2)
 **Contexto:** 
 
 > - Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da aula 10 as blindando, USE **`std::atomic<bool>`**. Do contrário você é uma vítima da *Superscalar Out Of Order Intel Architecture Pipeline* (a reordenação elétrica).
 
-**Pergunta:** Analisando o funcionamento de **Resumo Prático**, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
+**Pergunta:** Analisando o funcionamento de Resumo Prático, como essa métrica interage em um ambiente prático de compilação ou execução de código C/C++ a nível de sistema operacional?
 
 ## Questão 5 - 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution) (Desafio)
 **Contexto:** 

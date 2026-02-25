@@ -7,11 +7,11 @@ Abaixo estão as respostas esperadas e o embasamento teórico para os exercício
 
 A arquitetura interna da CPU possui 3 órgãos vitais:
 
-1. **ALU (Unidade Lógica e Aritmética):** O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.
+1. ALU (Unidade Lógica e Aritmética): O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.
 
-2. **CU (Unidade de Controle):** O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
+2. CU (Unidade de Controle): O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
 
-3. **Registradores:** Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
+3. Registradores: Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
 
 
 
@@ -27,13 +27,13 @@ A arquitetura interna da CPU possui 3 órgãos vitais:
 
 Cada operação ou linha de código C/C++ que você escreve é processada na cadência do *Clock* pelo ciclo clássico:
 
-1. **Fetch (Busca):** A CU vai na Memória RAM e busca qual o *próximo* byte de comando, guiando-se pelo **Program Counter (PC)**.
+1. Fetch (Busca): A CU vai na Memória RAM e busca qual o *próximo* byte de comando, guiando-se pelo Program Counter (PC).
 
-2. **Decode (Decodifica):** A CU traduz o comando para entender o que é ("Ah, é para Somar 5!").
+2. Decode (Decodifica): A CU traduz o comando para entender o que é ("Ah, é para Somar 5!").
 
-3. **Execute:** A ALU recebe os parâmetros e faz a conta física elétron a elétron.
+3. Execute: A ALU recebe os parâmetros e faz a conta física elétron a elétron.
 
-4. **Store (Armazena):** O resultado volta para um registrador ou para a Memória RAM.
+4. Store (Armazena): O resultado volta para um registrador ou para a Memória RAM.
 
 ---
 
@@ -67,11 +67,11 @@ Registradores são seus maiores amigos de performance. Códigos C++ que permitem
 
 A arquitetura interna da CPU possui 3 órgãos vitais:
 
-1. **ALU (Unidade Lógica e Aritmética):** O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.
+1. ALU (Unidade Lógica e Aritmética): O músculo. Onde as somas, subtrações e portas lógicas (AND/OR/XOR) acontecem fisicamente usando transistores.
 
-2. **CU (Unidade de Controle):** O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
+2. CU (Unidade de Controle): O supervisor. Ela diz à ALU o que fazer lendo os "Opcodes" (comandos binários ISA).
 
-3. **Registradores:** Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
+3. Registradores: Pequenos e ultra-rápidos blocos de memória embutidos diretamente no chip. (ex: EAX, EBX, RSP).
 
 
 

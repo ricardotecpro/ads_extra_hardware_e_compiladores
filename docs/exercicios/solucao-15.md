@@ -19,9 +19,9 @@ Para acionar a Rede, o C++ precisa paralisar, invocar a sagrada **System Call** 
 
 Seu App em Python/C diz: "Puxe o dado que está vindo no mouse".
 
-1. **Polling (Desastroso)**: A CPU fica travada rodando `while(mouse_is_empty) {}` perguntando de nano em nanosegundo "Chegou? E agora? E Agora?". (Suga 100% da CPU por um mouse inerte).
+1. Polling (Desastroso): A CPU fica travada rodando `while(mouse_is_empty) {}` perguntando de nano em nanosegundo "Chegou? E agora? E Agora?". (Suga 100% da CPU por um mouse inerte).
 
-2. **Interrupts (Moderno)**: A CPU delega para o controlador USB rodar a escuta passiva, e a CPU volta a fechar os frames de Game. Quando o usuário clica com o dedo, o Controlador injeta um choque elétrico no pino do Processador. **Interrupt request (IRQ)!** A CPU congela subitamente o Game, salva o contexto, trata o clique do Mouse rapidamente, e exuma a cena do Game novamente do congelamento.
+2. Interrupts (Moderno): A CPU delega para o controlador USB rodar a escuta passiva, e a CPU volta a fechar os frames de Game. Quando o usuário clica com o dedo, o Controlador injeta um choque elétrico no pino do Processador. Interrupt request (IRQ)! A CPU congela subitamente o Game, salva o contexto, trata o clique do Mouse rapidamente, e exuma a cena do Game novamente do congelamento.
 
 ---
 

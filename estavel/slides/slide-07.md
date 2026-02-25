@@ -9,9 +9,9 @@
 A Stack é a fundação natural de blocos de toda variável ordinariamente declarada dentro do escopo de funções em C/C++ (`int x`, `float y`). Ela trabalha rigorosamente sob o conceito LIFO (Last In, First Out). 
 
 
-    - **Performance Imediata**: Não sofre do atraso monumental do Sistema Operacional rodando scripts para achar buracos vazios. A CPU avança 1 pino de hardware no SP (Stack Pointer) e empilha na RAM. Retirou, ele decrementa. Super rápido.
-    - **Anti-Vazamento Automático**: Funções extintas são imediatamente retiradas (*popped*) num clique atômico LIFO e as fatias voltam a uso global. Memória protegida contra vazamentos lógicos (*memory leaks*) por definição estrita.
-    - **Quente da CPU**: Frequentemente preza por Cache Hit. A Stack costuma viver majoritariamente no limiar da L1 Data Cache.
+- **Performance Imediata**:  <!-- .element: class="fragment" --> Não sofre do atraso monumental do Sistema Operacional rodando scripts para achar buracos vazios. A CPU avança 1 pino de hardware no SP (Stack Pointer) e empilha na RAM. Retirou, ele decrementa. Super rápido.
+- **Anti-Vazamento Automático**:  <!-- .element: class="fragment" --> Funções extintas são imediatamente retiradas (*popped*) num clique atômico LIFO e as fatias voltam a uso global. Memória protegida contra vazamentos lógicos (*memory leaks*) por definição estrita.
+- **Quente da CPU**:  <!-- .element: class="fragment" --> Frequentemente preza por Cache Hit. A Stack costuma viver majoritariamente no limiar da L1 Data Cache.
 
 > [!CAUTION]
 > Stack Overflow! A Pilha nunca é infinita, sendo tipicamente restrita pelo S.O. Windows/Linux (geralmente entre 1MB a 8MB max num Kernel Padrão X86). Tentar criar um `int array[9999999]` puro no escopo sem alocação dinâmica explodirá a Pilha e esmagará cruelmente (o temido `Segmentation Fault (core dumped)`).

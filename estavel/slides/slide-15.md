@@ -32,8 +32,8 @@ A revolução moderna chama-se **Direct Memory Access (DMA)**. Placas de Captura
 
 ```mermaid
 graph BT
-    A["Placa de Rede"] -- "Caminho Direto (DMA)" --> B["Memória RAM"]
-    A -. "Aviso via IRQ\n(Terminei!)" .-> C["CPU"]
+    A[Placa de Rede] -- "Caminho Direto (DMA)" --> B[Memória RAM]
+    A -. "Aviso via IRQ\n(Terminei!)" .-> C[CPU]
     C -. "Ordens Lentas" .-> B
 ```
 

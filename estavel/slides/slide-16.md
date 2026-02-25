@@ -9,9 +9,9 @@
 Adivinhar onde o código está lento é a armadilha suprema do júnior.
 Usamos ferramentas robustas para que a Arquitetura Linux diga-nos onde os gargalos fervem a CPU.
 
-* **gprof**: O padrão antigo C++. Ele recompila injetando marcações contábeis nas idas e vindas de funções, revelando "Quais chamadas consumiram O Tempo Global".
+* **gprof**:  <!-- .element: class="fragment" --> O padrão antigo C++. Ele recompila injetando marcações contábeis nas idas e vindas de funções, revelando "Quais chamadas consumiram O Tempo Global".
 * **Valgrind (Callgrind / Cachegrind):** Ferramenta extrema rodando seu executável numa sandbox virtual que mapeia cada instrução assembly. Traz gráficos massivos de onde **Ocorreram os Caches Misses** da Memória L1 de nossa Aula 06!
-* **Perf**: O utilitário nativo dos programadores Linux Kernel, extraindo informações métricas em Eventos de Desvio (Branch Mispired da Aula 03) usando relógios internos dos registradores ocultos `PMU` do seu próprio Processador em tempo real, sem overhead sintético.
+* **Perf**:  <!-- .element: class="fragment" --> O utilitário nativo dos programadores Linux Kernel, extraindo informações métricas em Eventos de Desvio (Branch Mispired da Aula 03) usando relógios internos dos registradores ocultos `PMU` do seu próprio Processador em tempo real, sem overhead sintético.
 
 ---
 

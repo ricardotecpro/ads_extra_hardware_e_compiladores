@@ -48,5 +48,5 @@ NVIDIA e CUDA (plataforma de C++) reinam supremas em *Deep Learning* e Criptogra
 
 ## 🚀 Resumo Prático
 
-- **Task Paralelism**: Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*.
-- **Data Paralelism**: Se a conta for a repetição retumbante de um algoritmo idêntico sobre 2 milhões de dados sem dependência de saltos complexos, mova-a da RAM à VRAM da *GPU via CUDA/OpenCL*. A métrica vai das horas paras os décimos de segundo.
+- **Task Paralelism**:  <!-- .element: class="fragment" --> Se tens lógica variada, use a *CPU Multi-Core C++ thread pool*.
+- **Data Paralelism**:  <!-- .element: class="fragment" --> Se a conta for a repetição retumbante de um algoritmo idêntico sobre 2 milhões de dados sem dependência de saltos complexos, mova-a da RAM à VRAM da *GPU via CUDA/OpenCL*. A métrica vai das horas paras os décimos de segundo.

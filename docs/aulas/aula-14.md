@@ -60,7 +60,7 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-14.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-14.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -68,7 +68,7 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-14.html)
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-14.md)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -76,7 +76,7 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-14.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-14.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -84,7 +84,7 @@ Essa mágica salva a Morte do seu SSD (menos gravações simultâneas em desgast
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-14.md)
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-14.md)
 
 </div>
 

@@ -64,7 +64,7 @@ A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáv
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-06.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-06.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -72,7 +72,7 @@ A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáv
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-06.html)
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-06.md)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -80,7 +80,7 @@ A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáv
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-06.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-06.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -88,7 +88,7 @@ A estrutura define a localidade espacial. Prefira dezenas de minúsculas variáv
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-06.md)
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-06.md)
 
 </div>
 

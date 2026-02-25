@@ -92,7 +92,11 @@ def parse_aula_to_slides(aula_path: pathlib.Path, slide_path: pathlib.Path):
                     
         push_slide(current_slide_content)
 
-    slide_path.write_text("\n\n".join(slides), encoding='utf-8')
+    # Fix relative paths from original `aula-XX.md` to work inside `slides/src/`
+    slide_text = "\n\n".join(slides)
+    slide_text = re.sub(r'\]\(\.\./', r'](../../', slide_text)
+    
+    slide_path.write_text(slide_text, encoding='utf-8')
     return len(slides)
 
 def main():

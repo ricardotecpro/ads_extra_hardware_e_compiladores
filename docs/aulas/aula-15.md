@@ -54,7 +54,7 @@ Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-15.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-15.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -62,7 +62,7 @@ Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-15.html)
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-15.md)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -70,7 +70,7 @@ Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-15.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-15.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -78,7 +78,7 @@ Fim do estudo base teórico, chegamos ao final. É hora de compilar conhecimento
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-15.md)
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-15.md)
 
 </div>
 

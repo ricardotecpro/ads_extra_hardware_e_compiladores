@@ -98,7 +98,7 @@ Pronto para entender profundamente os dados no Módulo Binário?
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-01.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-01.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -106,7 +106,7 @@ Pronto para entender profundamente os dados no Módulo Binário?
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-01.html)
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-01.md)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -114,7 +114,7 @@ Pronto para entender profundamente os dados no Módulo Binário?
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-01.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-01.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -122,7 +122,7 @@ Pronto para entender profundamente os dados no Módulo Binário?
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-01.md)
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-01.md)
 
 </div>
 

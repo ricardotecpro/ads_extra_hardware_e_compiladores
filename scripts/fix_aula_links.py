@@ -14,29 +14,22 @@ def fix_footer_links():
             
         content = filepath.read_text(encoding='utf-8')
         
-        # O problema relacional: "../slides/slide-XX.html" quebra dependendo de como o MkDocs injeta as views (e.g aulas/)
-        # A solução: Transformar "../" em abs root aware paths
+        # O problema relacional 2.0: Root Paths (ex: /ads_extra_hardware_e_compiladores/quizzes/...html) parecem não estar batendo
+        # e o MkDocs exige que os links de navegação para as outras páginas .md usem extensões .md relativas puras,
+        # senão o sistema de warning quebra e o roteamento interno (pjax/SPA) não acopla.
         
-        # 1. Slides HTML
-        content = re.sub(r'\]\(\.\./slides/(slide-\d+\.html)\)', r'](../slides/\1)', content)
-        # Fix the actual prefix since using `../` is causing the site to prepend `/aulas/` in some permalink cases 
-        # MkDocs recommends using relative to the current physical page. 
-        # If the page is at /aulas/aula-01/ index, `../` takes it to `/aulas/`. So `../../quizzes/` would be theoretically required.
-        # However, MkDocs navigation naturally resolves absolute-like site roots `/quizzes/` or simply relative paths accurately.
+        # Para Slides: Eles de fato não são parseados para mkdocs, e sim HTML estáticos RevealJS puros na raiz do site.
+        content = re.sub(r'\]\(/ads_extra_hardware_e_compiladores/slides/(.*?)\)', r'](../slides/\1)', content)
         
-        # Let's standardize everything to the reliable site root absolute prefix (without hardcoding the domain)
-        # Mkdocs uses `/` directly mapping to the `docs/` dir internally when rendering final htmls if use_directory_urls is true 
-        # Actually, `../slides/` Should work. Let's trace why `../quizzes/` generated `aulas/quizzes/` in production:
-        # It's because Mkdocs generated `aulas/aula-02/index.html`. So `../` goes up to `/aulas/`. 
-        # Therefore, we need `../../quizzes/quiz-02.html` OR root absolute `/quizzes/quiz-02.html`.
-        # MkDocs prefers absolute URLs mapped from `docs` as root: `/slides/...`
+        # Para Quizzes / Exercicios / Projetos: Devem apontar para o .md relativo ascendente.
+        # Ex: quizzes/quiz-16.html --> ../quizzes/quiz-16.md
+        # O Mkdocs resolverá ../quizzes/quiz-16.md magicamente para a tag <a href="..../quizzes/quiz-16/"> no frontend.
         
-        content = re.sub(r'\]\(\.\./slides/(.*?)\)', r'](/ads_extra_hardware_e_compiladores/slides/\1)', content)
-        content = re.sub(r'\]\(\.\./quizzes/(.*?)\)', r'](/ads_extra_hardware_e_compiladores/quizzes/\1)', content)
-        content = re.sub(r'\]\(\.\./exercicios/(.*?)\)', r'](/ads_extra_hardware_e_compiladores/exercicios/\1)', content)
-        content = re.sub(r'\]\(\.\./projetos/(.*?)\)', r'](/ads_extra_hardware_e_compiladores/projetos/\1)', content)
+        content = re.sub(r'\]\(/ads_extra_hardware_e_compiladores/quizzes/(.*?)\.html\)', r'](../quizzes/\1.md)', content)
+        content = re.sub(r'\]\(/ads_extra_hardware_e_compiladores/exercicios/(.*?)\)', r'](../exercicios/\1)', content)
+        content = re.sub(r'\]\(/ads_extra_hardware_e_compiladores/projetos/(.*?)\)', r'](../projetos/\1)', content)
         
         filepath.write_text(content, encoding='utf-8')
-        print(f"URLs Absolutas de Produção corrigidos em: {filepath.name}")
+        print(f"URLs Relativas Nativas do MkDocs fixadas em: {filepath.name}")
 
 fix_footer_links()

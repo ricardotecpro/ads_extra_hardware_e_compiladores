@@ -69,7 +69,7 @@ O problema? Puxar e devolver o estado (registradores, program counter) na cache 
     
     Reveja a apresentação visual desta aula.
     
-    [:octicons-arrow-right-24: Ver Slides da Aula](/ads_extra_hardware_e_compiladores/slides/slide-09.html)
+    [:octicons-arrow-right-24: Ver Slides da Aula](../slides/slide-09.html)
 
 -   :octicons-tasklist-24: **Quiz**
 
@@ -77,7 +77,7 @@ O problema? Puxar e devolver o estado (registradores, program counter) na cache 
     
     Teste seu entendimento básico com perguntas rápidas.
     
-    [:octicons-arrow-right-24: Responder Quiz](/ads_extra_hardware_e_compiladores/quizzes/quiz-09.html)
+    [:octicons-arrow-right-24: Responder Quiz](../quizzes/quiz-09.md)
 
 -   :octicons-pencil-24: **Exercícios**
 
@@ -85,7 +85,7 @@ O problema? Puxar e devolver o estado (registradores, program counter) na cache 
     
     Prática avançada e dissertativa com consulta.
     
-    [:octicons-arrow-right-24: Lista de Exercícios](/ads_extra_hardware_e_compiladores/exercicios/exercicio-09.md)
+    [:octicons-arrow-right-24: Lista de Exercícios](../exercicios/exercicio-09.md)
 
 -   :octicons-rocket-24: **Projeto**
 
@@ -93,7 +93,7 @@ O problema? Puxar e devolver o estado (registradores, program counter) na cache 
     
     Laboratório prático de codificação em C/C++.
     
-    [:octicons-arrow-right-24: Mini Projeto](/ads_extra_hardware_e_compiladores/projetos/projeto-09.md)
+    [:octicons-arrow-right-24: Mini Projeto](../projetos/projeto-09.md)
 
 </div>
 

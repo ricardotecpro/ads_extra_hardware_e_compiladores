@@ -2,31 +2,31 @@
 
 **Avaliação Sistemática**
 
-1. Sobre **🚪 1. System Calls (O Pedágio do Kernel)**, qual a afirmação fundamental ensinada na aula?
+1. Segundo a aula 15, ao abordarmos o tópico de **1. System Calls (O Pedágio do Kernel)**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão físic... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Programas nativos de C/C++ rodando na zona abstratamente segura (User Space) NÃO TÊM permissão física elétron-elétron para dar ordens ao cabo de Rede de imprimir um byte TCP. Tenta... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-2. Sobre **⚠️ 2. Interrupções vs Polling**, qual a afirmação fundamental ensinada na aula?
+2. Segundo a aula 15, ao abordarmos o tópico de **2. Interrupções vs Polling**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-3. Sobre **🚀 3. DMA (Memória com Acesso Direto)**, qual a afirmação fundamental ensinada na aula?
+3. Segundo a aula 15, ao abordarmos o tópico de **3. DMA (Memória com Acesso Direto)**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher ... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Mesmo com as Interrupções ajudando a não ficar paralisado *Polling*... Fazer a Placa de Rede encher a placa RAM transitando Bit a Bit passando pelo miolo doloroso da CPU era imprat... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
+4. Segundo a aula 15, ao abordarmos o tópico de **Resumo Prático**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] - Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] - Se a sua aplicação Web Framework assíncrona (como NodeJS ou Nginx C++) trava muito com "I/O", isso significa que o Sistema delega operações custosas pelo DMA ao Kernel, enquanto ... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 

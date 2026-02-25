@@ -2,31 +2,31 @@
 
 **Avaliação Sistemática**
 
-1. Sobre **🔀 1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)**, qual a afirmação fundamental ensinada na aula?
+1. Segundo a aula 12, ao abordarmos o tópico de **1. A Reordenação do Compilador e CPU (Out-Of-Order Execution)**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Você codifica: *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Você codifica: *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-2. Sobre **🚧 2. O Memory Model (Consistências e Barreiras)**, qual a afirmação fundamental ensinada na aula?
+2. Segundo a aula 12, ao abordarmos o tópico de **2. O Memory Model (Consistências e Barreiras)**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::at... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] O C++11 emitiu formalmente o seu universal **Memory Model** definindo através da biblioteca `std::atomic` o que o Hardware tem permições para *Adiantar* vs *Trancar*. *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-3. Sobre **🧱 3. Memory Barriers (Fences) nas CPUs**, qual a afirmação fundamental ensinada na aula?
+3. Segundo a aula 12, ao abordarmos o tópico de **3. Memory Barriers (Fences) nas CPUs**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programávamos via "Gambiarra In... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Se não tivessemos essa lei `std::atomic` no standard oficial do GCC, programávamos via "Gambiarra Intrinseca" de Processador (Ex: Comando Assembler **MFENCE** ou **SFENCE** no Inte... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-4. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
+4. Segundo a aula 12, ao abordarmos o tópico de **Resumo Prático**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] - Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] - Se duas "Threads" conversam através das mesmas variáveis limpas de C e não possuam `std::mutex` da aula 10 as blindando, USE **`std::atomic<bool>`**. Do contrário você é uma víti... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 

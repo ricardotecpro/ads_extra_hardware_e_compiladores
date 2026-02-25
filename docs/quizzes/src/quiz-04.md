@@ -2,24 +2,24 @@
 
 **Avaliação Sistemática**
 
-1. Sobre **🥊 1. Entendendo a Batalha**, qual a afirmação fundamental ensinada na aula?
+1. Segundo a aula 04, ao abordarmos o tópico de **1. Entendendo a Batalha**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias ba... *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] A grande revolução do backend é: Seu *deploy* de aplicação na AWS/Azure precisa ser em instâncias baseadas em AMD/Intel x86 (CISC) ou instâncias AWS Graviton ARM (RISC), que normal... *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-2. Sobre **🖨️ 2. Como isso afeta o Compilador C/C++?**, qual a afirmação fundamental ensinada na aula?
+2. Segundo a aula 04, ao abordarmos o tópico de **2. Como isso afeta o Compilador C/C++?**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] Como programador, ao compilar nosso software, a *Target Architecture* é o divisor de águas: *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 
-3. Sobre **🚀 Resumo Prático**, qual a afirmação fundamental ensinada na aula?
+3. Segundo a aula 04, ao abordarmos o tópico de **Resumo Prático**, qual a premissa tecnológica subjacente a este conceito?
 
-    - [x] - Historicamente, servidores eram puramente CISC (Intel). *feedback: Exato! Essa é a premissa fundamental.* 
-    - [ ] É um conceito obsoleto na programação moderna em C/C++.
-    - [ ] Depende apenas do compilador e não afeta a execução do hardware.
-    - [ ] É executado exclusivamente pela placa de vídeo (GPU).
+    - [x] - Historicamente, servidores eram puramente CISC (Intel). *feedback: Afirmativo. Esta é exatamente a dinâmica explicada no texto base da aula.*
+    - [ ] É um conceito restrito apenas a linguagens de script interpretadas de alto nível, não afetando ambientes de sistema operacional.
+    - [ ] A execução desse processo independe da CPU, rodando inteiramente de forma abstrata na memória do monitor.
+    - [ ] Essa camada só existe em sistemas de 32 bits obsoletos e foi removida na computação moderna.
 

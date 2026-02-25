@@ -32,9 +32,9 @@ A revolução moderna chama-se **Direct Memory Access (DMA)**. Placas de Captura
 
 ```mermaid
 graph BT
-    A[Placa de Rede] -- Caminho Direto (DMA) --> B[Memória RAM]
-    A -. Aviso via IRQ\n[Terminei!] .-> C[CPU]
-    C -. Ordens Lentas .-> B
+    A["Placa de Rede"] -- "Caminho Direto (DMA)" --> B["Memória RAM"]
+    A -. "Aviso via IRQ\n(Terminei!)" .-> C["CPU"]
+    C -. "Ordens Lentas" .-> B
 ```
 
 A CPU diz: "Placa, baixe o NetFlix do Ponto P pro Q na RAM". A Placa faz todo os trabalho violento por trás. A CPU usa seu pipeline pra cálculos e matemática puros, enquanto sua memória vai sendo injetada pela placa de vídeo via túneis secretos pelas pontes.
@@ -232,20 +232,3 @@ No que tange diretamente a lógica de **2. Interrupções vs Polling** explicado
 **A alternativa correta é:**
 
 <span style="color:#42affa">Seu App em Python/C diz: "Puxe o dado que está vindo no mouse". *feedback: Afirmativo e Exato. Esta é rigorosamente a premissa central abordada no conteúdo de sala.*</span>
-
----
-
-<!-- .element: class="fragment" -->
-# 🥇 Conclusão Teórica
-## Tópicos Superados
-
-Você concluiu com sucesso a carga cognitiva desta apresentação teórica!
-
----
-
-### 🚀 Próximas Etapas (Prática)
-
-Agora que a conceituação inicial e os quizzes iterativos foram vencidos, aplique o conhecimento na prática:
-
-- Acesse a plataforma e inicie o seu desafio em **Mini Projetos** de C/C++.
-- Teste a fixação complexa com as questões dissertativas da **Lista de Exercícios**.

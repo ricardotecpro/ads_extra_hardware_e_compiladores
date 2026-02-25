@@ -138,6 +138,13 @@ extra:
 2. Em `pyproject.toml`, unificar as keys `name`, `description` garantindo que reflitam 1 para 1 a pasta de root local e com a tag de autores configurada em `Ricardo Tec Pro`.
 3. Os índices mestres (`index.md`) de todo diretório do projeto deverão ser reescritos em Python impedindo qualquer URL *hardcoded* legada errônea.
 
+### Regras Áureas de Geração Orgânica e Sanitização de Parsers (RevealJS e Quizzes)
+Para proteger o pipeline de construção do MkDocs e do compilador estático do RevealJS, a automação Python (scripts geradores) deve aderir restritamente a estas convenções testadas em fogo:
+- **Slides Orgânicos (Sem Fake Fillers)**: O extrator gerador de slides Markdown de aulas deve respeitar 1:1 a densidade bruta da aula original. O script Python (ex: `generate_slides_from_aulas.py`) fatiará e animará os blocos inteligentemente. Aulas médias/curtas atingirão **~15 a 26 slides**, e aulas densas renderão organicamente **~30 a 50 frames**. Não se insere blocos fantasmas para "inflar número".
+- **Purificação do Syntax Mermaid**: Parsers HTML como o `marked.js` corrompem aspas protetoras convertendo-as na entidade HTML `&quot;`. Consequentemente gera `Syntax Error` no Canvas SVG. Nunca crie labels ou ids no Markdown fonte contendo aspas internas: Prefira `A[Registrador - 1 ciclo]` sempre que possível no fluxo em vez de `A["Registrador (1 ciclo)"]`.
+- **Sanitização do "InnerHTML" (Quizzes Interativos)**: Títulos das classes HTML fixas de plugins Javascript (`<div class="quiz-question">`) sofrem fuga literal dos tokens limitantes em Markdown (ex. exibem na tela os astersiscos duplos que foram postos para injetar negrito). Scripts de sanitização (ex: `fix_quiz_bold.py`) precisam extirpar o Markdown cru desses blocos estáticos para preservar a tipografia no Front-End JS final.
+- **Render Gráfico de Tasklists**: Todo checkbox solto planejado para controle manual do aluno (comum nas páginas da seção `/projetos/`) não é renderizado em HTML apenas botando colchetes secos `[ ]` na linha. As tasks e diretrizes exigem que a sintaxe seja validada englobadamente como item de lista clássica via markdown tracejada: `- [ ] Módulo 1`. O plugin `pymdownx.tasklist` ativado em `mkdocs.yml` é pré-requisito irremovível.
+
 ---
 
 ## 📋 4. PLANO E ORDEM DE VALIDAÇÃO FINAL (QA RIGOROSO)

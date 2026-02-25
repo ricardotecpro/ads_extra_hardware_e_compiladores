@@ -170,6 +170,7 @@ extra:
 nav:
   - Home: index.md
   - Sobre: sobre.md
+  - Plano de Ensino: plano-ensino.md
   - Aulas:
     - aulas/index.md
     - Módulo 1 – Fundamentos de Arquitetura de Computadores:

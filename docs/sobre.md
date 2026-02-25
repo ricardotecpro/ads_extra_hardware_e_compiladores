@@ -116,3 +116,4 @@ Pronto para entender o silício?
 
 [:material-rocket: Ir para Aula 01](aulas/aula-01.md){ .md-button .md-button--primary }
 [:material-cog: Configurar Ambiente](setups/index.md){ .md-button }
+[:material-book-open-page-variant: Plano de Ensino](plano-ensino.md){ .md-button }

@@ -169,9 +169,9 @@ extra:
 
 nav:
   - Informações:
-    - Home: index.md
+    - Curso: index.md
     - Sobre: sobre.md
-    - Plano de Ensino: plano-ensino.md
+    - Plano: plano.md
   - Aulas:
     - aulas/index.md
     - Módulo 1 – Fundamentos de Arquitetura de Computadores:
@@ -223,5 +223,7 @@ nav:
           - projetos/index.md
       - Configuração:
           - setups/index.md
+          - 'Windows': setups/setup-01.md
+          - 'Linux': setups/setup-02.md
           - 'Mac (Intel/Apple Silicon)': setups/setup-03.md
   - Impressão: print_page.md

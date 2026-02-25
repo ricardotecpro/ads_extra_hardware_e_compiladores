@@ -16,14 +16,16 @@ jobs:
         with:
           python-version: '3.11'
           
-      - name: Instalar dependências
-        run: pip install -r requirements.txt
+      - name: Instalar Poetry
+        run: curl -sSL https://install.python-poetry.org | python3 -
+
+      - name: Configurar dependências
+        run: poetry install --no-interaction --no-root
         
-      - name: Build e deploy com Mike
+      - name: Build e deploy com Mike (gh-pages)
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          python scripts/generate_slides_quizzes.py
-          python scripts/convert_quizzes.py
-          mike deploy estavel --push --allow-empty
-          mike set-default estavel --push
+          poetry run python generate_massa.py
+          poetry run mike deploy estavel --push --allow-empty
+          poetry run mike set-default estavel --push

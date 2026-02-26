@@ -4,18 +4,27 @@ Baseado nos formatos antigos que funcionavam
 """
 import pathlib
 import re
+import yaml
 from rich import print
 from rich.progress import track
 
 
-def generate_slide_html(lesson_number: int) -> str:
+def load_config():
+    """Lê configurações do mkdocs.yml"""
+    yml_path = pathlib.Path('mkdocs.yml')
+    if not yml_path.exists():
+        return {"site_name": "Digital Lab"}
+    with open(yml_path, 'r', encoding='utf-8') as f:
+        return yaml.load(f, Loader=yaml.UnsafeLoader)
+
+def generate_slide_html(lesson_number: int, site_name: str) -> str:
     """Gera HTML para um slide específico"""
     return f'''<!doctype html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula {lesson_number:02d} - Fundamentos da Computação</title>
+    <title>Aula {lesson_number:02d} - {site_name}</title>
     
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reset.css">
     <link rel="stylesheet" href="https://unpkg.com/reveal.js@4.5.0/dist/reveal.css">
@@ -177,7 +186,8 @@ def generate_all_slides():
             dst_md_path.write_text(content.strip(), encoding='utf-8')
             
             # 4. Gerar HTML referenciando este markdown
-            html_content = generate_slide_html(i)
+            config = load_config()
+            html_content = generate_slide_html(i, config.get('site_name', 'Digital Lab'))
             html_path.write_text(html_content, encoding='utf-8')
         else:
             print(f"[yellow]⚠ Fonte {src_md_path} não encontrada[/yellow]")

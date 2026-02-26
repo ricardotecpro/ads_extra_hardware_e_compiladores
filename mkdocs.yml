@@ -135,6 +135,12 @@ plugins:
       enumerate_headings: false
       enumerate_figures: false
 
+exclude_docs: |
+  quizzes/src/*
+  slides/src/*
+  slides/slide-*.md
+  **/.src/*
+
 hooks:
   - hooks/copy_slides.py
 

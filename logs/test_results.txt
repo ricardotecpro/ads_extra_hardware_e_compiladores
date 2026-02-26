@@ -1,0 +1,926 @@
+============================= test session starts =============================
+platform win32 -- Python 3.13.0, pytest-9.0.1, pluggy-1.6.0
+baseurl: http://127.0.0.1:8766
+rootdir: D:\SourceCode\REPOS\github.io\ads_extra_hardware_e_compiladores
+configfile: pyproject.toml
+plugins: anyio-4.11.0, base-url-2.1.0, cov-7.0.0, mock-3.15.1, playwright-0.7.2
+collected 73 items
+
+tests\test_code_copy.py s                                                [  1%]
+tests\test_fullscreen.py s                                               [  2%]
+tests\test_layout.py F......                                             [ 12%]
+tests\test_navigation.py F....                                           [ 19%]
+tests\test_quizzes.py ......                                             [ 27%]
+tests\test_slides.py ....sF                                              [ 35%]
+tests\test_course_structure.py EEEEEE                                    [ 43%]
+tests\test_layout.py E                                                   [ 45%]
+tests\test_quizzes.py E                                                  [ 46%]
+tests\test_slides.py E                                                   [ 47%]
+tests\test_quizzes.py E                                                  [ 49%]
+tests\test_slides.py E                                                   [ 50%]
+tests\test_quizzes.py E                                                  [ 52%]
+tests\test_slides.py E                                                   [ 53%]
+tests\test_quizzes.py E                                                  [ 54%]
+tests\test_slides.py E                                                   [ 56%]
+tests\test_quizzes.py E                                                  [ 57%]
+tests\test_slides.py E                                                   [ 58%]
+tests\test_quizzes.py E                                                  [ 60%]
+tests\test_slides.py E                                                   [ 61%]
+tests\test_quizzes.py E                                                  [ 63%]
+tests\test_slides.py E                                                   [ 64%]
+tests\test_quizzes.py E                                                  [ 65%]
+tests\test_slides.py E                                                   [ 67%]
+tests\test_quizzes.py E                                                  [ 68%]
+tests\test_slides.py E                                                   [ 69%]
+tests\test_quizzes.py E                                                  [ 71%]
+tests\test_slides.py E                                                   [ 72%]
+tests\test_quizzes.py E                                                  [ 73%]
+tests\test_slides.py E                                                   [ 75%]
+tests\test_quizzes.py E                                                  [ 76%]
+tests\test_slides.py E                                                   [ 78%]
+tests\test_quizzes.py E                                                  [ 79%]
+tests\test_slides.py E                                                   [ 80%]
+tests\test_quizzes.py E                                                  [ 82%]
+tests\test_slides.py E                                                   [ 83%]
+tests\test_quizzes.py E                                                  [ 84%]
+tests\test_slides.py E                                                   [ 86%]
+tests\test_slide_build.py EEEEE                                          [ 93%]
+tests\test_slide_generation.py EEEEE                                     [100%]
+
+=================================== ERRORS ====================================
+_______________ ERROR at setup of test_content_structure_exists _______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+____________________ ERROR at setup of test_lessons_exist _____________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_____________________ ERROR at setup of test_slides_exist _____________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+____________________ ERROR at setup of test_quizzes_exist _____________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+___________________ ERROR at setup of test_exercises_exist ____________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+____________________ ERROR at setup of test_projects_exist ____________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_________________ ERROR at setup of test_build_output_exists __________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-2] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-2] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-3] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-3] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-4] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-4] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-5] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-5] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-6] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-6] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-7] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-7] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-8] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-8] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-9] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-9] ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-10] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-10] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-11] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-11] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-12] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-12] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-13] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-13] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-14] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-14] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-15] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-15] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestQuizzes.test_quiz_page_loads[chromium-16] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_______ ERROR at setup of TestSlides.test_slide_page_loads[chromium-16] _______
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+____________ ERROR at setup of test_slide_markdown_copied_to_site _____________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+______________ ERROR at setup of test_slide_html_copied_to_site _______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+_________ ERROR at setup of test_slide_markdown_content_valid_in_site _________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+______________ ERROR at setup of test_all_slides_present_in_site ______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+______________ ERROR at setup of test_slide_index_exists_in_site ______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+______________ ERROR at setup of test_slide_markdown_files_exist ______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+________________ ERROR at setup of test_slide_html_files_exist ________________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+________ ERROR at setup of test_slide_html_references_correct_markdown ________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+______________ ERROR at setup of test_slide_markdown_has_content ______________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+__________ ERROR at setup of test_slide_html_has_revealjs_structure ___________
+
+    @pytest.fixture(autouse=True)
+    def start_server():
+        """
+        Inicia um servidor HTTP local para servir o site gerado (site/)
+        para cada teste (escopo de funþÒo).
+        """
+        site_dir = Path("site").absolute()
+    
+        # Verifica se o site foi gerado
+        if not site_dir.exists() or not (site_dir / "index.html").exists():
+>           pytest.fail("Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.")
+E           Failed: Diret¾rio 'site/' nÒo encontrado ou invßlido. Execute 'poetry run task build' antes dos testes.
+
+..\ads_spec_backend_com_python\tests\conftest.py:23: Failed
+================================== FAILURES ===================================
+______________________ test_homepage_structure[chromium] ______________________
+
+page = <Page url='http://127.0.0.1:8766/'>, base_url = 'http://127.0.0.1:8766'
+
+    def test_homepage_structure(page: Page, base_url):
+        """Test that the homepage loads and has correct structure."""
+        page.set_viewport_size({"width": 1920, "height": 1080})
+        page.goto(base_url)
+    
+        # Check title
+>       expect(page).to_have_title("Home - Hardware para Programadores")
+E       AssertionError: Page title expected to be 'Home - Hardware para Programadores'
+E       Actual value: Curso - Hardware para Programadores 
+E       Call log:
+E         - Expect "to_have_title" with timeout 5000ms
+E           9 Î unexpected value "Curso - Hardware para Programadores"
+
+tests\test_layout.py:30: AssertionError
+________________ TestNavigation.test_home_page_loads[chromium] ________________
+
+self = <test_navigation.TestNavigation object at 0x0000028A81E2E850>
+page_with_base_url = <Page url='http://127.0.0.1:8766/'>
+base_url = 'http://127.0.0.1:8766'
+
+    def test_home_page_loads(self, page_with_base_url: Page, base_url: str):
+        """Verifica se a pßgina inicial carrega"""
+        page = page_with_base_url
+        page.goto(base_url)
+    
+>       expect(page).to_have_title("Home - Hardware para Programadores")
+E       AssertionError: Page title expected to be 'Home - Hardware para Programadores'
+E       Actual value: Curso - Hardware para Programadores 
+E       Call log:
+E         - Expect "to_have_title" with timeout 5000ms
+E           9 Î unexpected value "Curso - Hardware para Programadores"
+
+tests\test_navigation.py:16: AssertionError
+_________ TestSlides.test_slide_markdown_loads_without_404[chromium] __________
+
+self = <test_slides.TestSlides object at 0x0000028A81EA1010>
+page_with_base_url = <Page url='http://127.0.0.1:8766/slides/slide-01.html'>
+base_url = 'http://127.0.0.1:8766'
+
+    def test_slide_markdown_loads_without_404(self, page_with_base_url: Page, base_url: str):
+        """Verifica que markdown carrega sem erro 404 - TESTE CR═TICO"""
+        page = page_with_base_url
+    
+        # Interceptar requisiþ§es de rede para detectar 404
+        errors_404 = []
+        def handle_response(response):
+            if response.status == 404:
+                errors_404.append(response.url)
+    
+        page.on("response", handle_response)
+    
+        # Acessar slide
+        page.goto(f"{base_url}/slides/slide-01.html", wait_until="networkidle")
+    
+        # Aguardar RevealJS carregar e processar markdown
+        page.wait_for_timeout(3000)
+    
+        # Verificar que nÒo houve 404
+>       assert len(errors_404) == 0, (
+            f"Erros 404 encontrados ao carregar slide: {errors_404}. "
+            f"Verifique se os arquivos .md foram copiados para site/slides/ pelo hook."
+        )
+E       AssertionError: Erros 404 encontrados ao carregar slide: ['http://127.0.0.1:8766/assets/css/reveal-custom.css', 'http://127.0.0.1:8766/slides/slide-01.md']. Verifique se os arquivos .md foram copiados para site/slides/ pelo hook.
+E       assert 2 == 0
+E        +  where 2 = len(['http://127.0.0.1:8766/assets/css/reveal-custom.css', 'http://127.0.0.1:8766/slides/slide-01.md'])
+
+..\ads_mod_01_fundamentos_da_computacao\tests\test_slides.py:88: AssertionError
+=========================== short test summary info ===========================
+FAILED tests/test_layout.py::test_homepage_structure[chromium] - AssertionErr...
+FAILED tests/test_navigation.py::TestNavigation::test_home_page_loads[chromium]
+FAILED tests/test_slides.py::TestSlides::test_slide_markdown_loads_without_404[chromium]
+ERROR tests/test_course_structure.py::test_content_structure_exists - Failed:...
+ERROR tests/test_course_structure.py::test_lessons_exist - Failed: Diret¾rio ...
+ERROR tests/test_course_structure.py::test_slides_exist - Failed: Diret¾rio '...
+ERROR tests/test_course_structure.py::test_quizzes_exist - Failed: Diret¾rio ...
+ERROR tests/test_course_structure.py::test_exercises_exist - Failed: Diret¾ri...
+ERROR tests/test_course_structure.py::test_projects_exist - Failed: Diret¾rio...
+ERROR tests/test_layout.py::test_build_output_exists - Failed: Diret¾rio 'sit...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-2] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-2] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-3] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-3] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-4] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-4] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-5] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-5] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-6] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-6] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-7] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-7] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-8] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-8] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-9] - ...
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-9] - F...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-10]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-10] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-11]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-11] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-12]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-12] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-13]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-13] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-14]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-14] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-15]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-15] - ...
+ERROR tests/test_quizzes.py::TestQuizzes::test_quiz_page_loads[chromium-16]
+ERROR tests/test_slides.py::TestSlides::test_slide_page_loads[chromium-16] - ...
+ERROR tests/test_slide_build.py::test_slide_markdown_copied_to_site - Failed:...
+ERROR tests/test_slide_build.py::test_slide_html_copied_to_site - Failed: Dir...
+ERROR tests/test_slide_build.py::test_slide_markdown_content_valid_in_site - ...
+ERROR tests/test_slide_build.py::test_all_slides_present_in_site - Failed: Di...
+ERROR tests/test_slide_build.py::test_slide_index_exists_in_site - Failed: Di...
+ERROR tests/test_slide_generation.py::test_slide_markdown_files_exist - Faile...
+ERROR tests/test_slide_generation.py::test_slide_html_files_exist - Failed: D...
+ERROR tests/test_slide_generation.py::test_slide_html_references_correct_markdown
+ERROR tests/test_slide_generation.py::test_slide_markdown_has_content - Faile...
+ERROR tests/test_slide_generation.py::test_slide_html_has_revealjs_structure
+======== 3 failed, 20 passed, 3 skipped, 47 errors in 80.22s (0:01:20) ========

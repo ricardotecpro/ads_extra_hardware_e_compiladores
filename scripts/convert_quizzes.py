@@ -74,7 +74,7 @@ def generate_quiz_html(quiz_number: int, questions: list) -> str:
     
     # Cabeçalho
     html_parts = [
-        f"# Quiz {quiz_number:02d} - Introdução\n",
+        f"# Quiz {quiz_number:02d}\n",
         '\n--8<-- "assets/quiz.html"\n\n'
     ]
     
